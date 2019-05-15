@@ -1,0 +1,102 @@
+$border-radius: 4px;
+$grey: #E5E5E8;
+$grey-dark: #AEABAD;
+$selected-light: $grey;
+$selected-dark: $grey-dark;
+
+html, body, #root, #root > div {
+  height: 100%;
+  width: 100%;
+}
+
+.select-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    position: relative;
+    padding: 1rem;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: $border-radius;
+
+    &--selected {
+      background-color: $selected-light;
+    }
+  }
+
+  &__img-label {
+    background: white;
+    padding: 0.25em 0.5em;
+    position: absolute;
+    border-radius: $border-radius;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.select-agegroup {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    padding: 5px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    margin: 1rem;
+
+    &--selected {
+      background: $grey-dark;
+    }
+  }
+
+}
+
+
+.product-svg {
+  #Zones g {
+    &:hover {
+      fill-opacity: 0.6;
+    }
+    &.is-focused,
+    &:hover {
+      use.use-color {
+        mix-blend-mode: normal !important;
+      }
+      stroke: aqua;
+      stroke-width: 1px;
+      stroke-dasharray: 10;
+      transition: all 200ms ease-in-out;
+      animation: dash 1s linear infinite;
+      cursor: pointer;
+      box-shadow: 0 0 2em rgba(0,0,0,0.5);
+    }
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+.product-svg {
+    display: block;
+    width: 100%;
+  svg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100%;
+  }
+}

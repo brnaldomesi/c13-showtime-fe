@@ -1,0 +1,70 @@
+html, body, #root, #root > div {
+  height: 100%;
+  width: 100%; }
+
+.select-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .select-options__item {
+    position: relative;
+    padding: 1rem;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: 4px; }
+    .select-options__item--selected {
+      background-color: #E5E5E8; }
+  .select-options__img-label {
+    background: white;
+    padding: 0.25em 0.5em;
+    position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.select-agegroup {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .select-agegroup__item {
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem; }
+    .select-agegroup__item--selected {
+      background: #AEABAD; }
+
+.product-svg #Zones g:hover {
+  fill-opacity: 0.6; }
+
+.product-svg #Zones g.is-focused, .product-svg #Zones g:hover {
+  stroke: aqua;
+  stroke-width: 1px;
+  stroke-dasharray: 10;
+  transition: all 200ms ease-in-out;
+  animation: dash 1s linear infinite;
+  cursor: pointer;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.5); }
+  .product-svg #Zones g.is-focused use.use-color, .product-svg #Zones g:hover use.use-color {
+    mix-blend-mode: normal !important; }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100; } }
+
+.product-svg {
+  display: block;
+  width: 100%; }
+  .product-svg svg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100%; }
