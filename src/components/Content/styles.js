@@ -1,7 +1,7 @@
 export default theme => ({
   root: {
-    height: '100%',
-    width: '100%',
-    overflowY: 'auto'
-  }
+    overflowY: 'auto',
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3,
+  },
 })

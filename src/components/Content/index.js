@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import cx from 'classnames'
+import cn from 'classnames'
 import PropTypes from 'prop-types'
-import { compose } from 'redux'
-import { withRouter } from 'react-router'
 import { withStyles } from '@material-ui/core/styles'
 import styles from './styles'
 
-class Main extends Component {
+class Content extends Component {
   static propTypes = {
     children: PropTypes.node,
     classes: PropTypes.object.isRequired,
@@ -18,14 +16,11 @@ class Main extends Component {
     const { classes, className, children, domRef } = this.props
 
     return (
-      <div className={cx(classes.root, className)} ref={domRef}>
+      <div className={cn(classes.root, className)} ref={domRef}>
         {children}
       </div>
     )
   }
 }
 
-export default compose(
-  withRouter,
-  withStyles(styles)
-)(Main)
+export default withStyles(styles)(Content)
