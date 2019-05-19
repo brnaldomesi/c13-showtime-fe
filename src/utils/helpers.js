@@ -25,3 +25,11 @@ export const jsonToQueryString = obj => {
 
   return pairs.length ? `?${pairs.join('&')}` : ''
 }
+
+export const truncate = (input, len = 100) => {
+  if (input && input.length > len) {
+    return `${input.substring(0, len)}...`
+  } else {
+    return input
+  }
+}

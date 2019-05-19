@@ -3,5 +3,6 @@ export default theme => ({
     overflowY: 'auto',
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
+    marginTop: 64
   },
 })

@@ -1,0 +1,1856 @@
+[  
+   {  
+      "id":29,
+      "summary":"Outkick the Show with Clay Travis brings a one-of-a-kind perspective to discussions on sports, politics, and entertainment.",
+      "podcast_guid":"ccebe9f4524a4231b0806b9b2673c450",
+      "slug":"outkick-the-show-with-clay-travis",
+      "title":"Outkick The Show with Clay Travis",
+      "image_url":"https://megaphone.imgix.net/podcasts/6890ebb8-3c40-11e9-956d-5b739d599922/image/ade1a552e5b8f15d16665f96c86d83b3f047597fc945608cc475f030523852c09d5f8f2966fd7232593180a1117d6bd8b3aa2340a3afcb8a131b42f071554025.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:37:10.098138+00:00"
+   },
+   {  
+      "id":294,
+      "summary":"Lore is a bi-weekly podcast (as well as a TV show and book series) about dark historical tales. Each episode explores the mysterious creatures, tragic events, and unusual places that fill the pages of history.\r\n\r\nBecause sometimes the truth is more frightening than fiction.",
+      "podcast_guid":"f3ff1bf80fca4f88b7623eec4af75806",
+      "slug":"lore",
+      "title":"Lore",
+      "image_url":"https://megaphone.imgix.net/podcasts/4c37eae2-3926-11e9-98ee-9b97407aee4b/image/lore-coverart3.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:37:07.220462+00:00"
+   },
+   {  
+      "id":293,
+      "summary":"<p>On \"Waltrip Unfiltered,\"  2-time Daytona 500 winner Michael Waltrip delivers a unique breakdown of the world of racing. \"Uncle Mikey\" will talk with the biggest stars in the sport each week, while taking the listener behind the curtain to provide unprecedented access, stories and reaction to the NASCAR world.</p>",
+      "podcast_guid":"b34ce0874f4142538e4073fee667c9f4",
+      "slug":"waltrip-unfiltered",
+      "title":"Waltrip Unfiltered",
+      "image_url":"https://megaphone.imgix.net/podcasts/d45f91d4-3eaf-11e9-b879-ef4c7419295d/image/f82f7d1bb95d7a6991e6718a1ae371b5d2940c11b20b7052e3eeaec22c1b2a97944a4970d4617b47937fccf42a1e21bf486bbf672513273daaa12a80af80c9f6.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:37:06.532872+00:00"
+   },
+   {  
+      "id":33,
+      "summary":"The Sidelines podcast gives you an all-access pass into the world of college basketball and beyond. Evan Daniels, FOX Sports' & FS1's College Basketball Insider and 247 Sports' Director of Basketball Recruiting, comes to you with all the latest behind-the-scenes information into the biggest programs, players, and coaches that you won't get anywhere else.",
+      "podcast_guid":"59725aefa6734e7ea6046b857be21f35",
+      "slug":"the-sidelines-with-evan-daniels",
+      "title":"The Sidelines with Evan Daniels",
+      "image_url":"https://megaphone.imgix.net/podcasts/746337ac-3c40-11e9-9924-e343a1b774b8/image/3e35a2051ad49be2940716d0e1a8b6fd80793fa65be8d6903516d961f9acf9c1cff4f70b80dc5a38210101c3d927e54aee8161d2a99ff33fe24649d38bb28df7.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:37:05.111571+00:00"
+   },
+   {  
+      "id":217,
+      "summary":"Shane Bacon brings you a weekly podcast discussing the world of golf from all angles. Shane speaks with current and former stars from the world, while bringing you the best stories in the game.",
+      "podcast_guid":"649284d1c37f4e23bb7f7da4ac045afe",
+      "slug":"the-clubhouse-with-shane-bacon",
+      "title":"The Clubhouse with Shane Bacon",
+      "image_url":"https://megaphone.imgix.net/podcasts/4d8ff868-3c40-11e9-8fc3-dbaf341d402b/image/d67f844a85c99ef30831db2dad54d7f45405c68008a4acfa3f9faaf5e72d6087f6ddf67c2198a8dc20b05a32b06eec48721ff74058fa53316af7f873df9ddd73.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:37:02.199949+00:00"
+   },
+   {  
+      "id":34,
+      "summary":"<p>Jason Whitlock and Marcellus Wiley team up for the Speak For Yourself podcast, featuring the best discussions from their television show (weekdays at 3pm ET on FS1).</p>",
+      "podcast_guid":"6d5a4f6837d4443dacffdb1a6380feed",
+      "slug":"speak-for-yourself",
+      "title":"Speak For Yourself with Whitlock & Wiley",
+      "image_url":"https://megaphone.imgix.net/podcasts/8a5fc7e6-3c40-11e9-924f-07f8b0d8687b/image/653d5dffdcd3379e9c3aef945a78ffee299c177b576eb9f5995338211a6e139d4ca5ef26943a07ce457caf3cd3d6573798de37d959b765c72853dd13143c6038.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:56.389952+00:00"
+   },
+   {  
+      "id":42,
+      "summary":"The Skip and Shannon: Undisputed Podcast. Skip Bayless, Shannon Sharpe, and Jenny Taft discuss the biggest stories in the world of sports. It's unscripted and unfiltered. Don't miss the television show Monday-Friday at 9:30am ET on FS1.",
+      "podcast_guid":"a1481dce4c4c4574a185ac293d9af594",
+      "slug":"skip-and-shannon-undisputed",
+      "title":"Skip and Shannon: Undisputed",
+      "image_url":"https://megaphone.imgix.net/podcasts/7ecc5cc8-3c40-11e9-a8e8-6b6d9d40c59a/image/e08221c061343815a9999d1e69afe24e55b3a0ccd72e8c0e2bc722266cc49309df1adcfec2d8bbda1c3543c2314b7296aa26d7b13c3657b851f3b751af2c5b0a.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:48.612394+00:00"
+   },
+   {  
+      "id":204,
+      "summary":"The NASCAR Race Hub podcast brings you all the great content from FS1's daily NASCAR show. Shannon Spake and Adam Alexander are joined by the biggest names in the sport every day to discuss the biggest topics, offering insight and analysis you won't hear anywhere else! Located in the heart of NASCAR country, \"The Hub\" takes advantage of its central location to offer viewers unique access to drivers and race teams. Plus, a contingent of reporters relay inside stories and up-to-the-minute reports from race shops. Make sure you subscribe to stay up to date on everything going on in NASCAR and beyond.",
+      "podcast_guid":"cc2e900c763d49e49ef58b1127c1d097",
+      "slug":"race-hub",
+      "title":"NASCAR Race Hub",
+      "image_url":"https://megaphone.imgix.net/podcasts/5b38b112-3c40-11e9-9a36-4b1009f95754/image/4aded9937d516c6b1a86ad714b316ed4d78a3ab37247c72550b2b48bdd1365e48f0a20428d0997be4579a825c8fda5e13a302eb3106ef128dba74af2652e68f4.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:46.053871+00:00"
+   },
+   {  
+      "id":98,
+      "summary":"From Los Angeles to Boston and everywhere in between - MLB Whiparound has you covered with everything you need to know about Major League Baseball.",
+      "podcast_guid":"3f266e09759848f18d2f1f551d32155d",
+      "slug":"mlb-whiparound",
+      "title":"MLB Whiparound",
+      "image_url":"https://megaphone.imgix.net/podcasts/b9c0c1ae-3eaf-11e9-bad7-278ec8eb31a0/image/98a665cced81987318571042707491bcc653a0faeadd9834641fef351b07b8d097c1fac963fc6bafef792ba9ede75e63b4b7fe493c8f096a3e870f652e568306.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:43.500336+00:00"
+   },
+   {  
+      "id":190,
+      "summary":"Join Joy Taylor for a different take on the world of sports. Joy will be breaking down all the biggest stories from the NFL, NBA and everything in between.",
+      "podcast_guid":"90f8156eb047440aae752ec2d8c38dac",
+      "slug":"maybe-im-crazy-with-joy-taylor",
+      "title":"Maybe I'm Crazy with Joy Taylor",
+      "image_url":"https://megaphone.imgix.net/podcasts/c859a712-3eaf-11e9-8e43-db21553e9f46/image/a8cbdd4b2813a08ecec852c8f5fa51cb4220e99c46bf98d5c9e166d2bd319c338fa0949f92b5ce0031451863bed9301c8feecd5562333ee4ba5809cc24618cf1.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:41.266475+00:00"
+   },
+   {  
+      "id":202,
+      "summary":"Your daily dose of all things NBA! The Hoops on Fox podcast gives you the BEST basketball conversations from Fox Sports including studio show interviews, special content from Chris Broussard, post game interviews from NBA stars around the league and much more!",
+      "podcast_guid":"6934f56c616a4747a3b9310b31c43b2c",
+      "slug":"in-the-zone-with-chris-broussard",
+      "title":"Hoops on Fox Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/aba71aaa-3eaf-11e9-8aed-7f5dcf7730ea/image/67643e07f6b79b4e54d113a07a1b8d5c941243121395b1e775ce808dd50556e3b46959f2f7618773ef7514af36b50fe0e4dcd9b968f218168c6fc107423738c2.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:38.789494+00:00"
+   },
+   {  
+      "id":198,
+      "summary":"Cris Carter, Nick Wright &amp; Jenna Wolfe discuss the biggest stories in the world of sports. From LeBron James, to Tom Brady, this show will bring you the first, and most incisive, opinions on the best sports stories.",
+      "podcast_guid":"1934e725d1b8408cb4668031e84fa97a",
+      "slug":"first-things-first",
+      "title":"First Things First",
+      "image_url":"https://megaphone.imgix.net/podcasts/9758c652-3eaf-11e9-815f-f36a7e4bf707/image/74336a9afaf181b10db5b2a68e9232cb21ec88e5be90f0f9cecc84d9abf37ebc3379d3418d10e41a3551f8c5346b25bbeeae7e99678d20bdbc88e66121b521c7.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:28.436444+00:00"
+   },
+   {  
+      "id":131,
+      "summary":"Coming Up Winners is a interactive gambling podcast dedicated to making YOU a smarter gambler. Hosted by FS1 host Jason McIntyre & sports guru Andrew Lynch, the two team up to give you a realistic and analytical view inside the biggest games of the week every Monday and Thursday. Did we mention YOU the listener will have multiple chances to take cold hard cash from this crew? All this and MORE only on the Coming Up Winners podcast!",
+      "podcast_guid":"626122088b5a4701b6b4486990520e0d",
+      "slug":"coming-up-winners",
+      "title":"Coming Up Winners",
+      "image_url":"https://megaphone.imgix.net/podcasts/8390d7f4-3eaf-11e9-b897-a3a7e9b243ee/image/1e14087bcc799115d188317af09b1004dbdb9b47a644891941610b870fee90bc146ce9f7ddd692582a6bfe292fe02c3d078bf0b06e30809b16ae0cd550a71f02.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:27.278274+00:00"
+   },
+   {  
+      "id":70,
+      "summary":"Joel Klatt breaks down the biggest stories in the world of college football. Joel relies on his experience on the field, detailed film analysis and unmatched preparation to give the listener the most consistent and best analysis. Each week, Joel will dive into his Top 10 teams, take your questions and discuss the Heisman Trophy race with a rotating panel of expert guests.",
+      "podcast_guid":"452b28d2aee940cf98cac9b3fde102d9",
+      "slug":"breaking-the-huddle",
+      "title":"Breaking the Huddle with Joel Klatt",
+      "image_url":"https://megaphone.imgix.net/podcasts/748e8972-3eaf-11e9-9d60-3beeccffe81c/image/6b062c0717e4d438398234030a25550ea68c547b1c6e01e895cb45fb1412e5f3c2b41e59d4624809331cacbaae15d0aba848b54cf13381d209ae95cc7ede782f.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:26.333452+00:00"
+   },
+   {  
+      "id":88,
+      "summary":"U.S. Soccer legend Alexi Lalas discusses the biggest stories in the world of soccer. Join Alexi and soccer guru David Mosse, as they break down the USMNT, USWNT, MLS, Bundesliga, Premier League, World Cup & everything in between.",
+      "podcast_guid":"7d6d485f7e0a4c14b2d6218425fed977",
+      "slug":"state-of-the-union",
+      "title":"Alexi Lalas\u2019 State of the Union Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/68e2a32e-3eaf-11e9-8be0-57045cdfb25c/image/9ba81d45ab36802247a2c2cf804a8a0912aa19fdb6d38f8ab820db72f5a035651dd30c4345c4a2eaf45149c44f4922e384befb83ed57326504c73c33b698d0b0.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:24.878323+00:00"
+   },
+   {  
+      "id":292,
+      "summary":"RISE Together is more than just a conversation about this relationship. Each episode is filled with tangible advice that will get you and your partner to be the best version of yourselves. Hosted by New York Times Bestselling Author and Hollis Co CCO Rachel Hollis and Hollis Co CEO Dave Hollis,",
+      "podcast_guid":"894d4b8323434ccfb3ecfde1ae2ccba6",
+      "slug":"risetogether",
+      "title":"RISE Together Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/8a8d5710-2bd3-11e9-92a5-3ba8eaf3c1fb/image/Podcast_2Fartworks_2F2371_2Flarge_2F8833ec27c2d477f05ce8764b47ae89a38c0356f70f3b9b85651d52038d54c1b5_2FRise_20Together_20Podcast_20Image.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:23.654740+00:00"
+   },
+   {  
+      "id":291,
+      "summary":"Tangible and tactical tools for your life and business. Hosted by New York Times Best-Selling Author Rachel Hollis, RISE is a series of bold conversations with fellow business powerhouses and personal development leaders that provides the listener with real-life valuable takeaways.",
+      "podcast_guid":"deac81286d474f639353b33492a7c9ed",
+      "slug":"rise",
+      "title":"RISE podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/7a279796-2bd3-11e9-83e7-9b77013c6133/image/Podcast_2Fartworks_2F2370_2Flarge_2Fd0a8a882c042eea09d56cc66ca6e04d988078f17506c0c5182224613390a1ad0_2Fartworks-000456418884-89mqd1-original.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:21.554814+00:00"
+   },
+   {  
+      "id":236,
+      "summary":"TBD",
+      "podcast_guid":"bb7d4e0264264f1995529777d5548611",
+      "slug":"DGT3243565338",
+      "title":"Side Hustle School - Alexa Feed",
+      "image_url":"https://megaphone.imgix.net/podcasts/3e0b3c3c-02d3-11e9-be93-eb7934e1b084/image/uploads_2F1545168993953-k2ji1kgyku-842ee082de7203f1d0c2414688b8d7f9_2FSHS%2BLogo.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:36:18.706238+00:00"
+   },
+   {  
+      "id":234,
+      "summary":"A daily show for everyone who works a regular job and wants to start an income-earning project on the side. In each episode, listeners will hear a different story of someone who's started a side hustle\u2014along with what went well, how that person overcame challenges, and what happened as a result. The show is written and hosted by Chris Guillebeau, the New York Times bestselling author of The $100 Startup, The Happiness of Pursuit, and other books.",
+      "podcast_guid":"40ee42613d8948c58d1c1faf644162a8",
+      "slug":"sidehustleschool",
+      "title":"Side Hustle School",
+      "image_url":"https://megaphone.imgix.net/podcasts/299b9a48-b59c-11e6-92f8-6b5e7c3b2fce/image/uploads_2F1483028012046-3rybwfj08x5ksuwg-25c47aaa30eb85bb78cfbe631618b4b2_2FSideHustleSchool.ONW.3000x3000.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:59.288040+00:00"
+   },
+   {  
+      "id":235,
+      "summary":"Gretchen Rubin is HAPPIER, and she wants you to be happier too. The #1 bestselling author of The Happiness Project and Better Than Before gets more personal than ever as she brings her practical, manageable advice about happiness and good habits to this lively, thought-provoking podcast. Gretchen\u2019s cohost and guinea pig is her younger sister, Elizabeth Craft, a TV writer and producer living in Los Angeles, who (lovingly) refers to Gretchen as her happiness bully. Part of the Cadence13 Network.",
+      "podcast_guid":"b78b5b5c7cc24b9cb11707602adbf61d",
+      "slug":"happier",
+      "title":"Happier with Gretchen Rubin",
+      "image_url":"https://megaphone.imgix.net/podcasts/32ecfb42-8289-11e5-b42a-8f36c3d2bc76/image/uploads_2F1483024592237-t3dxed4unaollwd5-e7071c0d74635cc19bbde46c98f5de3a_2F3000x3000_Happier_ONW.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:50.820220+00:00"
+   },
+   {  
+      "id":237,
+      "summary":"Veteran TV writers Liz Craft and Sarah Fain demystify Hollywood by making career and personal struggles universal. Friends since high school and writing partners for 17 years, Liz and Sarah have survived and thrived in Tinseltown\u2019s male-dominated entertainment industry, guided by blind optimism and a Midwestern work ethic. Along the way they've learned a lot about kicking ass, kissing ass, and office yoga.",
+      "podcast_guid":"be69790a0c3644438a8c9d912d1db881",
+      "slug":"happierinhollywood",
+      "title":"Happier in Hollywood",
+      "image_url":"https://megaphone.imgix.net/podcasts/7028c9b8-1f9b-11e7-8634-bb451b195d3c/image/uploads_2F1549558220096-t6yq8b4i8f-923bad1dbd24e4f43591b5c4a8a25e6c_2FHapper%2Bin%2BHollywood%2BFINAL%2BCOVER.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:48.335910+00:00"
+   },
+   {  
+      "id":253,
+      "summary":"From the viral Instagram account @commentsbycelebs comes the much awaited Comments By Celebs Podcast. Emma Diamond & Julie Kramer, the creative minds behind the account and self-proclaimed celeb experts, talk all things pop culture. Using the unique angle of their Instagram account to frame the conversation, they delve into what's going on in the world of celeb comments, and how that translates into real life drama. Having a hard time keeping up with your favorite stars? They\u2019re here to break it all down for you. The girls of CBC dive right into it all - giving you their honest, no bs approach to what\u2019s going on in Hollywood. With no shortage of games & hypothetical celebrity scenarios, they make the gossip both fun and highly relatable. If it\u2019s happening, they\u2019re talking (and instagramming) about it.",
+      "podcast_guid":"14f385b5e39346c9b0d3827758cc954e",
+      "slug":"comments-by-celebs",
+      "title":"Comments by Celebs",
+      "image_url":"https://megaphone.imgix.net/podcasts/e2365988-137a-11e9-a173-1f4e4752f1bd/image/uploads_2F1547230855850-l2loavrazu-2c069346f98f05984b408ba36dd31325_2Fimage2.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:46.699890+00:00"
+   },
+   {  
+      "id":252,
+      "summary":"<p><strong>On the popular YouTube show, \u2018Hot Ones,\u2019 host Sean Evans interviews celebrities as they eat increasingly spicy chicken wings. The podcast version, \u2018Hot Ones, The Classic Interviews\u2019 looks back at Hot Ones history to unearth extended cuts of some of our favorite hot sauce-fueled interviews of all time.</strong></p><p><strong>You can expect to hear from names like Neil deGrasse Tyson, Tyra Banks, Ricky Gervais, and more.</strong></p><p><br></p>",
+      "podcast_guid":"49c18a13f754487dabfa32cb19565e1f",
+      "slug":"DGT7822111373",
+      "title":"Hot Ones: The Classic Interviews",
+      "image_url":"https://megaphone.imgix.net/podcasts/34ddc670-0f0d-11e9-bfb7-b3b4d016d582/image/267b3a922635a93c25011616fed9b7eb5bf684a07dd01f8278b93b1b34de9afe4d66614e67adcf6695d236f28209526001b1b6b85f78a73bb1f13e142fa4a8ef.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:46.242449+00:00"
+   },
+   {  
+      "id":251,
+      "summary":"<p>Hosts DJ Akademiks, Wayno, and Nadeska Alexis bring fans an in-depth look into the biggest stories in hip-hop with commentary, exclusive content, and a behind-the-scenes look at one of the biggest shows in rap.</p>",
+      "podcast_guid":"d6a9f9f5d4c2402f94f38b6d02ba98ea",
+      "slug":"DGT7543131022",
+      "title":"Everyday Struggle: Weekly Edition",
+      "image_url":"https://megaphone.imgix.net/podcasts/3d652540-0f0d-11e9-875f-c7a39db8a7b6/image/0a62c30a13692aa3e8752c58bd604ac4b7270955216933ea891b65c52a37b0978cce46dcdcc2914695cfbc2ad2d77e297edefc813daaaf21e908b4c243d999fb.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:45.593342+00:00"
+   },
+   {  
+      "id":193,
+      "summary":"Up and Vanished is an investigative true crime podcast hosted by Atlanta filmmaker Payne Lindsey. In Season 1, Payne tackles his first cold case story, the unsolved disappearance of Georgia high school teacher and former pageant queen, Tara Grinstead. The 11-year-old case remains the largest case file in Georgia history and is still unfolding. Season 2 focuses on the disappearance of young mother Kristal Reisinger from a remote mountain town in Colorado. Up and Vanished aims to tell compelling, true stories and give these cases the exposure they deserve.",
+      "podcast_guid":"6cb7db61f6704005933e08ebecba6451",
+      "slug":"up-and-vanished",
+      "title":"Up and Vanished",
+      "image_url":"https://megaphone.imgix.net/podcasts/a57182f8-1ffe-11e9-8e74-4b4d4b64cfd9/image/uploads_2F1549922724537-d2mw2227pmm-61e15f4d08224d897f61c390a646e328_2FUAV-%2Bcover_1_3000-2.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:42.925890+00:00"
+   },
+   {  
+      "id":263,
+      "summary":"In Feb 2018, an aspiring actress vanished from her Hollywood apartment. Rolling Stone journalist Neil Strauss was asked to help the family get answers. Together, they found them...sometimes at great personal risk. For the first time in a serial podcast, go inside a gripping multi-state investigation as it unfolds from the moment of the disappearance to each twist and turn in the case. Stay not only more informed than the news, but listen as the official story is dismantled with in-the-moment first-hand reporting with the leading figures in the investigation. The new #1 podcast from the team behind Up & Vanished and Atlanta Monster.",
+      "podcast_guid":"71090d13805247fa949c6404834e704c",
+      "slug":"to-live-and-die-in-la",
+      "title":"To Live and Die in LA",
+      "image_url":"https://megaphone.imgix.net/podcasts/0499c1ac-3399-11e9-8483-1399efb224e5/image/uploads_2F1550506658913-s0iqe2y67s-c383c01722d810ecde0697defb7137cb_2FLiveDieLA_Cover.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:42.572382+00:00"
+   },
+   {  
+      "id":221,
+      "summary":"This is the clips feed!! Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack.",
+      "podcast_guid":"84cf9fbb72684529b4300c0f453517ad",
+      "slug":"pro-rata-clips",
+      "title":"Pro Rata Update",
+      "image_url":"https://megaphone.imgix.net/podcasts/2cbdd1d8-0ed6-11e9-985a-83b4fdbf490c/image/8ef1e952729545fb71de81a1b4d7eedcc9729b57ce09ef85f6a2ca287f4b7935f04eebfdda248d9f23956b1ae4887feb8828ff975938ef7e5434fe4f7d0ecb35.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:41.361851+00:00"
+   },
+   {  
+      "id":103,
+      "summary":"<p>Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack.</p>",
+      "podcast_guid":"d46f4caeb79c4a708e6b800bf1eeba11",
+      "slug":"pro-rata",
+      "title":"Pro Rata",
+      "image_url":"https://megaphone.imgix.net/podcasts/c11bb198-0ed5-11e9-b104-23783a81f42d/image/53aa1a75b60e36e8a5daaa6f9fde44382b12e7d7db1ee809e53544ddb1cc2126a09b70662657dfa250798d6ffc0f75f332b7bc6e0a6d1fa3009a965dbab2920f.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:38.646665+00:00"
+   },
+   {  
+      "id":214,
+      "summary":"<p>Gwyneth Paltrow and goop's Chief Content Officer Elise Loehnen chat with leading thinkers, culture changers, and industry disruptors\u2014from doctors to creatives, CEOs to spiritual healers\u2014about shifting old paradigms and starting new conversations.</p>",
+      "podcast_guid":"611262c2b0234925b4782a73a80718fe",
+      "slug":"the-goop-podcast",
+      "title":"The goop Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/bdad5832-0f60-11e9-b326-cf9d0464717f/image/4553b7b501083a30aa4d1bc37d7a0668b02789e63f1339fcc484fbde2e663ee29b82a8d45fa507e80c2264eed87b83ffd2087216e7809e58a98a3a91fce2f64a.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:36.506244+00:00"
+   },
+   {  
+      "id":295,
+      "summary":"What drives people to change, to heal, to reinvent themselves? How do we reclaim our health, bounce back from heartbreak, flip the script? On goopfellas, two friends who have become familiar with unlikely personal transformations have raw conversations with people who have experienced profound shifts in perspective and well-being. Together, functional medicine practitioner Will Cole, DC, and chef Seamus Mullen get at the catalysts that bring people out of their dark night and into their purpose. Each of their goopfellas guests\u2014from athletes to actors to authors\u2014is different. As are the hosts: Mullen himself almost died from rheumatoid arthritis, and Cole\u2019s day job is helping people uncover and overturn the roots of dis-ease. But you\u2019ll likely see pieces of yourself in all their conversations, reflected in every one of their challenges. And we hope, from the lessons they learned along the way, you\u2019ll find something you need to bring about a change, big or small, in your own life.",
+      "podcast_guid":"678191b7b9f24870a5737be84af8875f",
+      "slug":"goopfellas",
+      "title":"goopfellas",
+      "image_url":"https://megaphone.imgix.net/podcasts/cbdfa9a8-5ba7-11e9-9fdf-5338a813fc2f/image/uploads_2F1554911173573-co093cx7ve-dc36134f25ec25481e02ee8327803df7_2FgoopFellas-FINAL.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:36.330544+00:00"
+   },
+   {  
+      "id":128,
+      "summary":"Little does the president know but somehow thousands of tiny microphones have found their way into the White House, and we\u2019ve got the tapes to prove it. The Hollywood Reporter calls THE OVAL OFFICE TAPES, \u201cComedic Gold!\u201d Finally, you\u2019ll be able to listen in on the madness taking place at 1600 Pennsylvania Avenue, in this behind-the-scenes ticket to \u201cthe room where it happens.\u201d Featuring your favorite Trump administration figures, family members, best friends and enemies, THE OVAL OFFICE TAPES takes an unprecedented look at today\u2019s top news stories. From the minds of R.J. Cutler and Blumhouse Television.",
+      "podcast_guid":"8480e957ef49492399c5dddba251a588",
+      "slug":"the-oval-office-tapes",
+      "title":"The Oval Office Tapes",
+      "image_url":"https://megaphone.imgix.net/podcasts/db2ba236-0ed6-11e9-ada1-472b1f217010/image/18063d53164b688a0e6d3ab8c22a9a8c903052507093c616b014f2dc8850054246cf5c296b604f24602249550670ec29ef061140468e523ff3cfc22fac34979f.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:35.749277+00:00"
+   },
+   {  
+      "id":92,
+      "summary":"<p>Sports fans around the world place bets on the games they love, every week. It\u2019s an exhilarating and rewarding experience unless, of course, you\u2019re not getting the right advice.</p><p>Introducing...The Favorites.</p><p>Three times a week\u2014Monday, Wednesday, and Friday\u2014Action's Chief Content Officer Chad Millman -- along with ex-NFL lineman Geoff Schwartz, former MLB All-Star catcher Paul Lo Duca, professional gambler BlackJack Fletcher and bookmaker Bob Scucci -- break down the angles, the markets and the numbers driving the loudest parallel conversation in sports.</p><p>On Mondays, it\u2019s Paul, Geoff and Chad, building a nine team parlay. Mid-week, it\u2019s Chad and Scooch, talking about what games the sharps are on, and on Friday, Blackjack and Chad choose five games for the Westgate SuperContest.</p><p>To win...or to cover? That is the question. And by the weekend, there's no question you will have the answers.</p>",
+      "podcast_guid":"592eb81071144a4bbb4450a27a595157",
+      "slug":"the-buffet-with-chad-and-scooch",
+      "title":"The Favorites - Part of The Action Network",
+      "image_url":"https://megaphone.imgix.net/podcasts/38764a12-0ed3-11e9-8aff-3b1c7e674da8/image/9842767ef7bdb2420f3c661301e2984ca1583ca48f51df973ef93b4c4c2b1d8ceacb4b90cd7646e74f19450f85c75dc48697553eace3732018d517774ddcb7b0.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:33.237903+00:00"
+   },
+   {  
+      "id":53,
+      "summary":"<p>Rachel Brathen, known as Yoga Girl, is an international yoga teacher and speaker, bestselling author and serial entrepreneur who inspires millions every day. Now \u2013 Rachel offers an even more intimate look into her life and the inspiring journey. Weekly episodes of storytelling and talks from Rachel (sometimes alongside special guests!) dive into topics such as love, trust, finding balance, overcoming adversity and of course, yoga and well-being.</p><p>The light you are seeking is within your own heart.</p><p>Join Rachel as she helps you uncover it, from her heart to yours.</p><p><br></p>",
+      "podcast_guid":"dbc44860bc2240bbab60fc78de4c7db0",
+      "slug":"yoga-girl",
+      "title":"From The Heart: Conversations with Yoga Girl",
+      "image_url":"https://megaphone.imgix.net/podcasts/d0cd3634-0f98-11e9-9ed7-ef7ffc56a8bd/image/fc61eeeeb30e7e586c181ade7b61fb5e319069bbd12321cfe7e177cb2d45ae0d9df0af90b28f9be2fb7e964473eb6a26e94c5313898cf9bf557aad1d421fa6cf.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:30.641179+00:00"
+   },
+   {  
+      "id":81,
+      "summary":"Authors and bloggers Tom Fitzgerald and Lorenzo Marquez render judgment on all the latest goings-on in the worlds of celebrity, pop culture, television and fashion. Strap yourselves in for some hilarious opinionating on all the most pressing issues of our time, darlings.",
+      "podcast_guid":"e649df0743ca41c9bd8bf180f12d0335",
+      "slug":"DGT8982539249",
+      "title":"Tom & Lorenzo's Pop Style Opinionfest",
+      "image_url":"https://megaphone.imgix.net/podcasts/f933b734-4724-11e8-914a-6751afb503d8/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:26.181203+00:00"
+   },
+   {  
+      "id":79,
+      "summary":"Love her or hate her, but you can\u2019t ignore the sassy, quick-witted Stassi Schroeder, star of Bravo\u2019s \u201cVanderpump Rules.\u201d Never one to hold back on any topic, Stassi is here with a weekly podcast, \u201cStraight Up with Stassi\u2019, a biting and hilarious look at the world and everyone in it, according to the Queen Bee herself.",
+      "podcast_guid":"5b16edd88f9a449cb60bca63758b442a",
+      "slug":"DGT9701433101",
+      "title":"Straight Up with Stassi",
+      "image_url":"https://megaphone.imgix.net/podcasts/7d909c00-471f-11e8-9b38-975f99a19c3c/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:21.115779+00:00"
+   },
+   {  
+      "id":80,
+      "summary":"Olivia Caridi, star of season 20 of \u201cThe Bachelor\u201d and an avid watcher of all sorts of television, is known for her smart, quick-witted mouth in more ways than one. On her new weekly podcast \"Mouthing Off with Olivia,\" she'll interview reality stars, actors and actresses, influencers and YouTube stars to get the latest in entertainment. Expect some major gossip, as Olivia will give each of her guests their own time to \"Mouth Off\" and deliver rants of epic proportions.",
+      "podcast_guid":"bc9179dc0ab74a5caf214505c5da779b",
+      "slug":"DGT3544898408",
+      "title":"Mouthing Off with Olivia Caridi",
+      "image_url":"https://megaphone.imgix.net/podcasts/59de18d0-4960-11e8-aebe-0b4d8ad1cd5e/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:18.754120+00:00"
+   },
+   {  
+      "id":225,
+      "summary":"Margaret Brennan asks the biggest guests the smartest questions. Hear official Washington on the firing line, on your schedule. (154991)",
+      "podcast_guid":"e92ce21bf8af49ec934d28c52c7d75f7",
+      "slug":"DGT9802241614",
+      "title":"Face the Nation on the Radio",
+      "image_url":"https://megaphone.imgix.net/podcasts/c942136e-64dd-11e8-a54d-97712b010ed5/image/ftnlogo1400x1400.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:17.264230+00:00"
+   },
+   {  
+      "id":223,
+      "summary":"CBS SUNDAY MORNING is the top-rated Sunday morning news program in all the key demos, and features stories on the arts, music, nature, entertainment, sports, history, science, Americana and highlights unique human accomplishments and achievements",
+      "podcast_guid":"49cf2579016746f8a1ff4912f2b8bbbc",
+      "slug":"DGT6544512251",
+      "title":"CBS Sunday Morning with Jane Pauley",
+      "image_url":"https://megaphone.imgix.net/podcasts/25a4fc98-433c-11e8-89a7-97fff674fab4/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:13.437608+00:00"
+   },
+   {  
+      "id":222,
+      "summary":"Get the biggest scoops and best storytelling on television from 60 Minutes - on your schedule. Now you can listen to the show in its entirety every week. 60 Minutes is the most successful broadcast in television history with more than 80 Emmys under its belt. 60 Minutes is also the only show to obtain interviews with every American president from Richard Nixon to Donald Trump.",
+      "podcast_guid":"0a7b4996fc5a4ff1bf58c1a4176a5ea8",
+      "slug":"DGT1588081910",
+      "title":"60 Minutes",
+      "image_url":"https://megaphone.imgix.net/podcasts/8ad9d9aa-433f-11e8-aa1f-cb1bbfab76f9/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:08.135173+00:00"
+   },
+   {  
+      "id":224,
+      "summary":"Experience the best in intriguing crime and justice cases that touch on all areas of the human experience, including greed and passion, presented by the award-winning team at CBS News' \"48 Hours.\"",
+      "podcast_guid":"acf6611b6c4f4c4fb6d040a38c8abdb9",
+      "slug":"DGT3646982943",
+      "title":"48 Hours",
+      "image_url":"https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:01.555479+00:00"
+   },
+   {  
+      "id":207,
+      "summary":"<p>Join best friends and YouTubers Anna Brisbin and Tessa Netting as they cover all things nerdy including TV shows, books, movies, animation, and pop culture. Listen in as these two proud Ravenclaws debate ship wars, play games like Would You Rather, and sort characters into Hogwarts houses. New episode every Friday. See you next Geek!</p>",
+      "podcast_guid":"e897d2f3f3fc4a85b1421928c601ef12",
+      "slug":"fantastic-geeks",
+      "title":"Fantastic Geeks (and where to find them)",
+      "image_url":"https://megaphone.imgix.net/podcasts/c5bf8796-0f0d-11e9-8578-9fc690c491b3/image/uploads_2F1554470586886-dbpmsdn6twa-13bbb661114d0ea87d70859decb471b4_2FFantasticGeeks_Artwork_S2Update.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:35:00.282081+00:00"
+   },
+   {  
+      "id":25,
+      "summary":"Dive deep into the HBO hit fantasy series each week with Entertainment Weekly's top Westeros war correspondent James Hibberd and Greyjoy fanboy Darren Franich as they talk about what happened on the show, both on camera and behind the scenes \u2013 and what might be coming up.",
+      "podcast_guid":"b55d9859dd0f4ffd95884df2d92b00bf",
+      "slug":"ews-game-of-thrones-weekly",
+      "title":"EW's Game of Thrones Weekly",
+      "image_url":"https://megaphone.imgix.net/podcasts/4334b53e-2994-11e9-953a-1b19e45d5131/image/49e90283ca62bb4def5678918bca80d14ebc001664907f170f932e5570f36569d0f6c7d29c3b4aac0682f15d8548ce1353942393930d14b45a8fd52a61671f82.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:59.394572+00:00"
+   },
+   {  
+      "id":239,
+      "summary":"There's never been more TV, which means there's never been more TV to talk about. Join Entertainment Weekly TV critics Kristen Baldwin and Darren Franich for Best of Shows, a weekly watercooler conversation about the biggest things happening on the small screen. With celebrity interviews and snappy conversational energy, they'll try to answer a simple question: What should I watch?",
+      "podcast_guid":"a138fdb171af4d41b98e124045829b20",
+      "slug":"ew-best-of-shows",
+      "title":"EW's Best of Shows",
+      "image_url":"https://megaphone.imgix.net/podcasts/7d0a7ef4-1500-11e9-b82e-9f354490777e/image/uploads_2F1547171601929-01cizzp2qp6n-0023661373b8febfc9e031ef35ec1003_2Few-bestofshows-podcast-final-2b.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:58.950937+00:00"
+   },
+   {  
+      "id":265,
+      "summary":"In today\u2019s world, context is clarity.\u00a0\"Skimm This\" breaks down the most important stories of the day and explains why they matter.\u00a0All in 10 minutes. Every\u00a0Monday through Friday. All\u00a0at 5PM.",
+      "podcast_guid":"fa8e259e8d184b5e8491d8e5e2054459",
+      "slug":"skimm-this",
+      "title":"Skimm This",
+      "image_url":"https://megaphone.imgix.net/podcasts/677c3fca-36b9-11e9-bdbf-4f08d49e0f8b/image/uploads_2F1550850401162-n4uep5w11ag-41325ccc883ed12b83e501af3e7bff18_2FSkimm%2BThis%2BAlbum%2BArtwork.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:57.901395+00:00"
+   },
+   {  
+      "id":197,
+      "summary":"<p>theSkimm's co-founders and co-CEOs, Carly Zakin and Danielle Weisberg, started their company from a couch. Now they\u2019re bringing it back to one, and inviting powerful female leaders to sit down and chat about everything from celebrating career wins to the worst advice they've ever received. It\u2019s an inside look at what it\u2019s really like on the road to success. No BS, no sugarcoating.</p>",
+      "podcast_guid":"6882c1dcff7e46f29ad0435deba71c9e",
+      "slug":"skimmd-from-the-couch",
+      "title":"Skimm'd from The Couch",
+      "image_url":"https://megaphone.imgix.net/podcasts/b595c39e-0f94-11e9-a160-1bc47ec27b97/image/613355f6d6065c4a131eb48a8cb3d4aeaa1f69f9a43a28143fbcfd0bc57f77cefb80d3edea90310d5959bfb27b0fc39d581742beca0cfd383d9a9e9fdff50ed5.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:56.088433+00:00"
+   },
+   {  
+      "id":11,
+      "summary":"<p>Host Jill Schlesinger, CFP\u00ae, tackles sometimes uncomfortable and even controversial money and investing issues, without the financial jargon, to get to the heart of what\u2019s important for anyone to know. Jill takes listener phone calls and interviews informative and entertaining guests each week to uncover surprising insights and provide actionable information so you can make the most of your money. Have a question? Email us at askjill at jillonmoney dot com.</p>",
+      "podcast_guid":"4ca952ed5fa3454d9246df86be1ca0cd",
+      "slug":"better-off-with-jill-schlesinger",
+      "title":"Jill on Money with Jill Schlesinger",
+      "image_url":"https://megaphone.imgix.net/podcasts/baeea6ea-0f61-11e9-b409-07308353d430/image/c188f63b6565a7d10133922a9d44cb22bd8f755c12b451f51949c7e96cdb835d3a9348b2d6b698ed7dccf63057adb75c9c6e0b3dccb130d54ff70feaa6b9b723.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:50.604033+00:00"
+   },
+   {  
+      "id":194,
+      "summary":"Whether it\u2019s what we eat for breakfast on the go, what we pack for lunch, or how we fill our shopping cart and stock our pantry, we make more than 300 food decisions every day. Together, we\u2019ll learn how to make better choices and eat all of our favorite foods, guilt-free!",
+      "podcast_guid":"2febf94155314c729ee3426170f909a8",
+      "slug":"eat-this-not-that",
+      "title":"Eat This, Not That!",
+      "image_url":"https://megaphone.imgix.net/podcasts/aa9a5270-0f0d-11e9-8e14-dbd46650ce7d/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:48.715857+00:00"
+   },
+   {  
+      "id":37,
+      "summary":"The MMQB suite of podcasts bring you unique, informed and immediate analysis from around the NFL. Whether you\u2019re looking to catch up on Sunday\u2019s football action, take a deep dive into the film or answer some burning NFL questions, The MMQB staff has you covered. With a rotating cast of hosts including Andy Benoit, Albert Breer, Jenny Vrentas, Conor Orr and Gary Gramling, you\u2019ll finish each episode knowing more about football than you ever thought you could.",
+      "podcast_guid":"f44cf59dadca45bc8a3651a22302fdfe",
+      "slug":"the-mmqb-10-things",
+      "title":"The MMQB NFL Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/64e88d80-0f8c-11e9-b0c2-238676ab751d/image/37ebd3fba26301bbf5a116608a84ba96e3f388813825d61998bc9f642dde2b63d696078b3db92db3384905ccb011f4ff08d590305cbf9e82bad33f2a0215896e.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:41.360900+00:00"
+   },
+   {  
+      "id":1,
+      "summary":"Sports Illustrated\u2019s Chris Mannix provides a weekly window into the world of basketball, from breakdowns of the biggest news and trends to conversations with players and personnel.",
+      "podcast_guid":"1b332f1157aa43b3b2dd778c5af3a0ca",
+      "slug":"vertical-chris-mannix",
+      "title":"The Crossover NBA Show with Chris Mannix",
+      "image_url":"https://megaphone.imgix.net/podcasts/5df1020a-0f8c-11e9-9407-df8b5bccdcb6/image/28a764d99de96516b69f4995e11c48b011ff58f28f86a34f94c37664fd636adbc438514cd15c65ea5b632dbd0f805d24f16f99137a18005f3d48c7c975689bd5.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:37.438382+00:00"
+   },
+   {  
+      "id":137,
+      "summary":"<p>The Awardist, from Entertainment Weekly, takes you inside this year\u2019s best contenders for the industry\u2019s biggest awards, from the Golden Globes to the Oscars. Join EW editors as they talk about the actors, films and TV series that should win \u2013 and which of those actually will win \u2013 and why.</p><p><br></p><p><br></p>",
+      "podcast_guid":"6dc91f527f0b439b8b5d27991348bdf9",
+      "slug":"chasing-emmy",
+      "title":"The Awardist",
+      "image_url":"https://megaphone.imgix.net/podcasts/4fc88ba2-0f6f-11e9-b8f7-3b8c2d8f132c/image/0aaecb8ed3e8b7564a1122a5e9228cf7555b09747028aa9ddc970b6aca2bda4ea10c90c85b0f6623986dfc6c2d985ddd5600ed66c3432692e5bec4153920a8de.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:36.600593+00:00"
+   },
+   {  
+      "id":215,
+      "summary":"July 4, 2009. Former NFL quarterback Steve McNair is found murdered in his Nashville condo. After just four days of investigating it was ruled a murder-suicide. But what if it wasn\u2019t? Over the course of this nine-part series, we\u2019ll guide you through the McNair case, reviewing the findings and re-examining crucial details in a new light.",
+      "podcast_guid":"282e01ec62934229a71c0c476b27989d",
+      "slug":"fall-of-a-titan",
+      "title":"Steve McNair: Fall of a Titan",
+      "image_url":"https://megaphone.imgix.net/podcasts/50768294-0f64-11e9-809e-b79228c19575/image/57a929fb3cbd6439cf37e6f26c0aed34345bb236b483f5510c28180a76dfe9122a71ec1384e5d8966e0b5e4821284c91bfa5862e96f8c4089975387d577701f4.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:36.253634+00:00"
+   },
+   {  
+      "id":41,
+      "summary":"Welcome to the SI Media Podcast with Jimmy Traina. This podcast, which will be published weekly, will focus on all things sports media via interviews and roundtable discussions. Occasionally, an athlete or celebrity will drop by for a chat as well.",
+      "podcast_guid":"496c4b8336f64ae5a1760ede8c26c03f",
+      "slug":"si-media-podcast",
+      "title":"Sports Illustrated Media Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/b797aeb8-0f6d-11e9-9cbb-27d61c58fd3f/image/c5b64d9d57d1f578ed0fc29fc6714796a83a628a78f55585d655c4fc3687939d757c4044c0a6192aa8f2c89ab3cf892c30ea88584d224e31332b5c3c4a0e50c1.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:31.168897+00:00"
+   },
+   {  
+      "id":273,
+      "summary":"Sports Illustrated keeps you up to date with a daily podcast from Brazil featuring interviews, analysis and more.",
+      "podcast_guid":"82df4d4101f84ab89fe6da97bb274847",
+      "slug":"DGT4842444150",
+      "title":"Sports Illustrated At The Games",
+      "image_url":"https://megaphone.imgix.net/podcasts/8f77800e-3ea0-11e9-b991-d35c95f0a554/image/avatars-000241515359-fgzl47-original.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:30.990998+00:00"
+   },
+   {  
+      "id":32,
+      "summary":"Chris Mannix will bring fans closer to the sport and its personalities with in-depth conversations with the top names in boxing.",
+      "podcast_guid":"142259b8bee1410a9b99d2571bf05053",
+      "slug":"boxing-mannix",
+      "title":"SI Boxing with Chris Mannix",
+      "image_url":"https://megaphone.imgix.net/podcasts/1b2e5f7e-0f66-11e9-8424-bf36c49658e4/image/05c0cef38e59e90991900a3ea44e51dca89648c1160c52f94dd0f440c3231e05957a8b3e9583979da018dd874d3a9bac749c55983468783ed6241257c1b52c52.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:28.424695+00:00"
+   },
+   {  
+      "id":16,
+      "summary":"Sports Illustrated\u2019s Grant Wahl talks with the prominent figures in soccer.",
+      "podcast_guid":"553ea071a8a444abae9bbff3ca339d2b",
+      "slug":"planet-futbol",
+      "title":"Planet F\u00fatbol with Grant Wahl",
+      "image_url":"https://megaphone.imgix.net/podcasts/24146634-0f65-11e9-bff3-173df34d7f3f/image/f72413e67a49d8bf419eb845fa90f421081c69b4ee68c57e31fe0d3f76c48656204b683ec87e13b4983342960342bcaa0234e21f5ee29cd8237d3e87c5e80224.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:22.707039+00:00"
+   },
+   {  
+      "id":50,
+      "summary":"Hosted by Andrew Sharp and Ben Golliver, SI\u2019s Open Floor podcast brings you breakdowns of the biggest news, moves and more from around the NBA.",
+      "podcast_guid":"7e71b393f8354ddb877721ad26cc49a7",
+      "slug":"open-floor",
+      "title":"Open Floor: SI's NBA Show",
+      "image_url":"https://megaphone.imgix.net/podcasts/b544bb00-0f64-11e9-a00a-ab00735a76ae/image/15071500016e6a25f78943ca289fc00d07e4b5f8721f474329de7edb16a94a51ba7bfca9727b1fb6c08f5d608e60115ab22432c68745dc4e6922c40175cd33b0.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:16.125919+00:00"
+   },
+   {  
+      "id":189,
+      "summary":"Why wait for an award when you can give yourself one? This is your one-stop shop for the most correct opinions, funniest jokes, and best insight in the world of sports and pop culture courtesy of your hosts Charlotte Wilder and Jessica Smetana. In addition to a weekly news rundown, MVP also features segments like Takes In The Wild (the most outrageous opinions from bars and the internet), Cheat Sheet (how to talk about sports if you don't know how), Ask Aunt Char (bad advice from Charlotte's alter-ego), Fountain of Youth (Jess will provide information that the kids know so you can seem less washed-up), Is It Sports? (where Charlotte and Jess debate whether a thing is or isn't sports, duh), and many more. Give it a listen: By the end, you'll have nothing but respect for your MVP.",
+      "podcast_guid":"1cf858d4d6bb4b729f3c0bc7c0c4b589",
+      "slug":"most-valuable-podcast",
+      "title":"Most Valuable Podcast with Charlotte Wilder and Jess Smetana",
+      "image_url":"https://megaphone.imgix.net/podcasts/af4c4a4c-0f64-11e9-9e2b-d3eab3e21355/image/9c4e0cfe0fb92e1141bbd9d433128fab83b58ca84edb460a93f1f14efb35311d500b29ff483081789e4eb001a4fd5b5bbe66af2b85a8982308e80830784e9d97.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:15.369410+00:00"
+   },
+   {  
+      "id":272,
+      "summary":"Think about the toughest job interview you\u2019ve ever had. Now imagine that interview was monitored by more than 30 million people worldwide, and involved, somehow, being measured and judged in your underwear. For hundreds of 20- to 22-year-olds every spring, this is an unblinkingly natural part of vying for a roster spot in the NFL. Every week SI\u2019s Draft Season will take you behind the scenes of this crazy and fascinating world of the NFL draft.",
+      "podcast_guid":"5bb452a6315e4c7789f7c7c0b5e99a1f",
+      "slug":"DGT2025472210",
+      "title":"Draft Season: SI's NFL draft miniseries",
+      "image_url":"https://megaphone.imgix.net/podcasts/9cf42368-3ea0-11e9-ba34-4f76122587f1/image/avatars-000261899019-z2vz4m-original.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:15.070146+00:00"
+   },
+   {  
+      "id":187,
+      "summary":"<p>A presidential hopeful crashes his car in the middle of the night and leaves a young woman to die. What transpired in the hours after Ted Kennedy\u2019s car went over the bridge in Chappaquiddick changed the course of American history. Nearly 50 years later, everyone has a theory yet no one knows the truth.&nbsp;Follow the investigation and hear from those who lived through it in this series from People magazine and Cadence13.</p>",
+      "podcast_guid":"81f6b346e69142ac8c01936fa0f2bed5",
+      "slug":"cover-up",
+      "title":"Cover-Up",
+      "image_url":"https://megaphone.imgix.net/podcasts/4a1aa5e2-0f64-11e9-8c5f-e7aa23ef4b03/image/5aa7744e481d9646b22800a7e10331aaad1fa2d39e3e3d856e6e4a11415d006b77ac2ae991ac160605d91700f7d05156394fe1edb9998169ab010681ea3debfd.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:14.714214+00:00"
+   },
+   {  
+      "id":211,
+      "summary":"Breakaway is a podcast miniseries that explores the NBA from the inside out. Every episode delves into one of the driving forces of the game, featuring the perspectives of the players, coaches, and thinkers who understand it best. Hosted by Rob Mahoney and presented by Sports Illustrated.",
+      "podcast_guid":"8da9fb75e619464f8278e125015456e0",
+      "slug":"breakaway",
+      "title":"Breakaway",
+      "image_url":"https://megaphone.imgix.net/podcasts/7ae274a0-3ea0-11e9-9567-a3383cd51906/image/80e3d0654984f38aa4b8a0f724be859f9242c14f98cf28521b9ea5c56ebde65600e6628a6c80e49f17a043de45c68e4284fc7ad910e22d1ce21e925c98a497b0.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:14.310578+00:00"
+   },
+   {  
+      "id":271,
+      "summary":"Podcast by Sports Illustrated",
+      "podcast_guid":"95657fed43784723992a6243872a4fc6",
+      "slug":"DGT3200476459",
+      "title":"Beyond The Baseline",
+      "image_url":"https://megaphone.imgix.net/podcasts/ac3bd60e-3ea0-11e9-99c3-c3e825ae8804/image/avatars-000289701890-0yk4ua-original.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:10.554829+00:00"
+   },
+   {  
+      "id":182,
+      "summary":"The Sports Media Podcast with Richard Deitsch is a weekly show that features interviews with members of the sports media about their work, as well as roundtables with sports media reporters about television, digital, audio/radio, print, and other forms of media. You can read Richard\u2019s work at The Athletic and hear his words at Sportsnet 590 The Fan in Toronto.",
+      "podcast_guid":"efa92701c8f547c7b762eff31a4ff72d",
+      "slug":"sports-media-with-richard-deitsch",
+      "title":"Sports Media with Richard Deitsch",
+      "image_url":"https://megaphone.imgix.net/podcasts/a81ff0fe-0f94-11e9-adc8-e7fb890b88f4/image/3ca99c4503a22e2ca843705957c61fbdb8e5d2eb918ff9e5ded7380176e95f0213910ed6c064282e3b8b17e555243670b10a56bd94ce9d6d605193c644f2fcc5.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:08.789907+00:00"
+   },
+   {  
+      "id":74,
+      "summary":"NASCAR\u2019s 15-time Most Popular Driver and winner of two Daytona 500s, Dale Earnhardt Jr., hosts his very own podcast, Dale Jr Download on Dirty Mo Media. Earnhardt and co-host Mike Davis raise the bar with unparalleled perspective, candid commentary, and fascinating, first-person insight into the life of a broadcaster, celebrated racer.",
+      "podcast_guid":"f73d87bde401463cb386dd51559f29f5",
+      "slug":"the-dale-jr-download-dirty-mo-radio",
+      "title":"The Dale Jr. Download - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/952e9f04-0f0d-11e9-9f5a-5feff2d1e347/image/f77a1242c879122058ba413767b4c63800569bbfdb22f102c048b50761caa7c05563b6d1c5f08473c9c5629cdcf46ac33553c60f5a30b4abac05def2d458192a.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:02.842660+00:00"
+   },
+   {  
+      "id":284,
+      "summary":"Three girls making light of the topics everyone wants to know about but are too afraid to ask. Edgy, outgoing, sarcastic, and down to earth Katie, Karsyn and Natalie will discuss hot trending topics in NASCAR and Pop Culture. From the outlandish lives of die hard NASCAR fans to features with celebrity guests and drivers on matters that are unconventional to the normal racing discussion.",
+      "podcast_guid":"3de8e3218f034be78849ee4aa8e8cc03",
+      "slug":"DGT9928107026",
+      "title":"Motor Mouths - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/6779b564-4bf6-11e9-be40-d3e283c399f0/image/d1f84abd18a00e644ad92c63c06860458200d2440c6e908e0861a09aa1b3be704e0e72ea9aeda0b651fc5c23c79e4e7bbd4715ab7a3dba05025e74057e825433.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:34:02.288012+00:00"
+   },
+   {  
+      "id":283,
+      "summary":"The official podcast of Jr Motorsports giving opinions, exclusive insight, and candid commentary from driver Justin Allgaier and a host of guests.",
+      "podcast_guid":"a298c383d6b348c8b64df3c9002b3da7",
+      "slug":"DGT8888908696",
+      "title":"JR Motorsports Up Front - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/4e577648-4bf6-11e9-81be-7b1c6babb56f/image/1ae7aaa9496d54aca20a1a50f1f2ad63c6c5b8afd32cb1c5028a099b2c8ab7be5098a574b6b75373f21bad1d0786be0d4a3533e523e326a5de8db5e5a1c6d691.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:59.838823+00:00"
+   },
+   {  
+      "id":282,
+      "summary":"An in-depth look at the personalities of JR Motorsports as well as insights to drivers Regan Smith, Kevin Harvick, Chase Elliott, and Dale Earnhardt Jr. regarding the upcoming race weekend.",
+      "podcast_guid":"56951a4a6ff6495f8c75e972d53a5bc2",
+      "slug":"DGT9846107245",
+      "title":"JRM 360 The Podcast - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/5a1cf0ac-4bf6-11e9-9873-4b728ed56120/image/131be6156038c97e698db933644935678c8f9eae271bbe1624a85e77f14e474e18c869a01bc131f8e4b08be0ef43d5d31184f897b1937b39703f7ec9d1e1f24f.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:58.649142+00:00"
+   },
+   {  
+      "id":281,
+      "summary":"Fast Lane Family is a lifestyle podcast featuring the perspectives, stories and relationships of Kelley Earnhardt Miller and teenage daughter Karsyn Elledge. They converse with key NASCAR influencers who similarly live life in the fast lane while tackling typical mother daughter issues in their atypical reality, living as Earnhardts.",
+      "podcast_guid":"d1270639ed384704a06ce18855111225",
+      "slug":"DGT4447344033",
+      "title":"Fast Lane Family - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/41041ab4-4bf6-11e9-96e3-4fa63be18f8e/image/7150e52b7556898b704f32fea802e2fb37433da978315094db582d298f220ded5a81720a2a4aa56d8aa1639ae4037084ebbe866bc6b8c529ccb06c66e552ab65.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:56.032309+00:00"
+   },
+   {  
+      "id":280,
+      "summary":"Kerry Earnhardt and L.W. Miller are your guides through Earnhardt Outdoors, a podcast built on the passions and experiences of two lifelong outdoor enthusiasts. Earnhardt Outdoors features stories, tips, and good-natured commentary while staying true to its focus of family, fun, and friendships.",
+      "podcast_guid":"fd35a18fe3c048aa9eff8d4be5844907",
+      "slug":"DGT5969738585",
+      "title":"Earnhardt Outdoors - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/344eb658-4bf6-11e9-914f-b3549a60f66c/image/386cd9475440e9e5ba9a22baf5bf37de48861926132d342a6fb27fe6129438455ac3eff3c6d828f1a7583d97d3db1706c5d7a1cc26e53dfd4504c73156ce6d91.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:55.114124+00:00"
+   },
+   {  
+      "id":279,
+      "summary":"From atop the spotter\u2019s stand to behind the microphone, spotters TJ Majors and Brett Griffin bring a whole new perspective to Dirty Mo Radio. They will debate back and forth on a timer and discuss their views from the stand, hot topics in NASCAR and today\u2019s society.",
+      "podcast_guid":"bb9b7f5548e045c7bd7e486c691dc4d1",
+      "slug":"door-bumper-clear",
+      "title":"Door Bumper Clear - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/2907eaf8-4bf6-11e9-abc5-13064e677a93/image/84c653a52b84e976703e2dbf30a5521fee91854e9dd758dfbd2121e09776dde325b0ac1ad91eab2cc4be73996fa937cb76b3800a53911df4d7c87214d09c2d8c.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:52.121348+00:00"
+   },
+   {  
+      "id":278,
+      "summary":"Refurbished from the 2006-07 SPEED Channel television series, Back In The Day is your NASCAR time machine that revisits auto racing\u2019s milestone moments, influential figures, and historical highlights.\u00a0 Ron Lemasters and Steve Richard provide this boost of high-octane nostalgia, while NASCAR historian Buzz McKim answers questions submitted by passionate race fans via social media.",
+      "podcast_guid":"ae1c26591ae2498f94b9db62767e2207",
+      "slug":"DGT6327768470",
+      "title":"Back In The Day - Dirty Mo Media",
+      "image_url":"https://megaphone.imgix.net/podcasts/19406302-4bf6-11e9-8b8e-dbe809ba8df6/image/a0f8f3db1372e61837d778491f773a9266bf3552871a4f629d0e1b812aae5837ba8fb31a16ccce90fe7be4584fbfe3be7bf4f6dd37565777ef3f9c3010592afe.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:51.538007+00:00"
+   },
+   {  
+      "id":12,
+      "summary":"What\u2019s really going on inside the Trump White House? As an advisor to the new administration and someone who has served in two Republican White Houses, Bill Bennett will explain the Trump agenda in clear and candid terms and give you a behind-the-scenes look at the new president through interviews with the highest members of his administration and inner circle. Let Bill Bennett be your guide to Washington D.C. and all things Trump-related.",
+      "podcast_guid":"c1799db4599a4dba8eacd3f3dacb87a6",
+      "slug":"bill-bennett-show",
+      "title":"The Bill Bennett Show",
+      "image_url":"https://megaphone.imgix.net/podcasts/f5dd3898-f21c-11e6-9101-eb937baab91a/image/uploads_2F1487088476018-93nm80spzk0zqehz-ceef815ce2990312ccb4d08ba5ff37da_2FBill%2BBennett%2BShow%2BFINAL%2BCOVER.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:48.662663+00:00"
+   },
+   {  
+      "id":216,
+      "summary":"Self Service is your cosmic comfort zone, an \u201cinner-beauty school\u201d where self-care is celebrated, where getting real with emotions is a treat, and an interest in thoughtful, funny conversations, weird wellness and astrology is unabashed. It\u2019s where being a little self-indulgent isn\u2019t just a shame-free act of self-love, it\u2019s a necessary launchpad into a life that\u2019s wholly ours, in a world where we feel good about taking up space. Here, we serve our hearts. We rant. We grow. And we tune the eff up. #SelfServicePodcast",
+      "podcast_guid":"9fd8c8621f61474cb62155c0d64076b8",
+      "slug":"self-service",
+      "title":"Self Service with Jerico Mandybur",
+      "image_url":"https://megaphone.imgix.net/podcasts/ddc535e6-e4d1-11e7-ad66-6bb34219da35/image/uploads_2F1515014560999-qvy37h4rw9-7da57bf6cab8e93f36d9498998e3ef6d_2FSelfServiceCoverArt.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:47.619143+00:00"
+   },
+   {  
+      "id":180,
+      "summary":"On each episode of #LIPSTORIES influential female founders, creators and thought leaders take listeners through some of their most notable, inspiring, funny stories from their everyday lives\u2014while they\u2019re out traveling the world, crushing it at work, or even just hanging out with friends. Presented by Girlboss Radio in partnership with Sephora Collection.",
+      "podcast_guid":"dbf6de2ac11440659d7798fd3bdd1424",
+      "slug":"lipstories",
+      "title":"#LIPSTORIES",
+      "image_url":"https://megaphone.imgix.net/podcasts/bfcc2902-3d30-11e8-b8ac-8f93f28376dc/image/uploads_2F1523414044545-bvc24mroid-586f383465684c044a69fbf82545f8e3_2FLipstories_COVER.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:47.338134+00:00"
+   },
+   {  
+      "id":144,
+      "summary":"Budding business entrepreneurs, consider this your crash course in how to knock your next pitch out of the park and get the funding you deserve. In six episodes, you\u2019ll learn from Away co-founder Jen Rubio who\u2019s been through the venture capitalist gauntlet as she shares her experiences to better arm you for your own pitching endeavors. Whether that means seeking angel investors for your genius startup idea, delivering a perfect pitch in a meeting, or negotiating for the salary you want, this podcast, presented by Girlboss Radio in partnership with Uber, is a can\u2019t-miss resource for your business finesse and bottom line.",
+      "podcast_guid":"6f43d045b9874beebec6826ecef6bcbb",
+      "slug":"jump-start",
+      "title":"Jump Start",
+      "image_url":"https://megaphone.imgix.net/podcasts/5699cf84-ccbe-11e8-9b8e-078e1f388b02/image/uploads_2F1539197872503-l05jmrkeap-b8e57f4ebe65dd4fe3bc89f449b5c830_2FUber-JumpStart-logo-white.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:47.054279+00:00"
+   },
+   {  
+      "id":219,
+      "summary":"Hi. I\u2019m Jen Gotch and this is my podcast.  It\u2019s kinda weird, and original, and funny and honest just like me.  Each week I\u2019m gonna get in your ear, tell you about my fears, my pain, my triumphs and hopefully in the process help you become more self aware, build your own emotional intelligence and more than anything else FEEL LESS ALONE.  Please subscribe and leave a nice review with all the stars; my parents are checking them every day and I really don\u2019t want to let them down.",
+      "podcast_guid":"238e7cb938c8447e89268d0e3148c11b",
+      "slug":"jen-gotch",
+      "title":"Jen Gotch is OK...Sometimes",
+      "image_url":"https://megaphone.imgix.net/podcasts/a55091b4-5863-11e8-96d0-0b4f41242eba/image/uploads_2F1526413418445-4y6rxd2elxi-5246b9fc6f6b7315f097acdbaead2677_2FJGOKAY-logo.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:46.252291+00:00"
+   },
+   {  
+      "id":66,
+      "summary":"The best and brightest female entrepreneurs, creatives, and founders get really real with host Noor Tagouri when it comes to nurturing self-development and well-being in a bustling, always-on world. Whether it\u2019s identifying a sense of purpose in your day-to-day, finding productivity hacks, taking care of relationships, changing careers, or cultivating a greater sense of self-love, this podcast presented in partnership with TUMI is an unmissable toolkit for the on-the-go individual in search of a happier, more fulfilling life.\u200b\u200b",
+      "podcast_guid":"be5bf91a91654307866e861b0ad586d5",
+      "slug":"in-progress",
+      "title":"In Progress",
+      "image_url":"https://megaphone.imgix.net/podcasts/7edeb084-b61d-11e8-ad4f-3b5011c2a281/image/uploads_2F1536762834475-nw99g6zg6n-f325766a5045d312b36d93458343b37f_2FINPROGRESS_Cover.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:45.885787+00:00"
+   },
+   {  
+      "id":56,
+      "summary":"Each week on Girlboss Radio, you'll hear honest conversations with trailblazing women. These women go deep on what it takes to build a successful career or grow a business with staying power\u2014while living life on their own terms and navigating personal and professional curveballs. Expect hilarious, vulnerable, ~useful~ conversations that humanize the known, champion the unknown, and laugh a little at the absurdity of life. Hosted by Sophia Amoruso, CEO and founder of Girlboss and Neha Gandhi, editor in chief and COO of Girlboss.",
+      "podcast_guid":"63e0a81b93734288852229c424cc17c1",
+      "slug":"girlbossradio",
+      "title":"Girlboss Radio with Sophia Amoruso",
+      "image_url":"https://megaphone.imgix.net/podcasts/79e6dcf6-76f3-11e7-9c7e-f79509699315/image/uploads_2F1554226539741-u0zx9pvyrn-e02ab4f2740f5e8397db5918110b112f_2FGirlbossRadio-Art-2019.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:42.485046+00:00"
+   },
+   {  
+      "id":228,
+      "summary":"Interviews about the pivotal moments that fueled fascinating creative careers. Hosted by Brian Koppelman.",
+      "podcast_guid":"df93ca0c7b76448c88666c64f2218cb8",
+      "slug":"themomentwithbriankoppelman",
+      "title":"The Moment with Brian Koppelman",
+      "image_url":"https://megaphone.imgix.net/podcasts/320694d6-8289-11e5-b42a-9ff54c4809da/image/uploads_2F1509477601184-lr2wv8z4d9k-ecc309e84981d06ce14984168d8c82af_2FThe%2BMoment%2BCover%2B-%2BFINAL.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:37.335193+00:00"
+   },
+   {  
+      "id":129,
+      "summary":"It's not just crazy talk, it's Psychobabble - the official free audio podcast from YouTube sensation Tyler Oakley. Listen each week as he and his bestie Korey Kuhl bring you a half hour of unfiltered gossip sessions, pop culture scrutiny, and stories never told before.",
+      "podcast_guid":"4a06775924a64689ad5fbb6268cfc13a",
+      "slug":"psychobabble",
+      "title":"Psychobabble with Tyler Oakley & Korey Kuhl",
+      "image_url":"https://megaphone.imgix.net/podcasts/f1607184-15c1-11e9-9cfe-4b0006ae479c/image/0cfc4529a462cbca69b611c267d2462fafd0e08be1f9f24696c657a64a1c3c3590240f0b087576ecef2c0229189af8483dcedaba770fb0a37c05bf70dbd45830.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:32.763606+00:00"
+   },
+   {  
+      "id":199,
+      "summary":"Crimetown Presents is an investigative anthology podcast series created by Marc Smerling and Zac Stuart-Pontier.  Every season they introduce you to a new serialized story that pushes the boundaries of storytelling, sound design and music.\r\n\r\n\r\nSeason Two, The Ballad of Billy Balls*: it\u2019s 1982, and a man bursts into an East Village storefront apartment and shoots punk musician Billy Balls. Author and activist iO Tillett Wright and Crimetown Producer Austin Mitchell unravel a mystery of love and loss, the tender binds of family, and the stories we tell ourselves just to survive.  \r\n\r\n\r\nSeason One, The RFK Tapes:  Zac Stuart-Pontier and Bill Klaber take a trip down a rabbit hole surrounding the assassination of Senator Robert F. Kennedy.  Featuring never-before heard police recordings, The RFK Tapes starts out a murder investigation and ends up revealing the power of conspiracy theories, and why it\u2019s human nature to believe in them.\r\n\r\n\r\n* scroll down to see the episodes of Crimetown Presents: The Ballad of Billy Balls.",
+      "podcast_guid":"35ee7ed09b7e49b99dc8babe8d40387e",
+      "slug":"the-rfk-tapes",
+      "title":"The Ballad of Billy Balls / The RFK Tapes",
+      "image_url":"https://megaphone.imgix.net/podcasts/cea1a7b6-1ffe-11e9-8fef-2f5ab2a869af/image/uploads_2F1553134806123-w71nlomzvlg-5affeb9fc83181e7d01f135f7679491a_2FBilly%2BBalls%2BCover%2BFINAL.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:31.938583+00:00"
+   },
+   {  
+      "id":43,
+      "summary":"\u201cHistory is a version of past events that people have decided to agree upon,\" Napoleon Bonaparte once famously said. In other words, there are many sides to every story.\r\n\r\nWHAT REALLY HAPPENED? chronicles documentarian Andrew Jenks as he examines and contextualizes famous figures and historical events, while discovering untold stories and unraveling newfound narratives. With today\u2019s technology, access to information, the ability to communicate from all parts of the globe, and cross-reference historians, Jenks takes on his own rogue investigations. He does not go down the rabbit hole of conspiracy theories, nor does the show purport to solve every historical mystery. Instead, Jenks often times throws a wrench in the gears of history, getting either closer to the truth or creating more questions. WHAT REALLY HAPPENED is executive produced by Seven Bucks Productions\u2019 Dwayne Johnson, Dany Garcia and Brian Gewirtz, Andrew Jenks and Cadence13.",
+      "podcast_guid":"4637f08f81294b4fb5b808111d9d1131",
+      "slug":"what-really-happened",
+      "title":"What Really Happened?",
+      "image_url":"https://megaphone.imgix.net/podcasts/a593f104-0eff-11e9-8942-cfb3b0ce1765/image/2c63cc175b11cd62c91e57df9b221f3b208c0a0d4fd7fed11c4248715f6c74dc58762b59464caee3ee1f812930c1e250ade3560acf1cb21b14643125d43f1284.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:30.758961+00:00"
+   },
+   {  
+      "id":13,
+      "summary":"<p>Adrian Wojnarowski, the most dominant force in NBA reporting, brings you inside the league with The Woj Pod. Woj is probing the biggest newsmakers in the sport \u2013 from the commissioner, to general managers, coaches and star players \u2013 to bring listeners inside the processes, personas and stories that impact the NBA. Beyond longer sit-down interviews in our New York studios, Woj will deliver real-time podcasts with league personnel built around breaking news.</p>",
+      "podcast_guid":"8498593254e9498db6772d94d6f15000",
+      "slug":"thewojpod",
+      "title":"The Woj Pod",
+      "image_url":"https://megaphone.imgix.net/podcasts/af8681fe-0eff-11e9-9bf8-2b28416637d1/image/bd1e6d172c7ce1fe8ec5fde8968206612ee7b8a2b047ffd1342ad51b0a24a6ec82e2841174a6728c80e52246147c9af7011d4b41430ac75f6555b78b1ce7145d.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:26.523587+00:00"
+   },
+   {  
+      "id":28,
+      "summary":"\"The Tony Kornheiser Show\" (now available exclusively on-demand) is a topical, daily talk show that starts with sports and quickly moves into politics, current events, entertainment and, really, whatever happens to be on Tony\u2019s mind that day.  The format of the show\u2014regular sit-in guests with familiar interviews and segments\u2014highlights not only the unique perspective of Tony Kornheiser but also the expertise of his network of friends.\n\nJoin one of the most recognizable and outspoken commentators of sports and entertainment (longtime radio host in Washington, DC and current co-host of ESPN's PTI) and enjoy original episodes published every weekday \u202astarting September 6th.",
+      "podcast_guid":"957252654087468c9d594cbdf996464d",
+      "slug":"the-tony-kornheiser-show",
+      "title":"The Tony Kornheiser Show",
+      "image_url":"https://megaphone.imgix.net/podcasts/1e3b06e8-0eff-11e9-aa8d-c36e28625ee8/image/31c8c6662f59ed90e0db4241db7c82d48d168d5251d9ac2aa0e1be1e688d63f382f2e934f58bfa7c9be850c8e34590d0010802367f666d0381f482474feadbc8.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:17.118639+00:00"
+   },
+   {  
+      "id":55,
+      "summary":"Before \u201cPTI\u201d or \u201cFirst Take\u201d or any of today\u2019s popular sports debate programs on TV, there was <em>The Sports Reporters on ESPN. For nearly 30 years, every Sunday morning, top sportswriters exchanged in passionate, intelligent conversation about the major sports issues and personalities today. Now, anchored by Mitch Albom and Mike Lupica \u2013 two of The Sports Reporters longest-standing members - the magic of the show is in podcast form, enabling the hosts to continue their highly popular tradition with the benefit of twice-a-week perspectives. In addition to Albom, of the Detroit Free Press, one of the most decorated sportswriters in history, and Lupica, perhaps the country\u2019s most recognized and opinionated sports scribe, a third voice will join each program, ranging from former Sports Reporters panelists like Bob Ryan, Bill Rhoden and Christine Brennan, to new and fresh voices in the industry. Join the best conversation in sports every Monday and Friday.",
+      "podcast_guid":"f28f15fe72324a4a866b0aa1b97c999f",
+      "slug":"the-sports-reporters",
+      "title":"The Sports Reporters",
+      "image_url":"https://megaphone.imgix.net/podcasts/259394d6-142d-11e9-9fa9-6373ee40b76a/image/0207e1da08cd73181f75fa617d955db0c5e8f6465991780878d4300949d6b139da3aa01896813f2cc73fe2a43644f921dd8ade971ffd7890a094889a1fd95836.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:13.656996+00:00"
+   },
+   {  
+      "id":288,
+      "summary":"Throughout his three-decade long career with the NFL, Mike Lombardi worked as an NFL executive with the\u00a0San Francisco 49ers,\u00a0Cleveland Browns,\u00a0Philadelphia Eagles, and\u00a0Oakland Raiders alongside\u00a0NFL\u00a0legends including\u00a0Bill Belichick, Bill Walsh and Al Davis.\u00a0\u00a0 \r\n\r\nOn\u00a0The GM Shuffle,\u00a0Lombardi and co-host Adnan Virk will tackle a wide range of topics weekly\u00a0within the world of the NFL and break down everything listeners and fans need to know about players, coaches, organizations, the draft, free agency, and all the NFL storylines in a way that only they could with the success and credibility they bring to the podcast audience.",
+      "podcast_guid":"6e78c147fc4844e3b45626a781e9df7f",
+      "slug":"gm-shuffle",
+      "title":"The GM Shuffle with Michael Lombardi and Adnan Virk",
+      "image_url":"https://megaphone.imgix.net/podcasts/bbd4153c-56e6-11e9-9b8f-5bb764e9f94f/image/uploads_2F1554837135467-jei5fqqvouo-1675c4ddf0fa61f747c3e1df027fc44d_2FTheGMShuffle-C13-cover.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:13.484719+00:00"
+   },
+   {  
+      "id":275,
+      "summary":"The Angry Americans is hosted by Paul Rieckhoff, the founder of Iraq and Afghanistan Veterans of America, and an Iraq War veteran himself, serving from 2003 to 2004, and he\u2019s angry. The type of righteous anger that started the American Revolution and sparked the Civil Rights Movement. This show is built on the belief that If you\u2019re not angry, you\u2019re not paying attention.",
+      "podcast_guid":"c1fd0ca31aad4a5aa683f61324dbb994",
+      "slug":"DGT9206047162",
+      "title":"The Angry Americans",
+      "image_url":"https://megaphone.imgix.net/?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:13.323010+00:00"
+   },
+   {  
+      "id":3,
+      "summary":"An NCAA, professional, and international lacrosse champion, Paul Rabil splits his time between the gym and office, where he operates companies, oversees a lengthy investment portfolio, and cuts weekly video and audio content. Mashable said, \"Talking to Rabil can feel more like a conversation with a business development executive than the average pro athlete.\" Suiting Up Podcast is an interview style show that explores the playbook of tools, skills, tips, and the psychology for success from some of the world's greatest athletes, entrepreneurs, and entertainers. Previous guests include Bill Belichick, Venus Williams, and Gary Vaynerchuk.",
+      "podcast_guid":"02f5f949786f45e69b544bc3b5bfd9f6",
+      "slug":"suiting-up",
+      "title":"Suiting Up with Paul Rabil",
+      "image_url":"https://megaphone.imgix.net/podcasts/c8536152-0f6d-11e9-8f36-1390b5c14f7d/image/ed1bc110f44ecdc3719d404d9dfb1fadbf424d7aabadef6a589c468b97c0ba0416c2b2adb6116b85aeaeef4b475677aba3b133a3ecf495fc2830925f52ce18d6.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:11.631771+00:00"
+   },
+   {  
+      "id":176,
+      "summary":"Portland Trail Blazers star - and former journalism major at Lehigh \u2013 CJ McCollum hosts Pull Up alongside Jordan Schultz, of \"The Boardroom\" on ESPN+. Pull Up is a one-of-a-kind show that will give an unmatched look into the NBA and the life of a basketball superstar. CJ has been lauded as the next breakout star in sports media. But why wait till he retires to begin his next career? In Pull Up, CJ will talk about everything from where star players will go in free agency, to what it\u2019s like to drop 50, to his favorite glass of wine. Pull Up will provide unmatched NBA access, plenty of laughs, and world-class guests in an unprecedented sports podcast showcasing an NBA and media star at the height of his career.",
+      "podcast_guid":"dd77178b801d471992a8be085eb5fbbb",
+      "slug":"pull-up-with-cj-mccollum",
+      "title":"Pull Up with CJ McCollum",
+      "image_url":"https://megaphone.imgix.net/podcasts/ed29cd28-0efe-11e9-9849-7353f03021d6/image/7f8143800d180979e174c0b7ea30f20040bd416545053751c123b8dec89b681dbb2c7b3fba870f45483391e01fc029bb15289efa504c30e2dba70e2a68009f90.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:10.395215+00:00"
+   },
+   {  
+      "id":93,
+      "summary":"Host Michael Sheehan's ability to help people communicate at the highest level was dubbed by New York Magazine&nbsp;as \"the Sheehan effect.\" With breaking news happening constantly, Sheehan looks outside the 24/7 news cycle to wonder what politicians can learn from professional wrestlers. How politicians can get laughs, intentionally, with advice from renowned comedians. And how losing candidates can be turned into winning ones with insight from legendary professional sports coaches. It's politics, policy, and people through Alice\u2019s looking glass.",
+      "podcast_guid":"c5ed70d1b17b4d8598206f7997a78ff2",
+      "slug":"politics-as-unusual",
+      "title":"POLITICS AS UNUSUAL",
+      "image_url":"https://megaphone.imgix.net/podcasts/e1708396-0efe-11e9-8af3-7f9f91a2b55e/image/show-cover.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:10.058397+00:00"
+   },
+   {  
+      "id":156,
+      "summary":"<p>In an intimate one-on one setting, Lindsay Czarniak invites her guests, who also happen to be the biggest \"players\" in country music, to reflect on perhaps the only thing as important to them as music...sports! Join Lindsay as she leads her guests in conversation about the significance of sports in their lives and how that has impacted their&nbsp;personal journey, revealing more about the passions, motivations, and inspirations behind these artists.</p><p><br></p>",
+      "podcast_guid":"dc5bb17810b74ad0bd48abc496130c6c",
+      "slug":"players-with-lindsay-czarniak",
+      "title":"Players with Lindsay Czarniak",
+      "image_url":"https://megaphone.imgix.net/podcasts/312f5bba-0efe-11e9-8e9e-d73c163296c0/image/5a1f4294521e0c69af38e687758ab40ab53dad44fa53aa98f4ae9ca1a64a4707a45842117d5d2662a4b7695355da6298919434888e6e67e71896526d371d8dfe.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:09.755082+00:00"
+   },
+   {  
+      "id":31,
+      "summary":"<p>Join award-winning journalist and best-selling author James Andrew Miller as he uncovers bold beginnings of success stories in the worlds of television, movies, sports, music, and business. Experience all the unpredictable moments, pivotal junctures, and strokes of luck that turn great ideas into formidable realities -- as told by the insiders who were there from the start.</p>",
+      "podcast_guid":"95f1d62a57ee4030b4f3c999ed4190df",
+      "slug":"origins-with-james-andrew-miller",
+      "title":"Origins with James Andrew Miller",
+      "image_url":"https://megaphone.imgix.net/podcasts/ec15db80-0efd-11e9-9449-b72fc9c58b1b/image/470b3a8a2f84e16cfa8e5265ca6879c269e42a95511f91547d2170094f164178041c9724e7b54efa54c49161e603625f8c969f280ac9401698cea82af3e6b6cd.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:08.259817+00:00"
+   },
+   {  
+      "id":287,
+      "summary":"MT Nesters is a podcast designed to help inspire, motivate and educate Moms and Dads during this challenging and exciting chapter in life.  We will be interviewing guests on the podcast that are either experts in relevant fields, i.e. retirement, financial management, beauty, marriage, health, parenting, or MT Nesters with inspiring stories. In addition, MT Nesters will offer stories, remedies, advice and fun activities.",
+      "podcast_guid":"bbaeb1772a464f5ba41e838be7cc4bee",
+      "slug":"mt-nesters",
+      "title":"MT Nesters",
+      "image_url":"https://megaphone.imgix.net/podcasts/d8f821c0-56e7-11e9-9fc4-ffd3aac3e2f1/image/uploads_2F1554498498545-8btoexnuhmv-3438b81c0a449dec294b0c1daef0e637_2FMTNesters_Cover.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:08.104365+00:00"
+   },
+   {  
+      "id":69,
+      "summary":"Three Michigan grads and longtime/sometimes friends discuss sports, politics, current events and whatever else.",
+      "podcast_guid":"2e27d7f498e24de88d780f04407c3a7c",
+      "slug":"michigas",
+      "title":"Michigas",
+      "image_url":"https://megaphone.imgix.net/podcasts/4fae4448-0f94-11e9-8be1-2f72a25c1f92/image/image.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:07.843731+00:00"
+   },
+   {  
+      "id":250,
+      "summary":"Building on the success of her instant No. 1 NY Times-bestselling book I\u2019ve Been Thinking\u2026Reflections, Prayers and Meditations for a Meaningful Life, Maria Shriver continues to explore the life topics, issues and ideas that we\u2019re all thinking about.\r\n\r\nThrough intimate, thought-provoking conversations with friends and other individuals she respects and admires, Maria dives into issues like love, pain, forgiveness, gratitude, family, faith, connection, loneliness, the art of self-reinvention, and more to inspire you to reflect on your own life and have more meaningful conversations with the people you love.",
+      "podcast_guid":"cf454e3279814bd482c5a119a3859468",
+      "slug":"meaningful-conversations",
+      "title":"Meaningful Conversations with Maria Shriver",
+      "image_url":"https://megaphone.imgix.net/podcasts/cd31d90a-0f8c-11e9-aca4-5b3cef8ceec1/image/uploads_2F1546543198797-oo98h0anv59-72c43a5382c5ced6517c678455119531_2FMaria%2BShriver%2BCover%2BUpdate%2Bv2%2B_281_29.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:07.439730+00:00"
+   },
+   {  
+      "id":277,
+      "summary":"In today\u2019s social media culture, it\u2019s easy to look around and believe that everyone else has life figured out. But things aren\u2019t always as they appear! Each week, fashion designer, NYT bestselling author and lifestyle expert, Lauren Conrad will host a variety of experts for candid conversations on everything from life, love, and business! Whether it\u2019s the ideal seven-minute morning beauty regimen, how to snap that perfect IG-worthy flat lay or tips for tricking party guests into believing you\u2019re a gourmet chef, Conrad\u2019s guests will offer listeners tips for quickly navigating a Pinterest-obsessed world, as well as offering a healthy dose of reality.  Because life isn\u2019t always about knowing how to do everything perfectly yourself; it\u2019s about knowing the people who do!",
+      "podcast_guid":"958c1864c3934b11990e4f09d8de0fc5",
+      "slug":"asking-for-a-friend",
+      "title":"Lauren Conrad: Asking for a Friend",
+      "image_url":"https://megaphone.imgix.net/podcasts/fed1db38-49a5-11e9-8d05-cb65d52e3768/image/uploads_2F1552930715084-hkt939pysek-27cec4b9d8dc881232da5ae47eafc513_2FLC_Podcast_Cover_Art_1.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:07.286144+00:00"
+   },
+   {  
+      "id":249,
+      "summary":"Testing features since Jan 31, 2019.",
+      "podcast_guid":"469ec467b1944925a98929b87e572769",
+      "slug":"jsbt",
+      "title":"Jim & Sean Break Things",
+      "image_url":"https://megaphone.imgix.net/podcasts/2c3b6dfc-2591-11e9-bcf8-bb31371650ee/image/uploads_2F1548964064889-5wmeg8b3cu8-e39df40cec15c85471ad96ec76332bde_2FCadence13%2B-%2BMic%2BFlag.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:07.216769+00:00"
+   },
+   {  
+      "id":264,
+      "summary":"Welcome to Hello Monday \u2013 a show where senior editor at large Jessi Hempel investigates how we\u2019re changing the nature of work, and how that work is changing us. What does work mean to us? Should we love what we do? How do we make sure we still have jobs tomorrow, and that they\u2019re good jobs \u2013 jobs we feel good about? \u00a0Each week, Jessi will talk to featured guests who have navigated layoffs, company collapses, evaporating industries, and emerged from these transitions happier and more successful. We'll infuse these interviews with reporting from LinkedIn managing editor Caroline Fairchild to unearth and present lessons that apply to our own careers.",
+      "podcast_guid":"bdfc0b509b5a46b5b8b00826b499163a",
+      "slug":"hello-monday",
+      "title":"Hello Monday",
+      "image_url":"https://megaphone.imgix.net/podcasts/45e9209a-360e-11e9-b0a2-2748004fec11/image/uploads_2F1550776715611-9bjazamndy-9818a0ce02a22ef0316823e92db58b33_2FHello%2BMonday%2Bpodcast-01.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:06.943567+00:00"
+   },
+   {  
+      "id":113,
+      "summary":"During the course of the election campaign this fall, we're going to talk about the issues. We're not going to talk about the races, the numbers, the polls. We're going to talk about the issues we think voters should be thinking about before they vote.&nbsp;</p><p>And we're going to be doing it with some of the nation's leading experts. People like Bill Clinton, Madeleine Albright, Susan Rice, Wendy Sherman, Seth Moulton and others.\r\nWe're going to talk about issues like terrorism, the President's assault on the media, the Iranian nuclear deal, North Korea, and cyber war. We're talking about the most important issues of our time.\r\nRichard A. Clarke served the last three Presidents as a senior White House Advisor holding the titles of Special Assistant to the President for Global Affairs, National Coordinator for Security and Counterterrorism, and Special Advisor to the President for Cyber Security.",
+      "podcast_guid":"5ad4c91fd34e41e6b3c30eddce46a6a2",
+      "slug":"future-state",
+      "title":"FUTURE STATE",
+      "image_url":"https://megaphone.imgix.net/podcasts/82464f70-0ed8-11e9-b307-4bdbf5025caf/image/62ee0db33687cc9986ac5cf2191a16a6a295aefff27ccfa94d79c0f14ac0b1ce144796fd31e9c3fb707baef8472fd4e8590ca631e51e0253a24d10bf0211a3dd.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:06.557531+00:00"
+   },
+   {  
+      "id":274,
+      "summary":"Essential habits for women at work. Diana interviews authors and thought leaders who have something to teach women about how to be more awesome at work. Diana acts like a guinea pig for each episode, trying the advice and instruction before each taping to report back on how well it worked for her.",
+      "podcast_guid":"656e496ef01e4525b1a536854caf90cc",
+      "slug":"professional-af",
+      "title":"Diana Kander: Professional AF",
+      "image_url":"https://megaphone.imgix.net/podcasts/45e5aa4a-412c-11e9-91f0-ff62e27aa8ab/image/uploads_2F1551999437071-yiftf1e16cf-957e419d9c87c7f130d5aa7dc6caba2e_2FDiana%2BKander%2B-%2BProfessional%2BAF%2BCover%2BFINAL.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:06.323118+00:00"
+   },
+   {  
+      "id":191,
+      "summary":"<p><em>David Ortiz: The Big Papi&nbsp;Story</em>&nbsp;captures the spirit of Boston, a city with no shortage of sports icons, and celebrates the rise of a man from the Dominican Republic who willed himself to greatness \u2014 and who, in the process, changed the culture of an entire city.&nbsp;</p><p>In addition to Ortiz\u2019s successful playing career, the series (Executive Produced by Emmy Award winner Zak Levitt and narrated by Michael Chiklis) will examine pivotal moments in his life off the field, from his difficult assimilation into American culture, to the sudden and tragic loss of his mother, to the raw emotion he shared with&nbsp;Hub fans following the tragic Boston Marathon bombing in 2013.\u200b</p><p><br></p>",
+      "podcast_guid":"09366a5fae82467291161fee7897cd1e",
+      "slug":"david-ortiz-the-big-papi-story",
+      "title":"David Ortiz: The Big Papi Story",
+      "image_url":"https://megaphone.imgix.net/podcasts/6db4dc52-0ed8-11e9-bc5f-bb7b5feb7133/image/e4d0591231c7fecbcfc6f7ffcf2b3acfa10c7e29a1bccc0156a37b21d4663d851f727b8f4b3e10590a58f5cefad9fc86a1d04c10c2d41535ce3a556e4f4e43e9.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:06.074522+00:00"
+   },
+   {  
+      "id":285,
+      "summary":"If you\u2019re not angry, you\u2019re not paying attention. The state of affairs in our country has made us all Angry Americans. But it\u2019s righteous, justifiable, vigilant anger. An anger that drives positive change. The anger that started the American Revolution and drove the Civil Rights movement. In times of national distress, it\u2019s our anger that can unite and inspire us all. Your host is Paul Rieckhoff. He\u2019s a fighter, a patriot, and an independent political and media force to be reckoned with. After serving as a soldier in Iraq in 2004, Rieckhoff emerged as one of the most dynamic political and social leaders in America. In every episode, he breaks down the most important issues facing our country. And he interviews the most influential and compelling people. He\u2019s taking on Republicans, Democrats\u2014and everyone in between. If you\u2019re in the angry middle, Angry Americans reminds you that you\u2019re not alone. We\u2019re all in this together. Join the Angry Americans movement and subscribe now. Produced by Righteous Media.",
+      "podcast_guid":"480ec3605c18492e9df09a980aff81a2",
+      "slug":"angry-americans",
+      "title":"Angry Americans with Paul Rieckhoff",
+      "image_url":"https://megaphone.imgix.net/podcasts/81c32e98-50b8-11e9-9c3e-f7250fa89154/image/uploads_2F1553708751965-hfbl31p2hpe-068dc40ce342c99c76fb3b09b1e2e46f_2FAngry_Americans.PNG?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:05.874030+00:00"
+   },
+   {  
+      "id":213,
+      "summary":"Digestible financial news. Get smarter fast with an entertaining breakdown of our top 3 business stories in 15-minutes. Pairs perfectly with your commute, workout, or morning oatmeal ritual. Hosted by Jack Kramer and Nick Martell.",
+      "podcast_guid":"11178280eeea4101ad878890affae484",
+      "slug":"marketsnacks-daily",
+      "title":"Snacks Daily",
+      "image_url":"https://megaphone.imgix.net/podcasts/6f5e0684-0f62-11e9-8892-c3999a92d94d/image/uploads_2F1553522986514-b6tqm8dlesw-13fcf874f9a7fdbf604a89a1b1967e94_2FiTunes%2BLogo.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:05.192719+00:00"
+   },
+   {  
+      "id":111,
+      "summary":"Introducing The Punies, an eclectic group of neighborhood friends who play sports and take on adventures together. Created by NBA Champion Kobe Bryant and featuring original songs and an unforgettable cast of characters known as The Good Ol\u2019 Gang, each episode shares important life lessons on how to play with joy and limitless imagination, the way sports should be played.",
+      "podcast_guid":"897eab5f5e9b45178ad409b97b4a62b6",
+      "slug":"the-punies",
+      "title":"The Punies by Kobe Bryant",
+      "image_url":"https://megaphone.imgix.net/podcasts/6a2271d8-0f61-11e9-9575-57e9765d69c7/image/75c14fa4bca5c4619fe725f99bb77163306c825e8340bb486c021cb898bb70f3049b0dd39be0d09276feb71f9fc7c73dd188cc7d5f3cb40a0ec4d3b8c72808c6.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:04.672749+00:00"
+   },
+   {  
+      "id":276,
+      "summary":"Revisionist History is Malcolm Gladwell's journey through the overlooked and the misunderstood. Every episode re-examines something from the past\u2014an event, a person, an idea, even a song\u2014and asks whether we got it right the first time. From Pushkin Industries. Because sometimes the past deserves a second chance.",
+      "podcast_guid":"b7065ad6ca014f5787f377c3d999e323",
+      "slug":"DGT1529470101",
+      "title":"Revisionist History",
+      "image_url":"https://megaphone.imgix.net/podcasts/1427a2f4-2674-11e6-a3d7-cf7ee2a2c03c/image/uploads_2F1542302370190-aoalvw0x11n-61dc154e07933b3b8fbad8911e4d11c4_2FRevisionistHistory_Vector_withfade.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:03.265657+00:00"
+   },
+   {  
+      "id":241,
+      "summary":"Revisionist History is Malcolm Gladwell's journey through the overlooked and the misunderstood. Every episode re-examines something from the past\u2014an event, a person, an idea, even a song\u2014and asks whether we got it right the first time. From Pushkin Industries. Because sometimes the past deserves a second chance.",
+      "podcast_guid":"47e67d323d9144318766febcae85d020",
+      "slug":"revisionisthistory",
+      "title":"Revisionist History",
+      "image_url":"https://megaphone.imgix.net/podcasts/1427a2f4-2674-11e6-a3d7-cf7ee2a2c03c/image/uploads_2F1542302370190-aoalvw0x11n-61dc154e07933b3b8fbad8911e4d11c4_2FRevisionistHistory_Vector_withfade.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:02.258904+00:00"
+   },
+   {  
+      "id":240,
+      "summary":"From Rick Rubin, Malcolm Gladwell, and Bruce Headlam. The musicians you love talk about their life, inspiration, and craft. Then play.",
+      "podcast_guid":"0dcff67801264251a224e93618b1cb14",
+      "slug":"broken-record",
+      "title":"Broken Record with Malcolm Gladwell, Rick Rubin, and Bruce Headlam",
+      "image_url":"https://megaphone.imgix.net/podcasts/4b6ac962-c8ad-11e7-87b8-93ae34279a5c/image/uploads_2F1542077153479-s29qhcusu7-492a1b002799eadf4eed8fb2b5b8f693_2FBroken_Record_Logo_Final.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:01.766002+00:00"
+   },
+   {  
+      "id":270,
+      "summary":"Journalist and bestselling author Michael Lewis (Liar's Poker, Moneyball) takes a searing look at what\u2019s happened to fairness\u2014in financial markets, newsrooms, basketball games, courts of law, and much more. And he asks what\u2019s happening to a world where everyone loves to hate the referee.",
+      "podcast_guid":"ae859bdec54b4155bc532f0011756983",
+      "slug":"against-the-rules",
+      "title":"Against the Rules with Michael Lewis",
+      "image_url":"https://megaphone.imgix.net/podcasts/a37908ea-3aac-11e9-ac9c-4b09d7d72509/image/uploads_2F1551284366620-4jcgz658nl-04a44dad01fdc1c87a6e5c0957d54e97_2Flogo%2B1.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:01.434693+00:00"
+   },
+   {  
+      "id":286,
+      "summary":"Stupid Genius is the brainchild of YouTuber, Emma Chamberlain. In every episode she takes a puzzling question, like \"Why do onions make us cry?,\" and is given three guesses to try to solve it. Will she be able to do it? Listen every Thursday starting April 11th to find out!",
+      "podcast_guid":"b7850211431d4cbfaf1b2d8b2d2e7b9a",
+      "slug":"stupid-genius",
+      "title":"Stupid Genius with Emma Chamberlain",
+      "image_url":"https://megaphone.imgix.net/podcasts/d2559f3c-54a3-11e9-85f3-4b0dc7ea6463/image/uploads_2F1554139810753-xwbo2zcjoq9-6681cd7d3e94d72585c6a2a6cc177216_2FStupidGenius_FINAL.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:01.086767+00:00"
+   },
+   {  
+      "id":262,
+      "summary":"Join the Smosh family as we discuss current events, YouTube drama, give our unqualified and unsolicited advice, and whatever else is on our minds with Ian Hecox and a rotating panel of Smosh cast members, coworkers, and YouTuber guests.",
+      "podcast_guid":"fd5f7e060abf40bbbb41cd9f3b54b1cd",
+      "slug":"smoshcast",
+      "title":"SmoshCast",
+      "image_url":"https://megaphone.imgix.net/podcasts/c9009e58-3196-11e9-bcbb-0b9b42a53e6b/image/uploads_2F1553549101503-13ihho579s8-e5ea888d3416920395b25d24db90e2b4_2FUnknown.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:00.739793+00:00"
+   },
+   {  
+      "id":192,
+      "summary":"With a combined social following of over 28 million followers, best friends Alisha Marie and Remi Cruz welcome you inside their daily life for a special helping of the tea you\u2019re not getting from their channels. Think of having a sleepover with your best friends, fun and open conversation, discussing what it\u2019s really like to be a YouTuber, behind the scenes stories from their shoots, and of course lots of boy drama.",
+      "podcast_guid":"47290bab6ae242a18aa08039117f6fb5",
+      "slug":"pretty-basic",
+      "title":"Pretty Basic with Alisha Marie and Remi Cruz",
+      "image_url":"https://megaphone.imgix.net/podcasts/e3c11210-0f93-11e9-aae6-b31634153da0/image/5567db7ca6146740c3c8170933eef1706368f507f551c4a6b2b95d4589ba7c3457f35882c2182b9281d23e0905b45bee001534389bf560303c1560246be3e34d.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:33:00.073608+00:00"
+   },
+   {  
+      "id":47,
+      "summary":"Join Rhett and Link, hosts of the popular daily YouTube show Good Mythical Morning and authors of the New York Times bestseller \u201cBook of Mythicality\u201d in a candid weekly conversation for your Internetainment.",
+      "podcast_guid":"dbf288799e1142cd85ff11d7da0d3d1c",
+      "slug":"ear-biscuits",
+      "title":"Ear Biscuits",
+      "image_url":"https://megaphone.imgix.net/podcasts/daef779e-0f93-11e9-8be1-ef6a540ab876/image/e3b54b763ab34aaef4b1878a3c144794106071c70d318904c7a183df1301130097e92d00811eb671009f221ee60b8fa6e477c169a38f2b56dd4ee3a84c85ebdf.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:55.970578+00:00"
+   },
+   {  
+      "id":200,
+      "summary":"Curious is what I am, about people, places, and things. I\u2019ve been so lucky to have met a tableau of interesting characters and people in my journey on this earth, and I constantly want to find out what makes them tick\u2014what their human experience has been like. Be it someone who\u2019s super famous, someone who\u2019s going through a life transition, someone who\u2019s got a very specific job or upbringing\u2014if it sparks my interest I want to get in deep, and learn more about it. For the most part, this will be funny, but at other times we may get a little emotional, a little deep. Overall, we\u2019re just going to try and find out how people get by on this earth.",
+      "podcast_guid":"5b4f2eb5de574ba09b6430a249e40094",
+      "slug":"curious-with-josh-peck",
+      "title":"Curious with Josh Peck",
+      "image_url":"https://megaphone.imgix.net/podcasts/d6a1635a-0f93-11e9-aae6-17ded1e4cf00/image/a660c0ffd579500c450e45f3efc5d67048da2ba5eb2c6774a76332c5482fea6901448aa74e044b1e0890b01024d6ec9510a32de366f7f0b949d94e0725a94bfa.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:54.783505+00:00"
+   },
+   {  
+      "id":196,
+      "summary":"Join German actor, musician, and unintentional comedian Flula Borg as he answers the universe\u2019s biggest questions in a delicious weekly conversation sure to improve your moods.",
+      "podcast_guid":"0722ae64445b416cad83ff23503d1cda",
+      "slug":"boom-time-with-flula-borg",
+      "title":"Boom Time with Flula Borg",
+      "image_url":"https://megaphone.imgix.net/podcasts/5a27c800-0f93-11e9-b26e-ff2c20ae5f5c/image/44fe84d0c54c9407a8755752a92ae80e72c299ba6117bd05f0ccade4f6c8c97134c261f7b9f28031c59e0a1fd3f54ae151efce5bc6dca059e4a6de33e2ba8a3c.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:53.672682+00:00"
+   },
+   {  
+      "id":23,
+      "summary":"Ana Marie Cox, political columnist and culture critic, sits down with liberals and conservatives, pastors, writers, activists, and other people you should know for an open, funny, in-depth conversation about what divides us - a show about listening instead of arguing.",
+      "podcast_guid":"5afdda0d92cb438b9ceccc25ee81bc07",
+      "slug":"with-friends-like-these",
+      "title":"With Friends Like These",
+      "image_url":"https://megaphone.imgix.net/podcasts/ec66779e-0f0b-11e9-a5bb-172ac6d75ce7/image/def210f885d1f4a2f2c141749edff2d530e53acb1aa8057d4b1e05ff995c842a790f185a236bb1e86ddf1f5afdbedf0257601701f44f8a1af754495cd22101d9.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:51.043457+00:00"
+   },
+   {  
+      "id":184,
+      "summary":"<p>Can the Democrats save America? This is the story of a party\u2019s journey through the wilderness after the most crushing defeat in history. In a documentary that spans two centuries of American politics, Pod Save America's Jon Favreau talks to more than 100 strategists, historians, activists, and voters about how the party of Roosevelt, Kennedy, and Obama arrived at this moment, and how it can lead the country out.&nbsp;</p>",
+      "podcast_guid":"0201ef9596c04df7b0f3d36fe95bdc57",
+      "slug":"the-wilderness",
+      "title":"The Wilderness",
+      "image_url":"https://megaphone.imgix.net/podcasts/1a3f429a-0f0c-11e9-8e1d-2369c7692969/image/9ee9d5c660c0b07759d1ce5cd3c0ec78c067a370c3a72efec43e3240157ba1111afb44f462b9ea6e47cf1e69829fe7cedb6f93433c723eafa13ceb0132c19eb3.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:50.574922+00:00"
+   },
+   {  
+      "id":289,
+      "summary":"This is a sample/practice podcast for internal use. It is not live!",
+      "podcast_guid":"0298601e1e2a48a9b4ddaaefe99e8f0a",
+      "slug":"DGT3991692125",
+      "title":"Sample Podcast - Internal Use",
+      "image_url":"https://megaphone.imgix.net/podcasts/384c8d7e-5719-11e9-bd0f-4fb171e7d9e3/image/uploads_2F1554158664345-1bl0c2n63mv-a9b1a511bbed059e880d9d22ed81c7b3_2Fuploads_2F1518800783573-x1p9w3niz8h-40c59b2c575e1f5e248ae501cddc0609_2Fuploads_2F1517588937538-a58et6nt6jh-ad93d0972e6e5ea1ce11e23c2ecdc591_2FThe_2BSample_2BPodcast.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:50.179610+00:00"
+   },
+   {  
+      "id":49,
+      "summary":"\u201cPod Save America\u201d cohost Tommy Vietor thought foreign policy was boring and complicated until he got the education of a lifetime working for President Obama\u2019s National Security Council. His new show \u201cPod Save the World\u201d will bring you behind the scenes into White House Situation Room meetings and secret negotiations through a series of conversations with people who were there.",
+      "podcast_guid":"9dd3bb131c8e45328943257c6607d66c",
+      "slug":"pod-save-the-world",
+      "title":"Pod Save the World",
+      "image_url":"https://megaphone.imgix.net/podcasts/38913aaa-0f0c-11e9-bb68-c77e0c4995bc/image/505e186f9423bb69e0ecb7e5c570b01c56e1f8834a563c4070531291eaf0c9953ff0df0f7343cc65e1414323db09d6d10c221f459729cb46d40c2cc07df1eb11.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:26.850298+00:00"
+   },
+   {  
+      "id":107,
+      "summary":"<p>Organizer and activist DeRay Mckesson explores news, culture, social justice, and politics through deep conversations with influencers and experts, and the weekly news with fellow activists Brittany Packnett and Sam Sinyangwe, and writer Clint Smith.</p>",
+      "podcast_guid":"f308c94ce3d64e3c9930ecf000e91e6e",
+      "slug":"pod-save-the-people",
+      "title":"Pod Save the People",
+      "image_url":"https://megaphone.imgix.net/podcasts/3f8a5198-0f0c-11e9-bb35-476c8c5dd801/image/aabb919814edd6c95c98d1d8542a57fc70ed5c33f481fb12cff5aa60f0dc8b28fca48d5643a2c2516cf67fab53c611a45378f90b51d078fef8ff8b688d6d5d90.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:24.336488+00:00"
+   },
+   {  
+      "id":10,
+      "summary":"Four former aides to President Obama \u2014 Jon Favreau, Dan Pfeiffer, Jon Lovett, and Tommy Vietor \u2014 are joined by journalists, politicians, comedians, and activists for a freewheeling conversation about politics, the press and the challenges posed by the Trump presidency.",
+      "podcast_guid":"175bfb7d1d8941709fdd01460eaeefff",
+      "slug":"pod-save-america",
+      "title":"Pod Save America",
+      "image_url":"https://megaphone.imgix.net/podcasts/454f50d8-0f0c-11e9-a73b-132c930842e3/image/5e963f8f8811e208b1a90c91507a0f7880c7b861bf81c290e44c193e891a507bbe99798dd7ed0cd795a4fede54560f167fa023553f66c29ff86bf9f8322c7f83.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:18.779062+00:00"
+   },
+   {  
+      "id":174,
+      "summary":"<p>Jason Kander is an army veteran from Kansas City, Missouri and the first millennial&nbsp;elected to statewide office in the United States. He's traveling the country to help the 54% of us who didn't vote for Donald Trump talk to those of us who did about the most divisive issues in our country.&nbsp;</p>",
+      "podcast_guid":"8efa3308dc1e4359abe844b0e5e2e163",
+      "slug":"majority-54",
+      "title":"Majority 54",
+      "image_url":"https://megaphone.imgix.net/podcasts/71f3e57e-0f0a-11e9-aee2-8742c29dc286/image/2ba04defe1435e31b64a179b510d5db969a65752f16ea823a413ac7774bc1895958390cc46d8531824c1491e1f1db445a5418d84fa79eb1370e161dcb2dffa60.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:18.111316+00:00"
+   },
+   {  
+      "id":20,
+      "summary":"Jon Lovett, former Obama speechwriter and co-host of Pod Save America, is joined by comedians, actors, journalists, and many, many renowned Friends of the Pod for a roundup of the week's top news. Rants! Games! Bad impressions! Nuanced discussion! Recorded in front of a live audience.",
+      "podcast_guid":"3952b2ac77174a8ba1ea2e0b846d59b5",
+      "slug":"lovett-or-leave-it",
+      "title":"Lovett or Leave It",
+      "image_url":"https://megaphone.imgix.net/podcasts/4aded07a-0f0a-11e9-b524-777a62b36ee0/image/d1035e7749e81bcfb524d679029eab7e977d16641bf208f04cc1c1b020bdf0da57bb8db2833a1cf4c60e061024af8497fc264c457814e80719956558401618e4.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:15.844514+00:00"
+   },
+   {  
+      "id":172,
+      "summary":"Ira Madison III, culture critic and columnist, is joined each week by comedians, journalists, actors, musicians, activists, politicians and more for a conversation at the intersection of pop culture and politics at a time when we're all obsessing over both. Movies! Music! Terrible tweets by celebrities trying to seem engaged while bragging about their latest project! This show has it all. New episodes every Wednesday.",
+      "podcast_guid":"16e43baad5fc4b3192ef564d113bd7cf",
+      "slug":"keep-it",
+      "title":"Keep It!",
+      "image_url":"https://megaphone.imgix.net/podcasts/32829930-0f0a-11e9-99fa-f764bc6e55ce/image/928f150e425ecf1ca24fb9509be587fe26ed88b456e26c592e614cee044ffcbb388cf2d6532699a63fb775adcc9c1ceaa1517ad543972457c251eca1f2cae47a.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:14.190153+00:00"
+   },
+   {  
+      "id":167,
+      "summary":"<p>Political commentator and comedy writer Erin Ryan is joined by a bicoastal squad of opinionated, mouthy women to discuss news, politics, and cultural stories that affect women's lives, from serious to absurd. Women: 51% of the population and 100% of this podcast.&nbsp;</p>",
+      "podcast_guid":"c10a9d1cb1944efca2ffc97d97b26fd7",
+      "slug":"hysteria",
+      "title":"Hysteria",
+      "image_url":"https://megaphone.imgix.net/podcasts/baa2f0d2-0f08-11e9-beef-7fdb76c7fc30/image/8103b56d15002317088beab1c763f88e3d9cf13ec5166ecc792b1485488493e92b248eb918395bbda605653015c31def740c2673b1c9e3bbabeee6f79814c6cc.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:13.215026+00:00"
+   },
+   {  
+      "id":183,
+      "summary":"One side effect of our national addiction to Trump\u2019s tweets and other news cycle garbage is that fascinating issues, brilliant books and important debates aren't getting the attention they deserve. With a rotating crew of your favorite Crooked Media hosts, contributors, and special guests, Crooked Conversations brings Pod Save America's no-b.s., conversational style to topics in politics, media, culture, sports, and technology that aren\u2019t making headlines but still have a major impact on our world.",
+      "podcast_guid":"5079de7745504829a78ebe9a21ea7dde",
+      "slug":"crooked-conversations",
+      "title":"Crooked Conversations",
+      "image_url":"https://megaphone.imgix.net/podcasts/a1d06a26-0f08-11e9-aee2-ff0987efd9b0/image/fded3375596c0b9eb58ad1d83712e2e4f7cd4fc77d024ea55847aa7b9905d6a19db7691e4712224c7fe084cd83942c625a4d9cbbbb4c4557ee48d4eabe84ae5f.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:11.486134+00:00"
+   },
+   {  
+      "id":125,
+      "summary":"A podcast dedicated to deciphering and celebrating pop culture's greatest (and not-so-greatest) Whos and Thems. Everything you need to know about celebrities you don't. Hosted by Bobby Finger and Lindsey Weber.",
+      "podcast_guid":"629675cc1fe8475b9fba244aa045a929",
+      "slug":"who-weekly",
+      "title":"Who? Weekly",
+      "image_url":"https://megaphone.imgix.net/podcasts/429e94f2-0f98-11e9-a717-3f92388bae36/image/0bad902c0ea60d59d24237058e9d5afed577f721f977f5497f8a37e2461f34a6081f1c00403a86df17d17daa8a74f18344ec44075a19acd1593f27184325183d.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:03.322677+00:00"
+   },
+   {  
+      "id":36,
+      "summary":"<p>The ultimate destination for all things pro football. Led by one of the most influential storytellers in all of sports media, three-time American Sportswriter of the Year Peter King delivers an access-driven experience that brings fans into the locker room, the press box and the front office with the biggest influencers in professional football. Fans can listen in on in-depth conversations with the biggest names in football that they haven't heard before to get a fresh, new and intimate experience on America\u2019s most popular sport. King also delves into other topics and other sports, particularly in the off-season.</p>",
+      "podcast_guid":"a67947443c864b1b9682600897ddf416",
+      "slug":"peter-king",
+      "title":"The Peter King Podcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/4a8243bc-0f93-11e9-af8b-37ac99404539/image/08223c668423d212ee291eb7758be8624c311ea0d3371d895400c0421882791820a6d7b18191ef0f2dd78d364c98b3b839c5abca380ea015f18f1aae969ed4b3.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:32:00.147583+00:00"
+   },
+   {  
+      "id":248,
+      "summary":"Cond\u00e9 Nast Traveler editors Lale Arikoglu and Meredith Carey dissect the realities of traveling as a woman today, high-fiving all those shaking things up in food, hospitality, adventure, and travel journalism, and celebrating all the reasons why we refuse to stay home.",
+      "podcast_guid":"c042d45c3ec74ce2abf57fb278a2436e",
+      "slug":"women-who-travel",
+      "title":"Women Who Travel",
+      "image_url":"https://megaphone.imgix.net/podcasts/cda94226-1f57-11e9-8dd5-2bdec950b92c/image/uploads_2F1551995677220-n2tbfb3tls-bce6e8241de733a7838376198a49868f_2FWWT_PC_3000X3000.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:58.509314+00:00"
+   },
+   {  
+      "id":247,
+      "summary":"Vanity Fair critics Joanna Robinson and Richard Lawson break down HBO's groundbreaking series Game of Thrones with a re-watch of specific episodes leading to an episode-by-episode breakdown of the 8th and final season this April.",
+      "podcast_guid":"a2db92dd22cd4873b36c559a17d3d596",
+      "slug":"PPY3889133426",
+      "title":"Still Watching: Game of Thrones",
+      "image_url":"https://megaphone.imgix.net/podcasts/70c3ba18-e5cf-11e7-b250-9f650d4e3168/image/uploads_2F1551718076171-sp07d1fhlej-c0078f9d932757b2d72c1b4539c55892_2FVF_Podcast_StillWatching_Game-of-Thrones.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:56.517991+00:00"
+   },
+   {  
+      "id":246,
+      "summary":"Little Gold Men is the inside story of Hollywood, from awards shows and red-carpet premieres to the hard work and whisper campaigns that get people there. Weekly episodes feature obsessive, expert conversations about the best of television and film, with special guest appearances from stars, creators, and critics. LGM also dives deep into Oscar history, and offers insight into all the other awards that make up Hollywood\u2019s continual dash toward glitz and glory.",
+      "podcast_guid":"e8ec0ef38d3b49aaabba1b8297b6a038",
+      "slug":"littlegoldmen",
+      "title":"Little Gold Men",
+      "image_url":"https://megaphone.imgix.net/podcasts/3b281d78-8289-11e5-b42a-43b398af9465/image/uploads_2F1543877163909-9cc5ze9pl1i-84c690c22f68bee97ba0230ce4bef37c_2FLGM__2718_final2%2B_281_29.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:52.176955+00:00"
+   },
+   {  
+      "id":245,
+      "summary":"A weekly podcast from Vanity Fair's Josh Duboff and Julie Miller exploring the ins and outs of pop culture, entertainment, and celebrity. Pour yourself a glass of champagne (or two), and join us as we go in-depth on the celebrity narratives and storylines\u2014 from Kate Middleton to the Kardashians\u2014 we are obsessed with each week.",
+      "podcast_guid":"36082bf675a2465391867aa0b354212b",
+      "slug":"inthelimelight",
+      "title":"In The Limelight",
+      "image_url":"https://megaphone.imgix.net/podcasts/0e231992-a784-11e6-8e8c-2b2d7f9bea9e/image/uploads_2F1543877204604-9t0x3o13n5k-d8214fb0548b0e02fa080b264e045ced_2FLimelight__2718_final%2B_281_29.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:49.184011+00:00"
+   },
+   {  
+      "id":48,
+      "summary":"Every week, Nick Bilton interviews the leading minds in tech, politics, and culture to find out what motivates them, how they make decisions, what keeps them up at night, where their ideas come from, who they look to for advice, and where they think their industry is going. Bilton brings you into the room where the world's most interesting and important decisions are made.",
+      "podcast_guid":"2249b65737c4400db309b3fdf68034f5",
+      "slug":"inside-the-hive",
+      "title":"Inside the Hive with Nick Bilton",
+      "image_url":"https://megaphone.imgix.net/podcasts/4ed2685c-0f07-11e9-9934-0757fcd3e724/image/df5f815a598f1d25a313852edf37167bd2d26b3122ec1570e261318b9b0dc0f970582f3aae65ea2a8bd686bddd731648200bf79899c9db130ca0ebd0e0c94c2a.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:46.905997+00:00"
+   },
+   {  
+      "id":269,
+      "summary":"Inside the hottest personal tech stories of the week; mobile apps, gear, social networking, and entertainment.",
+      "podcast_guid":"81ed3e16b4114083aa2e94dcd8149564",
+      "slug":"gadget-lab",
+      "title":"Gadget Lab: Weekly Tech News",
+      "image_url":"https://megaphone.imgix.net/podcasts/19306ebc-36ce-11e9-83cc-4f129e1dff43/image/Gadget-Lab-Podcast-3000.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:46.436619+00:00"
+   },
+   {  
+      "id":244,
+      "summary":"The Bon App\u00e9tit Foodcast features interviews with chefs, writers, and well, anyone who has something cool to say about food. Episodes air every Wednesday.",
+      "podcast_guid":"a9acbcf8d73f4a26bb66e1b5f604fdce",
+      "slug":"BNA1294372600",
+      "title":"Bon App\u00e9tit Foodcast",
+      "image_url":"https://megaphone.imgix.net/podcasts/47e9439e-d912-11e6-acfb-0ff39ac5a015/image/uploads_2F1531942875624-u4pr695jwza-72bebeaf7e77fc15baa79ec2ef25eaa8_2Ffoodcast_logo_yellow-01%2B_281_29.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:41.617053+00:00"
+   },
+   {  
+      "id":4,
+      "summary":"In this weekly podcast, David Dobrik, a 22-year-old, sexy, millionaire YouTuber and Jason Nash, a 40-something single dad with a vlog of his own, take you behind-the-scenes of their vlogs and show you what living the \u201cYouTube life\u201d is really like. Join these two as they confess their most intimate thoughts, discuss pop-culture, and dissect their own contentious relationship. New episodes drop every Thursday!",
+      "podcast_guid":"f1043e54629a481d979a98dea6b684b1",
+      "slug":"views-with-david-and-jason",
+      "title":"VIEWS with David Dobrik and Jason Nash",
+      "image_url":"https://megaphone.imgix.net/podcasts/311ec404-0f98-11e9-930e-0f22df78a419/image/1ea263069b2cd2746b55460ac6ee2d25d3f4c9aecbc1e651439fb050d102b8bb4c82ee123f9d04286c43ac5cd18dabf5514405aedfbc5a7ac28612e65f379c76.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:39.103901+00:00"
+   },
+   {  
+      "id":243,
+      "summary":"The latest from the world of sports, culture and food from the editors of For The Win.",
+      "podcast_guid":"dd5c28a3502548c9bbd2d8de36fc0408",
+      "slug":"for-the-win",
+      "title":"For The Win",
+      "image_url":"https://megaphone.imgix.net/podcasts/6d1f2612-18d8-11e9-a1e9-3bed1c774efd/image/avatars-000333785461-lq3cpx-original.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:32.989528+00:00"
+   },
+   {  
+      "id":17,
+      "summary":"UFC Unfiltered with Jim Norton and Matt Serra is the must-listen podcast for fight fans. Edgy veteran comedian Jim Norton and former UFC welterweight champion Matt Serra push the boundaries in the UFC's first audio series. \u201cUnfiltered\u201d delivers everything, including pre- and post-fight analysis, industry stories, observations, opinions and interviews with UFC sources, fighters and celebrity fans.",
+      "podcast_guid":"c0766b9fb44c4f5bbddeb9f58c53b9b0",
+      "slug":"ufc-unfiltered",
+      "title":"UFC Unfiltered with Jim Norton and Matt Serra",
+      "image_url":"https://megaphone.imgix.net/podcasts/115ec196-0f98-11e9-968b-5b4d9e61d286/image/5a2961a00914cddb306a74575438df5a08eb303634dbddae89c9bdb6c710076f7cd4d6c380cc4c41dff3ea6e467f5686d772fcc9957cc276623bfa10e8830291.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:31:26.866686+00:00"
+   },
+   {  
+      "id":120,
+      "summary":"This is the clip series for Cadence13",
+      "podcast_guid":"9e606c60f2d540a3a9cd5869f1878d47",
+      "slug":"clips",
+      "title":"Clips",
+      "image_url":"https://megaphone.imgix.net/podcasts/1dfe3698-0f98-11e9-b98b-67c84a6b5bf0/image/c3ffbb8e744dfb8809a6e16b6965a0e650c92b36e9b05a1a86c507fb3ba3dfe0fbf7145cb80eb1d4e28cc25d078a4f991a9454da4e30bbc6a564934c2ca7b55a.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:30:57.465653+00:00"
+   },
+   {  
+      "id":238,
+      "summary":"Mo Rocca has always loved obituaries. With Mobituaries he introduces listeners to the people who have long intrigued him\u2014from the 20th century's greatest entertainer ... to the Civil Rights pioneer who is completely forgotten ... to sitcom characters gone all too soon. Even if you know the names, you\u2019ve never understood why they matter\u2026until now.",
+      "podcast_guid":"b0bfc37e8562427abe56a8661fbcc8d8",
+      "slug":"mobituaries",
+      "title":"Mobituaries with Mo Rocca",
+      "image_url":"https://megaphone.imgix.net/podcasts/0987e3a6-143b-11e9-9527-77015df1ff2d/image/uploads_2F1547056981775-d9oz3tmlpr-671ec7e283b5777822cb5f8508a4db65_2FMo_Rocca_podcast_square_1800x1800.png?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:30:56.914913+00:00"
+   },
+   {  
+      "id":218,
+      "summary":"<p>Gotham Chopra, Tom Brady, and Michael Strahan bring you \u201cWhy Sports Matter\u201d,&nbsp;the first&nbsp;narrative&nbsp;series from Religion of Sports.&nbsp;Each week, a new story is built around a larger theme (i.e. mortality, tribalism, authenticity) and told through the first-hand voices of extraordinary people. Whether it's exploring grief and healing after tragedy or understanding the mindset of athletes who willingly face death, we search for purpose and meaning -- without shying away from nuance, or the salient political and social issues of our time.</p><p><br></p>",
+      "podcast_guid":"7c42d310d6d2446b9a09188495531526",
+      "slug":"why-sports-matter",
+      "title":"Why Sports Matter",
+      "image_url":"https://megaphone.imgix.net/podcasts/22ed4cd4-3608-11e9-b74b-e30aed586828/image/f5a94b898df53f13e50df5118dd6fab93e654eaf8e3cdfb8d2cfe02a52e1e2243961e4389aab1f0a545cffee38d94e495370fd92a013995ac6abcdc14bef612c.jpeg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:30:56.468188+00:00"
+   },
+   {  
+      "id":266,
+      "summary":"What makes us conscious beings and why does it matter that we are?  In his first ever podcast, Deepak Chopra welcomes a far-ranging group of guests, including Jane Goodall, Russell Brand, Dan Savage, Christopher Wylie, Jean Houston, Dr. Sanjay Gupta, and many more, who have paved new paths for understanding our present and future.  How do we define, harness, and elevate our minds?  How can we live creatively and purposefully?  What makes you\u2026you? Join Deepak as he delves into this moment of great transformation to answer these questions\u2026and explore our infinite potential.",
+      "podcast_guid":"4886fa944a8744c4af10539ba7882639",
+      "slug":"infinite-potential",
+      "title":"Deepak Chopra\u2019s Infinite Potential",
+      "image_url":"https://megaphone.imgix.net/podcasts/b20388f2-35ef-11e9-a96c-ab3d162f47bd/image/uploads_2F1550763656460-6e8b5o4plyc-da69a41369148acc19520685e611fadb_2FDeepak%2BChopras%2BIP2.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:30:56.196168+00:00"
+   },
+   {  
+      "id":290,
+      "summary":"Welcome to Daily Breath, where we pause the hectic world around us, refocus ourselves and expand our minds. I invite you to join me for a few short minutes each day to explore impactful ideas and themes that directly relate to all of our lives. Together we will delve into topics such as happiness, gratitude, love, sex, the true self, physical well-being, death and more. This is a space to build mindfulness into your daily routine and to end your week peacefully with a complete 10-minute meditation every Friday. \r\n\r\nJoin us and BREATHE\u2026",
+      "podcast_guid":"3b50f9e560c84faba283e34bb9370d05",
+      "slug":"daily-breath",
+      "title":"Daily Breath with Deepak Chopra",
+      "image_url":"https://megaphone.imgix.net/podcasts/a37798f4-57b5-11e9-bbd2-cb52124f62c4/image/uploads_2F1554477202709-vz57qxv2sio-337d4f57c8e4ff9dc7e63d4afb311420_2FDaily%2BBreath%2B8%2B_281_29%2Bcopy.jpg?ixlib=rails-2.1.2",
+      "updated_at":"2019-04-12 01:30:56.024453+00:00"
+   },
+   {  
+      "id":46,
+      "summary":"One of wrestling\u2019s most popular tag teams, Adam \u201cEdge\u201d Copeland and Jay \u201cChristian\u201d Reso, are teaming up once again to bring you a podcast about, well, everything. The hilarious duo will take you behind-the-scenes of the wrestling industry, talk with wrestlers and other entertainers they\u2019ve met over the years, share fun stories about life after the biz and being dads, and, sometimes, they\u2019ll even play the kazoo.",
+      "podcast_guid":"f926371e16fc40d3b61c3a4bcdb2b09e",
+      "slug":"ecs-pod-of-awesomeness",
+      "title":"E&C\u2019s Pod of Awesomeness",
+      "image_url":"https://content.production.cdn.art19.com/images/e7/52/5c/cf/e7525ccf-85c7-455d-8c81-d394e4b59433/a3b7a610ddfe23b80e129f581350fb02a1e3bae8e2c7f874d3412637cd47e54c1fb4cf140e329827909995564f74fedbd547e31134754c90e2ad4a862d23b06b.jpeg",
+      "updated_at":"2019-02-08 17:07:45.544382+00:00"
+   },
+   {  
+      "id":2,
+      "summary":"We\u2019ve got the NBA covered from A to Z with this inside look at the Association from veteran journalists Sam Amick and Jeff Zillgitt. Great guests and gab for the hoophead in you.\u00a0",
+      "podcast_guid":"8fba9cc9db8f41f4bea26f872bfa7c49",
+      "slug":"nba-a-to-z",
+      "title":"NBA A to Z with Sam Amick and Jeff Zillgitt",
+      "image_url":"https://content.production.cdn.art19.com/images/bb/1a/7a/80/bb1a7a80-bcd1-417c-a40f-6cf56548603e/4dc7a2d3b7156c205ea7f903910de762b18ce1c1603d1232105740c3fd9261e39074585eaad624d680354dac1c8ad060863683b7e0a2b2c543669861ceda8e1d.jpeg",
+      "updated_at":"2019-02-08 17:07:25.562541+00:00"
+   },
+   {  
+      "id":21,
+      "summary":"At Black Girl Magic headquarters, senior editors\u00a0Cori Murray (@corimurray), Charli Penn (@ManWifeDog) and Yolanda Sangweni (@YoliZama) host ESSENCE\u2019s podcast\u00a0Yes, Girl! Every episode features interviews with celebrities, politicos, and influencers\u2014plus unfiltered\u00a0\u201cTea for the Week\u201d\u00a0discussions on pop culture, love and relationships, race, news and business. Basically, uplifting everybody who\u2019s taking Black\u00a0culture a little higher.\u00a0",
+      "podcast_guid":"2059b9215dfe4f029949f614c39c7dd4",
+      "slug":"yes-girl",
+      "title":"Yes, Girl!",
+      "image_url":"https://content.production.cdn.art19.com/images/03/b2/58/10/03b25810-6e92-4489-8921-9d184f40c202/c3b428680830b75263f79dca530ea5ac2d23bb23f9df64555aa190ef3350f0f25f69f4b18b54b69a504e258eb38231d3eb278d5ae8100f46ddcff6d2756c5d10.jpeg",
+      "updated_at":"2019-02-08 17:07:16.921481+00:00"
+   },
+   {  
+      "id":6,
+      "summary":"The MMQB Podcast with Albert Breer brings listeners a one-of-a-kind combination of insight, information and attitude concerning all things football. Drawing from an unmatched collection of sources, The MMQB's senior reporter dives deep with original angles and unapologetic takes on the week's biggest headlines. Episodes feature an eclectic mix of interviews with big names from inside and outside the football world. It's the rare podcast experience that satisfies the hardcore gridiron junkie while remaining accessible to the casual football fan.",
+      "podcast_guid":"c871ca2f28f24c92a3cecbac4a7fd07a",
+      "slug":"the-mmqb-podcast-with-albert-breer",
+      "title":"Albert Breer, The MMQB Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/46/13/b0/44/4613b044-fcb2-4aa3-a778-733dde7a24bb/ceea039627a0b4f1d7efe4b10208f508bccf5fbda8a4d23bf84087a4988418de41ed3baca5479be583952b96f1f15d3b06fd9d9b59d7384ece4e4881ddf1d395.jpeg",
+      "updated_at":"2019-02-08 17:07:04.520703+00:00"
+   },
+   {  
+      "id":27,
+      "summary":"The show that changed television is back. Pour yourself some damn good coffee and join Entertainment Weekly\u2019s men from another place, Jeff Jensen and Darren Franich, as they unwrap the plastic and examine the mysteries of Showtime's trippy horror-soap revival.",
+      "podcast_guid":"27b3fc2ea49148dabc0a1208738d0a9d",
+      "slug":"twin-peaks-podcast",
+      "title":"A Twin Peaks Podcast: A Podcast About Twin Peaks",
+      "image_url":"https://content.production.cdn.art19.com/images/a3/8e/68/af/a38e68af-fbe9-4e8b-89d5-91b034b77765/84e9eceb9fa2eb443c0341b721e0cd8f905e11986f14e1ebcd898fb69388341b86726c251bde751fa707cf51921b2aceae13e4b67a8225b138c25aeee1bda03c.jpeg",
+      "updated_at":"2019-02-08 17:07:02.312057+00:00"
+   },
+   {  
+      "id":40,
+      "summary":"Two \u2018R\u2019s. Two \u2018C\u2019s. Two friends with a Star Wars obsession and four days of down time between starts. Thus, a podcast is born.\n\nJoin Yankees\u2019 pitcher CC Sabathia and media personality Ryan Ruocco as they bring fans inside the mind of one of MLB\u2019s most successful and durable performers.\n\nRecorded in-season and exclusively between CC's days on the mound, you never know who will enter the bullpen as the duo discuss sports, music, culture and more.",
+      "podcast_guid":"09c0eb14a0644b28a05fdcc2bd168c04",
+      "slug":"the-players-tribune-r2c2",
+      "title":"The Players\u2019 Tribune: R2C2",
+      "image_url":"https://content.production.cdn.art19.com/images/4e/39/28/95/4e392895-a284-4e0d-8aea-86f65d7e5bec/9a729cb45516d88bad9953934a05231bb38c18532e202a237b0308a6a473c34f61fde69762cb246a4da3833c729aa938a2e9592fc1fc0f5034ebdf6d51449851.jpeg",
+      "updated_at":"2019-02-08 17:06:49.204911+00:00"
+   },
+   {  
+      "id":30,
+      "summary":"With great power comes great scrutiny. Every Friday, Recode\u2019s Kara Swisher and NYU Professor Scott Galloway offer sharp, unfiltered insights into the way technology is shaping business and culture across media, advertising, politics, and more. Produced by Recode and the Vox Media Podcast Network.",
+      "podcast_guid":"acba857bd1764f178a9af017e9d06ad0",
+      "slug":"pivot-with-kara-swisher-and-scott-galloway",
+      "title":"Pivot with Kara Swisher and Scott Galloway",
+      "image_url":"https://content.production.cdn.art19.com/images/3b/15/76/b4/3b1576b4-7348-40f2-8d29-76fcb447da51/24296b4f2ae60be792e063c86808b0fa9b43e03ee78dc591fe715fde10241007480bc6f3599ed6140b9a3a679506880bf4f3c88af89bf19109107da217c7095e.jpeg",
+      "updated_at":"2019-02-08 17:06:43.092473+00:00"
+   },
+   {  
+      "id":162,
+      "summary":"The latest news from EWU Athletics spanning all sports, events and key information. Flight Report will help fans fly with us!",
+      "podcast_guid":"fcccd69a9d90460699211ccaeb9159e2",
+      "slug":"flight-report",
+      "title":"Flight Report",
+      "image_url":"https://content.production.cdn.art19.com/images/22/4a/ad/07/224aad07-b01c-4d5d-994a-f831547e434d/39a4b3f310a1fa8d5ef129f757428136ba6c948b9eba22f076bad748edc5f445ee47699bd317e6d6e9445efba9328a2dceed0cab98194684f5a4b35ce56da984.jpeg",
+      "updated_at":"2019-02-08 17:06:20.770199+00:00"
+   },
+   {  
+      "id":71,
+      "summary":"Space does not wish you well. It has no shortage of ways to kill you, and in the fifty years humans have been flying spacecraft around the Earth and out to the moon, the mortal perils have been evident. But ten of the missions were the most harrowing of all. Some of them ended in tragedy, some ended successfully\u2014but all of them involved astronauts playing for the very highest stakes in the very deadliest place.  Countdown tells the tale of those ten missions\u2014some of them American, some Russian. Written and narrated by Jeffrey Kluger\u2014author of Apollo 13 and Apollo 8\u2014Countdown recreates the space crises that every astronaut has feared, and that an unlucky handful were forced to live. ",
+      "podcast_guid":"fbb5cf07be084a2ab1bf5a9a92bae084",
+      "slug":"countdown",
+      "title":"Countdown",
+      "image_url":"https://content.production.cdn.art19.com/images/1f/74/a8/3f/1f74a83f-f227-4d17-811c-c71e5fd86ec2/886e36373421fce7e44e9ef625a81a69853df467a0f782a6a83f081b565c75a18d9ec588b7687815ff2f59a6b7aaea1d3ce0a0b324276ea09a1b16b0b7266a9b.jpeg",
+      "updated_at":"2019-02-08 17:06:19.821749+00:00"
+   },
+   {  
+      "id":118,
+      "summary":null,
+      "podcast_guid":"fa75909fae2e4967b9f61cddaa1e3c2e",
+      "slug":"first-person-qas",
+      "title":"First Person Q&As",
+      "image_url":null,
+      "updated_at":"2019-02-08 17:06:18.263938+00:00"
+   },
+   {  
+      "id":110,
+      "summary":"FOX Sports fantasy analysts John Halpin, Ryan Fowler, Adam Meyer and D.J. Foster provide the latest in fantasy news including player previews, team match-ups, injury reports and strategy. Don\u2019t make any moves until you listen to what the experts have to say! A must-start on your podcast roster. ",
+      "podcast_guid":"f8a7f95dc6b8470ba426d8a0879cbdc8",
+      "slug":"fox-sports-fantasy-podcast",
+      "title":"The FOX Sports Fantasy Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/7c/38/65/a8/7c3865a8-e742-4819-8d09-dadbcd3c39dd/258c55d92656fd994573e218b64425201d992c512210635b7224fae3e8e68c647a4603499e2660aaea53860bfd04e42528d6f2adb3d172f4fc75724c0144ffb9.jpeg",
+      "updated_at":"2019-02-08 17:06:17.902044+00:00"
+   },
+   {  
+      "id":72,
+      "summary":"The Players\u2019 Tribune is the first content platform created, curated and controlled by athletes, providing unique insight into the daily sports conversation. Founded by Derek Jeter, The Players\u2019 Tribune publishes first-person content from athletes, bringing fans closer than ever to the games they love. The Players Tribune Oral History Podcast Series will take fans inside the journey of some of the most historic moments in sports, told by the players that played it and lived it. ",
+      "podcast_guid":"f67b864517e5489a90c14af1ac1173b2",
+      "slug":"the-players-tribune-an-oral-history-series",
+      "title":"The Players Tribune, An Oral History Series",
+      "image_url":"https://content.production.cdn.art19.com/images/71/f0/16/b8/71f016b8-be09-4476-b3e3-fb97e6045bfe/13b56619f87cbf7edb7d2acfb3a4ab3b3b282016abf4e3197f435f15495da8e942f9f225e320fc72deec7b7c1995e46914b66f947416a178fe20113a669d987e.jpeg",
+      "updated_at":"2019-02-08 17:06:14.544433+00:00"
+   },
+   {  
+      "id":116,
+      "summary":"Do It On Purpose features our favorite talks, interviews and conversations from the\u00a0Together\u00a0Live Tour \u2013 a national event that brings an array of thought leaders, local artists, athletes and celebrity guests to cities across the country. You\u2019ll hear from some of the most badass ladies around on authentic storytelling, finding your purpose, overcoming fear, choosing love, effectuating change and taking social action. Listeners will have the opportunity for self-reflective work focused on where you come from, why you\u2019re here and where you\u2019re going.\n\n\n",
+      "podcast_guid":"f51b4d8a92a14ec1b71349d6969a6cb9",
+      "slug":"do-it-on-purpose",
+      "title":"Together Live Presents: Do it on Purpose",
+      "image_url":"https://content.production.cdn.art19.com/images/b7/67/2c/c1/b7672cc1-4eb2-49fb-a982-cb78c968036f/62d6f270188530fd50aa3b2e16093dd95172b9dacdae170ee96b66b4b63c0a4432e23212fc34bbc3547f61ea14a76214c0e30d68fbed893623a8a6fc3a0059db.jpeg",
+      "updated_at":"2019-02-08 17:06:13.582071+00:00"
+   },
+   {  
+      "id":112,
+      "summary":"Each week the Voice of the\u00a0Rockets Brent Balbinot brings you inside Toledo athletics. Interviews, insight and more.",
+      "podcast_guid":"f3f6163ccbe44f9d924fe83b69a668bb",
+      "slug":"the-rocket-liftoff-podcast",
+      "title":"The Rocket Liftoff Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/ab/f0/6a/d9/abf06ad9-a028-4761-9ef8-9b6627e26524/13dcefcb29dd1dd3caa1de2d4aa63b73beb2e169d5906f094d4e7253a3f4d414e0494683c5e82867e1d38fd14a2d054c0d263de14312c9bcb76f9810c5c3bd1a.jpeg",
+      "updated_at":"2019-02-08 17:06:12.649159+00:00"
+   },
+   {  
+      "id":89,
+      "summary":"Mark Johnson, The Voice of the Buffs, gives you a daily look inside Colorado Buffs Sports.",
+      "podcast_guid":"f043a6c36caf484c927b5ccf9c558aea",
+      "slug":"cu-buffs-daily",
+      "title":"CU Buffs Daily",
+      "image_url":"https://content.production.cdn.art19.com/images/dd/f1/b3/6c/ddf1b36c-6cc9-49f2-bef4-050fa2fe7d09/cdf541f021839063874a320e851b23296c1a3ecdbdd0c13741632e6de6a367f844e1fe427d2900e66d5575b237b2311eef6397409c41a1e63510387e7a091359.jpeg",
+      "updated_at":"2019-02-08 17:06:09.141248+00:00"
+   },
+   {  
+      "id":175,
+      "summary":"The Rematch takes a look at the thin line between love and hate in sports; a show that examines the nature of media and popular opinion by giving athletes an open forum to reclaim their identities from labels like polarizing, mercurial, and immature. \n\nHosted by NBA Veteran Etan Thomas, this unique athlete-first podcast will explore the differences between how we see professional athletes and who they really are.",
+      "podcast_guid":"ef63939eccb44d9abc3eee9e8f50d598",
+      "slug":"the-rematch",
+      "title":"The Rematch",
+      "image_url":"https://content.production.cdn.art19.com/images/62/eb/5f/4a/62eb5f4a-4734-400c-9324-ec0fbe6fd0be/e65497e9d0ddcbb100f9ae6c7d6f3a37e37a54416a669b57f71b046ae9c1ea9a0ed68478e7e1c03c646c60bb63e57c1d81e9bd671c1d29d5b5534d0231fcb3e9.jpeg",
+      "updated_at":"2019-02-08 17:05:56.804580+00:00"
+   },
+   {  
+      "id":230,
+      "summary":"MLB Radio opens The Vault to bring baseball's golden age into the digital realm with the best of these rarely-heard original radio broadcasts. Go back in time and explore the archives of baseball's best games, featuring legendary players and broadcasters.",
+      "podcast_guid":"ec5c329c7c5b4a8eb8c9c25ec5c993b5",
+      "slug":"mlb-radios-the-vault",
+      "title":"MLB Radio's The Vault",
+      "image_url":"https://content.production.cdn.art19.com/images/01/7d/42/38/017d4238-4269-4bfe-a395-1c4077f41850/e45d714ac9a3a0604f60b789ff7642cfc670c8bdbb549c423b0b3c76e4d523baf921152d96136ac14db651f044b9667d807c8fd4b66613acf40420472e8ecaf1.jpeg",
+      "updated_at":"2019-02-08 17:05:55.156909+00:00"
+   },
+   {  
+      "id":85,
+      "summary":"FOX Sports brings you the Make Me Smarter Football Podcast, a weekly show aimed to do just that: make you smarter about football. Each week Nick Wright joins our football experts to take a look at the top stories and narratives around the NFL and discuss the \"popular opinion\", then crack it open to give you the real and inside scoop from a unique and interesting perspective that you've never heard before, correcting the misguided opinions floating around media. It'll make you think, it'll make you understand, it'll make you smarter. ",
+      "podcast_guid":"e557d6c21d6a437b80fb5bfd817f9331",
+      "slug":"make-me-smarter-football-podcast",
+      "title":"Make Me Smarter Football Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/41/4f/34/69/414f3469-e19f-4191-bb83-99a8e6702cda/086e2f80761d4d7af1a7182bb177050e0513a8775a6bb6eba03346f2cc73e5b3017e7ce5f8fd3ddde345db1d27b9d86d9ecbd952e46e6d08afa241efb892eb11.jpeg",
+      "updated_at":"2019-02-08 17:05:50.384199+00:00"
+   },
+   {  
+      "id":45,
+      "summary":"Ed Schultz, speaks with the nations news makers daily about the important issues facing Americans. Whether it\u2019s the economy, labor, education, jobs or a myriad of other issues you can expect straight talk from Ed Schultz. You can get the daily podcast at 4pm ET and can be seen on RT America at 8:00 PM ET daily.",
+      "podcast_guid":"6715c973f51d4f3aaff851bf54bf4050",
+      "slug":"the-ed-schultz-show",
+      "title":"The Ed Schultz Show Daily Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/42/dc/c4/f6/42dcc4f6-23da-4678-82dc-fdc971e29def/414e66450ac65f2c65034fe140e8c61ae20f1292ca413c8ba5b94d0506f50a376dd75de72e05fd50c0a42e6f0a42b694b201bb5a9b76afcceaa2c4ea60a2f6bc.jpeg",
+      "updated_at":"2019-02-08 17:05:43.912830+00:00"
+   },
+   {  
+      "id":188,
+      "summary":"Mark Johnson, The Voice of the Buffs, and CUBuffs.com\u2019s Neill Woelk give you an in-depth, inside look at Colorado Buffs Sports. Interviews, guest analysis and more each week focused on your CU Buffs.",
+      "podcast_guid":"d4f47fd07b504537b1f0161f69fa7afb",
+      "slug":"cu-buffs-insider",
+      "title":"CU Buffs Insider",
+      "image_url":"https://content.production.cdn.art19.com/images/f4/5d/5c/1b/f45d5c1b-d851-4076-9092-8faaae144348/f6e773c43b1886a0b26928f3e7a7fb8fe1265a455f988e41790da8a6e37c9f69554c7d7fc6d64b3806ad5ef0346ab098aae09a7017f9c6c8a5257be6bd60c3f3.jpeg",
+      "updated_at":"2019-02-08 17:05:35.935704+00:00"
+   },
+   {  
+      "id":146,
+      "summary":"Join UMass Director of Athletics Ryan Bamford and various guests for exclusive discussion on current topics in college athletics, higher education and the intersection of college sports and business.",
+      "podcast_guid":"d101ab5f3fac42ca8a71d5cbd5ec30da",
+      "slug":"plant-the-flag",
+      "title":"Plant the Flag-Inside UMass Athletics",
+      "image_url":"https://content.production.cdn.art19.com/images/32/85/ef/f4/3285eff4-866c-465a-a11c-42c0769827c7/7eb36cfb37e83c1e04409b5f4af5d618d2cc7b1527adc350a737e7868b8cc7499d38ad762d16d35f885ca0d426f2d148042c4a1ab645064fb93129066353fd54.jpeg",
+      "updated_at":"2019-02-08 17:05:28.879223+00:00"
+   },
+   {  
+      "id":84,
+      "summary":"Special events, discussions, interviews, and one-off shows from The Verge. Up next: Better Worlds.",
+      "podcast_guid":"d090d75604354df1ac12f9e5e59bb4bc",
+      "slug":"verge-extras",
+      "title":"Verge Extras",
+      "image_url":"https://content.production.cdn.art19.com/images/45/47/57/b6/454757b6-5341-47f9-a314-a3ada18d9fb6/0193bc1a7f9dd2d9fa26a5270c07a3ae0c197903fd3bbec9042d2ca21dc5429db2006efc17b0320fc9e363c316e4f7cc330ee4b473cce296bb38fe2978e2048b.jpeg",
+      "updated_at":"2019-02-08 17:05:27.910299+00:00"
+   },
+   {  
+      "id":134,
+      "summary":"Get the latest information on Montana State Athletics you won\u2019t find anywhere else.\u00a0From game previews and recaps to in-depth conversations, the Bobcat Insider is every fan\u2019s source for all things MSU Athletics.",
+      "podcast_guid":"cefef3bdac3447868abb0bae4b8f32e2",
+      "slug":"bobcat-insider-podcast",
+      "title":"Bobcat Insider Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/f4/ce/15/94/f4ce1594-4b0c-4d03-a117-4ea7f8c70bbd/6745dc4e05e18eea3b9d2529a6d8ae2c05db73cddb20a86de447aaa442906d5ed09e62e355d0f19f7c3545624b40fa248426e05686a5deda6962b8436c564859.jpeg",
+      "updated_at":"2019-02-08 17:05:21.726910+00:00"
+   },
+   {  
+      "id":76,
+      "summary":"In the fall of 2017, VCU Athletics announced they were switching their normal Coaches Show format to better accommodate the Ram fans who loved attending to see coach.\u00a0Instead of 10 straight weeks in the middle of the season at a local Buffalo Wild Wings, \u201cThe Mike Rhoades Radio Show\u201d was going to be on location once a month, making it more of an event and a chance for Ram fans to see each other throughout the year. \n\nWhat that created was a void in the information the Coaches Show provided during the heart of the season.\u00a0Enter \u201cThe Mike Rhoades Podcast\u201d.\u00a0Each week during the A-10 Season where there is not a on-site Radio Show, the Voice of the Rams, Robby Robinson sit down to chat about the latest from the Men\u2019s Basketball team.\u00a0Robby also welcomes in other guests such as players, assistant coaches, VCU Staff members and other Ram fans to round out the podcast.\n\nYou want inside information on VCU?\u00a0You are in the right place.",
+      "podcast_guid":"c9831c1501df4579a03b956009f935d6",
+      "slug":"mike-rhoades",
+      "title":"The Mike Rhoades Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/a9/c2/cc/fa/a9c2ccfa-7f1c-4ef1-abc9-1987e001fbb3/34a9c177fbe9641a2d3c1a32286df730c201f40152ad8ce7fd8a895158f8f2ea79bdb6e55bb360dd033d5b6fe8463c6b641f6433d5f5134bfc67d245db08fc31.jpeg",
+      "updated_at":"2019-02-08 17:05:16.118263+00:00"
+   },
+   {  
+      "id":158,
+      "summary":"Renowned academic counselor and \u201cLast Chance U\u201d star Brittany Wagner hosts Sharpen Up, a podcast that inspires, energizes and educates.\n\n\n\n\nIf you don\u2019t know this southern, single mom yet - then hold on - she\u2019s the wise mentor, helpful advisor, and judgement-free friend we all need. Brittany gained recognition from the Netflix original series \u201cLast Chance U,\u201d where she was the academic advisor to a prolific junior college football team. She changed the lives of student-athletes by believing in them, no matter their circumstances or obstacles, sometimes insurmountable.\n\n\n\n\nIf you have seen Brittany in action, you probably wish you could head to her office for some advice, some laughs, or just a reminder that there\u2019s no better time than now to get your life together. Good news: you no longer have to live in small-town Scooba, Miss. or play college football: Sharpen Up brings Ms. Wagner\u2019s office to you.\n\n\n\n\nBrittany will share what\u2019s on her mind \u2013 from current events to college sports to her own personal struggles - even dating! Sometimes funny, sometimes emotional, and always thoughtful, Sharpen Up is for anyone who wants to get motivated and inspired with a few laughs along the way.\n\n\n\n\nJust make sure you have a pencil.",
+      "podcast_guid":"c8668c9d9ee2478b95217cd86788d8fb",
+      "slug":"sharpen-up-with-brittany-wagner",
+      "title":"Sharpen Up with Brittany Wagner",
+      "image_url":"https://content.production.cdn.art19.com/images/73/99/52/d7/739952d7-90ae-4bbb-8ed3-dafdce8f8a6b/eefa444955a45abe6ccb4d45167726113f85477373832122563675716fca1cd2aa8adc890553e476977499ca777fbacb4c6f6d5a15d80c2a0f9967fc07ac5345.jpeg",
+      "updated_at":"2019-02-08 17:05:14.219492+00:00"
+   },
+   {  
+      "id":160,
+      "summary":"Go inside New Mexico athletics each week for the latest in Lobo news.",
+      "podcast_guid":"c487906ae9544378b560330fedbc318a",
+      "slug":"inside-lobo-athletics-podcast",
+      "title":"Inside Lobo Athletics Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/78/89/04/16/78890416-4bd4-40b4-bc6a-6808d275177b/cdd351dce141c2a4543edc00747f0bccf5b53e8384b6299d261e76ac8f4eb2d077eb4d7633c2eb420108a1c231f2e3c30840ffb8b6709e43527107b76d3b644f.jpeg",
+      "updated_at":"2019-02-08 17:05:10.129311+00:00"
+   },
+   {  
+      "id":203,
+      "summary":"John Ramey brings you inside Nevada Wolf Pack Athletics. Insight, info and more on your Wolf Pack!",
+      "podcast_guid":"bfd7ca66620c489d9d4bd19b4c593933",
+      "slug":"wolf-pack-daily",
+      "title":"Wolf Pack Daily",
+      "image_url":"https://content.production.cdn.art19.com/images/ad/e0/1e/6c/ade01e6c-4847-482b-a323-36e8e2653a87/9fa6b48f9c9623ff23999913617ba6e1af66fd46a3d03cad6ce0a9922082eb6eb82c9e934856cfecc1a4a6ef6e9e715a7caaba65bbcabf131b29a8eed013bd4a.jpeg",
+      "updated_at":"2019-02-08 17:04:52.265844+00:00"
+   },
+   {  
+      "id":226,
+      "summary":"Todd McKim brings you inside Cal athletics. Interviews, insight and more each week. The \"Bear in Mind - The official podcast of Cal Athletics\" keeps you up to date with all things Bears.",
+      "podcast_guid":"bf864641ff3845a6bae5d57ab9d11d0f",
+      "slug":"inside-the-lockerroom",
+      "title":"Bear in Mind:  The Official Podcast of Cal Athletics",
+      "image_url":"https://content.production.cdn.art19.com/images/ee/09/79/d5/ee0979d5-ed10-4fca-a8c5-64159596ab32/fb11477b2694dd23904483d1ccd460df6ca1e35b5d8d0f95e224d092b0a4957f8362c7e0452bdcb32c1160049666cad73afa58be7ecf9d131347532e806f1281.jpeg",
+      "updated_at":"2019-02-08 17:04:50.662169+00:00"
+   },
+   {  
+      "id":165,
+      "summary":"Two of America's leading sports journalists, Dan Wetzel and Pat Forde of Yahoo Sports bring you the \"Wetzel to Forde Daily Podcast,\" discussing everything in sports in a right-size, Monday-to-Friday daily package. Prepared in time for your morning commute, workout or wherever you\u2019re trying to get to, this podcast will help you to form your own opinion on the day\u2019s sports headlines.",
+      "podcast_guid":"bdca3bb1ac724bccaec8aaf5e40c7fc9",
+      "slug":"wetzel-to-forde",
+      "title":"Wetzel to Forde",
+      "image_url":"https://content.production.cdn.art19.com/images/45/9e/73/9a/459e739a-afdf-4035-a3ea-1fe2cd277dd2/1d036402e431792d9e835a6d6365f756a8a2f69ec51ac37370ec679c7d1b7a6c46d59948d1d4415ceb1b1887f4a0dbe0979c710ca9c209f9aa72d5270d74f401.jpeg",
+      "updated_at":"2019-02-08 17:04:49.090404+00:00"
+   },
+   {  
+      "id":136,
+      "summary":"The Patton Veterans Project uses filmmaking\u00a0to help veterans coping with post-traumatic stress reduce social isolation and strengthen family, community, and professional bonds.\u00a0These podcasts are intended for veterans and civilians alike to advance community dialogue and educate the public about the often invisible challenges that veterans in transition and their families face, and some of the ways veterans can creatively express them.",
+      "podcast_guid":"b8af9516745f46de9a0931a9b74cc210",
+      "slug":"the-patton-veterans-project",
+      "title":"The Patton Veterans Project: Conversations On Service, Community & Creative Expression",
+      "image_url":"https://content.production.cdn.art19.com/images/71/7a/3f/7e/717a3f7e-fa4c-42b7-9b8f-e0aa9ab2ae74/d430eb3eba2ce4d060e0fc2074ff58d87ea70561247b08f8dcf15ce3774d431e22e1e2fa4e03db5688ed3fb14db1033c408e4313c39700e4c37e2933d6bd05ae.jpeg",
+      "updated_at":"2019-02-08 17:04:46.055392+00:00"
+   },
+   {  
+      "id":133,
+      "summary":"Get all of the inside access from head coach Lance Leipold and special guests each week throughout the season.",
+      "podcast_guid":"b73eb3ecf187445b9dce5ff8409cde8a",
+      "slug":"ub-football-insider-with-lance-leipold",
+      "title":"UB Bulls Insider",
+      "image_url":"https://content.production.cdn.art19.com/images/ae/1c/fc/a5/ae1cfca5-aa82-4dbd-bfc7-c5f19775036d/905fab26c7148f6bda491d215af9321b95dbcd66cf43326c4843cc802c685a9e327efc027ae9442f87182f0d8777eb92e93fa0455bebd7d1d48962db631966e7.jpeg",
+      "updated_at":"2019-02-08 17:04:45.097963+00:00"
+   },
+   {  
+      "id":186,
+      "summary":"The Voice of the Cyclones John Walters brings you inside Iowa State athletics.",
+      "podcast_guid":"b362122b3ef3407aac9ee7f7539731d5",
+      "slug":"iowa-state-cycast",
+      "title":"Iowa State CyCast",
+      "image_url":"https://content.production.cdn.art19.com/images/32/39/02/4a/3239024a-bd45-4ba7-9c2f-f6c99356ad6b/6c0ae4ad030ec0d3cc33966a5a1e131ff31fb9b86fbc73e9a8868ca93810f2ab83f7796dedd2de5f10ad5e4aa035aca527a3a760c762575a8b2cb76af1076d0b.jpeg",
+      "updated_at":"2019-02-08 17:04:39.561259+00:00"
+   },
+   {  
+      "id":143,
+      "summary":"\"The MMQB Podcast with Peter King\" is the ultimate destination for all things pro football. Led by one of the most influential storytellers in all of sports media, three-time American Sportswriter of the Year Peter King, \"The MMQB Podcast with Peter King\" is an access-driven experience that brings fans into the locker room, the press box and the front office with the biggest influencers in professional football. Fans can listen in on in-depth conversations with the biggest names in football that they haven't heard before to get a fresh, new and intimate experience on America\u2019s most popular sport.",
+      "podcast_guid":"b1eca19785ef47d58652f58fa061550a",
+      "slug":"the-mmqb-podcast",
+      "title":"The MMQB Podcast with Peter King",
+      "image_url":"https://content.production.cdn.art19.com/images/33/4a/47/fd/334a47fd-9d43-4fcf-a29e-a2e6e936e616/ec55baca92264bc5c117e8ef5a95346c0872320275ec5302c8ea5d7e5aaa6ce92f93c754d5f4d1a3c959d2b2be72344e3f9de4b0dbae97ad79e6fbcd232e3e2f.jpeg",
+      "updated_at":"2019-02-08 17:04:36.991670+00:00"
+   },
+   {  
+      "id":121,
+      "summary":"FOX Sports NFL Analyst, Peter Schrager takes you inside NFL locker rooms, breaking the latest news, giving opinions on the hottest topics, and interviewing the most compelling guests around the league.",
+      "podcast_guid":"ad86874796ee41abace11fb9fa0aaa43",
+      "slug":"the-peter-schrager-podcast",
+      "title":"The Peter Schrager Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/51/8b/66/0e/518b660e-42fd-42bc-afde-52dafbeea812/b484ad73439d3b25c157617cd0d683045d20b980bed399ef9274c5d6cf97c7c20c20d157a5efb3a93765f9e8af7f324c03471045c4061e07aa769ac794bc2cb2.jpeg",
+      "updated_at":"2019-02-08 17:04:34.801501+00:00"
+   },
+   {  
+      "id":97,
+      "summary":"From short stories and documentaries to limited-run series and exclusive content, TPT Audio Lab offers an inside look into what The Players' Tribune does best: provide the world's best athletes with the tools to tell their own stories, in their own way.",
+      "podcast_guid":"ac2a3cc2772e42e49bb3f4179dfca268",
+      "slug":"tpt-audio-lab",
+      "title":"TPT Audio Lab from The Players' Tribune",
+      "image_url":"https://content.production.cdn.art19.com/images/d0/81/eb/01/d081eb01-4d73-42f9-8216-b0599e446c48/e68828d9bfbcb490e58ac839ea5f0f4e29bbf8539831f31e60634c526dad4281424383b7f611441390df7f7ea05c9998bcd5a360d44ef6b3ece0c0f4e2e25dd4.jpeg",
+      "updated_at":"2019-02-08 17:04:33.187499+00:00"
+   },
+   {  
+      "id":209,
+      "summary":"Join the Voice of the Tigers Mike Kelly each week for the Inside Mizzou Athletics Podcast. Mike brings you insight, interviews, guests and more each week.",
+      "podcast_guid":"aaa9bdd6da604a20a5f935785c50d0a3",
+      "slug":"inside-mizzou-athletics",
+      "title":"Inside Mizzou Athletics",
+      "image_url":"https://content.production.cdn.art19.com/images/b1/79/0b/9a/b1790b9a-9469-4a70-a40a-43fc2b431604/49a7c0e5c4def768b679d4bad03805ce96fb9451f0aa3d09024988e8925bb813d5a5914ef4102c82e28a43bbe24ff8007680c05fd807a168f5b8ebf0296e1873.jpeg",
+      "updated_at":"2019-02-08 17:04:32.217244+00:00"
+   },
+   {  
+      "id":179,
+      "summary":"Best-selling sports author and noted Trump antagonist, Molly Knight, gives listeners a humorous, informative, and cathartic space to deal with all the ways in which Donald Trump is wreaking havoc on their lives. It will feature guests ranging from celebrities, to physicians, to professional athletes, to Molly\u2019s next door neighbors.\n\n\u00a0\n\nMolly promises to provide a platform for rational human beings to laugh until they cry, and cry until they laugh, until Trump and Pence are out of the White House. Each episode will do a quick review of the terrible things the president did in the previous seven days, and focus on a specific topic personal to the guest. Such topics will include what it's like to be gay in the age of Trump, what it's like to be a parent in the age of Trump, what it's like to be a pro athlete in the age of Trump, and how to handle insomnia, depression, anxiety, and sudden nihilistic urges.\n\n\u00a0\n\nThere are many political podcasts that review the news and talk to policy wonks. This podcast will delve into how this administration is affecting our everyday lives in ways we might not yet understand, and serve as a place to primal scream as we re-build the strength necessary to take our country back from the lunatic in charge.",
+      "podcast_guid":"a762be269eab463d8a82f81d12fbed0d",
+      "slug":"the-president-ruined-my-week",
+      "title":"The President Ruined My Week",
+      "image_url":"https://content.production.cdn.art19.com/images/16/03/f8/52/1603f852-eba1-4171-83ac-31a3c8041a33/4046525a3045e7895fd69d43fe46adb0c47b6122617c59104240fdd3bf06ba4be716aed1aa52f3808095161efee0c02b8c702b2218004c76cc9cf186560582c7.jpeg",
+      "updated_at":"2019-02-08 17:04:29.117913+00:00"
+   },
+   {  
+      "id":149,
+      "summary":"Jones Angell and Adam Lucas give you an inside peek on all things Tar Heels. Expert analysis, behind the scenes info and of course the latest UNC news.",
+      "podcast_guid":"a65a9d3f1330409b9074656ce0735919",
+      "slug":"carolina-insider",
+      "title":"Carolina Insider",
+      "image_url":"https://content.production.cdn.art19.com/images/b7/60/6a/5d/b7606a5d-3410-4751-ada7-089f329acba5/83d65c04483f882e8bcb146378a0416c59cf1a908c3542ab3bd691c16d3ac928a2dc52514c03f809645aeee3a7b5f933a3e9b57cc48d14dcfb56c8b6eeadc2d5.jpeg",
+      "updated_at":"2019-02-08 17:04:27.548326+00:00"
+   },
+   {  
+      "id":185,
+      "summary":"Jon Anik and Kenny Florian talk MMA, sports, pop culture, and whatever else they can think of. Join Anik and \"Ken-Flo\" as they break down the latest on-goings in the UFC, take listener calls, and interview personalities from all over the world. ",
+      "podcast_guid":"981c9d61921e40738f4fe3f02d1343c7",
+      "slug":"anik-and-florian",
+      "title":"Anik and Florian",
+      "image_url":"https://content.production.cdn.art19.com/images/cb/78/79/1a/cb78791a-85d5-438f-bc45-df3c4dd34878/456ffbdb6a238b0899d744adb0792739be21951d6075b66a01b8f891e314c9da636220b8aa84f7e45984df5c8a18f10a4fefcb0dde9494ecc57a4f9aed346fab.jpeg",
+      "updated_at":"2019-02-08 17:04:22.518373+00:00"
+   },
+   {  
+      "id":205,
+      "summary":"Mike Parker and John Warren bring you an in-depth, inside look at your Oregon State Beavers. Interviews, insight and more each week focused on your Beavers.",
+      "podcast_guid":"8dc1b4007d7149d1913e397bbb7551a0",
+      "slug":"beaver-sports",
+      "title":"Beaver Sports Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/b9/a1/a2/24/b9a1a224-0ca2-462f-b882-b1fa5ec7955f/dbbe89753de70c27388b26048bf18196e4535acde6c78948205f31d70c4b24883e24b1158eaa42403eea65c470619f71c25493a75f3a9fcf48fa365385a2701c.jpeg",
+      "updated_at":"2019-02-08 17:04:17.276714+00:00"
+   },
+   {  
+      "id":164,
+      "summary":"Canadian duo Jay Onrait and Dan O'Toole have launched a revamped version of FOX Sports Live, a nightly show recapping the day's events in the world of sports in only a way Jay and Dan can. ",
+      "podcast_guid":"8a9a740f73a44efea5d9bb08616dcd80",
+      "slug":"fox-sports-live",
+      "title":"FOX Sports Live with Jay & Dan",
+      "image_url":"https://content.production.cdn.art19.com/images/9e/59/9d/55/9e599d55-04b4-45c2-833f-16a675b158a8/f0132417de60cc857963c95da400ade9095befb0ed16c00f362eaaaf4525d235c284127239b3b21df15c7edcfde45ac2cd285cda711dd0bc1414b4f3413c62bf.jpeg",
+      "updated_at":"2019-02-08 17:04:13.989689+00:00"
+   },
+   {  
+      "id":83,
+      "summary":"Toby Rowland and Chris Plank bring you inside Sooner Sports. Get the latest scoop and expert opinions on everything Sooners!",
+      "podcast_guid":"894bea9734644a678b9e0b9e756b2d96",
+      "slug":"oklahoma-sooners-podcast",
+      "title":"Oklahoma Sooners Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/c0/21/1c/81/c0211c81-6507-47bd-b3fc-343d398391bd/eaad1d082f049763adcc0c7ec9a84574f3d7d8a0d103ee8228b1ff51fcf54c7f56336fd36ae0c49a63056c755128efda3d4f96c8eb6cbd946b6d461fff742d46.jpeg",
+      "updated_at":"2019-02-08 17:04:11.382818+00:00"
+   },
+   {  
+      "id":157,
+      "summary":"The Campus Rush Podcast puts you back on campus with weekly insight and analysis from around the world of college sports with SI writers Andy Staples and Lindsay Schnell and interviews with some of the biggest names in college sports.",
+      "podcast_guid":"83bfad72e94c4a4688ce99a7647af3d3",
+      "slug":"campus-rush",
+      "title":"Campus Rush with Andy Staples and Lindsay Schnell",
+      "image_url":"https://content.production.cdn.art19.com/images/26/01/9c/e9/26019ce9-4cb9-428d-b335-38ef07378f23/e8d311807aeba92687c43064babc8f4a65b2b2a455c4f8168313d36adcdf3d35927998ea3b66977149a3e8dd443223381d6cc272b18c83a482d0c3a792c70881.jpeg",
+      "updated_at":"2019-02-08 17:04:05.012568+00:00"
+   },
+   {  
+      "id":108,
+      "summary":"Join Teddy Allen each week for insider updates, behind the scene stories, special guests, and more.",
+      "podcast_guid":"7f24c437146640e2a480972ca2354d39",
+      "slug":"talking-tech-with-teddy",
+      "title":"Talking Tech with Teddy",
+      "image_url":"https://content.production.cdn.art19.com/images/a5/0b/d5/5f/a50bd55f-3edd-46e3-b4a6-118757d0e9fb/196e3d87c14aadc9afd928fd218edba4e2e6bfc10662e79549b321450b52608265116f849e22634711b696816abea8b4137fa94c37ead7828ca483bc12f9a1a9.jpeg",
+      "updated_at":"2019-02-08 17:04:03.106247+00:00"
+   },
+   {  
+      "id":100,
+      "summary":"Sports Illustrated\u2019s Seth Davis has smart conversations with interesting people in and around the world of sports. ",
+      "podcast_guid":"7f0cf20f83b2469386dda8ca2d4aa9d0",
+      "slug":"seth-davis",
+      "title":"The Seth Davis Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/5e/85/68/76/5e856876-2c65-4b52-9e16-d15f9245cb02/c237567842a77b619255af5a4ad5053f06ae015d51a67549175b32d628bff81f67ca99f3bcf9217799e5d525edacef72b96378954d5b99494728033c2796157d.jpeg",
+      "updated_at":"2019-02-08 17:04:02.133659+00:00"
+   },
+   {  
+      "id":208,
+      "summary":"Brian Roth, the Voice of the Colorado State Rams, gives fans an in-depth look at Colorado State Sports. Interviews, guest analysis and more each week focused on your Colorado State Rams.",
+      "podcast_guid":"7aed0f09c2bc44cf96ba845a5bae0697",
+      "slug":"the-colorado-state-insider",
+      "title":"The Colorado State Insider with Brian Roth",
+      "image_url":"https://content.production.cdn.art19.com/images/90/3f/6d/d1/903f6dd1-926b-4c9c-8c18-08e185d458ab/ac752b14c09ccfc3be257e456e5c5491b55c60c7297126b251ebfb5645d4283f4bd6017da01766a8ebddd73c4065c46d65d1fb2c1e8c57a61509822913169783.jpeg",
+      "updated_at":"2019-02-08 17:03:55.240612+00:00"
+   },
+   {  
+      "id":168,
+      "summary":"Every week Reece Monaco takes you inside Wyoming athletics.",
+      "podcast_guid":"795f916a47814368aace53b7127411b3",
+      "slug":"the-wyocast-with-reece-monaco",
+      "title":"The WyoCast with Reece Monaco",
+      "image_url":"https://content.production.cdn.art19.com/images/31/76/81/ed/317681ed-e701-4bf9-ba8e-7e260347d5ca/f0ad043b4f74a85df21b7c2be717b367e9c55b0bf0388aa5f0bf16af465ade362da8d2fa1c5f427af002e31fdf915d80bbe7e3467dd83d2f1b8683ca55165902.jpeg",
+      "updated_at":"2019-02-08 17:03:49.835331+00:00"
+   },
+   {  
+      "id":151,
+      "summary":"Get the inside scoop on UC Davis\u00a0Aggie\u00a0athletics.",
+      "podcast_guid":"75849093f3f343da85cda6543ba14ac6",
+      "slug":"aggie-overtime",
+      "title":"Aggie Overtime \u2013 The Inside Scoop on UC Davis Athletics",
+      "image_url":"https://content.production.cdn.art19.com/images/f3/34/73/0f/f334730f-efbf-4925-95d9-820803bbdb62/93e8cd491eab091c6d9d4089358ffbbad5df2ca844df34497f8a011d9a3a2623535f4eeddd3736dd29819d3cdf1ddb20b85ac502ee091a078c67eea8ca6dd37a.jpeg",
+      "updated_at":"2019-02-08 17:03:48.883978+00:00"
+   },
+   {  
+      "id":117,
+      "summary":"\"The Garbage Time Podcast with Katie Nolan\" is Katie's podcast where she tackles the world of sports and beyond in her own unique and humorous way.",
+      "podcast_guid":"7522ae475c2e4f948ff8caccf1f1b68a",
+      "slug":"the-garbage-time-podcast-with-katie-nolan",
+      "title":"The Garbage Time Podcast with Katie Nolan",
+      "image_url":"https://content.production.cdn.art19.com/images/4c/e0/c2/a1/4ce0c2a1-316f-4758-99de-f07a326de97f/834cb471a6bd9e9e6b41350bae60813fc7603d387c0c93e38559a91bda1f158d0c50b057024f384a4195ff0f98af5c54dd39ce5558de6d9f7848dd28d00f4ed0.jpeg",
+      "updated_at":"2019-02-08 17:03:47.896637+00:00"
+   },
+   {  
+      "id":91,
+      "summary":"Get updates on your favorite BGSU teams and their accomplishments. Updates on the success of our teams, upcoming games and interviews with key coaches on our staff.",
+      "podcast_guid":"721ad96558e54a288d351f94761a29d1",
+      "slug":"bgsu-ziggycast",
+      "title":"BGSU Ziggycast",
+      "image_url":"https://content.production.cdn.art19.com/images/62/97/b7/ee/6297b7ee-8dd9-429e-8431-b783fa676f02/993cb369b1902b67e44e23f383b2e8a9d9e770d1a1e8e4c77d2f92e5a0491dc37836fefbf0be437475775fa770ff6b96cd708b4069db857626aebd1d04b27ac6.jpeg",
+      "updated_at":"2019-02-08 17:03:45.647277+00:00"
+   },
+   {  
+      "id":206,
+      "summary":"I am Chris Hardwick. This podcast used to be called Nerdist. Now it is not. It is still basically just me talking about stuff and things with my two nerdy friends Jonah Ray and Matt Mira when they\u2019re available, and usually someone more famous and smarter than all of us. Swearing is still fun, so we still do that occasionally. I hope you like this new iteration which is the same as before, but if a name hangs you up unhealthily I\u2019m sure you will not hesitate to unfurl your rage not only in the \u2018reviews\u2019 section but also now on all the various social media platforms that have popped up since we started in 2010, effectively murdering blogs.",
+      "podcast_guid":"5b6209b50a3c49819d71ea27d76bb77e",
+      "slug":"id10t",
+      "title":"ID10T with Chris Hardwick",
+      "image_url":"https://content.production.cdn.art19.com/images/58/a1/cf/f4/58a1cff4-2127-476f-a386-eb043b863a7a/bc322acfdc82d04d3dd81f889e0d83348db797cdcc1353f593537198fb187362218c65681c3681a4938d01a7507975a8761b278c3a72c84b9a1aaa6e67db11f4.jpeg",
+      "updated_at":"2019-02-08 17:03:21.775116+00:00"
+   },
+   {  
+      "id":229,
+      "summary":"With more than 45 combined years on the K-State Sports Network, Wyatt Thompson and Stan Weber provide a weekly in-depth look at all things K-State Sports.\u00a0",
+      "podcast_guid":"57b1721e55544a8d814d10c821786aef",
+      "slug":"wildcat-podcast",
+      "title":"Wildcat Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/ca/b6/61/ce/cab661ce-480e-4c36-a5ae-fc58c28e1ac4/1481b08fbbbedf37b97f8fe33865c0c5c5859de98c51b7f02eecc3413aa48b5bee8e1a6a69927e776cccc89e6b2168c9293154d84b1ab7dce8bf25a309097592.jpeg",
+      "updated_at":"2019-02-08 17:03:15.876415+00:00"
+   },
+   {  
+      "id":177,
+      "summary":"A weekly look inside the world of Total Frat Move and college life across the country. \"The Inside TFM Podcast\" features writers and personalities from TFM headquarters in Austin, Texas. In addition to news and analysis, the guys discuss current events, and classic frat tales.",
+      "podcast_guid":"546770bd86be4da49fc3cae63a6e982e",
+      "slug":"the-inside-tfm-podcast",
+      "title":"The Inside TFM Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/06/6d/5f/be/066d5fbe-acc3-49c8-98d0-32c1c1e59e38/741f5cd18bda55f48800ca113d8939f2cdc03b3eaf882fa212c48755d878674510ffbcf8198c5cf9a09c944936a266bac3b2b9c06a13f8214384cacb33a7bce8.jpeg",
+      "updated_at":"2019-02-08 17:03:14.296957+00:00"
+   },
+   {  
+      "id":155,
+      "summary":"Colin Lacy and the Voice of the Eagles, Danny Reed, give you an All-Access look into Eagle Athletics.",
+      "podcast_guid":"4b0ce7e5999a4b249f9337ae8cef7e1e",
+      "slug":"inside-eagle-nation",
+      "title":"Inside Eagle Nation",
+      "image_url":"https://content.production.cdn.art19.com/images/a2/93/09/49/a2930949-a6cf-4e4e-ab8e-67e763eb2160/bf1cffb58d6072b3f4d05e7a2296523e904c787a5236d57d91e1ccf8022bf53fbf36ce6016939e827c1089831f88381b9474fdd47f3cfb584fa223b89bf33b47.jpeg",
+      "updated_at":"2019-02-08 17:03:07.638619+00:00"
+   },
+   {  
+      "id":102,
+      "summary":"Stay connected to Aggie sports all year long wherever you go with\u00a0Studio 12, the official podcast of Texas A&amp;M Athletics. Hosts Andrew Monaco and Will Johnson take you inside Texas A&amp;M Athletics with exclusive interviews, insights, former player features and much more.",
+      "podcast_guid":"42a2d078f0cc442f963454395c64b53b",
+      "slug":"the-station",
+      "title":"Studio 12",
+      "image_url":"https://content.production.cdn.art19.com/images/77/57/8c/b9/77578cb9-2610-4d27-9a04-f5f147aaa1ea/25ecacc674151465b657714f4600a611ece26efaf0a649b521eac32ec4c8f219a61021150c66cdb70e1237317787041e62000ebc0d067653898192ffcbb9854c.jpeg",
+      "updated_at":"2019-02-08 17:03:00.047489+00:00"
+   },
+   {  
+      "id":109,
+      "summary":" Explore the history, culture and people responsible for shaping and growing UNI wrestling. Meet the current members of the team at the University of Northern Iowa. The show goes beyond stats to share inspiring stories about Olympians, coaches and current student-athletes. ",
+      "podcast_guid":"3de1374fe5dc435e8d0d673233dc03de",
+      "slug":"uni-panther-pep-talk",
+      "title":"UNI Panther Pep Talk",
+      "image_url":"https://content.production.cdn.art19.com/images/e4/cc/38/54/e4cc3854-5126-461c-bbee-2d7896eeedad/b2bb8f51357129722751a05962ce4a840282b5e9b26597684be871a9445620c61890d4d4733c23a884eac15048fdc3d57bd053dc1b33f04e7457b225878caf4f.jpeg",
+      "updated_at":"2019-02-08 17:02:57.172644+00:00"
+   },
+   {  
+      "id":96,
+      "summary":"FOX Sports Senior UFC Writer Damon Martin brings you the all new Fight Society, a podcast dedicated to all things MMA. Featuring top guests around the industry with the most informed opinions and insight, Fight Society is a must-listen for any MMA fan. If you want the best fight analysis from current top pros and the guys who sit ringside for the biggest fights, look no further. ",
+      "podcast_guid":"366fce5461a94c529172ae6882fdc7d7",
+      "slug":"the-great-mma-debate",
+      "title":"Fight Society",
+      "image_url":"https://content.production.cdn.art19.com/images/49/ac/29/f5/49ac29f5-8cb0-4820-83a9-9c427fcf67e7/abf368620b681d7c48149d2a37396c48653858aa3b52704373a803714d6b2cb58bb5d99ab1c7114f8e6bd6b95fc86778c3c4e1eb02439a320e86563c990db5cb.jpeg",
+      "updated_at":"2019-02-08 17:02:56.212336+00:00"
+   },
+   {  
+      "id":86,
+      "summary":"Chris Stewart takes you behind the scenes on everything \"Bama. Interviews, guest analysis and more each week focused on your Alabama Crimson Tide.",
+      "podcast_guid":"33055bb48aaa4206ad0540411c17701c",
+      "slug":"alabama-insider",
+      "title":"Alabama Insider",
+      "image_url":"https://content.production.cdn.art19.com/images/09/33/bc/92/0933bc92-686c-4e1f-8d36-99c94582b3bc/4e16b926be0c35b472f609e771e279f0b6ef45729186ef1de5211487af1826db73ac6f62060f016a3e2ae61efe1cb9bca7abdbff7bd0272508924ac78f6032db.jpeg",
+      "updated_at":"2019-02-08 17:02:53.673001+00:00"
+   },
+   {  
+      "id":152,
+      "summary":"During a coaching career spanning more than three decades, Les Miles has established himself as one of the most fascinating figures in all of sports. Regarded almost as much for his press conferences antics as his on the field accomplishments, Les\u2019 reputation precedes itself. The Les Is More Podcast will quickly become a must-listen for anybody who loves college football. Combining a first-hand insider perspective with a distinctively personal and quirky approach, this weekly offering will cover the latest storylines on the college football landscape, as well as anecdotes and intimate experiences shared by Coach Miles, his family and the various figures he\u2019s befriended throughout the years. For those in the know, this podcast isn't merely a part of the conversation surrounding college football \u2014 it is the conversation.",
+      "podcast_guid":"31937e7b0017452ea45e72c47d66834c",
+      "slug":"the-players--tribune-les-is-more",
+      "title":"The Players\u2019 Tribune: Les Is More",
+      "image_url":"https://content.production.cdn.art19.com/images/54/11/80/79/54118079-2113-456d-a2a8-aa22c6b21c76/efe5f876d23d35cf0518fc47392528c4e67b9ba2c1d668458138ee0b24c958aabc597200390251510f79c52de174099c08440d5af6415439e57f1045e9159f82.jpeg",
+      "updated_at":"2019-02-08 17:02:52.683438+00:00"
+   },
+   {  
+      "id":99,
+      "summary":"Dave Hunziker, The Voice of the Cowboys, gives you an in depth look at Oklahoma State Sports. Interviews, guest analysis and more each week focused on your Oklahoma State Cowboys.",
+      "podcast_guid":"267c74b2726742f2acff423b2fc4b1f1",
+      "slug":"oklahoma-state-cowboy-insider",
+      "title":"Oklahoma State Cowboy Insider",
+      "image_url":"https://content.production.cdn.art19.com/images/5a/76/2e/6a/5a762e6a-1297-4366-9620-3ffb2ca5af1b/77bb661aee927a52f4204cc3411b8905dbd482cd78c3bd7d9049932ab4f38372669de995cc3975074a3ca9f9ac7753a5accf4079f5a84a328c7d646b3260ca1d.jpeg",
+      "updated_at":"2019-02-08 17:02:45.490417+00:00"
+   },
+   {  
+      "id":150,
+      "summary":"Media. Art. Advertising. Sports. Music. Film.  The lines between commerce and culture are more fluid than ever before.  Culture shapes advertising, advertising shapes culture and technology enables both.  Join David Sable, Global CEO of iconic agency Y&R, as he talks to some of the liveliest, most eclectic individuals using creativity to connect with people.",
+      "podcast_guid":"23b560f2ffd4478d8197f574bb1b2330",
+      "slug":"madison-and-culture",
+      "title":"Madison & Culture",
+      "image_url":"https://content.production.cdn.art19.com/images/2c/f5/8b/4e/2cf58b4e-e7c3-482e-9e49-4c77bbbfe38e/1ae47781d1f43fdd67d73b8fe8ff35d00836cfd513d662ea312ee83d5b30bb767595e97e78afa3124944633d93ae55748bbbc6eecd142aaf5e3cd385c69b8a4d.jpeg",
+      "updated_at":"2019-02-08 17:02:44.499718+00:00"
+   },
+   {  
+      "id":159,
+      "summary":"ChirpCast is a podcast hosted by Joel Godett and Mick Tidrow of the Ball State Radio Network, in partnership with Learfield. Featuring interviews with all the key newsmakers in Cardinals athletics and providing exclusive access to every aspect of the Ball State Athletic Department, ChirpCast is the podcast for serious Cardinals fans everywhere.\u00a0New episodes drop every week.",
+      "podcast_guid":"20e20dbac4164faaaf57b9c267ced838",
+      "slug":"chirpcast-podcast",
+      "title":"ChirpCast Podcast",
+      "image_url":"https://content.production.cdn.art19.com/images/3d/fb/bb/ae/3dfbbbae-6e73-4755-a20d-9e4951a457ad/29b5c487d094c633a391b2876d5c07775336df654b8f8eaf61d37613d31f022e92e4e372edcb67c6b6b821bd4e73b178932fc1d30a16619dcb0398c05edae0cb.jpeg",
+      "updated_at":"2019-02-08 17:02:40.734131+00:00"
+   },
+   {  
+      "id":195,
+      "summary":"Hannah Hart (wildly successful, super fly, very amazing) and her best friend, Hannah Gelb (her middle name is Ruth) discuss life, love, and the pursuit of happiness in a frank and no bullshit manner in this self-help podcast that just can\u2019t help itself.\u00a0\n\nEvery week the two Hannahs test out a new self-help fad and provide the listeners with candid feedback about their experience. Despite their differing opinions and stances, the two are best friend at the core. Also they have great vocabularies and love to giggle. Hannah Gelb is single BTW. Just in case anybody wants to hit her up sometime.",
+      "podcast_guid":"0ca2c24758604d18965e85a345ace25d",
+      "slug":"hannahlyze-this",
+      "title":"HANNAHLYZE THIS with Hannah Hart & Hannah Gelb",
+      "image_url":"https://content.production.cdn.art19.com/images/0d/61/6f/5e/0d616f5e-f95b-4e97-8ec3-01c8401d33f6/6d508b063533300f0a72989fe967ecce3191fe2c7ad84ad07b0dcfc0f2f606bc438b37a0d988c18eb0a2e2f81ad91633c6fd505c59b3f3831a27f1610b4c3afe.jpeg",
+      "updated_at":"2019-02-08 17:02:26.997557+00:00"
+   },
+   {  
+      "id":105,
+      "summary":"Younger Uncovered, the official after-show podcast goes deep behind the scenes and explores the space where the fiction of \u2018Younger' intersects with the themes, ideas and experiences that touch our daily lives. Now on the Paramount Network.",
+      "podcast_guid":"0b63456e4cca4d549eabd31bbf41f9b3",
+      "slug":"younger-uncovered",
+      "title":"Younger Uncovered",
+      "image_url":"https://content.production.cdn.art19.com/images/04/c2/14/2b/04c2142b-0994-42ee-8d72-f1edc9c7cc4d/e34fceb0cefa7583ae9ddb5c376f7170165207c813f5d7f6e0b236d115dadac760a5318473677b3e2e78b6eda623520b37847ed559760bba5ae6af7b5cc516a7.jpeg",
+      "updated_at":"2019-02-08 17:02:25.453913+00:00"
+   },
+   {  
+      "id":106,
+      "summary":"Utah Athletic Director Mark Harlan gives an inside look to trending topics of Utah Athletics and college athletics",
+      "podcast_guid":"0813b6aa6cf746399381fba8cd817543",
+      "slug":"hear-it-from-harlan",
+      "title":"Hear it from Harlan",
+      "image_url":"https://content.production.cdn.art19.com/images/0e/c2/ce/7e/0ec2ce7e-9019-4252-9ef9-4321686edb95/c880803c5be76036e5848bf153112fe58f32126b6a429f86150739a7a15b0d2fb334c18c170950395de4b764f6f272bdcfc79752787c215c30e0d6f8d439bed5.jpeg",
+      "updated_at":"2019-02-08 17:02:22.936257+00:00"
+   }
+]

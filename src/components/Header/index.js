@@ -13,7 +13,7 @@ export const Header = ({ classes, toggleSidebar }) => (
     <Toolbar disableGutters>
       <IconButton
         color="inherit"
-        onClick={toggleSidebar}
+        onClick={() => toggleSidebar(true)}
         className={classes.menuButton}
       >
         <MenuIcon />

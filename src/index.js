@@ -8,7 +8,7 @@ import Routes from './routes'
 import store, { history } from './redux/store'
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import theme from './theme'
-import './styles/main.css'
+import './styles/styles.scss'
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>

@@ -20,6 +20,7 @@ const withRouterAndQueryParams = WrappedComponent => {
     }
 
     render() {
+      const { location } = this.props
       const queryParams = parseQueryString(location.search)
       return (
         <WrappedComponent

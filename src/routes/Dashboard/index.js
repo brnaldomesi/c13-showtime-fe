@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 
 import styles from './styles'
+import Typography from '@material-ui/core/Typography';
 
 class Dashboard extends Component {
   static propTypes = {
@@ -15,7 +16,7 @@ class Dashboard extends Component {
 
     return (
       <div className={classes.root}>
-        Podcasts Dashboard
+        <Typography variant="h4">Welcome to Cadence Dashboard!</Typography>
       </div>
     )
   }
