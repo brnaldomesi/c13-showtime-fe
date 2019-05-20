@@ -16,7 +16,7 @@ class Dashboard extends Component {
 
     return (
       <div className={classes.root}>
-        <Typography variant="h4">Welcome to Cadence Dashboard!</Typography>
+        <Typography variant="h4">Welcome to Cadence Showtime!</Typography>
       </div>
     )
   }

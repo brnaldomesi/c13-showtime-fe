@@ -19,7 +19,7 @@ export const Header = ({ classes, toggleSidebar }) => (
         <MenuIcon />
       </IconButton>
       <Typography variant="h6" color="inherit" noWrap>
-        Cadence13 Dashboard
+        Cadence13 Showtime
       </Typography>
     </Toolbar>
   </AppBar>

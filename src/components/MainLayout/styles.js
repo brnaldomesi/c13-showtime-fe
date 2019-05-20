@@ -1,6 +1,6 @@
 export default theme => ({
   root: {
     display: 'flex',
-    height: '130%'
+    height: '100%'
   }
 });

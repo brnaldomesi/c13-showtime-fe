@@ -5,5 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.0"
   }
 }
