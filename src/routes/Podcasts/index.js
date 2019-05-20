@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
@@ -12,16 +15,18 @@ import TablePagination from '@material-ui/core/TablePagination'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
 
+import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE } from 'config/constants'
+import { getPodcastsList, podcastsListSelector } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
 import styles from './styles'
-import podcasts from 'apiMocks/podcasts.json'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams';
 
 export const Podcasts = (props) => {
-  const { classes, location, pushWithQuery, queryParams } = props
+  const { classes, location, pushWithQuery, queryParams, getPodcastsList, podcasts } = props
   const { page = 1, pageSize = DEFAULT_PAGE_SIZE } = queryParams
-  const totalCount = podcasts.count
+  const totalCount = podcasts ? podcasts.count : 0
+  const podcastsList = podcasts ? podcasts.rows : []
   const pageNavButtonProps = { className: classes.pageNavButton }
 
   const handleChangePage = (event, pageIndex) => {
@@ -37,12 +42,19 @@ export const Podcasts = (props) => {
   const handleChangeRowsPerPage = event => {
     pushWithQuery({
       location: location,
-      search: {
+      queryParams: {
         ...queryParams,
         pageSize: event.target.value
       }
     })
   }
+
+  useEffect(
+    () => {
+      getPodcastsList({ params: { page, pageSize } })
+    },
+    [page, pageSize, getPodcastsList]
+  )
 
   return (
     <>
@@ -57,17 +69,25 @@ export const Podcasts = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {podcasts.map(row => (
+            {podcastsList.map(row => (
               <TableRow key={row.id}>
                 <TableCell scope="row">
-                  <img src={row.image_url} width={100} />
+                  <img src={row.image_url} width={100} alt="" />
                 </TableCell>
                 <TableCell>
-                  <Typography variant="subtitle1">{row.title}</Typography>
-                  <Typography>{truncate(row.summary)}</Typography>
+                  <Typography variant="subtitle1" color="textPrimary">{row.title}</Typography>
+                  <Typography color="textSecondary">{truncate(row.summary)}</Typography>
                 </TableCell>
                 <TableCell align="right" className={classes.actions}>
-                  <Button variant="contained" color="primary" className={classes.edit}>Edit</Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.edit}
+                    to={`/podcasts/${row.id}`}
+                    component={Link}
+                  >
+                    Edit
+                  </Button>
                   <Button variant="contained" color="secondary">Disable</Button>
                 </TableCell>
               </TableRow>
@@ -94,12 +114,21 @@ export const Podcasts = (props) => {
 Podcasts.propTypes = {
   classes: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
-  podcasts: PropTypes.array.isRequired,
+  podcasts: APIListType.isRequired,
   pushWithQuery: PropTypes.func.isRequired,
   queryParams: PropTypes.object,
 }
 
+const selector = createStructuredSelector({
+  podcasts: podcastsListSelector
+})
+
+const actions = {
+  getPodcastsList
+}
+
 export default compose(
   withRouterAndQueryParams,
+  connect(selector, actions),
   withStyles(styles)
 )(Podcasts)
