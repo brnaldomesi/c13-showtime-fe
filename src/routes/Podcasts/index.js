@@ -70,7 +70,7 @@ export const Podcasts = (props) => {
           </TableHead>
           <TableBody>
             {podcastsList.map(row => (
-              <TableRow key={row.id}>
+              <TableRow key={row.podcast_guid}>
                 <TableCell scope="row">
                   <img src={row.image_url} width={100} alt="" />
                 </TableCell>
@@ -83,7 +83,7 @@ export const Podcasts = (props) => {
                     variant="contained"
                     color="primary"
                     className={classes.edit}
-                    to={`/podcasts/${row.id}`}
+                    to={`/podcasts/${row.podcast_guid}`}
                     component={Link}
                   >
                     Edit
@@ -113,6 +113,7 @@ export const Podcasts = (props) => {
 
 Podcasts.propTypes = {
   classes: PropTypes.object.isRequired,
+  getPodcastsList: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
   podcasts: APIListType.isRequired,
   pushWithQuery: PropTypes.func.isRequired,
