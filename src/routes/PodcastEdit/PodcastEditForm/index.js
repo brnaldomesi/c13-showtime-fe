@@ -56,6 +56,14 @@ const renderForm = (classes) => (props) => (
           component={FormInput}
         />
       </Grid>
+      <Grid item sm={6}>
+        <Field
+          name="subscription_urls.RADIO_COM"
+          label="Radio.com"
+          placeholder="e.g. https://player.radio.com/listen/station/..."
+          component={FormInput}
+        />
+      </Grid>
     </Grid>
     <Grid container justify="flex-end" spacing={16}>
       <Grid item>
