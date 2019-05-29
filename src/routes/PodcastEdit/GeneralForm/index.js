@@ -4,9 +4,16 @@ import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
+import * as Yup from 'yup'
 
 import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
+
+const validationSchema = Yup.object().shape({
+  title: Yup.string().required('Podcast title is required'),
+  summary: Yup.string().required('Summary is required'),
+  slug: Yup.string().required('Slug is required'),
+});
 
 const renderForm = (props) => (
   <form onSubmit={props.handleSubmit}>
@@ -30,6 +37,8 @@ const renderForm = (props) => (
       name="summary"
       label="Summary"
       component={FormLockerInput}
+      multiline
+      rows={6}
       placeholder="e.g. pod-save-america ..."
       lockerName="locked"
       lockerValue="summary"
@@ -74,6 +83,7 @@ const GeneralForm = ({ initialValues, onSubmit }) => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       render={renderForm}
+      validationSchema={validationSchema}
     />
   )
 }

@@ -21,7 +21,8 @@ export default theme => ({
   },
   divider: {
     width: 1,
-    height: 28,
+    height: 'auto',
     margin: 4,
+    alignSelf: 'stretch'
   },
 })
