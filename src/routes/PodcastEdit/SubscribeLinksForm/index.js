@@ -5,46 +5,58 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 
-import FormInput from 'components/FormInput'
+import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
 
 const renderForm = (props) => (
   <form onSubmit={props.handleSubmit}>
     <Field
-      name="subscription_urls.GOOGLE_PODCASTS"
+      name="subscriptionUrls.GOOGLE_PODCASTS"
       label="Google Podcasts"
       placeholder="e.g. https://www.google.com/podcasts?feed=..."
-      component={FormInput}
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="GOOGLE_PODCASTS"
     />
     <Field
-      name="subscription_urls.GOOGLE_PLAY"
+      name="subscriptionUrls.GOOGLE_PLAY"
       label="Google Play"
       placeholder="e.g. https://play.google.com/music/m/..."
-      component={FormInput}
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="GOOGLE_PLAY"
     />
     <Field
-      name="subscription_urls.APPLE_PODCASTS"
+      name="subscriptionUrls.APPLE_PODCASTS"
       label="Apple Podcasts"
       placeholder="e.g. https://itunes.apple.com/podcast/..."
-      component={FormInput}
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="APPLE_PODCASTS"
     />
     <Field
-      name="subscription_urls.SPOTIFY"
+      name="subscriptionUrls.SPOTIFY"
       label="Spotify"
       placeholder="e.g. https://open.spotify.com/show/..."
-      component={FormInput}
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="SPOTIFY"
     />
     <Field
-      name="subscription_urls.STITCHER"
+      name="subscriptionUrls.STITCHER"
       label="Stitcher"
       placeholder="e.g. http://www.stitcher.com/podcast/..."
-      component={FormInput}
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="STITCHER"
     />
     <Field
-      name="subscription_urls.RADIO_COM"
+      name="subscriptionUrls.RADIO_COM"
       label="Radio.com"
       placeholder="e.g. https://player.radio.com/listen/station/..."
-      component={FormInput}
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="RADIO_COM"
     />
     <Hr />
     <Grid container justify="flex-end" spacing={3}>

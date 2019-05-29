@@ -24,7 +24,7 @@
        "TWITTER":"http://www.twitter.com/ClayTravis",
        "FACEBOOK":"https://www.facebook.com/claytravissports/"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/outkick-the-show",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/outkick-show-clay-travis/id705029632?mt=2"
      }
@@ -53,7 +53,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -81,7 +81,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -110,7 +110,7 @@
        "FACEBOOK":"https://www.facebook.com/HoopsOnFOX",
        "TWITTER":"https://twitter.com/EvanDaniels"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/sidelines-evan-daniels/id1168176609?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-sidelines-with-evan-daniels"
      }
@@ -139,7 +139,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/clubhouse-shane-bacon/id1094911742?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-clubhouse-with-shane-bacon"
      }
@@ -169,7 +169,7 @@
        "FACEBOOK":"https://www.facebook.com/SFYonFS1",
        "TWITTER":"https://twitter.com/SFY"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/speak-for-yourself-cowherd/id1123133293?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/speak-for-yourself-with-cowherd-whitlock"
      }
@@ -199,7 +199,7 @@
        "FACEBOOK":"https://www.facebook.com/Undisputed-On-FS1-320120738325702/",
        "TWITTER":"https://twitter.com/undisputed"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/skip-and-shannon-undisputed/id1150088852?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/skip-and-shannon-undisputed"
      }
@@ -229,7 +229,7 @@
        "FACEBOOK":"https://www.facebook.com/NASCARonFOX",
        "TWITTER":"https://twitter.com/NASCARONFOX"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/nascar-race-hub/id1218564441?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-hubcast-with-adam-alexander"
      }
@@ -258,7 +258,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -286,7 +286,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -315,7 +315,7 @@
        "FACEBOOK":"https://www.facebook.com/foxsports",
        "TWITTER":"https://twitter.com/Chris_Broussard"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/in-zone-chris-broussard/id1193331363?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/in-the-zone-with-chris-broussard?refid=stpr"
      }
@@ -344,7 +344,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/first-things-first/id1277873664?mt=2",
        "STITCHER":"https://www.stitcher.com/podcast/fox-sports-network/first-things-first"
      }
@@ -373,7 +373,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -402,7 +402,7 @@
        "FACEBOOK":"http://www.facebook.com/CFBonFOX",
        "TWITTER":"http://twitter.com/CFBONFOX"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/breaking-huddle-joel-klatt/id1037085984?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/breaking-the-huddle-with-joel-klatt"
      }
@@ -432,7 +432,7 @@
        "FACEBOOK":"https://www.facebook.com/foxsoccer",
        "TWITTER":"https://twitter.com/AlexiLalas"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/mutant-gene-podcast-alexi/id1101874962?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-mutant-gene-podcast-with-alexi-lalas"
      }
@@ -461,7 +461,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -489,7 +489,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -517,7 +517,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -545,7 +545,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1188487073",
        "SPOTIFY":"https://open.spotify.com/show/3qnXDWYMqKD3nNBiJFXyP6"
      }
@@ -574,7 +574,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/969519520",
        "GOOGLE_PLAY":"https://play.google.com/music/m/I2itsuciuulwej22qcvjz6pebzm",
        "SPOTIFY":"https://open.spotify.com/show/0rgMTVJ9TWDWsut3R1c5L3",
@@ -605,7 +605,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -633,7 +633,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1409801789",
        "GOOGLE_PLAY":"https://play.google.com/music/m/Iqeptsrxgzisgsghxjdu6jh6mki",
        "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vY29tbWVudHMtYnktY2VsZWJz",
@@ -665,7 +665,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -693,7 +693,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -722,7 +722,7 @@
        "FACEBOOK":"http://www.facebook.com/upandvanished",
        "TWITTER":"http://www.twitter.com/upandvanished"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PLAY":"https://play.google.com/music/m/Im5rmeeujqoxj7qqte4tngsr2v4?t=Up_and_Vanished",
        "APPLE_PODCASTS":"http://www.applepodcasts.com/upandvanished",
        "SPOTIFY":"https://open.spotify.com/show/5FqJcvfGMLledCODGqV4J9?si=bSvYhc85Q329-hdLQKIofg"
@@ -752,7 +752,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1453788965",
        "SPOTIFY":"https://open.spotify.com/show/0OFl1ONSwhVghhAbEBo2e4",
        "STITCHER":"http://www.stitcher.com/podcast/cadence13/to-live-and-die-in-la"
@@ -782,7 +782,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -810,7 +810,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "STITCHER":"https://www.stitcher.com/podcast/cadence13/pro-rata",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/pro-rata/id1412162689?mt=2"
      }
@@ -839,7 +839,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -867,7 +867,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -895,7 +895,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/the-oval-office-tapes/id1435414063?mt=2"
      }
    },
@@ -923,7 +923,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1293897220",
        "STITCHER":"http://www.stitcher.com/podcast/fantasy-labs-2/the-buffet-with-chad-and-scooch",
        "GOOGLE_PLAY":"https://play.google.com/music/m/Idmteu5jj5if55jztobtkoxdgwq",
@@ -955,7 +955,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PLAY":"https://play.google.com/music/m/Iwejm7zsznl74gxzvngztu2nhsa?t=From_The_Heart_Conversations_with_Yoga_Girl",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/from-the-heart-conversations-with-yoga-girl/id1219728105?mt=2",
        "SPOTIFY":"https://open.spotify.com/show/6VBsAU8dpXZSwX8GmU3qM5?si=E864G2GTT4e6M_lw64z5bA",
@@ -986,7 +986,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1014,7 +1014,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1042,7 +1042,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1070,7 +1070,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1098,7 +1098,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1126,7 +1126,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1154,7 +1154,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/965818306",
        "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vREdUMzY0Njk4Mjk0Mw",
        "SPOTIFY":"https://open.spotify.com/show/0UetHF8bYSGBtDsjVl4GDv",
@@ -1185,7 +1185,7 @@
      "social_media_urls":{  
        "TWITTER":"https://twitter.com/FantasticGeeks"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PLAY":"https://play.google.com/music/m/I5fgoridsuf3tmnyvmyv2dgynq4?t=Fantastic_Geeks_and_where_to_find_them",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/fantastic-geeks-and-where-to-find-them/id1354780495?mt=2",
        "SPOTIFY":"https://open.spotify.com/show/4ClhDjAqhqH9SRkGnfOsxY?si=a_lhoIlpQ-KQbazCX7twZg",
@@ -1216,7 +1216,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/ews-game-of-thrones-weekly/id1099326209?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/entertainment-weekly/ews-game-of-thrones-weekly?refid=stpr"
      }
@@ -1245,7 +1245,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1273,7 +1273,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1454021155",
        "SPOTIFY":"https://open.spotify.com/show/7EE84czguLACM5cQwUz1J0",
        "STITCHER":"http://www.stitcher.com/podcast/cadence13/skimm-this"
@@ -1303,7 +1303,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/skimmd-from-the-couch/id1345547675?mt=2",
        "STITCHER":"https://www.stitcher.com/podcast/cadence13/skimmd-from-the-couch?refid=stpr"
      }
@@ -1334,7 +1334,7 @@
        "TWITTER":"https://twitter.com/jillonmoney",
        "LINKEDIN":"https://www.linkedin.com/in/jillonmoney"
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "CASTBOX":"https://castbox.fm/channel/Better-Off-with-Jill-Schlesinger-id1208339?country=us",
        "GOOGLE_PLAY":"https://play.google.com/music/listen?u=0#/ps/Ij7qn37am4msadnvv7biqplriwe",
        "IHEART":"https://www.iheart.com/podcast/274-better-off-with-jill-28090565/episode/a-real-estate-dilemma-30282295/",
@@ -1368,7 +1368,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/eat-this-not-that/id1330196974?mt=2",
        "STITCHER":"https://www.stitcher.com/podcast/cadence13/eat-this-not-that"
      }
@@ -1397,7 +1397,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PLAY":"https://play.google.com/music/m/I3e5ffp2uwuen5kxwce5jygn2hq?t=The_MMQB_NFL_Podcast",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/the-mmqb-10-things/id916244917?mt=2",
        "SPOTIFY":"https://open.spotify.com/show/1Qme53SgzFqtt2RN16AHbK?si=U9ZYXpHfRaSVVaAFJR9CBg",
@@ -1428,7 +1428,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=https://podcasts.google.com/?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL1ZlcnRpY2FsLU1hbm5peA%3D%3D",
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/https://itunes.apple.com/us/podcast/the-crossover-nba-show-with-chris-mannix/id1078713316?mt=2&ign-mpt=uo%3D4",
        "GOOGLE_PLAY":"https://play.google.com/music/m/Isuhxosszncevpvxdpuo4hdlbna?t=The_Crossover_NBA_Show_with_Chris_Mannix",
@@ -1460,7 +1460,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1488,7 +1488,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/steve-mcnair-fall-of-a-titan/id1438017801?mt=2",
        "SPOTIFY":"https://open.spotify.com/show/6SKpCDfPFjDKTzMutjEdVn?si=guG2NPSmQ7OOC8U0UuoITA",
        "GOOGLE_PLAY":"https://play.google.com/music/m/Ilkbojbbuh767d4isf2wabt5fwm?t=Steve_McNair_Fall_of_a_Titan"
@@ -1518,7 +1518,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PLAY":"https://play.google.com/music/m/Iq5rbvuoxjtxxns3fnal5ciyy4y?t=Sports_Illustrated_Media_Podcast",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/si-media-podcast-richard-deitsch/id997819235?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/dgital-media/si-media-podcast-with-richard-deitsch",
@@ -1549,7 +1549,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1577,7 +1577,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/boxing-with-chris-mannix/id1176276029?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/dgital-media/boxing-with-chris-mannix"
      }
@@ -1606,7 +1606,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/planet-futbol-podcast/id999062153?mt=2",
        "STITCHER":"http://www.stitcher.com/podcast/planet-futbol-podcast"
      }
@@ -1635,7 +1635,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/https://itunes.apple.com/us/podcast/open-floor-sis-nba-show/id1050847009?mt=2&ign-mpt=uo%3D4",
        "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=https://podcasts.google.com/?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL29wZW4tZmxvb3I%3D",
        "STITCHER":"http://www.stitcher.com/podcast/cadence13/sis-nba-podcast",
@@ -1667,7 +1667,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PLAY":"https://play.google.com/music/listen?u=0#/ps/Iwh3hupirsebesylmnfucpieyqi",
        "IHEART":"https://www.iheart.com/podcast/274-most-valuable-podcast-with-30036214/",
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/most-valuable-podcast-charlotte-wilder-jess-smetana/id1439253638?mt=2",
@@ -1699,7 +1699,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
  
      }
    },
@@ -1727,7 +1727,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "STITCHER":"http://www.stitcher.com/podcast/cadence13/coverup",
        "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3Blb3BsZS1jb3Zlci11cA",
        "SPOTIFY":"https://open.spotify.com/show/2CLMoNDcpzt5Yzsqwy5cVx",
@@ -1759,7 +1759,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/breakaway/id1202998858?mt=2",
        "STITCHER":"https://www.stitcher.com/podcast/cadence13/breakaway-2"
      }
@@ -1788,7 +1788,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/https://itunes.apple.com/us/podcast/beyond-the-baseline/id1005210315?mt=2",
        "SPOTIFY":"https://open.spotify.com/show/https://open.spotify.com/show/5aYFkCxTeueITNs4Uhf4nj",
        "STITCHER":"http://www.stitcher.com/podcast/cadence13/beyond-the-baseline"
@@ -1818,7 +1818,7 @@
      "social_media_urls":{  
  
      },
-     "subscription_urls":{  
+     "subscriptionUrls":{  
        "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL21lZGlhLWRlaXRzY2g%3D",
        "GOOGLE_PLAY":"https://play.google.com/music/m/If6bszjbrrr4jpdx4i6vsxjvdcy",
        "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1366264191",

@@ -5,16 +5,51 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 
-import FormInput from 'components/FormInput'
+import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
 
 const renderForm = (props) => (
   <form onSubmit={props.handleSubmit}>
-    <Field name="title" label="Podcast Title" component={FormInput} placeholder="Enter the podcast title here..." />
-    <Field name="subtitle" label="Subtitle" component={FormInput} placeholder="Enter the podcast subtitle here..." />
-    <Field name="summary" label="Summary" component={FormInput} multiline rows={8} />
-    <Field name="slug" label="Slug" component={FormInput} placeholder="e.g. pod-save-america ..." />
-    <Field name="websiteUrl" label="Website URL" component={FormInput} placeholder="e.g. https://crooked.com/..." />
+    <Field
+      name="title"
+      label="Podcast Title"
+      component={FormLockerInput}
+      placeholder="Enter the podcast title here..."
+      lockerName="locked"
+      lockerValue="title"
+    />
+    <Field
+      name="subtitle"
+      label="Subtitle"
+      component={FormLockerInput}
+      placeholder="Enter the podcast subtitle here..."
+      lockerName="locked"
+      lockerValue="subtitle"
+    />
+    <Field
+      name="summary"
+      label="Summary"
+      component={FormLockerInput}
+      placeholder="e.g. pod-save-america ..."
+      lockerName="locked"
+      lockerValue="summary"
+    />
+    <Field
+      name="slug"
+      label="Slug"
+      component={FormLockerInput}
+      placeholder="e.g. pod-save-america ..."
+      lockerName="locked"
+      lockerValue="slug"
+    />
+    <Field
+      name="websiteUrl"
+      label="Website URL"
+      component={FormLockerInput}
+      placeholder="e.g. https://crooked.com/..."
+      lockerName="locked"
+      lockerValue="websiteUrl"
+    />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
