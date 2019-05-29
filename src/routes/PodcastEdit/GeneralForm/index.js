@@ -15,7 +15,7 @@ const renderForm = (classes) => (props) => (
     <Field name="title" label="Podcast Title" component={FormInput} />
     <Field name="summary" label="Podcast Summary" component={FormInput} multiline rows={8} />
     <Divider className={classes.divider} />
-    <Grid container spacing={16}>
+    <Grid container spacing={3}>
       <Grid item sm={6}>
         <Field
           name="subscription_urls.GOOGLE_PODCASTS"
@@ -76,7 +76,7 @@ const renderForm = (classes) => (props) => (
   </form>
 )
 
-const PodcastEditForm = ({ classes, initialValues, onSubmit }) => {
+const GeneralForm = ({ classes, initialValues, onSubmit }) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     await onSubmit(values)
@@ -92,10 +92,10 @@ const PodcastEditForm = ({ classes, initialValues, onSubmit }) => {
   )
 }
 
-PodcastEditForm.propTypes = {
+GeneralForm.propTypes = {
   classes: PropTypes.object.isRequired,
   initialValues: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
 }
 
-export default withStyles(styles)(PodcastEditForm)
+export default withStyles(styles)(GeneralForm)

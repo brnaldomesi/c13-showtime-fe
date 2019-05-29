@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
@@ -12,8 +13,11 @@ import {
   podcastDetailsSelector,
 } from 'redux/modules/podcast'
 import LoadingIndicator from 'components/LoadingIndicator'
-import PodcastEditForm from './PodcastEditForm'
+import NavTabs from './NavTabs'
+import GeneralForm from './GeneralForm'
 import styles from './styles'
+
+const renderComingSoon = () => <div>Coming Soon...</div>
 
 export const PodcastEdit = (props) => {
   const { classes, match, getPodcastDetails, podcastDetails, updatePodcastDetails } = props
@@ -31,16 +35,44 @@ export const PodcastEdit = (props) => {
   }
 
   return (
-    <Paper className={classes.root}>
-      {podcastDetails ? (
-        <PodcastEditForm
-          initialValues={podcastDetails}
-          onSubmit={handleSubmit}
-        />
-      ) : (
-        <LoadingIndicator />
-      )}
-    </Paper>
+    <>
+      <NavTabs />
+      <Paper className={classes.paper}>
+        {podcastDetails ? (
+          <Switch>
+            <Route
+              path={`${match.path}/general`}
+              render={props => (
+                <GeneralForm
+                  {...props}
+                  initialValues={podcastDetails}
+                  onSubmit={handleSubmit}
+                />
+              )}
+            />
+            <Route
+              path={`${match.path}/staff`}
+              render={renderComingSoon}
+            />
+            <Route
+              path={`${match.path}/subscribe-links`}
+              render={renderComingSoon}
+            />
+            <Route
+              path={`${match.path}/tags`}
+              render={renderComingSoon}
+            />
+            <Route
+              path={`${match.path}/settings`}
+              render={renderComingSoon}
+            />
+            <Redirect to={`${match.url}/general`} />
+          </Switch>
+        ) : (
+          <LoadingIndicator />
+        )}
+      </Paper>
+    </>
   )
 }
 

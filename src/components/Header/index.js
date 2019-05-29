@@ -9,7 +9,7 @@ import styles from './styles'
 import { withStyles } from '@material-ui/core';
 
 export const Header = ({ classes, toggleSidebar }) => (
-  <AppBar position="fixed">
+  <AppBar position="fixed" className={classes.root}>
     <Toolbar disableGutters>
       <IconButton
         color="inherit"

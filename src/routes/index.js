@@ -1,5 +1,5 @@
 import React from 'react'
-import { ConnectedRouter } from 'connected-react-router';
+import { ConnectedRouter } from 'connected-react-router'
 import { Route, Switch } from 'react-router-dom'
 
 import AppContainer from 'components/AppContainer'
@@ -14,7 +14,7 @@ const routes = ({ history }) => (
       <MainLayout>
         <Switch>
           <Route exact path="/podcasts" component={Podcasts} />
-          <Route exact path="/podcasts/:podcastGuid" component={PodcastEdit} />
+          <Route exact path="/podcasts/:podcastGuid/:tabId?" component={PodcastEdit} />
           <Route exact path="/" component={Dashboard} />
         </Switch>
       </MainLayout>

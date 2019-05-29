@@ -57,8 +57,10 @@ export const Podcasts = (props) => {
   )
 
   return (
-    <>
-      <Typography variant="h6">Podcasts</Typography>
+    <div className={classes.root}>
+      <Typography variant="h6" gutterBottom>
+        Podcasts
+      </Typography>
       <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
@@ -107,7 +109,7 @@ export const Podcasts = (props) => {
           backIconButtonProps={pageNavButtonProps}
         />
       </Paper>
-    </>
+    </div>
   )
 }
 

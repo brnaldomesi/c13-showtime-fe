@@ -16,9 +16,12 @@ class Content extends Component {
     const { classes, className, children, domRef } = this.props
 
     return (
-      <div className={cn(classes.root, className)} ref={domRef}>
-        {children}
-      </div>
+      <>
+        <div className={classes.toolbar} />
+        <div className={cn(classes.root, className)} ref={domRef}>
+          {children}
+        </div>
+      </>
     )
   }
 }
