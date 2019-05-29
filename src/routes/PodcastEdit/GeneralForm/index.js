@@ -1,82 +1,33 @@
 import React from 'react'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
-import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 
 import FormInput from 'components/FormInput'
-import styles from './styles'
+import Hr from 'components/Hr'
 
-const renderForm = (classes) => (props) => (
+const renderForm = (props) => (
   <form onSubmit={props.handleSubmit}>
-    <Field name="title" label="Podcast Title" component={FormInput} />
-    <Field name="summary" label="Podcast Summary" component={FormInput} multiline rows={8} />
-    <Divider className={classes.divider} />
-    <Grid container spacing={3}>
-      <Grid item sm={6}>
-        <Field
-          name="subscription_urls.GOOGLE_PODCASTS"
-          label="Google Podcasts"
-          placeholder="e.g. https://www.google.com/podcasts?feed=..."
-          component={FormInput}
-        />
-      </Grid>
-      <Grid item sm={6}>
-        <Field
-          name="subscription_urls.GOOGLE_PLAY"
-          label="Google Play"
-          placeholder="e.g. https://play.google.com/music/m/..."
-          component={FormInput}
-        />
-      </Grid>
-      <Grid item sm={6}>
-        <Field
-          name="subscription_urls.APPLE_PODCASTS"
-          label="Apple Podcasts"
-          placeholder="e.g. https://itunes.apple.com/podcast/..."
-          component={FormInput}
-        />
-      </Grid>
-      <Grid item sm={6}>
-        <Field
-          name="subscription_urls.SPOTIFY"
-          label="Spotify"
-          placeholder="e.g. https://open.spotify.com/show/..."
-          component={FormInput}
-        />
-      </Grid>
-      <Grid item sm={6}>
-        <Field
-          name="subscription_urls.STITCHER"
-          label="Stitcher"
-          placeholder="e.g. http://www.stitcher.com/podcast/..."
-          component={FormInput}
-        />
-      </Grid>
-      <Grid item sm={6}>
-        <Field
-          name="subscription_urls.RADIO_COM"
-          label="Radio.com"
-          placeholder="e.g. https://player.radio.com/listen/station/..."
-          component={FormInput}
-        />
-      </Grid>
-    </Grid>
-    <Grid container justify="flex-end" spacing={16}>
+    <Field name="title" label="Podcast Title" component={FormInput} placeholder="Enter the podcast title here..." />
+    <Field name="subtitle" label="Subtitle" component={FormInput} placeholder="Enter the podcast subtitle here..." />
+    <Field name="summary" label="Summary" component={FormInput} multiline rows={8} />
+    <Field name="slug" label="Slug" component={FormInput} placeholder="e.g. pod-save-america ..." />
+    <Field name="websiteUrl" label="Website URL" component={FormInput} placeholder="e.g. https://crooked.com/..." />
+    <Hr />
+    <Grid container justify="flex-end" spacing={2}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to="/podcasts">Discard</Button>
+        <Button color="primary" type="submit" component={Link} to="/podcasts">Cancel</Button>
       </Grid>
       <Grid item>
-        <Button variant="contained" color="primary" type="submit">Save</Button>
+        <Button variant="contained" color="primary" type="submit">Save Changes</Button>
       </Grid>
     </Grid>
   </form>
 )
 
-const GeneralForm = ({ classes, initialValues, onSubmit }) => {
+const GeneralForm = ({ initialValues, onSubmit }) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     await onSubmit(values)
@@ -87,7 +38,7 @@ const GeneralForm = ({ classes, initialValues, onSubmit }) => {
     <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
-      render={renderForm(classes)}
+      render={renderForm}
     />
   )
 }
@@ -98,4 +49,4 @@ GeneralForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 }
 
-export default withStyles(styles)(GeneralForm)
+export default GeneralForm

@@ -15,6 +15,7 @@ import {
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
 import GeneralForm from './GeneralForm'
+import SubscribeLinksForm from './SubscribeLinksForm'
 import styles from './styles'
 
 const renderComingSoon = () => <div>Coming Soon...</div>
@@ -56,7 +57,13 @@ export const PodcastEdit = (props) => {
             />
             <Route
               path={`${match.path}/subscribe-links`}
-              render={renderComingSoon}
+              render={props => (
+                <SubscribeLinksForm
+                  {...props}
+                  initialValues={podcastDetails}
+                  onSubmit={handleSubmit}
+                />
+              )}
             />
             <Route
               path={`${match.path}/tags`}

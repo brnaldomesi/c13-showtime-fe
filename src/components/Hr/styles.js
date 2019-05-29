@@ -1,5 +1,5 @@
 export default theme => ({
-  divider: {
+  root: {
     margin: `${theme.spacing.unit * 3}px 0`
   }
 })
