@@ -1,7 +1,6 @@
 import React from 'react'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
-import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
@@ -59,7 +58,7 @@ const renderForm = (props) => (
   </form>
 )
 
-const SubscribeLinksForm = ({ classes, initialValues, onSubmit }) => {
+const SubscribeLinksForm = ({ initialValues, onSubmit }) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     await onSubmit(values)
@@ -76,7 +75,6 @@ const SubscribeLinksForm = ({ classes, initialValues, onSubmit }) => {
 }
 
 SubscribeLinksForm.propTypes = {
-  classes: PropTypes.object.isRequired,
   initialValues: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
 }

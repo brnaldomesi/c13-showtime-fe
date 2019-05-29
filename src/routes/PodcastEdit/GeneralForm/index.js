@@ -44,7 +44,6 @@ const GeneralForm = ({ initialValues, onSubmit }) => {
 }
 
 GeneralForm.propTypes = {
-  classes: PropTypes.object.isRequired,
   initialValues: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
 }

@@ -15,6 +15,6 @@ export default theme => ({
     whiteSpace: 'nowrap'
   },
   edit: {
-    marginRight: theme.spacing.unit * 2
+    marginRight: theme.spacing(2)
   }
 })

@@ -3,7 +3,7 @@ export default theme => ({
     zIndex: theme.zIndex.drawer + 1,
   },
   menuButton: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit * 2,
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(2),
   },
 })
