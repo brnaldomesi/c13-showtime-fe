@@ -1,1829 +1,823 @@
-[  
-   {  
-     "id":29,
-     "summary":"Outkick the Show with Clay Travis brings a one-of-a-kind perspective to discussions on sports, politics, and entertainment.",
-     "podcast_guid":"ccebe9f4524a4231b0806b9b2673c450",
-     "slug":"outkick-the-show-with-clay-travis",
-     "title":"Outkick The Show with Clay Travis",
-     "image_url":"https://megaphone.imgix.net/podcasts/6890ebb8-3c40-11e9-956d-5b739d599922/image/ade1a552e5b8f15d16665f96c86d83b3f047597fc945608cc475f030523852c09d5f8f2966fd7232593180a1117d6bd8b3aa2340a3afcb8a131b42f071554025.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"Outkick The Show",
-     "website_url":"https://art19.com/shows/outkick-the-show-with-clay-travis",
-     "feed_url":"https://feeds.megaphone.fm/C24H4084973537",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:37:10.098138+00:00",
-     "updated_at":"2019-04-12 01:37:10.098138+00:00",
-     "series_id":"F004-002",
-     "social_media_urls":{  
-       "TWITTER":"http://www.twitter.com/ClayTravis",
-       "FACEBOOK":"https://www.facebook.com/claytravissports/"
-     },
-     "subscriptionUrls":{  
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/outkick-the-show",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/outkick-show-clay-travis/id705029632?mt=2"
-     }
-   },
-   {  
-     "id":294,
-     "summary":"Lore is a bi-weekly podcast (as well as a TV show and book series) about dark historical tales. Each episode explores the mysterious creatures, tragic events, and unusual places that fill the pages of history.\r\n\r\nBecause sometimes the truth is more frightening than fiction.",
-     "podcast_guid":"f3ff1bf80fca4f88b7623eec4af75806",
-     "slug":"lore",
-     "title":"Lore",
-     "image_url":"https://megaphone.imgix.net/podcasts/4c37eae2-3926-11e9-98ee-9b97407aee4b/image/lore-coverart3.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2015 Aaron Mahnke",
-     "author":"Aaron Mahnke",
-     "website_url":"http://www.lorepodcast.com",
-     "feed_url":"https://feeds.megaphone.fm/lore",
-     "owner_name":"Aaron Mahnke",
-     "owner_email":"contact@lorepodcast.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:37:07.220462+00:00",
-     "updated_at":"2019-04-12 01:37:07.220462+00:00",
-     "series_id":"f3ff1bf8-0fca-4f88-b762-3eec4af75806",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":293,
-     "summary":"<p>On \"Waltrip Unfiltered,\"  2-time Daytona 500 winner Michael Waltrip delivers a unique breakdown of the world of racing. \"Uncle Mikey\" will talk with the biggest stars in the sport each week, while taking the listener behind the curtain to provide unprecedented access, stories and reaction to the NASCAR world.</p>",
-     "podcast_guid":"b34ce0874f4142538e4073fee667c9f4",
-     "slug":"waltrip-unfiltered",
-     "title":"Waltrip Unfiltered",
-     "image_url":"https://megaphone.imgix.net/podcasts/d45f91d4-3eaf-11e9-b879-ef4c7419295d/image/f82f7d1bb95d7a6991e6718a1ae371b5d2940c11b20b7052e3eeaec22c1b2a97944a4970d4617b47937fccf42a1e21bf486bbf672513273daaa12a80af80c9f6.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"Fox Sports ",
-     "website_url":"https://art19.com/shows/waltrip-unfiltered",
-     "feed_url":"https://feeds.megaphone.fm/waltrip-unfiltered",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:37:06.532872+00:00",
-     "updated_at":"2019-04-12 01:37:06.532872+00:00",
-     "series_id":"b34ce087-4f41-4253-8e40-73fee667c9f4",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":33,
-     "summary":"The Sidelines podcast gives you an all-access pass into the world of college basketball and beyond. Evan Daniels, FOX Sports' & FS1's College Basketball Insider and 247 Sports' Director of Basketball Recruiting, comes to you with all the latest behind-the-scenes information into the biggest programs, players, and coaches that you won't get anywhere else.",
-     "podcast_guid":"59725aefa6734e7ea6046b857be21f35",
-     "slug":"the-sidelines-with-evan-daniels",
-     "title":"The Sidelines with Evan Daniels",
-     "image_url":"https://megaphone.imgix.net/podcasts/746337ac-3c40-11e9-9924-e343a1b774b8/image/3e35a2051ad49be2940716d0e1a8b6fd80793fa65be8d6903516d961f9acf9c1cff4f70b80dc5a38210101c3d927e54aee8161d2a99ff33fe24649d38bb28df7.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 FOX Sports",
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/the-sidelines-with-evan-daniels",
-     "feed_url":"https://feeds.megaphone.fm/the-sidelines",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:37:05.111571+00:00",
-     "updated_at":"2019-04-12 01:37:05.111571+00:00",
-     "series_id":"F004-006",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/HoopsOnFOX",
-       "TWITTER":"https://twitter.com/EvanDaniels"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/sidelines-evan-daniels/id1168176609?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-sidelines-with-evan-daniels"
-     }
-   },
-   {  
-     "id":217,
-     "summary":"Shane Bacon brings you a weekly podcast discussing the world of golf from all angles. Shane speaks with current and former stars from the world, while bringing you the best stories in the game.",
-     "podcast_guid":"649284d1c37f4e23bb7f7da4ac045afe",
-     "slug":"the-clubhouse-with-shane-bacon",
-     "title":"The Clubhouse with Shane Bacon",
-     "image_url":"https://megaphone.imgix.net/podcasts/4d8ff868-3c40-11e9-8fc3-dbaf341d402b/image/d67f844a85c99ef30831db2dad54d7f45405c68008a4acfa3f9faaf5e72d6087f6ddf67c2198a8dc20b05a32b06eec48721ff74058fa53316af7f873df9ddd73.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/the-clubhouse-with-shane-bacon",
-     "feed_url":"https://feeds.megaphone.fm/the-clubhouse",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:37:02.199949+00:00",
-     "updated_at":"2019-04-12 01:37:02.199949+00:00",
-     "series_id":"649284d1-c37f-4e23-bb7f-7da4ac045afe",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/clubhouse-shane-bacon/id1094911742?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-clubhouse-with-shane-bacon"
-     }
-   },
-   {  
-     "id":34,
-     "summary":"<p>Jason Whitlock and Marcellus Wiley team up for the Speak For Yourself podcast, featuring the best discussions from their television show (weekdays at 3pm ET on FS1).</p>",
-     "podcast_guid":"6d5a4f6837d4443dacffdb1a6380feed",
-     "slug":"speak-for-yourself",
-     "title":"Speak For Yourself with Whitlock & Wiley",
-     "image_url":"https://megaphone.imgix.net/podcasts/8a5fc7e6-3c40-11e9-924f-07f8b0d8687b/image/653d5dffdcd3379e9c3aef945a78ffee299c177b576eb9f5995338211a6e139d4ca5ef26943a07ce457caf3cd3d6573798de37d959b765c72853dd13143c6038.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/speak-for-yourself",
-     "feed_url":"https://feeds.megaphone.fm/speak-for-yourself",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:56.389952+00:00",
-     "updated_at":"2019-04-12 01:36:56.389952+00:00",
-     "series_id":"F004-004",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/SFYonFS1",
-       "TWITTER":"https://twitter.com/SFY"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/speak-for-yourself-cowherd/id1123133293?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/speak-for-yourself-with-cowherd-whitlock"
-     }
-   },
-   {  
-     "id":42,
-     "summary":"The Skip and Shannon: Undisputed Podcast. Skip Bayless, Shannon Sharpe, and Jenny Taft discuss the biggest stories in the world of sports. It's unscripted and unfiltered. Don't miss the television show Monday-Friday at 9:30am ET on FS1.",
-     "podcast_guid":"a1481dce4c4c4574a185ac293d9af594",
-     "slug":"skip-and-shannon-undisputed",
-     "title":"Skip and Shannon: Undisputed",
-     "image_url":"https://megaphone.imgix.net/podcasts/7ecc5cc8-3c40-11e9-a8e8-6b6d9d40c59a/image/e08221c061343815a9999d1e69afe24e55b3a0ccd72e8c0e2bc722266cc49309df1adcfec2d8bbda1c3543c2314b7296aa26d7b13c3657b851f3b751af2c5b0a.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/skip-and-shannon-undisputed",
-     "feed_url":"https://feeds.megaphone.fm/undisputed",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:48.612394+00:00",
-     "updated_at":"2019-04-12 01:36:48.612394+00:00",
-     "series_id":"F004-003",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/Undisputed-On-FS1-320120738325702/",
-       "TWITTER":"https://twitter.com/undisputed"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/skip-and-shannon-undisputed/id1150088852?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/skip-and-shannon-undisputed"
-     }
-   },
-   {  
-     "id":204,
-     "summary":"The NASCAR Race Hub podcast brings you all the great content from FS1's daily NASCAR show. Shannon Spake and Adam Alexander are joined by the biggest names in the sport every day to discuss the biggest topics, offering insight and analysis you won't hear anywhere else! Located in the heart of NASCAR country, \"The Hub\" takes advantage of its central location to offer viewers unique access to drivers and race teams. Plus, a contingent of reporters relay inside stories and up-to-the-minute reports from race shops. Make sure you subscribe to stay up to date on everything going on in NASCAR and beyond.",
-     "podcast_guid":"cc2e900c763d49e49ef58b1127c1d097",
-     "slug":"race-hub",
-     "title":"NASCAR Race Hub",
-     "image_url":"https://megaphone.imgix.net/podcasts/5b38b112-3c40-11e9-9a36-4b1009f95754/image/4aded9937d516c6b1a86ad714b316ed4d78a3ab37247c72550b2b48bdd1365e48f0a20428d0997be4579a825c8fda5e13a302eb3106ef128dba74af2652e68f4.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 FOX Sports",
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/race-hub",
-     "feed_url":"https://feeds.megaphone.fm/nascar-race-hub",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:46.053871+00:00",
-     "updated_at":"2019-04-12 01:36:46.053871+00:00",
-     "series_id":"cc2e900c-763d-49e4-9ef5-8b1127c1d097",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/NASCARonFOX",
-       "TWITTER":"https://twitter.com/NASCARONFOX"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/nascar-race-hub/id1218564441?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-hubcast-with-adam-alexander"
-     }
-   },
-   {  
-     "id":98,
-     "summary":"From Los Angeles to Boston and everywhere in between - MLB Whiparound has you covered with everything you need to know about Major League Baseball.",
-     "podcast_guid":"3f266e09759848f18d2f1f551d32155d",
-     "slug":"mlb-whiparound",
-     "title":"MLB Whiparound",
-     "image_url":"https://megaphone.imgix.net/podcasts/b9c0c1ae-3eaf-11e9-bad7-278ec8eb31a0/image/98a665cced81987318571042707491bcc653a0faeadd9834641fef351b07b8d097c1fac963fc6bafef792ba9ede75e63b4b7fe493c8f096a3e870f652e568306.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/mlb-whiparound",
-     "feed_url":"https://feeds.megaphone.fm/mlb-whiparound",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:43.500336+00:00",
-     "updated_at":"2019-04-12 01:36:43.500336+00:00",
-     "series_id":"3f266e09-7598-48f1-8d2f-1f551d32155d",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":190,
-     "summary":"Join Joy Taylor for a different take on the world of sports. Joy will be breaking down all the biggest stories from the NFL, NBA and everything in between.",
-     "podcast_guid":"90f8156eb047440aae752ec2d8c38dac",
-     "slug":"maybe-im-crazy-with-joy-taylor",
-     "title":"Maybe I'm Crazy with Joy Taylor",
-     "image_url":"https://megaphone.imgix.net/podcasts/c859a712-3eaf-11e9-8e43-db21553e9f46/image/a8cbdd4b2813a08ecec852c8f5fa51cb4220e99c46bf98d5c9e166d2bd319c338fa0949f92b5ce0031451863bed9301c8feecd5562333ee4ba5809cc24618cf1.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/maybe-im-crazy-with-joy-taylor",
-     "feed_url":"https://feeds.megaphone.fm/maybe-im-crazy",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:41.266475+00:00",
-     "updated_at":"2019-04-12 01:36:41.266475+00:00",
-     "series_id":"90f8156e-b047-440a-ae75-2ec2d8c38dac",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":202,
-     "summary":"Your daily dose of all things NBA! The Hoops on Fox podcast gives you the BEST basketball conversations from Fox Sports including studio show interviews, special content from Chris Broussard, post game interviews from NBA stars around the league and much more!",
-     "podcast_guid":"6934f56c616a4747a3b9310b31c43b2c",
-     "slug":"in-the-zone-with-chris-broussard",
-     "title":"Hoops on Fox Podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/aba71aaa-3eaf-11e9-8aed-7f5dcf7730ea/image/67643e07f6b79b4e54d113a07a1b8d5c941243121395b1e775ce808dd50556e3b46959f2f7618773ef7514af36b50fe0e4dcd9b968f218168c6fc107423738c2.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 FOX Sports",
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/in-the-zone-with-chris-broussard",
-     "feed_url":"https://feeds.megaphone.fm/hoops-on-fox",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:38.789494+00:00",
-     "updated_at":"2019-04-12 01:36:38.789494+00:00",
-     "series_id":"6934f56c-616a-4747-a3b9-310b31c43b2c",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/foxsports",
-       "TWITTER":"https://twitter.com/Chris_Broussard"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/in-zone-chris-broussard/id1193331363?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/in-the-zone-with-chris-broussard?refid=stpr"
-     }
-   },
-   {  
-     "id":198,
-     "summary":"Cris Carter, Nick Wright &amp; Jenna Wolfe discuss the biggest stories in the world of sports. From LeBron James, to Tom Brady, this show will bring you the first, and most incisive, opinions on the best sports stories.",
-     "podcast_guid":"1934e725d1b8408cb4668031e84fa97a",
-     "slug":"first-things-first",
-     "title":"First Things First",
-     "image_url":"https://megaphone.imgix.net/podcasts/9758c652-3eaf-11e9-815f-f36a7e4bf707/image/74336a9afaf181b10db5b2a68e9232cb21ec88e5be90f0f9cecc84d9abf37ebc3379d3418d10e41a3551f8c5346b25bbeeae7e99678d20bdbc88e66121b521c7.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"Fox Sports",
-     "website_url":"https://art19.com/shows/first-things-first",
-     "feed_url":"https://feeds.megaphone.fm/first-things-first",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:28.436444+00:00",
-     "updated_at":"2019-04-12 01:36:28.436444+00:00",
-     "series_id":"1934e725-d1b8-408c-b466-8031e84fa97a",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/first-things-first/id1277873664?mt=2",
-       "STITCHER":"https://www.stitcher.com/podcast/fox-sports-network/first-things-first"
-     }
-   },
-   {  
-     "id":131,
-     "summary":"Coming Up Winners is a interactive gambling podcast dedicated to making YOU a smarter gambler. Hosted by FS1 host Jason McIntyre & sports guru Andrew Lynch, the two team up to give you a realistic and analytical view inside the biggest games of the week every Monday and Thursday. Did we mention YOU the listener will have multiple chances to take cold hard cash from this crew? All this and MORE only on the Coming Up Winners podcast!",
-     "podcast_guid":"626122088b5a4701b6b4486990520e0d",
-     "slug":"coming-up-winners",
-     "title":"Coming Up Winners",
-     "image_url":"https://megaphone.imgix.net/podcasts/8390d7f4-3eaf-11e9-b897-a3a7e9b243ee/image/1e14087bcc799115d188317af09b1004dbdb9b47a644891941610b870fee90bc146ce9f7ddd692582a6bfe292fe02c3d078bf0b06e30809b16ae0cd550a71f02.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"Fox Sports",
-     "website_url":"https://art19.com/shows/coming-up-winners",
-     "feed_url":"https://feeds.megaphone.fm/coming-up-winners",
-     "owner_name":"",
-     "owner_email":"conrad.company@fox.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:27.278274+00:00",
-     "updated_at":"2019-04-12 01:36:27.278274+00:00",
-     "series_id":"62612208-8b5a-4701-b6b4-486990520e0d",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":70,
-     "summary":"Joel Klatt breaks down the biggest stories in the world of college football. Joel relies on his experience on the field, detailed film analysis and unmatched preparation to give the listener the most consistent and best analysis. Each week, Joel will dive into his Top 10 teams, take your questions and discuss the Heisman Trophy race with a rotating panel of expert guests.",
-     "podcast_guid":"452b28d2aee940cf98cac9b3fde102d9",
-     "slug":"breaking-the-huddle",
-     "title":"Breaking the Huddle with Joel Klatt",
-     "image_url":"https://megaphone.imgix.net/podcasts/748e8972-3eaf-11e9-9d60-3beeccffe81c/image/6b062c0717e4d438398234030a25550ea68c547b1c6e01e895cb45fb1412e5f3c2b41e59d4624809331cacbaae15d0aba848b54cf13381d209ae95cc7ede782f.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 All rights reserved",
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/breaking-the-huddle",
-     "feed_url":"https://feeds.megaphone.fm/breaking-the-huddle",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:26.333452+00:00",
-     "updated_at":"2019-04-12 01:36:26.333452+00:00",
-     "series_id":"452b28d2-aee9-40cf-98ca-c9b3fde102d9",
-     "social_media_urls":{  
-       "FACEBOOK":"http://www.facebook.com/CFBonFOX",
-       "TWITTER":"http://twitter.com/CFBONFOX"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/breaking-huddle-joel-klatt/id1037085984?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/breaking-the-huddle-with-joel-klatt"
-     }
-   },
-   {  
-     "id":88,
-     "summary":"U.S. Soccer legend Alexi Lalas discusses the biggest stories in the world of soccer. Join Alexi and soccer guru David Mosse, as they break down the USMNT, USWNT, MLS, Bundesliga, Premier League, World Cup & everything in between.",
-     "podcast_guid":"7d6d485f7e0a4c14b2d6218425fed977",
-     "slug":"state-of-the-union",
-     "title":"Alexi Lalas\u2019 State of the Union Podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/68e2a32e-3eaf-11e9-8be0-57045cdfb25c/image/9ba81d45ab36802247a2c2cf804a8a0912aa19fdb6d38f8ab820db72f5a035651dd30c4345c4a2eaf45149c44f4922e384befb83ed57326504c73c33b698d0b0.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"FOX Sports",
-     "website_url":"https://art19.com/shows/state-of-the-union",
-     "feed_url":"https://feeds.megaphone.fm/alexi-lalas-sou",
-     "owner_name":"",
-     "owner_email":"foxsportspodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:24.878323+00:00",
-     "updated_at":"2019-04-12 01:36:24.878323+00:00",
-     "series_id":"7d6d485f-7e0a-4c14-b2d6-218425fed977",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/foxsoccer",
-       "TWITTER":"https://twitter.com/AlexiLalas"
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/mutant-gene-podcast-alexi/id1101874962?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/fox-sports-network/the-mutant-gene-podcast-with-alexi-lalas"
-     }
-   },
-   {  
-     "id":292,
-     "summary":"RISE Together is more than just a conversation about this relationship. Each episode is filled with tangible advice that will get you and your partner to be the best version of yourselves. Hosted by New York Times Bestselling Author and Hollis Co CCO Rachel Hollis and Hollis Co CEO Dave Hollis,",
-     "podcast_guid":"894d4b8323434ccfb3ecfde1ae2ccba6",
-     "slug":"risetogether",
-     "title":"RISE Together Podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/8a8d5710-2bd3-11e9-92a5-3ba8eaf3c1fb/image/Podcast_2Fartworks_2F2371_2Flarge_2F8833ec27c2d477f05ce8764b47ae89a38c0356f70f3b9b85651d52038d54c1b5_2FRise_20Together_20Podcast_20Image.png?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"All rights reserved",
-     "author":"Rachel Hollis & Dave Hollis",
-     "website_url":"thehollisco.com",
-     "feed_url":"https://feeds.megaphone.fm/risetogether",
-     "owner_name":"Rachel Hollis & Dave Hollis",
-     "owner_email":"feeds@soundcloud.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:23.654740+00:00",
-     "updated_at":"2019-04-12 01:36:23.654740+00:00",
-     "series_id":"894d4b83-2343-4ccf-b3ec-fde1ae2ccba6",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":291,
-     "summary":"Tangible and tactical tools for your life and business. Hosted by New York Times Best-Selling Author Rachel Hollis, RISE is a series of bold conversations with fellow business powerhouses and personal development leaders that provides the listener with real-life valuable takeaways.",
-     "podcast_guid":"deac81286d474f639353b33492a7c9ed",
-     "slug":"rise",
-     "title":"RISE podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/7a279796-2bd3-11e9-83e7-9b77013c6133/image/Podcast_2Fartworks_2F2370_2Flarge_2Fd0a8a882c042eea09d56cc66ca6e04d988078f17506c0c5182224613390a1ad0_2Fartworks-000456418884-89mqd1-original.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"All rights reserved",
-     "author":"Rachel Hollis",
-     "website_url":"thehollisco.com",
-     "feed_url":"https://feeds.megaphone.fm/rise",
-     "owner_name":"Rachel Hollis",
-     "owner_email":"",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:21.554814+00:00",
-     "updated_at":"2019-04-12 01:36:21.554814+00:00",
-     "series_id":"deac8128-6d47-4f63-9353-b33492a7c9ed",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":236,
-     "summary":"TBD",
-     "podcast_guid":"bb7d4e0264264f1995529777d5548611",
-     "slug":"DGT3243565338",
-     "title":"Side Hustle School - Alexa Feed",
-     "image_url":"https://megaphone.imgix.net/podcasts/3e0b3c3c-02d3-11e9-be93-eb7934e1b084/image/uploads_2F1545168993953-k2ji1kgyku-842ee082de7203f1d0c2414688b8d7f9_2FSHS%2BLogo.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"",
-     "website_url":null,
-     "feed_url":"https://feeds.megaphone.fm/DGT3243565338",
-     "owner_name":"",
-     "owner_email":"",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:36:18.706238+00:00",
-     "updated_at":"2019-04-12 01:36:18.706238+00:00",
-     "series_id":"bb7d4e02-6426-4f19-9552-9777d5548611",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":234,
-     "summary":"A daily show for everyone who works a regular job and wants to start an income-earning project on the side. In each episode, listeners will hear a different story of someone who's started a side hustle\u2014along with what went well, how that person overcame challenges, and what happened as a result. The show is written and hosted by Chris Guillebeau, the New York Times bestselling author of The $100 Startup, The Happiness of Pursuit, and other books.",
-     "podcast_guid":"40ee42613d8948c58d1c1faf644162a8",
-     "slug":"sidehustleschool",
-     "title":"Side Hustle School",
-     "image_url":"https://megaphone.imgix.net/podcasts/299b9a48-b59c-11e6-92f8-6b5e7c3b2fce/image/uploads_2F1483028012046-3rybwfj08x5ksuwg-25c47aaa30eb85bb78cfbe631618b4b2_2FSideHustleSchool.ONW.3000x3000.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"Chris Guillebeau / Onward Project / Panoply",
-     "website_url":"http://sidehustleschool.com/",
-     "feed_url":"https://feeds.megaphone.fm/sidehustleschool",
-     "owner_name":"Chris Guillebeau / Onward Project / Panoply",
-     "owner_email":"hello@chrisguillebeau.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:59.288040+00:00",
-     "updated_at":"2019-04-12 01:35:59.288040+00:00",
-     "series_id":"40ee4261-3d89-48c5-8d1c-1faf644162a8",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1188487073",
-       "SPOTIFY":"https://open.spotify.com/show/3qnXDWYMqKD3nNBiJFXyP6"
-     }
-   },
-   {  
-     "id":235,
-     "summary":"Gretchen Rubin is HAPPIER, and she wants you to be happier too. The #1 bestselling author of The Happiness Project and Better Than Before gets more personal than ever as she brings her practical, manageable advice about happiness and good habits to this lively, thought-provoking podcast. Gretchen\u2019s cohost and guinea pig is her younger sister, Elizabeth Craft, a TV writer and producer living in Los Angeles, who (lovingly) refers to Gretchen as her happiness bully. Part of the Cadence13 Network.",
-     "podcast_guid":"b78b5b5c7cc24b9cb11707602adbf61d",
-     "slug":"happier",
-     "title":"Happier with Gretchen Rubin",
-     "image_url":"https://megaphone.imgix.net/podcasts/32ecfb42-8289-11e5-b42a-8f36c3d2bc76/image/uploads_2F1483024592237-t3dxed4unaollwd5-e7071c0d74635cc19bbde46c98f5de3a_2F3000x3000_Happier_ONW.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"Gretchen Rubin / The Onward Project / Panoply",
-     "website_url":"http://www.gretchenrubin.com",
-     "feed_url":"https://feeds.megaphone.fm/happier",
-     "owner_name":"Gretchen Rubin / The Onward Project / Panoply",
-     "owner_email":"dev@panoply.fm",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:50.820220+00:00",
-     "updated_at":"2019-04-12 01:35:50.820220+00:00",
-     "series_id":"b78b5b5c-7cc2-4b9c-b117-07602adbf61d",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/969519520",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/I2itsuciuulwej22qcvjz6pebzm",
-       "SPOTIFY":"https://open.spotify.com/show/0rgMTVJ9TWDWsut3R1c5L3",
-       "STITCHER":"http://www.stitcher.com/podcast/61836"
-     }
-   },
-   {  
-     "id":237,
-     "summary":"Veteran TV writers Liz Craft and Sarah Fain demystify Hollywood by making career and personal struggles universal. Friends since high school and writing partners for 17 years, Liz and Sarah have survived and thrived in Tinseltown\u2019s male-dominated entertainment industry, guided by blind optimism and a Midwestern work ethic. Along the way they've learned a lot about kicking ass, kissing ass, and office yoga.",
-     "podcast_guid":"be69790a0c3644438a8c9d912d1db881",
-     "slug":"happierinhollywood",
-     "title":"Happier in Hollywood",
-     "image_url":"https://megaphone.imgix.net/podcasts/7028c9b8-1f9b-11e7-8634-bb451b195d3c/image/uploads_2F1549558220096-t6yq8b4i8f-923bad1dbd24e4f43591b5c4a8a25e6c_2FHapper%2Bin%2BHollywood%2BFINAL%2BCOVER.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":null,
-     "author":"The Onward Project / Panoply",
-     "website_url":"http://www.happierinhollywood.com",
-     "feed_url":"https://feeds.megaphone.fm/happierinhollywood",
-     "owner_name":"Onward Project / Panoply",
-     "owner_email":"happierinhollywood@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:48.335910+00:00",
-     "updated_at":"2019-04-12 01:35:48.335910+00:00",
-     "series_id":"be69790a-0c36-4443-8a8c-9d912d1db881",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":253,
-     "summary":"From the viral Instagram account @commentsbycelebs comes the much awaited Comments By Celebs Podcast. Emma Diamond & Julie Kramer, the creative minds behind the account and self-proclaimed celeb experts, talk all things pop culture. Using the unique angle of their Instagram account to frame the conversation, they delve into what's going on in the world of celeb comments, and how that translates into real life drama. Having a hard time keeping up with your favorite stars? They\u2019re here to break it all down for you. The girls of CBC dive right into it all - giving you their honest, no bs approach to what\u2019s going on in Hollywood. With no shortage of games & hypothetical celebrity scenarios, they make the gossip both fun and highly relatable. If it\u2019s happening, they\u2019re talking (and instagramming) about it.",
-     "podcast_guid":"14f385b5e39346c9b0d3827758cc954e",
-     "slug":"comments-by-celebs",
-     "title":"Comments by Celebs",
-     "image_url":"https://megaphone.imgix.net/podcasts/e2365988-137a-11e9-a173-1f4e4752f1bd/image/uploads_2F1547230855850-l2loavrazu-2c069346f98f05984b408ba36dd31325_2Fimage2.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"All rights reserved",
-     "author":"Comments By Celebs and Cadence13",
-     "website_url":"https://www.instagram.com/commentsbycelebs/?hl=en",
-     "feed_url":"https://feeds.megaphone.fm/comments-by-celebs",
-     "owner_name":"Comments By Celebs and Cadence13",
-     "owner_email":"CommentsByCelebsPod@Gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:46.699890+00:00",
-     "updated_at":"2019-04-12 01:35:46.699890+00:00",
-     "series_id":"14f385b5-e393-46c9-b0d3-827758cc954e",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1409801789",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Iqeptsrxgzisgsghxjdu6jh6mki",
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vY29tbWVudHMtYnktY2VsZWJz",
-       "SPOTIFY":"https://open.spotify.com/show/3fhFOdd1RQRjkmjkYP80CC",
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/comments-by-celebs?refid=stpr"
-     }
-   },
-   {  
-     "id":252,
-     "summary":"<p><strong>On the popular YouTube show, \u2018Hot Ones,\u2019 host Sean Evans interviews celebrities as they eat increasingly spicy chicken wings. The podcast version, \u2018Hot Ones, The Classic Interviews\u2019 looks back at Hot Ones history to unearth extended cuts of some of our favorite hot sauce-fueled interviews of all time.</strong></p><p><strong>You can expect to hear from names like Neil deGrasse Tyson, Tyra Banks, Ricky Gervais, and more.</strong></p><p><br></p>",
-     "podcast_guid":"49c18a13f754487dabfa32cb19565e1f",
-     "slug":"DGT7822111373",
-     "title":"Hot Ones: The Classic Interviews",
-     "image_url":"https://megaphone.imgix.net/podcasts/34ddc670-0f0d-11e9-bfb7-b3b4d016d582/image/267b3a922635a93c25011616fed9b7eb5bf684a07dd01f8278b93b1b34de9afe4d66614e67adcf6695d236f28209526001b1b6b85f78a73bb1f13e142fa4a8ef.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 Complex Media, Inc. All Rights Reserved.",
-     "author":"Complex Media",
-     "website_url":"https://shows.cadence13.com/podcast/hot-ones",
-     "feed_url":"https://feeds.megaphone.fm/DGT7822111373",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:46.242449+00:00",
-     "updated_at":"2019-04-12 01:35:46.242449+00:00",
-     "series_id":"49c18a13-f754-487d-abfa-32cb19565e1f",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":251,
-     "summary":"<p>Hosts DJ Akademiks, Wayno, and Nadeska Alexis bring fans an in-depth look into the biggest stories in hip-hop with commentary, exclusive content, and a behind-the-scenes look at one of the biggest shows in rap.</p>",
-     "podcast_guid":"d6a9f9f5d4c2402f94f38b6d02ba98ea",
-     "slug":"DGT7543131022",
-     "title":"Everyday Struggle: Weekly Edition",
-     "image_url":"https://megaphone.imgix.net/podcasts/3d652540-0f0d-11e9-875f-c7a39db8a7b6/image/0a62c30a13692aa3e8752c58bd604ac4b7270955216933ea891b65c52a37b0978cce46dcdcc2914695cfbc2ad2d77e297edefc813daaaf21e908b4c243d999fb.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 Complex Media, Inc. All Rights Reserved.",
-     "author":"Complex Media",
-     "website_url":null,
-     "feed_url":"https://feeds.megaphone.fm/DGT7543131022",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:45.593342+00:00",
-     "updated_at":"2019-04-12 01:35:45.593342+00:00",
-     "series_id":"d6a9f9f5-d4c2-402f-94f3-8b6d02ba98ea",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":193,
-     "summary":"Up and Vanished is an investigative true crime podcast hosted by Atlanta filmmaker Payne Lindsey. In Season 1, Payne tackles his first cold case story, the unsolved disappearance of Georgia high school teacher and former pageant queen, Tara Grinstead. The 11-year-old case remains the largest case file in Georgia history and is still unfolding. Season 2 focuses on the disappearance of young mother Kristal Reisinger from a remote mountain town in Colorado. Up and Vanished aims to tell compelling, true stories and give these cases the exposure they deserve.",
-     "podcast_guid":"6cb7db61f6704005933e08ebecba6451",
-     "slug":"up-and-vanished",
-     "title":"Up and Vanished",
-     "image_url":"https://megaphone.imgix.net/podcasts/a57182f8-1ffe-11e9-8e74-4b4d4b64cfd9/image/uploads_2F1549922724537-d2mw2227pmm-61e15f4d08224d897f61c390a646e328_2FUAV-%2Bcover_1_3000-2.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 Tenderfoot TV",
-     "author":"Tenderfoot TV",
-     "website_url":"https://shows.cadence13.com/podcast/up-and-vanished",
-     "feed_url":"https://feeds.megaphone.fm/up-and-vanished",
-     "owner_name":"",
-     "owner_email":"tenderfoottv@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:42.925890+00:00",
-     "updated_at":"2019-04-12 01:35:42.925890+00:00",
-     "series_id":"6cb7db61-f670-4005-933e-08ebecba6451",
-     "social_media_urls":{  
-       "FACEBOOK":"http://www.facebook.com/upandvanished",
-       "TWITTER":"http://www.twitter.com/upandvanished"
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Im5rmeeujqoxj7qqte4tngsr2v4?t=Up_and_Vanished",
-       "APPLE_PODCASTS":"http://www.applepodcasts.com/upandvanished",
-       "SPOTIFY":"https://open.spotify.com/show/5FqJcvfGMLledCODGqV4J9?si=bSvYhc85Q329-hdLQKIofg"
-     }
-   },
-   {  
-     "id":263,
-     "summary":"In Feb 2018, an aspiring actress vanished from her Hollywood apartment. Rolling Stone journalist Neil Strauss was asked to help the family get answers. Together, they found them...sometimes at great personal risk. For the first time in a serial podcast, go inside a gripping multi-state investigation as it unfolds from the moment of the disappearance to each twist and turn in the case. Stay not only more informed than the news, but listen as the official story is dismantled with in-the-moment first-hand reporting with the leading figures in the investigation. The new #1 podcast from the team behind Up & Vanished and Atlanta Monster.",
-     "podcast_guid":"71090d13805247fa949c6404834e704c",
-     "slug":"to-live-and-die-in-la",
-     "title":"To Live and Die in LA",
-     "image_url":"https://megaphone.imgix.net/podcasts/0499c1ac-3399-11e9-8483-1399efb224e5/image/uploads_2F1550506658913-s0iqe2y67s-c383c01722d810ecde0697defb7137cb_2FLiveDieLA_Cover.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 Tenderfoot TV. All Rights Reserved.",
-     "author":"Tenderfoot TV & Cadence 13",
-     "website_url":"http://livediela.com",
-     "feed_url":"https://feeds.megaphone.fm/to-live-and-die-in-la",
-     "owner_name":"Tenderfoot TV",
-     "owner_email":"livediela@tenderfoot.tv",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:42.572382+00:00",
-     "updated_at":"2019-04-12 01:35:42.572382+00:00",
-     "series_id":"71090d13-8052-47fa-949c-6404834e704c",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1453788965",
-       "SPOTIFY":"https://open.spotify.com/show/0OFl1ONSwhVghhAbEBo2e4",
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/to-live-and-die-in-la"
-     }
-   },
-   {  
-     "id":221,
-     "summary":"This is the clips feed!! Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack.",
-     "podcast_guid":"84cf9fbb72684529b4300c0f453517ad",
-     "slug":"pro-rata-clips",
-     "title":"Pro Rata Update",
-     "image_url":"https://megaphone.imgix.net/podcasts/2cbdd1d8-0ed6-11e9-985a-83b4fdbf490c/image/8ef1e952729545fb71de81a1b4d7eedcc9729b57ce09ef85f6a2ca287f4b7935f04eebfdda248d9f23956b1ae4887feb8828ff975938ef7e5434fe4f7d0ecb35.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Axios Media Inc. All Rights Reserved.",
-     "author":"Axios Media, Inc.",
-     "website_url":"https://www.axios.com/tag/pro-rata-podcast",
-     "feed_url":"https://feeds.megaphone.fm/DGT1301639776",
-     "owner_name":"",
-     "owner_email":"podcast@axios.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:41.361851+00:00",
-     "updated_at":"2019-04-12 01:35:41.361851+00:00",
-     "series_id":"84cf9fbb-7268-4529-b430-0c0f453517ad",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":103,
-     "summary":"<p>Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack.</p>",
-     "podcast_guid":"d46f4caeb79c4a708e6b800bf1eeba11",
-     "slug":"pro-rata",
-     "title":"Pro Rata",
-     "image_url":"https://megaphone.imgix.net/podcasts/c11bb198-0ed5-11e9-b104-23783a81f42d/image/53aa1a75b60e36e8a5daaa6f9fde44382b12e7d7db1ee809e53544ddb1cc2126a09b70662657dfa250798d6ffc0f75f332b7bc6e0a6d1fa3009a965dbab2920f.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Axios Media Inc. All Rights Reserved.",
-     "author":"Axios Media, Inc.",
-     "website_url":"https://www.axios.com/tag/pro-rata-podcast",
-     "feed_url":"https://feeds.megaphone.fm/DGT6067378160",
-     "owner_name":"",
-     "owner_email":"podcast@axios.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:38.646665+00:00",
-     "updated_at":"2019-04-12 01:35:38.646665+00:00",
-     "series_id":"d46f4cae-b79c-4a70-8e6b-800bf1eeba11",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "STITCHER":"https://www.stitcher.com/podcast/cadence13/pro-rata",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/pro-rata/id1412162689?mt=2"
-     }
-   },
-   {  
-     "id":214,
-     "summary":"<p>Gwyneth Paltrow and goop's Chief Content Officer Elise Loehnen chat with leading thinkers, culture changers, and industry disruptors\u2014from doctors to creatives, CEOs to spiritual healers\u2014about shifting old paradigms and starting new conversations.</p>",
-     "podcast_guid":"611262c2b0234925b4782a73a80718fe",
-     "slug":"the-goop-podcast",
-     "title":"The goop Podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/bdad5832-0f60-11e9-b326-cf9d0464717f/image/4553b7b501083a30aa4d1bc37d7a0668b02789e63f1339fcc484fbde2e663ee29b82a8d45fa507e80c2264eed87b83ffd2087216e7809e58a98a3a91fce2f64a.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Goop, Inc. and Cadence13. All Rights Reserved.",
-     "author":"Goop, Inc. and Cadence13 ",
-     "website_url":"https://goop.com/thepodcast",
-     "feed_url":"https://feeds.megaphone.fm/goop-podcast",
-     "owner_name":"",
-     "owner_email":"podcast@goop.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:36.506244+00:00",
-     "updated_at":"2019-04-12 01:35:36.506244+00:00",
-     "series_id":"611262c2-b023-4925-b478-2a73a80718fe",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":295,
-     "summary":"What drives people to change, to heal, to reinvent themselves? How do we reclaim our health, bounce back from heartbreak, flip the script? On goopfellas, two friends who have become familiar with unlikely personal transformations have raw conversations with people who have experienced profound shifts in perspective and well-being. Together, functional medicine practitioner Will Cole, DC, and chef Seamus Mullen get at the catalysts that bring people out of their dark night and into their purpose. Each of their goopfellas guests\u2014from athletes to actors to authors\u2014is different. As are the hosts: Mullen himself almost died from rheumatoid arthritis, and Cole\u2019s day job is helping people uncover and overturn the roots of dis-ease. But you\u2019ll likely see pieces of yourself in all their conversations, reflected in every one of their challenges. And we hope, from the lessons they learned along the way, you\u2019ll find something you need to bring about a change, big or small, in your own life.",
-     "podcast_guid":"678191b7b9f24870a5737be84af8875f",
-     "slug":"goopfellas",
-     "title":"goopfellas",
-     "image_url":"https://megaphone.imgix.net/podcasts/cbdfa9a8-5ba7-11e9-9fdf-5338a813fc2f/image/uploads_2F1554911173573-co093cx7ve-dc36134f25ec25481e02ee8327803df7_2FgoopFellas-FINAL.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2019 Goop Inc and Cadence 13. All Rights Reserved.",
-     "author":"Goop Inc and Cadence 13",
-     "website_url":"https://goop.com/thepodcast",
-     "feed_url":"https://feeds.megaphone.fm/goopfellas",
-     "owner_name":"Goop Inc and Cadence 13",
-     "owner_email":"podcast@goop.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:36.330544+00:00",
-     "updated_at":"2019-04-12 01:35:36.330544+00:00",
-     "series_id":"678191b7-b9f2-4870-a573-7be84af8875f",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":128,
-     "summary":"Little does the president know but somehow thousands of tiny microphones have found their way into the White House, and we\u2019ve got the tapes to prove it. The Hollywood Reporter calls THE OVAL OFFICE TAPES, \u201cComedic Gold!\u201d Finally, you\u2019ll be able to listen in on the madness taking place at 1600 Pennsylvania Avenue, in this behind-the-scenes ticket to \u201cthe room where it happens.\u201d Featuring your favorite Trump administration figures, family members, best friends and enemies, THE OVAL OFFICE TAPES takes an unprecedented look at today\u2019s top news stories. From the minds of R.J. Cutler and Blumhouse Television.",
-     "podcast_guid":"8480e957ef49492399c5dddba251a588",
-     "slug":"the-oval-office-tapes",
-     "title":"The Oval Office Tapes",
-     "image_url":"https://megaphone.imgix.net/podcasts/db2ba236-0ed6-11e9-ada1-472b1f217010/image/18063d53164b688a0e6d3ab8c22a9a8c903052507093c616b014f2dc8850054246cf5c296b604f24602249550670ec29ef061140468e523ff3cfc22fac34979f.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Blumhouse TV and Cadence13",
-     "author":"Blumhouse TV",
-     "website_url":"http://ovalofficetapes.com/",
-     "feed_url":"https://feeds.megaphone.fm/oval-office-tapes",
-     "owner_name":"",
-     "owner_email":"info@ovalofficetapes.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:35.749277+00:00",
-     "updated_at":"2019-04-12 01:35:35.749277+00:00",
-     "series_id":"8480e957-ef49-4923-99c5-dddba251a588",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/the-oval-office-tapes/id1435414063?mt=2"
-     }
-   },
-   {  
-     "id":92,
-     "summary":"<p>Sports fans around the world place bets on the games they love, every week. It\u2019s an exhilarating and rewarding experience unless, of course, you\u2019re not getting the right advice.</p><p>Introducing...The Favorites.</p><p>Three times a week\u2014Monday, Wednesday, and Friday\u2014Action's Chief Content Officer Chad Millman -- along with ex-NFL lineman Geoff Schwartz, former MLB All-Star catcher Paul Lo Duca, professional gambler BlackJack Fletcher and bookmaker Bob Scucci -- break down the angles, the markets and the numbers driving the loudest parallel conversation in sports.</p><p>On Mondays, it\u2019s Paul, Geoff and Chad, building a nine team parlay. Mid-week, it\u2019s Chad and Scooch, talking about what games the sharps are on, and on Friday, Blackjack and Chad choose five games for the Westgate SuperContest.</p><p>To win...or to cover? That is the question. And by the weekend, there's no question you will have the answers.</p>",
-     "podcast_guid":"592eb81071144a4bbb4450a27a595157",
-     "slug":"the-buffet-with-chad-and-scooch",
-     "title":"The Favorites - Part of The Action Network",
-     "image_url":"https://megaphone.imgix.net/podcasts/38764a12-0ed3-11e9-8aff-3b1c7e674da8/image/9842767ef7bdb2420f3c661301e2984ca1583ca48f51df973ef93b4c4c2b1d8ceacb4b90cd7646e74f19450f85c75dc48697553eace3732018d517774ddcb7b0.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 The Action Network and Cadence13",
-     "author":"The Action Network",
-     "website_url":"https://art19.com/shows/the-buffet-with-chad-and-scooch",
-     "feed_url":"https://feeds.megaphone.fm/the-favorites",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:33.237903+00:00",
-     "updated_at":"2019-04-12 01:35:33.237903+00:00",
-     "series_id":"592eb810-7114-4a4b-bb44-50a27a595157",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1293897220",
-       "STITCHER":"http://www.stitcher.com/podcast/fantasy-labs-2/the-buffet-with-chad-and-scooch",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Idmteu5jj5if55jztobtkoxdgwq",
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL3RoZS1idWZmZXQtd2l0aC1jaGFkLWFuZC1zY29vY2g",
-       "SPOTIFY":"https://open.spotify.com/show/0YSm6t56iWPskqCkgb3K6p"
-     }
-   },
-   {  
-     "id":53,
-     "summary":"<p>Rachel Brathen, known as Yoga Girl, is an international yoga teacher and speaker, bestselling author and serial entrepreneur who inspires millions every day. Now \u2013 Rachel offers an even more intimate look into her life and the inspiring journey. Weekly episodes of storytelling and talks from Rachel (sometimes alongside special guests!) dive into topics such as love, trust, finding balance, overcoming adversity and of course, yoga and well-being.</p><p>The light you are seeking is within your own heart.</p><p>Join Rachel as she helps you uncover it, from her heart to yours.</p><p><br></p>",
-     "podcast_guid":"dbc44860bc2240bbab60fc78de4c7db0",
-     "slug":"yoga-girl",
-     "title":"From The Heart: Conversations with Yoga Girl",
-     "image_url":"https://megaphone.imgix.net/podcasts/d0cd3634-0f98-11e9-9ed7-ef7ffc56a8bd/image/fc61eeeeb30e7e586c181ade7b61fb5e319069bbd12321cfe7e177cb2d45ae0d9df0af90b28f9be2fb7e964473eb6a26e94c5313898cf9bf557aad1d421fa6cf.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Yoga Girl. All rights reserved.",
-     "author":"Rachel Brathen",
-     "website_url":"http://rachelbrathen.com/",
-     "feed_url":"https://feeds.megaphone.fm/yoga-girl",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:30.641179+00:00",
-     "updated_at":"2019-04-12 01:35:30.641179+00:00",
-     "series_id":"I001-001",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Iwejm7zsznl74gxzvngztu2nhsa?t=From_The_Heart_Conversations_with_Yoga_Girl",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/from-the-heart-conversations-with-yoga-girl/id1219728105?mt=2",
-       "SPOTIFY":"https://open.spotify.com/show/6VBsAU8dpXZSwX8GmU3qM5?si=E864G2GTT4e6M_lw64z5bA",
-       "STITCHER":"http://www.stitcher.com/podcast/dgital-media/from-the-heart-conversations-with-yoga-girl"
-     }
-   },
-   {  
-     "id":81,
-     "summary":"Authors and bloggers Tom Fitzgerald and Lorenzo Marquez render judgment on all the latest goings-on in the worlds of celebrity, pop culture, television and fashion. Strap yourselves in for some hilarious opinionating on all the most pressing issues of our time, darlings.",
-     "podcast_guid":"e649df0743ca41c9bd8bf180f12d0335",
-     "slug":"DGT8982539249",
-     "title":"Tom & Lorenzo's Pop Style Opinionfest",
-     "image_url":"https://megaphone.imgix.net/podcasts/f933b734-4724-11e8-914a-6751afb503d8/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2018 Radio.com",
-     "author":"Radio.com",
-     "website_url":"http://radio.com/audio/",
-     "feed_url":"https://feeds.megaphone.fm/DGT8982539249",
-     "owner_name":"",
-     "owner_email":"podcasts@play.it",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:26.181203+00:00",
-     "updated_at":"2019-04-12 01:35:26.181203+00:00",
-     "series_id":"e649df07-43ca-41c9-bd8b-f180f12d0335",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":79,
-     "summary":"Love her or hate her, but you can\u2019t ignore the sassy, quick-witted Stassi Schroeder, star of Bravo\u2019s \u201cVanderpump Rules.\u201d Never one to hold back on any topic, Stassi is here with a weekly podcast, \u201cStraight Up with Stassi\u2019, a biting and hilarious look at the world and everyone in it, according to the Queen Bee herself.",
-     "podcast_guid":"5b16edd88f9a449cb60bca63758b442a",
-     "slug":"DGT9701433101",
-     "title":"Straight Up with Stassi",
-     "image_url":"https://megaphone.imgix.net/podcasts/7d909c00-471f-11e8-9b38-975f99a19c3c/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2018 Radio.com",
-     "author":"Radio.com",
-     "website_url":"http://radio.com/audio/",
-     "feed_url":"https://feeds.megaphone.fm/DGT9701433101",
-     "owner_name":"",
-     "owner_email":"podcasts@play.it",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:21.115779+00:00",
-     "updated_at":"2019-04-12 01:35:21.115779+00:00",
-     "series_id":"5b16edd8-8f9a-449c-b60b-ca63758b442a",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":80,
-     "summary":"Olivia Caridi, star of season 20 of \u201cThe Bachelor\u201d and an avid watcher of all sorts of television, is known for her smart, quick-witted mouth in more ways than one. On her new weekly podcast \"Mouthing Off with Olivia,\" she'll interview reality stars, actors and actresses, influencers and YouTube stars to get the latest in entertainment. Expect some major gossip, as Olivia will give each of her guests their own time to \"Mouth Off\" and deliver rants of epic proportions.",
-     "podcast_guid":"bc9179dc0ab74a5caf214505c5da779b",
-     "slug":"DGT3544898408",
-     "title":"Mouthing Off with Olivia Caridi",
-     "image_url":"https://megaphone.imgix.net/podcasts/59de18d0-4960-11e8-aebe-0b4d8ad1cd5e/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2018 Radio.com",
-     "author":"Radio.com",
-     "website_url":"http://www1.play.it/audio/mouthing-off-with-olivia-caridi/",
-     "feed_url":"https://feeds.megaphone.fm/DGT3544898408",
-     "owner_name":"",
-     "owner_email":"podcasts@play.it",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:18.754120+00:00",
-     "updated_at":"2019-04-12 01:35:18.754120+00:00",
-     "series_id":"bc9179dc-0ab7-4a5c-af21-4505c5da779b",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":225,
-     "summary":"Margaret Brennan asks the biggest guests the smartest questions. Hear official Washington on the firing line, on your schedule. (154991)",
-     "podcast_guid":"e92ce21bf8af49ec934d28c52c7d75f7",
-     "slug":"DGT9802241614",
-     "title":"Face the Nation on the Radio",
-     "image_url":"https://megaphone.imgix.net/podcasts/c942136e-64dd-11e8-a54d-97712b010ed5/image/ftnlogo1400x1400.png?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 CBS Radio News",
-     "author":"CBS News Radio",
-     "website_url":"http://www.cbsradionewsfeed.com/rss.php?id=45",
-     "feed_url":"https://feeds.megaphone.fm/DGT9802241614",
-     "owner_name":"",
-     "owner_email":"CBSNetworkRadioNewsWeb@cbsnews.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:17.264230+00:00",
-     "updated_at":"2019-04-12 01:35:17.264230+00:00",
-     "series_id":"e92ce21b-f8af-49ec-934d-28c52c7d75f7",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":223,
-     "summary":"CBS SUNDAY MORNING is the top-rated Sunday morning news program in all the key demos, and features stories on the arts, music, nature, entertainment, sports, history, science, Americana and highlights unique human accomplishments and achievements",
-     "podcast_guid":"49cf2579016746f8a1ff4912f2b8bbbc",
-     "slug":"DGT6544512251",
-     "title":"CBS Sunday Morning with Jane Pauley",
-     "image_url":"https://megaphone.imgix.net/podcasts/25a4fc98-433c-11e8-89a7-97fff674fab4/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2018 Radio.com",
-     "author":"Radio.com",
-     "website_url":"http://radio.com/audio/",
-     "feed_url":"https://feeds.megaphone.fm/DGT6544512251",
-     "owner_name":"",
-     "owner_email":"podcasts@play.it",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:13.437608+00:00",
-     "updated_at":"2019-04-12 01:35:13.437608+00:00",
-     "series_id":"49cf2579-0167-46f8-a1ff-4912f2b8bbbc",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":222,
-     "summary":"Get the biggest scoops and best storytelling on television from 60 Minutes - on your schedule. Now you can listen to the show in its entirety every week. 60 Minutes is the most successful broadcast in television history with more than 80 Emmys under its belt. 60 Minutes is also the only show to obtain interviews with every American president from Richard Nixon to Donald Trump.",
-     "podcast_guid":"0a7b4996fc5a4ff1bf58c1a4176a5ea8",
-     "slug":"DGT1588081910",
-     "title":"60 Minutes",
-     "image_url":"https://megaphone.imgix.net/podcasts/8ad9d9aa-433f-11e8-aa1f-cb1bbfab76f9/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2018 Radio.com",
-     "author":"Radio.com",
-     "website_url":"http://radio.com/audio/",
-     "feed_url":"https://feeds.megaphone.fm/DGT1588081910",
-     "owner_name":"",
-     "owner_email":"podcasts@play.it",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:08.135173+00:00",
-     "updated_at":"2019-04-12 01:35:08.135173+00:00",
-     "series_id":"0a7b4996-fc5a-4ff1-bf58-c1a4176a5ea8",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":224,
-     "summary":"Experience the best in intriguing crime and justice cases that touch on all areas of the human experience, including greed and passion, presented by the award-winning team at CBS News' \"48 Hours.\"",
-     "podcast_guid":"acf6611b6c4f4c4fb6d040a38c8abdb9",
-     "slug":"DGT3646982943",
-     "title":"48 Hours",
-     "image_url":"https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2018 Radio.com",
-     "author":"Radio.com",
-     "website_url":"http://radio.com/audio",
-     "feed_url":"https://feeds.megaphone.fm/DGT3646982943",
-     "owner_name":"",
-     "owner_email":"podcasts@play.it",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:01.555479+00:00",
-     "updated_at":"2019-04-12 01:35:01.555479+00:00",
-     "series_id":"acf6611b-6c4f-4c4f-b6d0-40a38c8abdb9",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/965818306",
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vREdUMzY0Njk4Mjk0Mw",
-       "SPOTIFY":"https://open.spotify.com/show/0UetHF8bYSGBtDsjVl4GDv",
-       "STITCHER":"http://www.stitcher.com/podcast/cbs-local/48-hours"
-     }
-   },
-   {  
-     "id":207,
-     "summary":"<p>Join best friends and YouTubers Anna Brisbin and Tessa Netting as they cover all things nerdy including TV shows, books, movies, animation, and pop culture. Listen in as these two proud Ravenclaws debate ship wars, play games like Would You Rather, and sort characters into Hogwarts houses. New episode every Friday. See you next Geek!</p>",
-     "podcast_guid":"e897d2f3f3fc4a85b1421928c601ef12",
-     "slug":"fantastic-geeks",
-     "title":"Fantastic Geeks (and where to find them)",
-     "image_url":"https://megaphone.imgix.net/podcasts/c5bf8796-0f0d-11e9-8578-9fc690c491b3/image/uploads_2F1554470586886-dbpmsdn6twa-13bbb661114d0ea87d70859decb471b4_2FFantasticGeeks_Artwork_S2Update.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Anna Brisbin and Tessa Netting. All Rights Reserved.",
-     "author":"Anna Brisbin, Tessa Netting & Cadence13",
-     "website_url":"https://shows.cadence13.com/podcast/fantastic-geeks",
-     "feed_url":"https://feeds.megaphone.fm/fantastic-geeks",
-     "owner_name":"",
-     "owner_email":"info@expandentertainment.co",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:35:00.282081+00:00",
-     "updated_at":"2019-04-12 01:35:00.282081+00:00",
-     "series_id":"e897d2f3-f3fc-4a85-b142-1928c601ef12",
-     "social_media_urls":{  
-       "TWITTER":"https://twitter.com/FantasticGeeks"
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PLAY":"https://play.google.com/music/m/I5fgoridsuf3tmnyvmyv2dgynq4?t=Fantastic_Geeks_and_where_to_find_them",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/fantastic-geeks-and-where-to-find-them/id1354780495?mt=2",
-       "SPOTIFY":"https://open.spotify.com/show/4ClhDjAqhqH9SRkGnfOsxY?si=a_lhoIlpQ-KQbazCX7twZg",
-       "STITCHER":"https://www.stitcher.com/podcast/cadence13/fantastic-geeks-and-where-to-find-them"
-     }
-   },
-   {  
-     "id":25,
-     "summary":"Dive deep into the HBO hit fantasy series each week with Entertainment Weekly's top Westeros war correspondent James Hibberd and Greyjoy fanboy Darren Franich as they talk about what happened on the show, both on camera and behind the scenes \u2013 and what might be coming up.",
-     "podcast_guid":"b55d9859dd0f4ffd95884df2d92b00bf",
-     "slug":"ews-game-of-thrones-weekly",
-     "title":"EW's Game of Thrones Weekly",
-     "image_url":"https://megaphone.imgix.net/podcasts/4334b53e-2994-11e9-953a-1b19e45d5131/image/49e90283ca62bb4def5678918bca80d14ebc001664907f170f932e5570f36569d0f6c7d29c3b4aac0682f15d8548ce1353942393930d14b45a8fd52a61671f82.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 Entertainment Weekly",
-     "author":"Entertainment Weekly",
-     "website_url":"https://art19.com/shows/ews-game-of-thrones-weekly",
-     "feed_url":"https://feeds.megaphone.fm/ew-thrones-weekly",
-     "owner_name":"",
-     "owner_email":"ewdigital@ew.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:59.394572+00:00",
-     "updated_at":"2019-04-12 01:34:59.394572+00:00",
-     "series_id":"T005-001",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/ews-game-of-thrones-weekly/id1099326209?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/entertainment-weekly/ews-game-of-thrones-weekly?refid=stpr"
-     }
-   },
-   {  
-     "id":239,
-     "summary":"There's never been more TV, which means there's never been more TV to talk about. Join Entertainment Weekly TV critics Kristen Baldwin and Darren Franich for Best of Shows, a weekly watercooler conversation about the biggest things happening on the small screen. With celebrity interviews and snappy conversational energy, they'll try to answer a simple question: What should I watch?",
-     "podcast_guid":"a138fdb171af4d41b98e124045829b20",
-     "slug":"ew-best-of-shows",
-     "title":"EW's Best of Shows",
-     "image_url":"https://megaphone.imgix.net/podcasts/7d0a7ef4-1500-11e9-b82e-9f354490777e/image/uploads_2F1547171601929-01cizzp2qp6n-0023661373b8febfc9e031ef35ec1003_2Few-bestofshows-podcast-final-2b.png?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2019 Entertainment Weekly/Meredith Corporation. All Rights Reserved.",
-     "author":"Entertainment Weekly",
-     "website_url":"https://ew.com/",
-     "feed_url":"https://feeds.megaphone.fm/ew-best-of-shows",
-     "owner_name":"Entertainment Weekly",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:58.950937+00:00",
-     "updated_at":"2019-04-12 01:34:58.950937+00:00",
-     "series_id":"a138fdb1-71af-4d41-b98e-124045829b20",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":265,
-     "summary":"In today\u2019s world, context is clarity.\u00a0\"Skimm This\" breaks down the most important stories of the day and explains why they matter.\u00a0All in 10 minutes. Every\u00a0Monday through Friday. All\u00a0at 5PM.",
-     "podcast_guid":"fa8e259e8d184b5e8491d8e5e2054459",
-     "slug":"skimm-this",
-     "title":"Skimm This",
-     "image_url":"https://megaphone.imgix.net/podcasts/677c3fca-36b9-11e9-bdbf-4f08d49e0f8b/image/uploads_2F1550850401162-n4uep5w11ag-41325ccc883ed12b83e501af3e7bff18_2FSkimm%2BThis%2BAlbum%2BArtwork.png?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"theSkimm, Inc. All Rights Reserved.",
-     "author":"theSkimm, Inc.",
-     "website_url":"https://theskimm.com/news/skimmthis",
-     "feed_url":"https://feeds.megaphone.fm/skimm-this",
-     "owner_name":"theSkimm, Inc.",
-     "owner_email":"skimmthis@theskimm.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:57.901395+00:00",
-     "updated_at":"2019-04-12 01:34:57.901395+00:00",
-     "series_id":"fa8e259e-8d18-4b5e-8491-d8e5e2054459",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1454021155",
-       "SPOTIFY":"https://open.spotify.com/show/7EE84czguLACM5cQwUz1J0",
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/skimm-this"
-     }
-   },
-   {  
-     "id":197,
-     "summary":"<p>theSkimm's co-founders and co-CEOs, Carly Zakin and Danielle Weisberg, started their company from a couch. Now they\u2019re bringing it back to one, and inviting powerful female leaders to sit down and chat about everything from celebrating career wins to the worst advice they've ever received. It\u2019s an inside look at what it\u2019s really like on the road to success. No BS, no sugarcoating.</p>",
-     "podcast_guid":"6882c1dcff7e46f29ad0435deba71c9e",
-     "slug":"skimmd-from-the-couch",
-     "title":"Skimm'd from The Couch",
-     "image_url":"https://megaphone.imgix.net/podcasts/b595c39e-0f94-11e9-a160-1bc47ec27b97/image/613355f6d6065c4a131eb48a8cb3d4aeaa1f69f9a43a28143fbcfd0bc57f77cefb80d3edea90310d5959bfb27b0fc39d581742beca0cfd383d9a9e9fdff50ed5.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 THESKIMM, INC. ALL RIGHTS RESERVED. 582981",
-     "author":"theSkimm",
-     "website_url":"https://www.theskimm.com/",
-     "feed_url":"https://feeds.megaphone.fm/skimmd-from-the-couch",
-     "owner_name":"",
-     "owner_email":"podcasts@theskimm.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:56.088433+00:00",
-     "updated_at":"2019-04-12 01:34:56.088433+00:00",
-     "series_id":"6882c1dc-ff7e-46f2-9ad0-435deba71c9e",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/skimmd-from-the-couch/id1345547675?mt=2",
-       "STITCHER":"https://www.stitcher.com/podcast/cadence13/skimmd-from-the-couch?refid=stpr"
-     }
-   },
-   {  
-     "id":11,
-     "summary":"<p>Host Jill Schlesinger, CFP\u00ae, tackles sometimes uncomfortable and even controversial money and investing issues, without the financial jargon, to get to the heart of what\u2019s important for anyone to know. Jill takes listener phone calls and interviews informative and entertaining guests each week to uncover surprising insights and provide actionable information so you can make the most of your money. Have a question? Email us at askjill at jillonmoney dot com.</p>",
-     "podcast_guid":"4ca952ed5fa3454d9246df86be1ca0cd",
-     "slug":"better-off-with-jill-schlesinger",
-     "title":"Jill on Money with Jill Schlesinger",
-     "image_url":"https://megaphone.imgix.net/podcasts/baeea6ea-0f61-11e9-b409-07308353d430/image/c188f63b6565a7d10133922a9d44cb22bd8f755c12b451f51949c7e96cdb835d3a9348b2d6b698ed7dccf63057adb75c9c6e0b3dccb130d54ff70feaa6b9b723.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Cadence13. All Rights Reserved.",
-     "author":"Cadence13",
-     "website_url":"http://www.jillonmoney.com",
-     "feed_url":"https://feeds.megaphone.fm/jill-on-money",
-     "owner_name":"",
-     "owner_email":"askjill@jillonmoney.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:50.604033+00:00",
-     "updated_at":"2019-04-12 01:34:50.604033+00:00",
-     "series_id":"D001-001",
-     "social_media_urls":{  
-       "FACEBOOK":"https://www.facebook.com/JillonMoney",
-       "TWITTER":"https://twitter.com/jillonmoney",
-       "LINKEDIN":"https://www.linkedin.com/in/jillonmoney"
-     },
-     "subscriptionUrls":{  
-       "CASTBOX":"https://castbox.fm/channel/Better-Off-with-Jill-Schlesinger-id1208339?country=us",
-       "GOOGLE_PLAY":"https://play.google.com/music/listen?u=0#/ps/Ij7qn37am4msadnvv7biqplriwe",
-       "IHEART":"https://www.iheart.com/podcast/274-better-off-with-jill-28090565/episode/a-real-estate-dilemma-30282295/",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/better-off-with-jill-schlesinger/id431167790?mt=2",
-       "RADIO_PUBLIC":"https://radiopublic.com/better-off-with-jill-schlesinger-6rNLZq",
-       "SPOTIFY":"https://open.spotify.com/show/0kRrgDDxdD9JTqvHY0A5DG",
-       "STITCHER":"https://www.stitcher.com/podcast/jill-on-money"
-     }
-   },
-   {  
-     "id":194,
-     "summary":"Whether it\u2019s what we eat for breakfast on the go, what we pack for lunch, or how we fill our shopping cart and stock our pantry, we make more than 300 food decisions every day. Together, we\u2019ll learn how to make better choices and eat all of our favorite foods, guilt-free!",
-     "podcast_guid":"2febf94155314c729ee3426170f909a8",
-     "slug":"eat-this-not-that",
-     "title":"Eat This, Not That!",
-     "image_url":"https://megaphone.imgix.net/podcasts/aa9a5270-0f0d-11e9-8e14-dbd46650ce7d/image/image.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"2019 ETNT, LLC and Cadence 13",
-     "author":"ETNT, LLC and Cadence 13",
-     "website_url":"http://www.eatthis.com/podcast/",
-     "feed_url":"https://feeds.megaphone.fm/e-t-n-t",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:48.715857+00:00",
-     "updated_at":"2019-04-12 01:34:48.715857+00:00",
-     "series_id":"2febf941-5531-4c72-9ee3-426170f909a8",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/eat-this-not-that/id1330196974?mt=2",
-       "STITCHER":"https://www.stitcher.com/podcast/cadence13/eat-this-not-that"
-     }
-   },
-   {  
-     "id":37,
-     "summary":"The MMQB suite of podcasts bring you unique, informed and immediate analysis from around the NFL. Whether you\u2019re looking to catch up on Sunday\u2019s football action, take a deep dive into the film or answer some burning NFL questions, The MMQB staff has you covered. With a rotating cast of hosts including Andy Benoit, Albert Breer, Jenny Vrentas, Conor Orr and Gary Gramling, you\u2019ll finish each episode knowing more about football than you ever thought you could.",
-     "podcast_guid":"f44cf59dadca45bc8a3651a22302fdfe",
-     "slug":"the-mmqb-10-things",
-     "title":"The MMQB NFL Podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/64e88d80-0f8c-11e9-b0c2-238676ab751d/image/37ebd3fba26301bbf5a116608a84ba96e3f388813825d61998bc9f642dde2b63d696078b3db92db3384905ccb011f4ff08d590305cbf9e82bad33f2a0215896e.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"http://mmqb.si.com/",
-     "feed_url":"https://feeds.megaphone.fm/mmqb-podcast",
-     "owner_name":"Sports Illustrated",
-     "owner_email":"talkback@themmqb.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:41.360900+00:00",
-     "updated_at":"2019-04-12 01:34:41.360900+00:00",
-     "series_id":"T005-007",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PLAY":"https://play.google.com/music/m/I3e5ffp2uwuen5kxwce5jygn2hq?t=The_MMQB_NFL_Podcast",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/the-mmqb-10-things/id916244917?mt=2",
-       "SPOTIFY":"https://open.spotify.com/show/1Qme53SgzFqtt2RN16AHbK?si=U9ZYXpHfRaSVVaAFJR9CBg",
-       "STITCHER":"http://www.stitcher.com/podcast/dgital-media/the-mmqb-podcast-with-andy-benoit"
-     }
-   },
-   {  
-     "id":1,
-     "summary":"Sports Illustrated\u2019s Chris Mannix provides a weekly window into the world of basketball, from breakdowns of the biggest news and trends to conversations with players and personnel.",
-     "podcast_guid":"1b332f1157aa43b3b2dd778c5af3a0ca",
-     "slug":"vertical-chris-mannix",
-     "title":"The Crossover NBA Show with Chris Mannix",
-     "image_url":"https://megaphone.imgix.net/podcasts/5df1020a-0f8c-11e9-9407-df8b5bccdcb6/image/28a764d99de96516b69f4995e11c48b011ff58f28f86a34f94c37664fd636adbc438514cd15c65ea5b632dbd0f805d24f16f99137a18005f3d48c7c975689bd5.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Cadence13. All Rights Reserved. 484676",
-     "author":"Cadence13",
-     "website_url":"https://art19.com/shows/vertical-chris-mannix",
-     "feed_url":"https://feeds.megaphone.fm/crossover-mannix",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:37.438382+00:00",
-     "updated_at":"2019-04-12 01:34:37.438382+00:00",
-     "series_id":"Y002-002",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=https://podcasts.google.com/?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL1ZlcnRpY2FsLU1hbm5peA%3D%3D",
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/https://itunes.apple.com/us/podcast/the-crossover-nba-show-with-chris-mannix/id1078713316?mt=2&ign-mpt=uo%3D4",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Isuhxosszncevpvxdpuo4hdlbna?t=The_Crossover_NBA_Show_with_Chris_Mannix",
-       "SPOTIFY":"https://open.spotify.com/show/https://open.spotify.com/show/7LpeHndYrRzeDHvG94axRb",
-       "STITCHER":"http://www.stitcher.com/podcast/art19/the-vertical-podcast-with-chris-mannix"
-     }
-   },
-   {  
-     "id":137,
-     "summary":"<p>The Awardist, from Entertainment Weekly, takes you inside this year\u2019s best contenders for the industry\u2019s biggest awards, from the Golden Globes to the Oscars. Join EW editors as they talk about the actors, films and TV series that should win \u2013 and which of those actually will win \u2013 and why.</p><p><br></p><p><br></p>",
-     "podcast_guid":"6dc91f527f0b439b8b5d27991348bdf9",
-     "slug":"chasing-emmy",
-     "title":"The Awardist",
-     "image_url":"https://megaphone.imgix.net/podcasts/4fc88ba2-0f6f-11e9-b8f7-3b8c2d8f132c/image/0aaecb8ed3e8b7564a1122a5e9228cf7555b09747028aa9ddc970b6aca2bda4ea10c90c85b0f6623986dfc6c2d985ddd5600ed66c3432692e5bec4153920a8de.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Entertainment Weekly",
-     "author":"Entertainment Weekly",
-     "website_url":"https://art19.com/shows/chasing-emmy",
-     "feed_url":"https://feeds.megaphone.fm/the-awardist",
-     "owner_name":"",
-     "owner_email":"ewdigital@ew.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:36.600593+00:00",
-     "updated_at":"2019-04-12 01:34:36.600593+00:00",
-     "series_id":"6dc91f52-7f0b-439b-8b5d-27991348bdf9",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":215,
-     "summary":"July 4, 2009. Former NFL quarterback Steve McNair is found murdered in his Nashville condo. After just four days of investigating it was ruled a murder-suicide. But what if it wasn\u2019t? Over the course of this nine-part series, we\u2019ll guide you through the McNair case, reviewing the findings and re-examining crucial details in a new light.",
-     "podcast_guid":"282e01ec62934229a71c0c476b27989d",
-     "slug":"fall-of-a-titan",
-     "title":"Steve McNair: Fall of a Titan",
-     "image_url":"https://megaphone.imgix.net/podcasts/50768294-0f64-11e9-809e-b79228c19575/image/57a929fb3cbd6439cf37e6f26c0aed34345bb236b483f5510c28180a76dfe9122a71ec1384e5d8966e0b5e4821284c91bfa5862e96f8c4089975387d577701f4.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Time Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"https://www.si.com/podcasts",
-     "feed_url":"https://feeds.megaphone.fm/fall-of-a-titan",
-     "owner_name":"",
-     "owner_email":"Sportsillustratedpodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:36.253634+00:00",
-     "updated_at":"2019-04-12 01:34:36.253634+00:00",
-     "series_id":"282e01ec-6293-4229-a71c-0c476b27989d",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/steve-mcnair-fall-of-a-titan/id1438017801?mt=2",
-       "SPOTIFY":"https://open.spotify.com/show/6SKpCDfPFjDKTzMutjEdVn?si=guG2NPSmQ7OOC8U0UuoITA",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Ilkbojbbuh767d4isf2wabt5fwm?t=Steve_McNair_Fall_of_a_Titan"
-     }
-   },
-   {  
-     "id":41,
-     "summary":"Welcome to the SI Media Podcast with Jimmy Traina. This podcast, which will be published weekly, will focus on all things sports media via interviews and roundtable discussions. Occasionally, an athlete or celebrity will drop by for a chat as well.",
-     "podcast_guid":"496c4b8336f64ae5a1760ede8c26c03f",
-     "slug":"si-media-podcast",
-     "title":"Sports Illustrated Media Podcast",
-     "image_url":"https://megaphone.imgix.net/podcasts/b797aeb8-0f6d-11e9-9cbb-27d61c58fd3f/image/c5b64d9d57d1f578ed0fc29fc6714796a83a628a78f55585d655c4fc3687939d757c4044c0a6192aa8f2c89ab3cf892c30ea88584d224e31332b5c3c4a0e50c1.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"https://art19.com/shows/si-media-podcast",
-     "feed_url":"https://feeds.megaphone.fm/si-media",
-     "owner_name":"",
-     "owner_email":"Sportsillustratedpodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:31.168897+00:00",
-     "updated_at":"2019-04-12 01:34:31.168897+00:00",
-     "series_id":"T005-006",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Iq5rbvuoxjtxxns3fnal5ciyy4y?t=Sports_Illustrated_Media_Podcast",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/si-media-podcast-richard-deitsch/id997819235?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/dgital-media/si-media-podcast-with-richard-deitsch",
-       "SPOTIFY":"https://open.spotify.com/show/4Bvno6GHUWSuOLTAIWma1u?si=vrV0zyGTQ4iXYSaClWsjNA"
-     }
-   },
-   {  
-     "id":273,
-     "summary":"Sports Illustrated keeps you up to date with a daily podcast from Brazil featuring interviews, analysis and more.",
-     "podcast_guid":"82df4d4101f84ab89fe6da97bb274847",
-     "slug":"DGT4842444150",
-     "title":"Sports Illustrated At The Games",
-     "image_url":"https://megaphone.imgix.net/podcasts/8f77800e-3ea0-11e9-b991-d35c95f0a554/image/avatars-000241515359-fgzl47-original.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"All rights reserved",
-     "author":"Sports Illustrated",
-     "website_url":"http://olympics.si.com/",
-     "feed_url":"https://feeds.megaphone.fm/si-at-the-games",
-     "owner_name":"",
-     "owner_email":"sportsillustratedoly@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:30.990998+00:00",
-     "updated_at":"2019-04-12 01:34:30.990998+00:00",
-     "series_id":"82df4d41-01f8-4ab8-9fe6-da97bb274847",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":32,
-     "summary":"Chris Mannix will bring fans closer to the sport and its personalities with in-depth conversations with the top names in boxing.",
-     "podcast_guid":"142259b8bee1410a9b99d2571bf05053",
-     "slug":"boxing-mannix",
-     "title":"SI Boxing with Chris Mannix",
-     "image_url":"https://megaphone.imgix.net/podcasts/1b2e5f7e-0f66-11e9-8424-bf36c49658e4/image/05c0cef38e59e90991900a3ea44e51dca89648c1160c52f94dd0f440c3231e05957a8b3e9583979da018dd874d3a9bac749c55983468783ed6241257c1b52c52.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Cadence13. All Rights Reserved. 768138",
-     "author":"Cadence13",
-     "website_url":"https://art19.com/shows/boxing-mannix",
-     "feed_url":"https://feeds.megaphone.fm/si-boxing",
-     "owner_name":"Sports Illustrated",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:28.424695+00:00",
-     "updated_at":"2019-04-12 01:34:28.424695+00:00",
-     "series_id":"Y001-001",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/boxing-with-chris-mannix/id1176276029?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/dgital-media/boxing-with-chris-mannix"
-     }
-   },
-   {  
-     "id":16,
-     "summary":"Sports Illustrated\u2019s Grant Wahl talks with the prominent figures in soccer.",
-     "podcast_guid":"553ea071a8a444abae9bbff3ca339d2b",
-     "slug":"planet-futbol",
-     "title":"Planet F\u00fatbol with Grant Wahl",
-     "image_url":"https://megaphone.imgix.net/podcasts/24146634-0f65-11e9-bff3-173df34d7f3f/image/f72413e67a49d8bf419eb845fa90f421081c69b4ee68c57e31fe0d3f76c48656204b683ec87e13b4983342960342bcaa0234e21f5ee29cd8237d3e87c5e80224.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"http://www.si.com/podcasts",
-     "feed_url":"https://feeds.megaphone.fm/planet-futbol",
-     "owner_name":"",
-     "owner_email":"Sportsillustratedpodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:22.707039+00:00",
-     "updated_at":"2019-04-12 01:34:22.707039+00:00",
-     "series_id":"T005-005",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/planet-futbol-podcast/id999062153?mt=2",
-       "STITCHER":"http://www.stitcher.com/podcast/planet-futbol-podcast"
-     }
-   },
-   {  
-     "id":50,
-     "summary":"Hosted by Andrew Sharp and Ben Golliver, SI\u2019s Open Floor podcast brings you breakdowns of the biggest news, moves and more from around the NBA.",
-     "podcast_guid":"7e71b393f8354ddb877721ad26cc49a7",
-     "slug":"open-floor",
-     "title":"Open Floor: SI's NBA Show",
-     "image_url":"https://megaphone.imgix.net/podcasts/b544bb00-0f64-11e9-a00a-ab00735a76ae/image/15071500016e6a25f78943ca289fc00d07e4b5f8721f474329de7edb16a94a51ba7bfca9727b1fb6c08f5d608e60115ab22432c68745dc4e6922c40175cd33b0.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"https://art19.com/shows/open-floor",
-     "feed_url":"https://feeds.megaphone.fm/open-floor",
-     "owner_name":"",
-     "owner_email":"Sportsillustratedpodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:16.125919+00:00",
-     "updated_at":"2019-04-12 01:34:16.125919+00:00",
-     "series_id":"T005-004",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/https://itunes.apple.com/us/podcast/open-floor-sis-nba-show/id1050847009?mt=2&ign-mpt=uo%3D4",
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=https://podcasts.google.com/?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL29wZW4tZmxvb3I%3D",
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/sis-nba-podcast",
-       "SPOTIFY":"https://open.spotify.com/show/https://open.spotify.com/show/0Bgxp9XcFMTysIDB5mC04P",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Ivp6wjliwhgmesqzbfn5ekc3nqy?t=Open_Floor_SIs_NBA_Show"
-     }
-   },
-   {  
-     "id":189,
-     "summary":"Why wait for an award when you can give yourself one? This is your one-stop shop for the most correct opinions, funniest jokes, and best insight in the world of sports and pop culture courtesy of your hosts Charlotte Wilder and Jessica Smetana. In addition to a weekly news rundown, MVP also features segments like Takes In The Wild (the most outrageous opinions from bars and the internet), Cheat Sheet (how to talk about sports if you don't know how), Ask Aunt Char (bad advice from Charlotte's alter-ego), Fountain of Youth (Jess will provide information that the kids know so you can seem less washed-up), Is It Sports? (where Charlotte and Jess debate whether a thing is or isn't sports, duh), and many more. Give it a listen: By the end, you'll have nothing but respect for your MVP.",
-     "podcast_guid":"1cf858d4d6bb4b729f3c0bc7c0c4b589",
-     "slug":"most-valuable-podcast",
-     "title":"Most Valuable Podcast with Charlotte Wilder and Jess Smetana",
-     "image_url":"https://megaphone.imgix.net/podcasts/af4c4a4c-0f64-11e9-9e2b-d3eab3e21355/image/9c4e0cfe0fb92e1141bbd9d433128fab83b58ca84edb460a93f1f14efb35311d500b29ff483081789e4eb001a4fd5b5bbe66af2b85a8982308e80830784e9d97.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"http://www.si.com/podcasts",
-     "feed_url":"https://feeds.megaphone.fm/most-valuable-podcast",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:15.369410+00:00",
-     "updated_at":"2019-04-12 01:34:15.369410+00:00",
-     "series_id":"1cf858d4-d6bb-4b72-9f3c-0bc7c0c4b589",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PLAY":"https://play.google.com/music/listen?u=0#/ps/Iwh3hupirsebesylmnfucpieyqi",
-       "IHEART":"https://www.iheart.com/podcast/274-most-valuable-podcast-with-30036214/",
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/most-valuable-podcast-charlotte-wilder-jess-smetana/id1439253638?mt=2",
-       "SPOTIFY":"https://open.spotify.com/show/4IrhnKlvG7LqJksyIOZyD8",
-       "STITCHER":"https://www.stitcher.com/podcast/cadence13/most-valuable-podcast-with-charlotte-wilder-and-jess-smetana?refid=stpr"
-     }
-   },
-   {  
-     "id":272,
-     "summary":"Think about the toughest job interview you\u2019ve ever had. Now imagine that interview was monitored by more than 30 million people worldwide, and involved, somehow, being measured and judged in your underwear. For hundreds of 20- to 22-year-olds every spring, this is an unblinkingly natural part of vying for a roster spot in the NFL. Every week SI\u2019s Draft Season will take you behind the scenes of this crazy and fascinating world of the NFL draft.",
-     "podcast_guid":"5bb452a6315e4c7789f7c7c0b5e99a1f",
-     "slug":"DGT2025472210",
-     "title":"Draft Season: SI's NFL draft miniseries",
-     "image_url":"https://megaphone.imgix.net/podcasts/9cf42368-3ea0-11e9-ba34-4f76122587f1/image/avatars-000261899019-z2vz4m-original.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"All rights reserved",
-     "author":"Sports Illustrated",
-     "website_url":"http://soundcloud.com/draft-season-si",
-     "feed_url":"https://feeds.megaphone.fm/draft-season",
-     "owner_name":"",
-     "owner_email":"nfldraftsi@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:15.070146+00:00",
-     "updated_at":"2019-04-12 01:34:15.070146+00:00",
-     "series_id":"5bb452a6-315e-4c77-89f7-c7c0b5e99a1f",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
- 
-     }
-   },
-   {  
-     "id":187,
-     "summary":"<p>A presidential hopeful crashes his car in the middle of the night and leaves a young woman to die. What transpired in the hours after Ted Kennedy\u2019s car went over the bridge in Chappaquiddick changed the course of American history. Nearly 50 years later, everyone has a theory yet no one knows the truth.&nbsp;Follow the investigation and hear from those who lived through it in this series from People magazine and Cadence13.</p>",
-     "podcast_guid":"81f6b346e69142ac8c01936fa0f2bed5",
-     "slug":"cover-up",
-     "title":"Cover-Up",
-     "image_url":"https://megaphone.imgix.net/podcasts/4a1aa5e2-0f64-11e9-8c5f-e7aa23ef4b03/image/5aa7744e481d9646b22800a7e10331aaad1fa2d39e3e3d856e6e4a11415d006b77ac2ae991ac160605d91700f7d05156394fe1edb9998169ab010681ea3debfd.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 People. All Rights Reserved.",
-     "author":"People Magazine",
-     "website_url":"http://www.people.com",
-     "feed_url":"https://feeds.megaphone.fm/cover-up",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:14.714214+00:00",
-     "updated_at":"2019-04-12 01:34:14.714214+00:00",
-     "series_id":"81f6b346-e691-42ac-8c01-936fa0f2bed5",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/coverup",
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3Blb3BsZS1jb3Zlci11cA",
-       "SPOTIFY":"https://open.spotify.com/show/2CLMoNDcpzt5Yzsqwy5cVx",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/Iojnxyef7nqvq5b5imbnm7yxyf4",
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1384638621"
-     }
-   },
-   {  
-     "id":211,
-     "summary":"Breakaway is a podcast miniseries that explores the NBA from the inside out. Every episode delves into one of the driving forces of the game, featuring the perspectives of the players, coaches, and thinkers who understand it best. Hosted by Rob Mahoney and presented by Sports Illustrated.",
-     "podcast_guid":"8da9fb75e619464f8278e125015456e0",
-     "slug":"breakaway",
-     "title":"Breakaway",
-     "image_url":"https://megaphone.imgix.net/podcasts/7ae274a0-3ea0-11e9-9567-a3383cd51906/image/80e3d0654984f38aa4b8a0f724be859f9242c14f98cf28521b9ea5c56ebde65600e6628a6c80e49f17a043de45c68e4284fc7ad910e22d1ce21e925c98a497b0.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"https://art19.com/shows/breakaway",
-     "feed_url":"https://feeds.megaphone.fm/breakaway",
-     "owner_name":"",
-     "owner_email":"Sportsillustratedpodcasts@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:14.310578+00:00",
-     "updated_at":"2019-04-12 01:34:14.310578+00:00",
-     "series_id":"8da9fb75-e619-464f-8278-e125015456e0",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/breakaway/id1202998858?mt=2",
-       "STITCHER":"https://www.stitcher.com/podcast/cadence13/breakaway-2"
-     }
-   },
-   {  
-     "id":271,
-     "summary":"Podcast by Sports Illustrated",
-     "podcast_guid":"95657fed43784723992a6243872a4fc6",
-     "slug":"DGT3200476459",
-     "title":"Beyond The Baseline",
-     "image_url":"https://megaphone.imgix.net/podcasts/ac3bd60e-3ea0-11e9-99c3-c3e825ae8804/image/avatars-000289701890-0yk4ua-original.jpg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
-     "author":"Sports Illustrated",
-     "website_url":"http://SI.com/podcasts",
-     "feed_url":"https://feeds.megaphone.fm/beyond-the-baseline",
-     "owner_name":"",
-     "owner_email":"lizaelea1000@gmail.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:10.554829+00:00",
-     "updated_at":"2019-04-12 01:34:10.554829+00:00",
-     "series_id":"95657fed-4378-4723-992a-6243872a4fc6",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/https://itunes.apple.com/us/podcast/beyond-the-baseline/id1005210315?mt=2",
-       "SPOTIFY":"https://open.spotify.com/show/https://open.spotify.com/show/5aYFkCxTeueITNs4Uhf4nj",
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/beyond-the-baseline"
-     }
-   },
-   {  
-     "id":182,
-     "summary":"The Sports Media Podcast with Richard Deitsch is a weekly show that features interviews with members of the sports media about their work, as well as roundtables with sports media reporters about television, digital, audio/radio, print, and other forms of media. You can read Richard\u2019s work at The Athletic and hear his words at Sportsnet 590 The Fan in Toronto.",
-     "podcast_guid":"efa92701c8f547c7b762eff31a4ff72d",
-     "slug":"sports-media-with-richard-deitsch",
-     "title":"Sports Media with Richard Deitsch",
-     "image_url":"https://megaphone.imgix.net/podcasts/a81ff0fe-0f94-11e9-adc8-e7fb890b88f4/image/3ca99c4503a22e2ca843705957c61fbdb8e5d2eb918ff9e5ded7380176e95f0213910ed6c064282e3b8b17e555243670b10a56bd94ce9d6d605193c644f2fcc5.jpeg?ixlib=rails-2.1.2",
-     "subtitle":null,
-     "podcast_type":1,
-     "copyright":"\u00a9 2018 Cadence13. All Rights Reserved.",
-     "author":"Cadence13 and Richard Deitsch",
-     "website_url":"http://shows.cadence13.com/podcast/sports-media-with-richard-deitsch",
-     "feed_url":"https://feeds.megaphone.fm/sports-media-deitsch",
-     "owner_name":"",
-     "owner_email":"podcasts@cadence13.com",
-     "is_explicit":null,
-     "is_complete":false,
-     "status":1,
-     "created_at":"2019-04-12 01:34:08.789907+00:00",
-     "updated_at":"2019-04-12 01:34:08.789907+00:00",
-     "series_id":"efa92701-c8f5-47c7-b762-eff31a4ff72d",
-     "social_media_urls":{  
- 
-     },
-     "subscriptionUrls":{  
-       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL21lZGlhLWRlaXRzY2g%3D",
-       "GOOGLE_PLAY":"https://play.google.com/music/m/If6bszjbrrr4jpdx4i6vsxjvdcy",
-       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/1366264191",
-       "SPOTIFY":"https://open.spotify.com/show/7jCuL8jXHPcX6zFEvpUpXk",
-       "STITCHER":"http://www.stitcher.com/podcast/cadence13/sports-media-with-richard-deitsch"
-     }
-   }
- ]
+[
+  {  
+    "id":193,
+    "summary":"Up and Vanished is an investigative true crime podcast hosted by Atlanta filmmaker Payne Lindsey. In Season 1, Payne tackles his first cold case story, the unsolved disappearance of Georgia high school teacher and former pageant queen, Tara Grinstead. The 11-year-old case remains the largest case file in Georgia history and is still unfolding. Season 2 focuses on the disappearance of young mother Kristal Reisinger from a remote mountain town in Colorado. Up and Vanished aims to tell compelling, true stories and give these cases the exposure they deserve.",
+    "podcast_guid":"6cb7db61f6704005933e08ebecba6451",
+    "slug":"up-and-vanished",
+    "title":"Up and Vanished",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/a57182f8-1ffe-11e9-8e74-4b4d4b64cfd9/image/uploads_2F1549922724537-d2mw2227pmm-61e15f4d08224d897f61c390a646e328_2FUAV-%2Bcover_1_3000-2.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2019 Tenderfoot TV",
+    "author":"Tenderfoot TV",
+    "website_url":"www.upandvanished.com",
+    "feed_url":"https://feeds.megaphone.fm/up-and-vanished",
+    "owner_name":"",
+    "owner_email":"tenderfoottv@gmail.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-24 23:18:51.637878+00:00",
+    "updated_at":"2019-05-24 23:18:51.637878+00:00",
+    "series_id":"6cb7db61-f670-4005-933e-08ebecba6451",
+    "social_media_urls":{  
+      "FACEBOOK":"http://www.facebook.com/upandvanished",
+      "TWITTER":"http://www.twitter.com/upandvanished"
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Im5rmeeujqoxj7qqte4tngsr2v4?t=Up_and_Vanished",
+      "APPLE_PODCASTS":"http://www.applepodcasts.com/upandvanished",
+      "SPOTIFY":"https://open.spotify.com/show/5FqJcvfGMLledCODGqV4J9?si=bSvYhc85Q329-hdLQKIofg"
+    },
+    "staff":[  
+      {  
+        "guid":"fb9bb269d6254c7f8bedf829bec67868",
+        "firstName":"Donald",
+        "middleName":null,
+        "lastName":"Albright",
+        "biography":"Crooked Conversations brings Pod Save America's no-b.s., conversational style to topics in politics, media, culture, sports, and technology that aren’t making headlines but still have a major impact on our world.",
+        "imageUrl":"https://content.production.cdn.art19.com/images/38/02/a9/16/3802a916-4d08-47ce-bcbe-8e216203fbcd/f48ee1615fffc796094c24093a707592cc01b7412e47c7333afdec0f5a044e363513bd21d848c2cbf8b77c7ee2bf6b0fd72c09c7504f34ece423b54e115f32fb.jpeg",
+        "sort_no":0
+      },
+      {  
+        "guid":"cf9854ebd8004bbba7875e98284f7100",
+        "firstName":"Mason",
+        "middleName":null,
+        "lastName":"Lindsey",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/38/2e/2c/17/382e2c17-7226-4119-9968-52e94157ae6b/a310ad51968169bfe319be5b6199f185ac5a4aa3c02a6cd825bb6611bbfb062ae64258771be16d582aef5ec7f38c258cde8814dbcfeadc490be099cd0b51cd17.jpeg",
+        "sort_no":1
+      },
+      {  
+        "guid":"0160c5b4ce614989a414aeca6d5cce83",
+        "firstName":"Payne",
+        "middleName":null,
+        "lastName":"Lindsey",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/61/e6/74/ae/61e674ae-18d7-470c-ac07-2f2aac7810bb/0219cd4e6767bfaf990100401dd3deb595bf7bdc8567f9b75e7ab9ec6067c2dd72fbc241265abff83dac954cdbeedf8781fca2600a0cee55eb21a64ed89c8de4.jpeg",
+        "sort_no":2
+      },
+      {  
+        "guid":"e25704a1f2ca451f8f542bb24ab318e5",
+        "firstName":"Meredith",
+        "middleName":null,
+        "lastName":"Stedman",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/83/b3/89/7d/83b3897d-ae64-480d-b16a-61c461bbea53/519651fa7a56069c4a68dc56bf5260a0efc2dbfd91a5de6764a001e8efaa5fe573c85cbc183a6ce8353851c3e24362578eda563f43044d5afa1e590bedfec681.jpeg",
+        "sort_no":3
+      }
+    ]
+  },
+  {  
+    "id":137,
+    "summary":"The Awardist, from Entertainment Weekly, takes you inside this year\u2019s best contenders for the industry\u2019s biggest awards. This Emmy season, join EW\u2019s Editor-in-Chief Henry Goldblatt, along with EW\u2019s Lynette Rice and Kristen Baldwin, as they talk about the TV stars and shows that should (and will) win big this year.",
+    "podcast_guid":"6dc91f527f0b439b8b5d27991348bdf9",
+    "slug":"chasing-emmy",
+    "title":"The Awardist",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/4fc88ba2-0f6f-11e9-b8f7-3b8c2d8f132c/image/0aaecb8ed3e8b7564a1122a5e9228cf7555b09747028aa9ddc970b6aca2bda4ea10c90c85b0f6623986dfc6c2d985ddd5600ed66c3432692e5bec4153920a8de.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2018 Entertainment Weekly",
+    "author":"Entertainment Weekly",
+    "website_url":"https://art19.com/shows/chasing-emmy",
+    "feed_url":"https://feeds.megaphone.fm/the-awardist",
+    "owner_name":"",
+    "owner_email":"ewdigital@ew.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-17 15:47:42.014816+00:00",
+    "updated_at":"2019-05-17 15:47:42.014816+00:00",
+    "series_id":"6dc91f52-7f0b-439b-8b5d-27991348bdf9",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+
+    },
+    "staff":[  
+      {  
+        "guid":"e51b027a7bdd4881818b7f850a9dd94b",
+        "firstName":"Kristen",
+        "middleName":null,
+        "lastName":"Baldwin",
+        "biography":null,
+        "imageUrl":null,
+        "sort_no":0
+      },
+      {  
+        "guid":"ce4dcd929b934310a1677251cafbf0ab",
+        "firstName":"Henry",
+        "middleName":null,
+        "lastName":"Goldblatt",
+        "biography":null,
+        "imageUrl":null,
+        "sort_no":1
+      },
+      {  
+        "guid":"d7268c20df1b42d099eeee8367107880",
+        "firstName":"Lynette",
+        "middleName":null,
+        "lastName":"Rice",
+        "biography":null,
+        "imageUrl":null,
+        "sort_no":2
+      }
+    ]
+  },
+  {  
+    "id":306,
+    "summary":"Throughout the 2020 presidential campaign, battle-tested operatives will be sitting on bar stools along the trail, sharing war stories and unique, sometimes uproarious cuts on the latest developments. Two Hacks on Tap is your invitation to join two of the best. Campaign veterans Axelrod and Murphy will take listeners deep inside the top level of American politics. These seasoned pros have seen it all: the peaks and valleys, the pressure-cooker moments, the huge breaks and the horrible calamities no one saw coming. Who better to narrate this momentous race? So pull up a stool and join us!",
+    "podcast_guid":"68f1903345e240a9a62aeda884faf7d2",
+    "slug":null,
+    "title":"Two Hacks On Tap",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/fa62b4f6-7d6b-11e9-a5a6-1b2c0f33b8d5/image/uploads_2F1558623764707-4oucu2zb1xp-e3cc721fec755b6f606c6f4590f460cc_2FTwoHacks_ART-3000x3000.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2019 David Axelrod",
+    "author":"David Axelrod",
+    "website_url":null,
+    "feed_url":"https://feeds.megaphone.fm/CAD9436514031",
+    "owner_name":"David Axelrod",
+    "owner_email":"podcasts@cadence13.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"None",
+    "updated_at":"None",
+    "series_id":"68f19033-45e2-40a9-a62a-eda884faf7d2",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":304,
+    "summary":"An 1839 assassination of a Cherokee leader and a 1999 murder case \u2013 two crimes nearly two centuries apart provide the backbone to an upcoming 2019 Supreme Court decision that will determine the fate of five tribes and nearly half the land in Oklahoma. Hosted by Rebecca Nagle, Oklahoma journalist and citizen of Cherokee Nation, this podcast traces how a cut and dry homicide opened up an investigation into the treaty rights of five Native American tribes. Tune in to find out how this unique case could result in the largest restoration of tribal land in US history when it answers one fundamental question: Who owns this land?",
+    "podcast_guid":"1bae1ca8666049a88e73f17e8c09b68e",
+    "slug":"this-land",
+    "title":"This Land",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/2d80a482-6e63-11e9-b5af-cf31ce84a8ce/image/uploads_2F1558448032018-9b7l6b8th6k-56a0f415860388837dce41415cc3ccac_2Fthis_land_final.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"Crooked Media. All Rights Reserved.",
+    "author":"Crooked Media",
+    "website_url":"https://crooked.com/",
+    "feed_url":"https://feeds.megaphone.fm/this-land",
+    "owner_name":"Crooked Media",
+    "owner_email":"hey@getcrookedmedia.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-28 19:46:39.455251+00:00",
+    "updated_at":"2019-05-28 19:46:39.455251+00:00",
+    "series_id":"1bae1ca8-6660-49a8-8e73-f17e8c09b68e",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1464954218",
+      "SPOTIFY":"https://open.spotify.com/show/00cW96nTcbQSq5EOfRsFcB",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/this-land-2",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Iwhjx3tcfeaahtmeeoz5kgbqmky",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3RoaXMtbGFuZA"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":263,
+    "summary":"In Feb 2018, an aspiring actress vanished from her Hollywood apartment. Rolling Stone journalist Neil Strauss was asked to help the family get answers. Together, they found them...sometimes at great personal risk. For the first time in a serial podcast, go inside a gripping multi-state investigation as it unfolds from the moment of the disappearance to each twist and turn in the case. Stay not only more informed than the news, but listen as the official story is dismantled with in-the-moment first-hand reporting with the leading figures in the investigation. The new #1 podcast from the team behind Up & Vanished and Atlanta Monster.",
+    "podcast_guid":"71090d13805247fa949c6404834e704c",
+    "slug":"to-live-and-die-in-la",
+    "title":"To Live and Die in LA",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/0499c1ac-3399-11e9-8483-1399efb224e5/image/uploads_2F1550506658913-s0iqe2y67s-c383c01722d810ecde0697defb7137cb_2FLiveDieLA_Cover.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2019 Tenderfoot TV. All Rights Reserved.",
+    "author":"Tenderfoot TV & Cadence 13",
+    "website_url":"http://livediela.com",
+    "feed_url":"https://feeds.megaphone.fm/to-live-and-die-in-la",
+    "owner_name":"Tenderfoot TV",
+    "owner_email":"livediela@tenderfoot.tv",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-24 23:18:51.366208+00:00",
+    "updated_at":"2019-05-24 23:18:51.366208+00:00",
+    "series_id":"71090d13-8052-47fa-949c-6404834e704c",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "SPOTIFY":"https://open.spotify.com/show/0OFl1ONSwhVghhAbEBo2e4",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/to-live-and-die-in-la",
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1453788965",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Ia7kmmetafmbbu5zqnaifh66nu4",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vdG8tbGl2ZS1hbmQtZGllLWluLWxh"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":305,
+    "summary":"Solvable showcases the world\u2019s most innovative thinkers proposing solutions to the world\u2019s most daunting problems. The interviews, conducted by journalists like Malcolm Gladwell and Jacob Weisberg, will launch a dialogue that both acknowledges the complexity of the issues while inspiring hope that the problems are, in fact, solvable.",
+    "podcast_guid":"583dc03fc6274216a00a42698b07d40a",
+    "slug":"solvable",
+    "title":"Solvable",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/9997654a-75c3-11e9-8399-5b93ab36efad/image/uploads_2F1557783339366-vba00oiownc-9616bdae7a96d66174d11fb17df8cd39_2FSolvable%2BLogo.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2019",
+    "author":"Pushkin Industries",
+    "website_url":null,
+    "feed_url":"https://feeds.megaphone.fm/solvable",
+    "owner_name":"The Rockefeller Foundation",
+    "owner_email":"marketing@pushkin.fm",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-24 18:47:59.595882+00:00",
+    "updated_at":"2019-05-24 18:47:59.595882+00:00",
+    "series_id":"583dc03f-c627-4216-a00a-42698b07d40a",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1463448386",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vc29sdmFibGU%3D",
+      "SPOTIFY":"https://open.spotify.com/show/12RtWzIOj9gdr98MUDTaUB?si=aQEKGr50To-c_HZJUIYr5g",
+      "STITCHER":"https://www.stitcher.com/podcast/pushkin-industries/solvable"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":301,
+    "summary":"Adnan Virk gives his takes on the newest films and much more.",
+    "podcast_guid":"d8295d1822fd4baeac4a628df306f3d6",
+    "slug":"cinephile",
+    "title":"Cinephile: The Adnan Virk Movie Podcast",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/1668b080-679e-11e9-a11c-b7e1a4bdf062/image/uploads_2F1558015964950-er7vj8kln3j-b744674462a33d3eb85a24f2c16bd56d_2FCinephile%2Bwith%2BAdnan%2BVirk%2BFINAL%2BCOVER.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2019 Cadence13. All Rights Reserved.",
+    "author":"Cadence13",
+    "website_url":"http://cadence13.com/",
+    "feed_url":"https://feeds.megaphone.fm/cinephile",
+    "owner_name":"Cadence13",
+    "owner_email":"podcasts@cadence13.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-16 17:49:17.366209+00:00",
+    "updated_at":"2019-05-16 17:49:17.366209+00:00",
+    "series_id":"d8295d18-22fd-4bae-ac4a-628df306f3d6",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":79,
+    "summary":"Love her or hate her, but you can\u2019t ignore the sassy, quick-witted Stassi Schroeder, star of Bravo\u2019s \u201cVanderpump Rules.\u201d Never one to hold back on any topic, Stassi is here with a weekly podcast, \u201cStraight Up with Stassi\u2019, a biting and hilarious look at the world and everyone in it, according to the Queen Bee herself.",
+    "podcast_guid":"5b16edd88f9a449cb60bca63758b442a",
+    "slug":null,
+    "title":"Straight Up with Stassi",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/7d909c00-471f-11e8-9b38-975f99a19c3c/image/uploads_2F1557869343225-sfg60lpvsbe-ada30e9f1dc2f98c351718499df07e3f_2FStraight%2BUp%2Bwith%2BStassi%2BFINAL%2BCOVER.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2018 Radio.com",
+    "author":"Radio.com",
+    "website_url":"http://radio.com/audio/",
+    "feed_url":"https://feeds.megaphone.fm/DGT9701433101",
+    "owner_name":"",
+    "owner_email":"podcasts@play.it",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-14 21:48:14.802670+00:00",
+    "updated_at":"2019-05-14 21:48:14.802670+00:00",
+    "series_id":"5b16edd8-8f9a-449c-b60b-ca63758b442a",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":156,
+    "summary":"<p>In an intimate one-on one setting, Lindsay Czarniak invites her guests, who also happen to be the biggest \"players\" in country music, to reflect on perhaps the only thing as important to them as music...sports! Join Lindsay as she leads her guests in conversation about the significance of sports in their lives and how that has impacted their&nbsp;personal journey, revealing more about the passions, motivations, and inspirations behind these artists.</p><p><br></p>",
+    "podcast_guid":"dc5bb17810b74ad0bd48abc496130c6c",
+    "slug":"players-with-lindsay-czarniak",
+    "title":"Players with Lindsay Czarniak",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/312f5bba-0efe-11e9-8e9e-d73c163296c0/image/5a1f4294521e0c69af38e687758ab40ab53dad44fa53aa98f4ae9ca1a64a4707a45842117d5d2662a4b7695355da6298919434888e6e67e71896526d371d8dfe.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2018 Cadence 13. All Rights Reserved.",
+    "author":"Cadence13",
+    "website_url":"http://www.cadence13.com",
+    "feed_url":"https://feeds.megaphone.fm/players-czarniak",
+    "owner_name":"",
+    "owner_email":"podcasts@cadence13.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-14 17:17:18.973987+00:00",
+    "updated_at":"2019-05-14 17:17:18.973987+00:00",
+    "series_id":"dc5bb178-10b7-4ad0-bd48-abc496130c6c",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Isveik4bkysdcfv5q2oq6xxrcgu",
+      "IHEART":"https://www.iheart.com/podcast/274-players-with-lindsay-czarn-30072802/",
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1440322598",
+      "SPOTIFY":"https://open.spotify.com/show/3pQe9c3q1kbB1Nkmjydcft",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/players-with-lindsay-czarniak",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3BsYXllcnMtcG9kY2FzdA"
+    },
+    "staff":[  
+      {  
+        "guid":"d661ef188e384446a8241cffbb24f92c",
+        "firstName":"Lindsay",
+        "middleName":null,
+        "lastName":"Czarniak",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/f1/d5/cc/69/f1d5cc69-f13f-433b-b92c-327432c81004/7d0f42a487b8ab7e235e69884f7925359832e84fc3e3243d1541131ed481e771dcf112c8dff59745b4f5586519e09813478c11f62311b49fafe52594e36e6570.jpeg",
+        "sort_no":0
+      }
+    ]
+  },
+  {  
+    "id":198,
+    "summary":"Cris Carter, Nick Wright & Jenna Wolfe discuss the biggest stories in the world of sports. From LeBron James, to Tom Brady, this show will bring you the first, and most incisive, opinions on the best sports stories.",
+    "podcast_guid":"1934e725d1b8408cb4668031e84fa97a",
+    "slug":"first-things-first",
+    "title":"First Things First",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/9758c652-3eaf-11e9-815f-f36a7e4bf707/image/74336a9afaf181b10db5b2a68e9232cb21ec88e5be90f0f9cecc84d9abf37ebc3379d3418d10e41a3551f8c5346b25bbeeae7e99678d20bdbc88e66121b521c7.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":null,
+    "author":"Fox Sports",
+    "website_url":"https://art19.com/shows/first-things-first",
+    "feed_url":"https://feeds.megaphone.fm/first-things-first",
+    "owner_name":"",
+    "owner_email":"foxsportspodcasts@gmail.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-10 20:22:52.476540+00:00",
+    "updated_at":"2019-05-10 20:22:52.476540+00:00",
+    "series_id":"1934e725-d1b8-408c-b466-8031e84fa97a",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/first-things-first/id1277873664?mt=2",
+      "STITCHER":"https://www.stitcher.com/podcast/fox-sports-network/first-things-first"
+    },
+    "staff":[  
+      {  
+        "guid":"291a9432e38b472e844939f582cebb8b",
+        "firstName":"Cris",
+        "middleName":null,
+        "lastName":"Carter",
+        "biography":null,
+        "imageUrl":null,
+        "sort_no":0
+      },
+      {  
+        "guid":"efbb11c39cf0466bac450046cfd21102",
+        "firstName":"Jenna",
+        "middleName":null,
+        "lastName":"Wolfe",
+        "biography":null,
+        "imageUrl":null,
+        "sort_no":1
+      },
+      {  
+        "guid":"4120ea0aad74447db004a4bb9011fd39",
+        "firstName":"Nick",
+        "middleName":null,
+        "lastName":"Wright",
+        "biography":"FOX Sports Host",
+        "imageUrl":"https://content.production.cdn.art19.com/images/de/24/ad/a4/de24ada4-be6d-4455-959f-1c79304dbc51/f9daa5e356fe29869c56876237f129e15ced7b61aaa8a4f6e9ea6f66f665958a35053610ea1cb5feded17ae86942943460141ccffa3396de6c89aae9ba00e2f1.jpeg",
+        "sort_no":2
+      }
+    ]
+  },
+  {  
+    "id":221,
+    "summary":"This is the clips feed!! Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack.",
+    "podcast_guid":"84cf9fbb72684529b4300c0f453517ad",
+    "slug":"pro-rata-clips",
+    "title":"Pro Rata Update",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/2cbdd1d8-0ed6-11e9-985a-83b4fdbf490c/image/8ef1e952729545fb71de81a1b4d7eedcc9729b57ce09ef85f6a2ca287f4b7935f04eebfdda248d9f23956b1ae4887feb8828ff975938ef7e5434fe4f7d0ecb35.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2018 Axios Media Inc. All Rights Reserved.",
+    "author":"Axios Media, Inc.",
+    "website_url":"https://www.axios.com/tag/pro-rata-podcast",
+    "feed_url":"https://feeds.megaphone.fm/pro-rata-update",
+    "owner_name":"",
+    "owner_email":"podcast@axios.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-10 17:48:37.426046+00:00",
+    "updated_at":"2019-05-10 17:48:37.426046+00:00",
+    "series_id":"84cf9fbb-7268-4529-b430-0c0f453517ad",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+
+    },
+    "staff":[  
+      {  
+        "guid":"a0af2fdff71d4854a8b645a33fa48e42",
+        "firstName":"dan",
+        "middleName":null,
+        "lastName":"primack",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/30/14/a8/ce/3014a8ce-7f6a-48fe-913e-ca05ea323f9b/58b556c5af45e35269f44ff868bf38898b4c47803faf4a666b6f776afeb3b7306d5c6583c79fbcb77bf82e4e8ac073eba4ee6b3ff6db9a8a4b1f134b1e32388a.jpeg",
+        "sort_no":0
+      }
+    ]
+  },
+  {  
+    "id":103,
+    "summary":"Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack.",
+    "podcast_guid":"d46f4caeb79c4a708e6b800bf1eeba11",
+    "slug":"pro-rata",
+    "title":"Axios Pro Rata",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/c11bb198-0ed5-11e9-b104-23783a81f42d/image/53aa1a75b60e36e8a5daaa6f9fde44382b12e7d7db1ee809e53544ddb1cc2126a09b70662657dfa250798d6ffc0f75f332b7bc6e0a6d1fa3009a965dbab2920f.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2018 Axios Media Inc. All Rights Reserved. 768745",
+    "author":"Axios Media, Inc.",
+    "website_url":"https://www.axios.com/tag/pro-rata-podcast",
+    "feed_url":"https://feeds.megaphone.fm/pro-rata",
+    "owner_name":"",
+    "owner_email":"podcast@axios.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-10 17:48:35.379325+00:00",
+    "updated_at":"2019-05-10 17:48:35.379325+00:00",
+    "series_id":"d46f4cae-b79c-4a70-8e6b-800bf1eeba11",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Ijm72qt2qi54q3wur7rtu4u5w6e",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3Byby1yYXRh",
+      "SPOTIFY":"https://open.spotify.com/show/1p2CaOHkbK6JdqYiI3GEBw",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/pro-rata",
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1412162689"
+    },
+    "staff":[  
+      {  
+        "guid":"a0af2fdff71d4854a8b645a33fa48e42",
+        "firstName":"dan",
+        "middleName":null,
+        "lastName":"primack",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/30/14/a8/ce/3014a8ce-7f6a-48fe-913e-ca05ea323f9b/58b556c5af45e35269f44ff868bf38898b4c47803faf4a666b6f776afeb3b7306d5c6583c79fbcb77bf82e4e8ac073eba4ee6b3ff6db9a8a4b1f134b1e32388a.jpeg",
+        "sort_no":0
+      }
+    ]
+  },
+  {  
+    "id":297,
+    "summary":"There\u2019s a dark side to the American dream. \r\n\r\nFrom the creators of Root of Evil, Gangster Capitalism Season 1 is centered on the 2019 college admissions scandal that is exposing everyone from CEOs to celebrities. Award-winning documentarian, Andrew Jenks, uncovers the origins and inner workings of this unprecedented scam, introducing you to the people involved, and exploring the larger debate around higher education that has been brought to the forefront. The final chapter of this story is still being written, as the federal investigation into these crimes continues to grow and unfold.\r\n\r\nGangster Capitalism is a production of C13Originals, a division of Cadence13.",
+    "podcast_guid":"b5a631f747804d4497a819b8d12c9dfc",
+    "slug":"gangster-capitalism",
+    "title":"Gangster Capitalism",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/378d4272-6220-11e9-bdd5-b738745ce31b/image/uploads_2F1555622476245-zz5qxs2rumb-b3c80bc9ac0698f2409c6356d3c6c8c1_2FGangster%2BCapitalism%2BFINAL%2BCOVER.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"C13Originals. All Rights Reserved.",
+    "author":"C13Originals",
+    "website_url":"http://cadence13.com/",
+    "feed_url":"https://feeds.megaphone.fm/gangster-capitalism",
+    "owner_name":"C13Originals",
+    "owner_email":"podcasts@cadence13.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-09 22:48:44.109744+00:00",
+    "updated_at":"2019-05-09 22:48:44.109744+00:00",
+    "series_id":"b5a631f7-4780-4d44-97a8-19b8d12c9dfc",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1460320573",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Ihmyrmonvpwvfpem6i3dgyjc7iq",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL2dhbmdzdGVyLWNhcGl0YWxpc20",
+      "SPOTIFY":"https://open.spotify.com/show/5v3AVISCObOPHdOigzE3zj",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/gangster-capitalism"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":303,
+    "summary":"The biggest moments in sports history have stories behind them which have never been told. In 1999, Brandi Chastain kicked the winning goal for the U.S. at the Women\u2019s World Cup. Her victory celebration in a sports bra made for one of the most iconic photos in recent memory. But how did we get to a moment where a women\u2019s sport became a national obsession? To answer that question, we have to go back. In Season 1, soccer journalist Grant Wahl traces that \u201999 Women\u2019s World Cup victory back to the origins of the U.S. women\u2019s national team and the first Women\u2019s World Cup in 1991. Featuring superstars like Mia Hamm, Michelle Akers and Julie Foudy; former coach, Anson Dorrance; and even ex-FIFA President, Sepp Blatter.",
+    "podcast_guid":"d129b6e1eba24aefbb82a5a9774969a7",
+    "slug":"throwback",
+    "title":"Throwback",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/ef04d042-6c29-11e9-a9a3-1729114e3d41/image/uploads_2F1556726288695-2hrbj3024s-e69a3604f297eb354b4a6406e92b8d8f_2FThrow_Back.png?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2019 TI Gotham Inc. All rights reserved.",
+    "author":"Sports Illustrated",
+    "website_url":"https://www.si.com/podcasts",
+    "feed_url":"https://feeds.megaphone.fm/throwback",
+    "owner_name":"",
+    "owner_email":"si-podcasts@simail.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-08 22:47:36.314771+00:00",
+    "updated_at":"2019-05-08 22:47:36.314771+00:00",
+    "series_id":"d129b6e1-eba2-4aef-bb82-a5a9774969a7",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1462243735",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vdGhyb3diYWNr",
+      "SPOTIFY":"https://open.spotify.com/show/6EX5HCXU2wbRWEmf0lQid1",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/throwback-2",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Ijto6cnjd2ccxi4v5zn3s7dpfhe"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":276,
+    "summary":"Revisionist History is Malcolm Gladwell's journey through the overlooked and the misunderstood. Every episode re-examines something from the past\u2014an event, a person, an idea, even a song\u2014and asks whether we got it right the first time. From Pushkin Industries. Because sometimes the past deserves a second chance.",
+    "podcast_guid":"b7065ad6ca014f5787f377c3d999e323",
+    "slug":null,
+    "title":"Revisionist History",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/1427a2f4-2674-11e6-a3d7-cf7ee2a2c03c/image/uploads_2F1542302370190-aoalvw0x11n-61dc154e07933b3b8fbad8911e4d11c4_2FRevisionistHistory_Vector_withfade.png?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2016",
+    "author":"Pushkin Industries",
+    "website_url":"http://revisionisthistory.com/",
+    "feed_url":"https://feeds.megaphone.fm/DGT1529470101",
+    "owner_name":"Pushkin Industries",
+    "owner_email":"marketing@pushkin.fm",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-08 20:48:08.033179+00:00",
+    "updated_at":"2019-05-08 20:48:08.033179+00:00",
+    "series_id":"b7065ad6-ca01-4f57-87f3-77c3d999e323",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1119389968",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/I5ublubzjotnvtmf2u2p3vwhfwy",
+      "SPOTIFY":"https://open.spotify.com/show/2LOJaYKijiwNefCvzczyib",
+      "STITCHER":"https://www.stitcher.com/podcast/pushkin-industries/revisionist-history",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vcmV2aXNpb25pc3RoaXN0b3J5"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":241,
+    "summary":"Revisionist History is Malcolm Gladwell's journey through the overlooked and the misunderstood. Every episode re-examines something from the past\u2014an event, a person, an idea, even a song\u2014and asks whether we got it right the first time. From Pushkin Industries. Because sometimes the past deserves a second chance.",
+    "podcast_guid":"47e67d323d9144318766febcae85d020",
+    "slug":"revisionisthistory",
+    "title":"Revisionist History",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/1427a2f4-2674-11e6-a3d7-cf7ee2a2c03c/image/uploads_2F1542302370190-aoalvw0x11n-61dc154e07933b3b8fbad8911e4d11c4_2FRevisionistHistory_Vector_withfade.png?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2016",
+    "author":"Pushkin Industries",
+    "website_url":"http://revisionisthistory.com/",
+    "feed_url":"https://feeds.megaphone.fm/revisionisthistory",
+    "owner_name":"Pushkin Industries",
+    "owner_email":"marketing@pushkin.fm",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-08 20:48:07.526772+00:00",
+    "updated_at":"2019-05-08 20:48:07.526772+00:00",
+    "series_id":"47e67d32-3d91-4431-8766-febcae85d020",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vcmV2aXNpb25pc3RoaXN0b3J5",
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1119389968",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/I5ublubzjotnvtmf2u2p3vwhfwy",
+      "SPOTIFY":"https://open.spotify.com/show/2LOJaYKijiwNefCvzczyib",
+      "STITCHER":"https://www.stitcher.com/podcast/pushkin-industries/revisionist-history"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":286,
+    "summary":"Stupid Genius is the brainchild of YouTuber, Emma Chamberlain. In every episode she takes a puzzling question, like \"Why do onions make us cry?,\" and is given three guesses to try to solve it. Will she be able to do it? Listen every Thursday to find out!",
+    "podcast_guid":"b7850211431d4cbfaf1b2d8b2d2e7b9a",
+    "slug":"stupid-genius",
+    "title":"Stupid Genius with Emma Chamberlain",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/d2559f3c-54a3-11e9-85f3-4b0dc7ea6463/image/uploads_2F1554139810753-xwbo2zcjoq9-6681cd7d3e94d72585c6a2a6cc177216_2FStupidGenius_FINAL.jpg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"EFC LLC.",
+    "author":"Emma Chamberlain and Ramble",
+    "website_url":"http://thisisramble.com/",
+    "feed_url":"https://feeds.megaphone.fm/stupid-genius",
+    "owner_name":"Emma Chamberlain and Ramble",
+    "owner_email":"emmachamberlainbusiness@gmail.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-08 05:19:09.768286+00:00",
+    "updated_at":"2019-05-08 05:19:09.768286+00:00",
+    "series_id":"b7850211-431d-4cbf-af1b-2d8b2d2e7b9a",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3N0dXBpZC1nZW5pdXM",
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/idhttps://itunes.apple.com/us/podcast/stupid-genius-with-emma-chamberlain/id1458568923?mt=2\u200b",
+      "SPOTIFY":"https://open.spotify.com/show/5VzFvh1JlEhBMS6ZHZ8CNO",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/stupid-genius-with-emma-chamberlain"
+    },
+    "staff":[  
+
+    ]
+  },
+  {  
+    "id":192,
+    "summary":"With a combined social following of over 28 million followers, best friends Alisha Marie and Remi Cruz welcome you inside their daily life for a special helping of the tea you\u2019re not getting from their channels. Think of having a sleepover with your best friends, fun and open conversation, discussing what it\u2019s really like to be a YouTuber, behind the scenes stories from their shoots, and of course lots of boy drama.",
+    "podcast_guid":"47290bab6ae242a18aa08039117f6fb5",
+    "slug":"pretty-basic",
+    "title":"Pretty Basic with Alisha Marie and Remi Cruz",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/e3c11210-0f93-11e9-aae6-b31634153da0/image/5567db7ca6146740c3c8170933eef1706368f507f551c4a6b2b95d4589ba7c3457f35882c2182b9281d23e0905b45bee001534389bf560303c1560246be3e34d.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 Alisha Marie, Remi Cruz, Cadence13",
+    "author":"Ramble",
+    "website_url":"http://rambleofficial.com",
+    "feed_url":"https://feeds.megaphone.fm/pretty-basic",
+    "owner_name":"",
+    "owner_email":"prettybasicpodcast@gmail.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-07 18:16:30.989984+00:00",
+    "updated_at":"2019-05-07 18:16:30.989984+00:00",
+    "series_id":"47290bab-6ae2-42a1-8aa0-8039117f6fb5",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Ibrqbut3vablepulxtpywpcsvq4",
+      "IHEART":"https://www.iheart.com/podcast/274-pretty-basic-with-alisha-m-30056150/",
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1439655378",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3ByZXR0eS1iYXNpYw",
+      "SPOTIFY":"https://open.spotify.com/show/68A5qikGHcsXiZU4W0Hz6q",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/pretty-basic-with-alisha-marie-and-remi-cruz"
+    },
+    "staff":[  
+      {  
+        "guid":"55a367a47bf44708b0085ac63e5839f1",
+        "firstName":"Remi",
+        "middleName":null,
+        "lastName":"Cruz",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/e0/cc/a7/c1/e0cca7c1-6ec6-4747-8523-da9f149f8627/f9a9944c155ae9ae4ff5c7debd19dc83400c160a402620a583855af2f25b3e5ff7d4d948c626695cb6107f8cee80341d41ccad6b146f2b2bb50e63a18d7b64cf.jpeg",
+        "sort_no":0
+      },
+      {  
+        "guid":"4e711a2b1d1545dfb4c46968cc046d20",
+        "firstName":"Alisha",
+        "middleName":null,
+        "lastName":"Marie",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/5b/6d/7e/10/5b6d7e10-38a4-4105-80b4-edaaf76b1623/26b6bcb234fe6ae06029f76ab1f2a5a913e06f2a149634291374d94738446b45f7c5ff4cb601f339c92755006ef5feb2d8c2f9949eefaa0152cfdeec6780d435.jpeg",
+        "sort_no":1
+      }
+    ]
+  },
+  {  
+    "id":47,
+    "summary":"Join Rhett and Link, hosts of the popular daily YouTube show Good Mythical Morning and authors of the New York Times bestseller \u201cBook of Mythicality\u201d in a candid weekly conversation for your Internetainment.",
+    "podcast_guid":"dbf288799e1142cd85ff11d7da0d3d1c",
+    "slug":"ear-biscuits",
+    "title":"Ear Biscuits",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/daef779e-0f93-11e9-8be1-ef6a540ab876/image/e3b54b763ab34aaef4b1878a3c144794106071c70d318904c7a183df1301130097e92d00811eb671009f221ee60b8fa6e477c169a38f2b56dd4ee3a84c85ebdf.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"\u00a9 2018 Mythical Entertainment. All rights reserved.",
+    "author":"Mythical & Ramble",
+    "website_url":"http://rambleofficial.com",
+    "feed_url":"https://feeds.megaphone.fm/ear-biscuits",
+    "owner_name":"Rhett & Link",
+    "owner_email":"earbiscuits@mythicalentertainment.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-07 18:16:29.089685+00:00",
+    "updated_at":"2019-05-07 18:16:29.089685+00:00",
+    "series_id":"M003-001",
+    "social_media_urls":{  
+      "FACEBOOK":"http://www.facebook.com/rhettandlink",
+      "TWITTER":"http://www.twitter.com/rhettandlink"
+    },
+    "subscriptionUrls":{  
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Iv2nlaznnyqgddy35sawfvy7m2m?t=Ear_Biscuits",
+      "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/ear-biscuits/id717407884?mt=2",
+      "SPOTIFY":"https://open.spotify.com/show/3j9nu2qpJrUxEXp5qMudM7?si=rccgCchiR-WbREFzpL2E3w",
+      "STITCHER":"http://www.stitcher.com/podcast/ear-biscuits-with-rhett-and-link"
+    },
+    "staff":[  
+      {  
+        "guid":"ed7e4c96c54e453e88f634cd21a8a1d4",
+        "firstName":"Rhett",
+        "middleName":null,
+        "lastName":"McLaughlin",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/46/be/a4/42/46bea442-27a0-4d7c-9acf-df2937cd363f/c990a82e391c31116599b34fd74d868be0b0f1eba31feac946135c7279e0fc7b89dd88d37a9a26183055b82c83a24080d12a8ac25343fd1266e31468a7e3cf88.jpeg",
+        "sort_no":0
+      },
+      {  
+        "guid":"84ca066364354a2f8cd469b11c26e3f1",
+        "firstName":"Link",
+        "middleName":null,
+        "lastName":"Neal",
+        "biography":null,
+        "imageUrl":"https://content.production.cdn.art19.com/images/48/d9/7e/7c/48d97e7c-b1fb-4b8c-8c07-2e54b08b6bc4/37b8f880001d38a1a88d4d5104d9763c7fe2a033d68871cbc6d55162bc4d19852cb0c7dfb6bba71db91c56fd6e05930ec95e5fd8587510f6820e1c187c6dea8b.jpeg",
+        "sort_no":1
+      }
+    ]
+  },
+  {  
+    "id":262,
+    "summary":"Join the Smosh family as we discuss current events, YouTube drama, give our unqualified and unsolicited advice, and whatever else is on our minds with Ian Hecox and a rotating panel of Smosh cast members, coworkers, and YouTuber guests.",
+    "podcast_guid":"fd5f7e060abf40bbbb41cd9f3b54b1cd",
+    "slug":"smoshcast",
+    "title":"SmoshCast",
+    "imageUrl":"https://megaphone.imgix.net/podcasts/c9009e58-3196-11e9-bcbb-0b9b42a53e6b/image/uploads_2F1553549101503-13ihho579s8-e5ea888d3416920395b25d24db90e2b4_2FUnknown.jpeg?ixlib=rails-2.1.2",
+    "subtitle":null,
+    "podcast_type":1,
+    "copyright":"2019 Smosh. All Rights Reserved",
+    "author":"Smosh & Ramble",
+    "website_url":"https://www.smosh.com/",
+    "feed_url":"https://feeds.megaphone.fm/smoshcast",
+    "owner_name":"Smosh",
+    "owner_email":"smosh@smosh.com",
+    "is_explicit":null,
+    "is_complete":false,
+    "status":1,
+    "created_at":"2019-05-07 13:48:00.190295+00:00",
+    "updated_at":"2019-05-07 13:48:00.190295+00:00",
+    "series_id":"fd5f7e06-0abf-40bb-bb41-cd9f3b54b1cd",
+    "social_media_urls":{  
+
+    },
+    "subscriptionUrls":{  
+      "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1453555416",
+      "GOOGLE_PLAY":"https://play.google.com/music/m/Iqnhukaqlsoux75nejxmugj3bg4",
+      "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3Ntb3NoY2FzdA",
+      "SPOTIFY":"https://open.spotify.com/show/7Cf8Om8uXsDiPWdNetpypf",
+      "STITCHER":"https://www.stitcher.com/podcast/cadence13/smoshcast"
+    },
+    "staff":[  
+
+    ]
+  }
+]

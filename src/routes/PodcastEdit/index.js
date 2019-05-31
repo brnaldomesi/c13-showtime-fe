@@ -15,6 +15,7 @@ import {
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
 import GeneralForm from './GeneralForm'
+import PodcastStaffs from './PodcastStaffs'
 import SubscribeLinksForm from './SubscribeLinksForm'
 import styles from './styles'
 
@@ -38,47 +39,54 @@ export const PodcastEdit = (props) => {
   return (
     <>
       <NavTabs />
-      <Paper className={classes.paper}>
-        {podcastDetails ? (
-          <Switch>
-            <Route
-              path={`${match.path}/general`}
-              render={props => (
+      {podcastDetails ? (
+        <Switch>
+          <Route
+            path={`${match.path}/general`}
+            render={props => (
+              <Paper className={classes.paper}>
                 <GeneralForm
                   {...props}
                   initialValues={podcastDetails}
                   onSubmit={handleSubmit}
                 />
-              )}
-            />
-            <Route
-              path={`${match.path}/staff`}
-              render={renderComingSoon}
-            />
-            <Route
-              path={`${match.path}/subscribe-links`}
-              render={props => (
+              </Paper>
+            )}
+          />
+          <Route
+            path={`${match.path}/staff`}
+            render={props => (
+              <PodcastStaffs
+                {...props}
+                staffs={podcastDetails.staff}
+              />
+            )}
+          />
+          <Route
+            path={`${match.path}/subscribe-links`}
+            render={props => (
+              <Paper className={classes.paper}>
                 <SubscribeLinksForm
                   {...props}
                   initialValues={podcastDetails}
                   onSubmit={handleSubmit}
                 />
-              )}
-            />
-            <Route
-              path={`${match.path}/tags`}
-              render={renderComingSoon}
-            />
-            <Route
-              path={`${match.path}/settings`}
-              render={renderComingSoon}
-            />
-            <Redirect to={`${match.url}/general`} />
-          </Switch>
-        ) : (
-          <LoadingIndicator />
-        )}
-      </Paper>
+              </Paper>
+            )}
+          />
+          <Route
+            path={`${match.path}/tags`}
+            render={renderComingSoon}
+          />
+          <Route
+            path={`${match.path}/settings`}
+            render={renderComingSoon}
+          />
+          <Redirect to={`${match.url}/general`} />
+        </Switch>
+      ) : (
+        <LoadingIndicator />
+      )}
     </>
   )
 }
