@@ -6,8 +6,8 @@ import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
-import FormLockerInput from 'components/FormLockerInput'
-import Hr from 'components/Hr'
+import FormLockerInput from './node_modules/components/FormLockerInput'
+import Hr from './node_modules/components/Hr'
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),

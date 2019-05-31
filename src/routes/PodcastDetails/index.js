@@ -14,14 +14,14 @@ import {
 } from 'redux/modules/podcast'
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
-import GeneralForm from './GeneralForm'
+import GeneralEdit from './GeneralEdit'
 import PodcastStaffs from './PodcastStaffs'
-import SubscribeLinksForm from './SubscribeLinksForm'
+import SubscribeLinks from './SubscribeLinks'
 import styles from './styles'
 
 const renderComingSoon = () => <div>Coming Soon...</div>
 
-export const PodcastEdit = (props) => {
+export const PodcastDetails = (props) => {
   const { classes, match, getPodcastDetails, podcastDetails, updatePodcastDetails } = props
   const { podcastGuid } = match.params
 
@@ -45,7 +45,7 @@ export const PodcastEdit = (props) => {
             path={`${match.path}/general`}
             render={props => (
               <Paper className={classes.paper}>
-                <GeneralForm
+                <GeneralEdit
                   {...props}
                   initialValues={podcastDetails}
                   onSubmit={handleSubmit}
@@ -66,7 +66,7 @@ export const PodcastEdit = (props) => {
             path={`${match.path}/subscribe-links`}
             render={props => (
               <Paper className={classes.paper}>
-                <SubscribeLinksForm
+                <SubscribeLinks
                   {...props}
                   initialValues={podcastDetails}
                   onSubmit={handleSubmit}
@@ -91,7 +91,7 @@ export const PodcastEdit = (props) => {
   )
 }
 
-PodcastEdit.propTypes = {
+PodcastDetails.propTypes = {
   classes: PropTypes.object.isRequired,
   getPodcastDetails: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
@@ -113,4 +113,4 @@ const actions = {
 export default compose(
   connect(selector, actions),
   withStyles(styles)
-)(PodcastEdit)
+)(PodcastDetails)

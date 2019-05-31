@@ -70,7 +70,7 @@ const renderForm = (props) => (
   </form>
 )
 
-const SubscribeLinksForm = ({ initialValues, onSubmit }) => {
+const SubscribeLinks = ({ initialValues, onSubmit }) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     await onSubmit(values)
@@ -86,9 +86,9 @@ const SubscribeLinksForm = ({ initialValues, onSubmit }) => {
   )
 }
 
-SubscribeLinksForm.propTypes = {
+SubscribeLinks.propTypes = {
   initialValues: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
 }
 
-export default SubscribeLinksForm
+export default SubscribeLinks
