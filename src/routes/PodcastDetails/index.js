@@ -17,6 +17,7 @@ import NavTabs from './NavTabs'
 import GeneralEdit from './GeneralEdit'
 import PodcastStaffs from './PodcastStaffs'
 import SubscribeLinks from './SubscribeLinks'
+import StaffEdit from './StaffEdit'
 import styles from './styles'
 
 const renderComingSoon = () => <div>Coming Soon...</div>
@@ -54,7 +55,28 @@ export const PodcastDetails = (props) => {
             )}
           />
           <Route
+            path={`${match.path}/staff/new`}
+            render={props => (
+              <Paper className={classes.paper}>
+                <StaffEdit
+                  {...props}
+                />
+              </Paper>
+            )}
+          />
+          <Route
+            path={`${match.path}/staff/:crewGuid/edit`}
+            render={props => (
+              <Paper className={classes.paper}>
+                <StaffEdit
+                  {...props}
+                />
+              </Paper>
+            )}
+          />
+          <Route
             path={`${match.path}/staff`}
+            exact
             render={props => (
               <PodcastStaffs
                 {...props}

@@ -31,7 +31,7 @@ const StaffItem = ({ staff, match, number }) => {
           <IconButton
             className={classes.edit}
             component={Link}
-            to={`${match.url}/${staff.guid}`}
+            to={`${match.url}/${staff.guid}/edit`}
           >
             <EditIcon />
           </IconButton>
