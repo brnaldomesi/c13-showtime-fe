@@ -16,7 +16,7 @@ import styles from './styles'
 
 const menuItems = [
   { label: 'General', value: 'general', icon: FormatAlignLeftIcon },
-  { label: 'Staff', value: 'staff', icon: PeopleIcon },
+  { label: 'Crew Members', value: 'crew', icon: PeopleIcon },
   { label: 'Subscribe Links', value: 'subscribe-links', icon: RssFeedIcon },
   { label: 'Tags', value: 'tags', icon: LabelIcon },
   { label: 'Settings', value: 'settings', icon: SettingsIcon },
@@ -26,7 +26,6 @@ export const NavTabs = ({
   classes,
   history,
   match,
-  parentUrl,
 }) => {
   const handleClick = (value) => () => {
     history.push(

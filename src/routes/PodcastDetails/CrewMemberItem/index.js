@@ -10,9 +10,9 @@ import Typography from '@material-ui/core/Typography'
 
 import useStyles from './styles'
 
-const getFullName = (staff) => `${staff.firstName} ${staff.lastName}`
+const getFullName = (crewMember) => `${crewMember.firstName} ${crewMember.lastName}`
 
-const StaffItem = ({ staff, match, number }) => {
+const CrewMemberItem = ({ crewMember, match, number }) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -23,23 +23,23 @@ const StaffItem = ({ staff, match, number }) => {
         <Grid item className={classes.image}>
           <CardMedia
             className={classes.cover}
-            image={staff.imageUrl}
-            title={getFullName(staff)}
+            image={crewMember.imageUrl}
+            title={getFullName(crewMember)}
           />
         </Grid>
         <Grid item xs>
           <IconButton
             className={classes.edit}
             component={Link}
-            to={`${match.url}/${staff.guid}/edit`}
+            to={`${match.url}/${crewMember.guid}/edit`}
           >
             <EditIcon />
           </IconButton>
           <Typography variant="subtitle1" className={classes.title}>
-            {getFullName(staff)}
+            {getFullName(crewMember)}
           </Typography>
           <Typography color="textSecondary">
-            {staff.biography || <em>No biography yet</em>}
+            {crewMember.biography || <em>No biography yet</em>}
           </Typography>
         </Grid>
       </Grid>
@@ -47,9 +47,9 @@ const StaffItem = ({ staff, match, number }) => {
   )
 }
 
-StaffItem.propTypes = {
+CrewMemberItem.propTypes = {
   classes: PropTypes.object.isRequired,
-  staff: PropTypes.object.isRequired,
+  crewMember: PropTypes.object.isRequired,
 }
 
-export default withRouter(StaffItem)
+export default withRouter(CrewMemberItem)

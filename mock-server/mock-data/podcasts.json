@@ -29,7 +29,7 @@
       "APPLE_PODCASTS":"http://www.applepodcasts.com/upandvanished",
       "SPOTIFY":"https://open.spotify.com/show/5FqJcvfGMLledCODGqV4J9?si=bSvYhc85Q329-hdLQKIofg"
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"fb9bb269d6254c7f8bedf829bec67868",
         "firstName":"Donald",
@@ -95,7 +95,7 @@
     "subscriptionUrls":{  
 
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"e51b027a7bdd4881818b7f850a9dd94b",
         "firstName":"Kristen",
@@ -152,7 +152,7 @@
     "subscriptionUrls":{  
 
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -187,7 +187,7 @@
       "GOOGLE_PLAY":"https://play.google.com/music/m/Iwhjx3tcfeaahtmeeoz5kgbqmky",
       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3RoaXMtbGFuZA"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -222,7 +222,7 @@
       "GOOGLE_PLAY":"https://play.google.com/music/m/Ia7kmmetafmbbu5zqnaifh66nu4",
       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vdG8tbGl2ZS1hbmQtZGllLWluLWxh"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -256,7 +256,7 @@
       "SPOTIFY":"https://open.spotify.com/show/12RtWzIOj9gdr98MUDTaUB?si=aQEKGr50To-c_HZJUIYr5g",
       "STITCHER":"https://www.stitcher.com/podcast/pushkin-industries/solvable"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -287,7 +287,7 @@
     "subscriptionUrls":{  
 
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -318,7 +318,7 @@
     "subscriptionUrls":{  
 
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -354,7 +354,7 @@
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/players-with-lindsay-czarniak",
       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL3BsYXllcnMtcG9kY2FzdA"
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"d661ef188e384446a8241cffbb24f92c",
         "firstName":"Lindsay",
@@ -394,7 +394,7 @@
       "APPLE_PODCASTS":"https://itunes.apple.com/us/podcast/first-things-first/id1277873664?mt=2",
       "STITCHER":"https://www.stitcher.com/podcast/fox-sports-network/first-things-first"
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"291a9432e38b472e844939f582cebb8b",
         "firstName":"Cris",
@@ -451,7 +451,7 @@
     "subscriptionUrls":{  
 
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"a0af2fdff71d4854a8b645a33fa48e42",
         "firstName":"dan",
@@ -494,7 +494,7 @@
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/pro-rata",
       "APPLE_PODCASTS":"https://itunes.apple.com/podcast/id1412162689"
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"a0af2fdff71d4854a8b645a33fa48e42",
         "firstName":"dan",
@@ -537,7 +537,7 @@
       "SPOTIFY":"https://open.spotify.com/show/5v3AVISCObOPHdOigzE3zj",
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/gangster-capitalism"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -572,7 +572,7 @@
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/throwback-2",
       "GOOGLE_PLAY":"https://play.google.com/music/m/Ijto6cnjd2ccxi4v5zn3s7dpfhe"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -607,7 +607,7 @@
       "STITCHER":"https://www.stitcher.com/podcast/pushkin-industries/revisionist-history",
       "GOOGLE_PODCASTS":"https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vcmV2aXNpb25pc3RoaXN0b3J5"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -642,7 +642,7 @@
       "SPOTIFY":"https://open.spotify.com/show/2LOJaYKijiwNefCvzczyib",
       "STITCHER":"https://www.stitcher.com/podcast/pushkin-industries/revisionist-history"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -676,7 +676,7 @@
       "SPOTIFY":"https://open.spotify.com/show/5VzFvh1JlEhBMS6ZHZ8CNO",
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/stupid-genius-with-emma-chamberlain"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   },
@@ -712,7 +712,7 @@
       "SPOTIFY":"https://open.spotify.com/show/68A5qikGHcsXiZU4W0Hz6q",
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/pretty-basic-with-alisha-marie-and-remi-cruz"
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"55a367a47bf44708b0085ac63e5839f1",
         "firstName":"Remi",
@@ -764,7 +764,7 @@
       "SPOTIFY":"https://open.spotify.com/show/3j9nu2qpJrUxEXp5qMudM7?si=rccgCchiR-WbREFzpL2E3w",
       "STITCHER":"http://www.stitcher.com/podcast/ear-biscuits-with-rhett-and-link"
     },
-    "staff":[  
+    "crewMembers":[  
       {  
         "guid":"ed7e4c96c54e453e88f634cd21a8a1d4",
         "firstName":"Rhett",
@@ -816,7 +816,7 @@
       "SPOTIFY":"https://open.spotify.com/show/7Cf8Om8uXsDiPWdNetpypf",
       "STITCHER":"https://www.stitcher.com/podcast/cadence13/smoshcast"
     },
-    "staff":[  
+    "crewMembers":[  
 
     ]
   }

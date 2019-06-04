@@ -15,9 +15,9 @@ import {
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
 import GeneralEdit from './GeneralEdit'
-import PodcastStaffs from './PodcastStaffs'
+import CrewMembers from './CrewMembers'
 import SubscribeLinks from './SubscribeLinks'
-import StaffEdit from './StaffEdit'
+import CrewMemberEdit from './CrewMemberEdit'
 import styles from './styles'
 
 const renderComingSoon = () => <div>Coming Soon...</div>
@@ -55,32 +55,32 @@ export const PodcastDetails = (props) => {
             )}
           />
           <Route
-            path={`${match.path}/staff/new`}
+            path={`${match.path}/crew/new`}
             render={props => (
               <Paper className={classes.paper}>
-                <StaffEdit
+                <CrewMemberEdit
                   {...props}
                 />
               </Paper>
             )}
           />
           <Route
-            path={`${match.path}/staff/:crewGuid/edit`}
+            path={`${match.path}/crew/:crewGuid/edit`}
             render={props => (
               <Paper className={classes.paper}>
-                <StaffEdit
+                <CrewMemberEdit
                   {...props}
                 />
               </Paper>
             )}
           />
           <Route
-            path={`${match.path}/staff`}
+            path={`${match.path}/crew`}
             exact
             render={props => (
-              <PodcastStaffs
+              <CrewMembers
                 {...props}
-                staffs={podcastDetails.staff}
+                crewMembers={podcastDetails.crewMembers}
               />
             )}
           />

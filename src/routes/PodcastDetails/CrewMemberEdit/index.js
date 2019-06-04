@@ -49,7 +49,7 @@ const renderForm = ({ handleSubmit, match }) => (
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastGuid}/staff`}>
+        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastGuid}/crew`}>
           Cancel
         </Button>
       </Grid>
@@ -60,7 +60,7 @@ const renderForm = ({ handleSubmit, match }) => (
   </form>
 )
 
-const StaffEdit = ({ match, podcastDetails, updatePodcastDetails }) => {
+const CrewMemberEdit = ({ match, podcastDetails, updatePodcastDetails }) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     await updatePodcastDetails({
@@ -70,7 +70,7 @@ const StaffEdit = ({ match, podcastDetails, updatePodcastDetails }) => {
   }
 
   const initialValues = podcastDetails
-    ? (podcastDetails.staff || []).find((item) => item.guid === match.params.crewGuid)
+    ? (podcastDetails.crewMembers || []).find((item) => item.guid === match.params.crewGuid)
     : {}
 
   return (
@@ -83,7 +83,7 @@ const StaffEdit = ({ match, podcastDetails, updatePodcastDetails }) => {
   )
 }
 
-StaffEdit.propTypes = {
+CrewMemberEdit.propTypes = {
   podcastDetails: PropTypes.object.isRequired
 }
 
@@ -95,4 +95,4 @@ const actions = {
   updatePodcastDetails
 }
 
-export default connect(selector, actions)(StaffEdit)
+export default connect(selector, actions)(CrewMemberEdit)
