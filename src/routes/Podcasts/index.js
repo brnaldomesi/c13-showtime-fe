@@ -73,8 +73,8 @@ export const Podcasts = (props) => {
           <TableBody>
             {podcastsList.map(row => (
               <TableRow key={row.podcast_guid}>
-                <TableCell scope="row">
-                  <img src={row.image_url} width={100} alt="" />
+                <TableCell scope="row" width={100}>
+                  <img src={row.imageUrl} width={100} alt="" />
                 </TableCell>
                 <TableCell>
                   <Typography variant="subtitle1" color="textPrimary">{row.title}</Typography>
