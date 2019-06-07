@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
 import { podcastDetailsSelector, updatePodcastDetails } from 'redux/modules/podcast'
+import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
 
@@ -37,15 +38,24 @@ const renderForm = ({ handleSubmit, match }) => (
           placeholder="E.g. Doe"
         />
       </Grid>
+      <Grid item sm={12}>
+        <Field
+          name="biography"
+          label="Biography"
+          component={FormInput}
+          multiline
+          rows={6}
+          placeholder="Enter biography here..."
+        />
+      </Grid>
+      <Grid item sm={12}>
+        <Field
+          name="imageUrl"
+          label="Image"
+          component={FileDropzone}
+        />
+      </Grid>
     </Grid>
-    <Field
-      name="biography"
-      label="Biography"
-      component={FormInput}
-      multiline
-      rows={6}
-      placeholder="Enter biography here..."
-    />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>

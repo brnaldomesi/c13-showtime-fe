@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
+import FileDropzone from 'components/FileDropzone'
 import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
 
@@ -58,6 +59,11 @@ const renderForm = (props) => (
       placeholder="e.g. https://crooked.com/..."
       lockerName="locked"
       lockerValue="websiteUrl"
+    />
+    <Field
+      name="imageUrl"
+      label="Image"
+      component={FileDropzone}
     />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
