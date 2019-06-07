@@ -61,7 +61,7 @@ const renderForm = (props) => (
       lockerValue="websiteUrl"
     />
     <Field
-      name="imageUrl"
+      name="image"
       label="Image"
       component={FileDropzone}
     />
@@ -77,13 +77,14 @@ const renderForm = (props) => (
   </form>
 )
 
-const GeneralEdit = ({ initialValues, onSubmit }) => {
+const GeneralEdit = ({ podcastDetails, onSubmit }) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     await onSubmit(values)
     actions.setSubmitting(false)
   }
 
+  const initialValues = podcastDetails ? { ...podcastDetails, image: podcastDetails.imageUrl } : {}
   return (
     <Formik
       initialValues={initialValues}
@@ -95,7 +96,7 @@ const GeneralEdit = ({ initialValues, onSubmit }) => {
 }
 
 GeneralEdit.propTypes = {
-  initialValues: PropTypes.object.isRequired,
+  podcastDetails: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
 }
 

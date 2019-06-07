@@ -48,7 +48,7 @@ export const PodcastDetails = (props) => {
               <Paper className={classes.paper}>
                 <GeneralEdit
                   {...props}
-                  initialValues={podcastDetails}
+                  podcastDetails={podcastDetails}
                   onSubmit={handleSubmit}
                 />
               </Paper>

@@ -4,11 +4,13 @@ import { createStructuredSelector } from 'reselect'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
+import get from 'lodash/get'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
-import { podcastDetailsSelector, updatePodcastDetails } from 'redux/modules/podcast'
+import { podcastDetailsSelector, } from 'redux/modules/podcast'
+import { createCrewMemberDetails, updateCrewMemberDetails } from 'redux/modules/crew'
 import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
@@ -50,7 +52,7 @@ const renderForm = ({ handleSubmit, match }) => (
       </Grid>
       <Grid item sm={12}>
         <Field
-          name="imageUrl"
+          name="image"
           label="Image"
           component={FileDropzone}
         />
@@ -70,18 +72,26 @@ const renderForm = ({ handleSubmit, match }) => (
   </form>
 )
 
-const CrewMemberEdit = ({ match, podcastDetails, updatePodcastDetails }) => {
+const CrewMemberEdit = ({
+  match,
+  podcastDetails,
+  createCrewMemberDetails,
+  updateCrewMemberDetails,
+}) => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
-    await updatePodcastDetails({
+    const saveCrewMember = match.params.crewGuid ? updateCrewMemberDetails : createCrewMemberDetails
+    await saveCrewMember({
       data: values
     })
     actions.setSubmitting(false)
   }
 
-  const initialValues = podcastDetails
-    ? (podcastDetails.crewMembers || []).find((item) => item.guid === match.params.crewGuid)
-    : {}
+  const crewMember = (get(podcastDetails, 'crewMembers') || [])
+    .find(
+      (item) => item.guid === match.params.crewGuid
+    )
+  const initialValues = crewMember ? { ...crewMember, image: crewMember.imageUrl } : {}
 
   return (
     <Formik
@@ -102,7 +112,8 @@ const selector = createStructuredSelector({
 })
 
 const actions = {
-  updatePodcastDetails
+  createCrewMemberDetails,
+  updateCrewMemberDetails,
 }
 
 export default connect(selector, actions)(CrewMemberEdit)
