@@ -8,6 +8,7 @@ import {
 } from '../api'
 import {
   GET_CREW_MEMBER_DETAILS,
+  GET_CREW_MEMBERS_LIST,
   CREATE_CREW_MEMBER,
   CREATE_CREW_MEMBER_DETAILS,
   UPDATE_CREW_MEMBER_DETAILS,
@@ -15,40 +16,47 @@ import {
   UPDATE_CREW_MEMBER,
 } from './types'
 
+const getCrewMembersList = apiCallSaga({
+  type: GET_CREW_MEMBERS_LIST,
+  method: 'get',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts/${payload.podcastGuid}/crew-members`,
+  selectorKey: 'crewMembersList'
+})
+
 const getCrewMemberDetails = apiCallSaga({
   type: GET_CREW_MEMBER_DETAILS,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/crew-members/${payload.guid}`,
-  payloadOnSuccess: data => data.data,
-  selectorKey: 'crewMember'
+  path: ({ payload }) => `/crew-members/${payload.guid}`,
+  selectorKey: 'crewMemberDetails'
 })
 
 const createCrewMemberApi = apiCallSaga({
   type: CREATE_CREW_MEMBER,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/crew-members/${payload.podcastGuid}`,
+  path: ({ payload }) => `/crew-members/${payload.podcastGuid}`,
   payloadOnSuccess: data => data.data,
-  selectorKey: 'crewMember'
+  selectorKey: 'crewMemberDetails'
 })
 
 const updatePodcastApi = apiCallSaga({
   type: UPDATE_CREW_MEMBER,
   method: 'put',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/crew-members/${payload.guid}`,
+  path: ({ payload }) => `/crew-members/${payload.guid}`,
   payloadOnSuccess: data => data.data,
-  selectorKey: 'crewMember'
+  selectorKey: 'crewMemberDetails'
 })
 
 const uploadCrewMemberImage = apiCallSaga({
   type: UPLOAD_CREW_MEMBER_IMAGE,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/crew-members/${payload.guid}/image`,
+  path: ({ payload }) => `/crew-members/${payload.guid}/image`,
   payloadOnSuccess: data => data.data,
-  selectorKey: 'crewMember.imageUrl'
+  selectorKey: 'crewMemberDetails.imageUrl'
 })
 
 const createCrewMemberDetails = function* (action) {
@@ -104,8 +112,9 @@ const updateCrewMemberDetails = function* (action) {
 }
 
 export default function* rootSaga() {
+  yield takeLatest(GET_CREW_MEMBERS_LIST, getCrewMembersList)
   yield takeLatest(GET_CREW_MEMBER_DETAILS, getCrewMemberDetails)
   yield takeLatest(CREATE_CREW_MEMBER_DETAILS, createCrewMemberDetails)
   yield takeLatest(UPDATE_CREW_MEMBER_DETAILS, updateCrewMemberDetails)
-  yield takeLatest(uploadCrewMemberImage, uploadCrewMemberImage)
+  yield takeLatest(UPLOAD_CREW_MEMBER_IMAGE, uploadCrewMemberImage)
 }

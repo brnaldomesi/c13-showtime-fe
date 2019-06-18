@@ -5,55 +5,52 @@ import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
+import get from 'lodash/get'
+import IconButton from '@material-ui/core/IconButton'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
-import TablePagination from '@material-ui/core/TablePagination'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
 
 import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE } from 'config/constants'
-import { getPodcastsList, podcastsListSelector } from 'redux/modules/podcast'
+import {
+  getPodcastsList,
+  podcastsListSelector,
+  podcastsListLoadingSelector
+} from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
+import LoadingIndicator from 'components/LoadingIndicator';
 import styles from './styles'
-import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams';
+import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 export const Podcasts = (props) => {
-  const { classes, location, pushWithQuery, queryParams, getPodcastsList, podcasts } = props
-  const { page = 1, pageSize = DEFAULT_PAGE_SIZE } = queryParams
-  const totalCount = podcasts ? podcasts.count : 0
-  const podcastsList = podcasts ? podcasts.rows : []
-  const pageNavButtonProps = { className: classes.pageNavButton }
+  const { classes, history, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
+  const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
+  const podcastsList = podcasts ? podcasts.results : []
 
-  const handleChangePage = (event, pageIndex) => {
-    pushWithQuery({
-      location: location,
-      queryParams: {
-        ...queryParams,
-        page: pageIndex + 1
-      }
-    })
+  const handlePrevPage = (event) => {
+    history.push(podcasts.links.prev)
   }
 
-  const handleChangeRowsPerPage = event => {
-    pushWithQuery({
-      location: location,
-      queryParams: {
-        ...queryParams,
-        pageSize: event.target.value
-      }
-    })
+  const handleNextPage = event => {
+    history.push(podcasts.links.next)
   }
 
   useEffect(
     () => {
-      getPodcastsList({ params: { page, pageSize } })
+      getPodcastsList({
+        params: { startAfter, endBefore, limit }
+      })
     },
-    [page, pageSize, getPodcastsList]
+    [startAfter, endBefore, limit, getPodcastsList]
   )
 
   return (
@@ -62,52 +59,57 @@ export const Podcasts = (props) => {
         Podcasts
       </Typography>
       <Paper className={classes.root}>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <TableCell>Thumbnail</TableCell>
-              <TableCell>Title</TableCell>
-              <TableCell />
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {podcastsList.map(row => (
-              <TableRow key={row.podcast_guid}>
-                <TableCell scope="row" width={100}>
-                  <img src={row.imageUrl} width={100} alt="" />
-                </TableCell>
-                <TableCell>
-                  <Typography variant="subtitle1" color="textPrimary">{row.title}</Typography>
-                  <Typography color="textSecondary">{truncate(row.summary)}</Typography>
-                </TableCell>
-                <TableCell align="right" className={classes.actions}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={classes.edit}
-                    to={`/podcasts/${row.podcast_guid}`}
-                    component={Link}
-                  >
-                    Edit
-                  </Button>
-                  <Button variant="contained" color="secondary">Disable</Button>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        <TablePagination
-          component="div"
-          count={totalCount}
-          rowsPerPage={Number(pageSize)}
-          page={page - 1}
-          classes={{ toolbar: classes.pageNavToolbar }}
-          onChangePage={handleChangePage}
-          onChangeRowsPerPage={handleChangeRowsPerPage}
-          rowsPerPageOptions={[1, 5, 10, 20, 50]}
-          nextIconButtonProps={pageNavButtonProps}
-          backIconButtonProps={pageNavButtonProps}
-        />
+        {podcastsLoading ? (
+          <LoadingIndicator />
+        ) : (
+          <>
+            <Table className={classes.table}>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Thumbnail</TableCell>
+                  <TableCell>Title</TableCell>
+                  <TableCell />
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {podcastsList.map(podcast => (
+                  <TableRow key={podcast.guid}>
+                    <TableCell scope="row" width={100}>
+                      <img src={get(podcast, 'imageUrls.original')} width={100} alt="" />
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="subtitle1" color="textPrimary">{podcast.title}</Typography>
+                      <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
+                    </TableCell>
+                    <TableCell align="right" className={classes.actions}>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        className={classes.edit}
+                        to={`/podcasts/${podcast.guid}`}
+                        component={Link}
+                      >
+                        Edit
+                      </Button>
+                      <Button variant="contained" color="secondary">Disable</Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+            <Grid container>
+              <Grid xs />
+              <Grid item>
+                <IconButton onClick={handlePrevPage} disabled={!podcasts.links.prev}>
+                  <ChevronLeftIcon />
+                </IconButton>
+                <IconButton onClick={handleNextPage} disabled={!podcasts.links.next}>
+                  <ChevronRightIcon />
+                </IconButton>
+              </Grid>
+            </Grid>
+          </>
+        )}
       </Paper>
     </div>
   )
@@ -118,12 +120,14 @@ Podcasts.propTypes = {
   getPodcastsList: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
   podcasts: APIListType.isRequired,
+  podcastsLoading: PropTypes.bool,
   pushWithQuery: PropTypes.func.isRequired,
   queryParams: PropTypes.object,
 }
 
 const selector = createStructuredSelector({
-  podcasts: podcastsListSelector
+  podcasts: podcastsListSelector,
+  podcastsLoading: podcastsListLoadingSelector,
 })
 
 const actions = {

@@ -84,7 +84,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
     actions.setSubmitting(false)
   }
 
-  const initialValues = podcastDetails ? { ...podcastDetails, image: podcastDetails.imageUrl } : {}
+  const initialValues = podcastDetails ? { ...podcastDetails, image: podcastDetails.imageUrls.original } : {}
   return (
     <Formik
       initialValues={initialValues}

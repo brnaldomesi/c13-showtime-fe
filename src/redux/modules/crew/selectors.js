@@ -1,3 +1,5 @@
 import { dataSelector } from '../api'
 
-export const podcastDetailsSelector = dataSelector('crewMemberDetails', null)
+export const crewMembersListSelector = dataSelector('crewMembersList', [])
+
+export const crewMemberDetailsSelector = dataSelector('crewMemberDetails', null)

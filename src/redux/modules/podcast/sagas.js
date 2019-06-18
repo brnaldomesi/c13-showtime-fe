@@ -17,9 +17,8 @@ import {
 const getPodcastsList = apiCallSaga({
   type: GET_PODCASTS_LIST,
   method: 'get',
-  allowedParamKeys: ['page', 'pageSize'],
-  path: '/api/podcasts',
-  payloadOnSuccess: data => data.data,
+  allowedParamKeys: ['startAfter', 'endingBefore', 'limit'],
+  path: '/podcasts',
   selectorKey: 'podcastsList'
 })
 
@@ -27,8 +26,7 @@ const getPodcastDetails = apiCallSaga({
   type: GET_PODCAST_DETAILS,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/podcasts/${payload.guid}`,
-  payloadOnSuccess: data => data.data,
+  path: ({ payload }) => `/podcasts/${payload.guid}`,
   selectorKey: 'podcastDetails'
 })
 
@@ -36,7 +34,7 @@ const updatePodcastApi = apiCallSaga({
   type: UPDATE_PODCAST,
   method: 'put',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/podcasts/${payload.guid}`,
+  path: ({ payload }) => `/podcasts/${payload.guid}`,
   payloadOnSuccess: data => data.data,
   selectorKey: 'podcastDetails'
 })
@@ -45,7 +43,7 @@ const uploadPodcastImage = apiCallSaga({
   type: UPLOAD_PODCAST_IMAGE,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/api/podcasts/${payload.guid}/image`,
+  path: ({ payload }) => `/podcasts/${payload.guid}/image`,
   payloadOnSuccess: data => data.data,
   selectorKey: 'podcastDetails.imageUrl'
 })

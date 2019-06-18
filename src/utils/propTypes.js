@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
 export const APIListType = PropTypes.shape({
-  rows: PropTypes.array.isRequired,
-  count: PropTypes.number.isRequired
+  results: PropTypes.array.isRequired,
+  links: PropTypes.object.isRequired
 })

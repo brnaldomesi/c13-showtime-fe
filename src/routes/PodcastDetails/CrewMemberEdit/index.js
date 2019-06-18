@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
-import get from 'lodash/get'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
-import { podcastDetailsSelector, } from 'redux/modules/podcast'
-import { createCrewMemberDetails, updateCrewMemberDetails } from 'redux/modules/crew'
+import { crewMemberDetailsSelector } from 'redux/modules/crew'
+import {
+  createCrewMemberDetails,
+  getCrewMemberDetails,
+  updateCrewMemberDetails
+} from 'redux/modules/crew'
 import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
@@ -74,7 +77,8 @@ const renderForm = ({ handleSubmit, match }) => (
 
 const CrewMemberEdit = ({
   match,
-  podcastDetails,
+  getCrewMemberDetails,
+  crewMember,
   createCrewMemberDetails,
   updateCrewMemberDetails,
 }) => {
@@ -86,11 +90,15 @@ const CrewMemberEdit = ({
     })
     actions.setSubmitting(false)
   }
+  const { crewGuid } = match.params
 
-  const crewMember = (get(podcastDetails, 'crewMembers') || [])
-    .find(
-      (item) => item.guid === match.params.crewGuid
-    )
+  useEffect(
+    () => {
+      getCrewMemberDetails({ guid: crewGuid })
+    },
+    [crewGuid, getCrewMemberDetails]
+  )
+
   const initialValues = crewMember ? { ...crewMember, image: crewMember.imageUrl } : {}
 
   return (
@@ -104,15 +112,19 @@ const CrewMemberEdit = ({
 }
 
 CrewMemberEdit.propTypes = {
-  podcastDetails: PropTypes.object.isRequired
+  createCrewMemberDetails: PropTypes.func.isRequired,
+  getCrewMemberDetails: PropTypes.func.isRequired,
+  podcastDetails: PropTypes.object.isRequired,
+  updateCrewMemberDetails: PropTypes.func.isRequired,
 }
 
 const selector = createStructuredSelector({
-  podcastDetails: podcastDetailsSelector
+  crewMember: crewMemberDetailsSelector
 })
 
 const actions = {
   createCrewMemberDetails,
+  getCrewMemberDetails,
   updateCrewMemberDetails,
 }
 

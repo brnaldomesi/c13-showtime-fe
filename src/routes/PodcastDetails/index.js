@@ -77,12 +77,7 @@ export const PodcastDetails = (props) => {
           <Route
             path={`${match.path}/crew`}
             exact
-            render={props => (
-              <CrewMembers
-                {...props}
-                crewMembers={podcastDetails.crewMembers}
-              />
-            )}
+            component={CrewMembers}
           />
           <Route
             path={`${match.path}/subscribe-links`}
