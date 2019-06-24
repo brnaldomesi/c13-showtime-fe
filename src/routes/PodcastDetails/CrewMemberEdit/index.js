@@ -104,6 +104,7 @@ const CrewMemberEdit = ({
   return (
     <Formik
       initialValues={initialValues}
+      enableReinitialize
       onSubmit={handleSubmit}
       render={(props) => renderForm({ ...props, match })}
       validationSchema={validationSchema}
