@@ -1,11 +1,6 @@
-import { put, takeLatest } from 'redux-saga/effects'
+import { takeLatest } from 'redux-saga/effects'
 
-import {
-  apiCallSaga,
-  requestPending,
-  requestRejected,
-  requestSuccess,
-} from '../api'
+import { apiCallSaga } from '../api'
 import {
   GET_CREW_MEMBER_DETAILS,
   GET_CREW_MEMBERS_LIST,
@@ -37,16 +32,14 @@ const createCrewMemberApi = apiCallSaga({
   method: 'post',
   allowedParamKeys: [],
   path: ({ payload }) => `/crew-members/${payload.podcastGuid}`,
-  payloadOnSuccess: data => data.data,
   selectorKey: 'crewMemberDetails'
 })
 
-const updatePodcastApi = apiCallSaga({
+const updateCrewMemberApi = apiCallSaga({
   type: UPDATE_CREW_MEMBER,
-  method: 'put',
+  method: 'patch',
   allowedParamKeys: [],
   path: ({ payload }) => `/crew-members/${payload.guid}`,
-  payloadOnSuccess: data => data.data,
   selectorKey: 'crewMemberDetails'
 })
 
@@ -55,14 +48,12 @@ const uploadCrewMemberImage = apiCallSaga({
   method: 'post',
   allowedParamKeys: [],
   path: ({ payload }) => `/crew-members/${payload.guid}/image`,
-  payloadOnSuccess: data => data.data,
   selectorKey: 'crewMemberDetails.imageUrl'
 })
 
 const createCrewMemberDetails = function* (action) {
   const { payload } = action
   const { image, ...podcastData } = payload.data
-  yield put({ type: requestPending(CREATE_CREW_MEMBER_DETAILS) })
   let result = yield createCrewMemberApi({
     type: CREATE_CREW_MEMBER,
     payload: { data: podcastData }
@@ -77,21 +68,19 @@ const createCrewMemberDetails = function* (action) {
       payload: { data: imageData }
     })
   }
-
-  if (result) {
-    yield put({ type: requestSuccess(CREATE_CREW_MEMBER_DETAILS) })
-  } else {
-    yield put({ type: requestRejected(CREATE_CREW_MEMBER_DETAILS) })
-  }
+  return result
 }
 
 const updateCrewMemberDetails = function* (action) {
   const { payload } = action
+  const { resolve, reject } = payload
   const { image, ...podcastData } = payload.data
-  yield put({ type: requestPending(UPDATE_CREW_MEMBER_DETAILS) })
-  let result = yield updatePodcastApi({
+  let result = yield updateCrewMemberApi({
     type: UPDATE_CREW_MEMBER,
-    payload: { data: podcastData }
+    payload: {
+      reject,
+      data: podcastData
+    }
   })
 
   if (result && image) {
@@ -100,15 +89,19 @@ const updateCrewMemberDetails = function* (action) {
 
     result = yield uploadCrewMemberImage({
       type: UPLOAD_CREW_MEMBER_IMAGE,
-      payload: { data: imageData }
+      payload: {
+        reject,
+        guid: payload.guid,
+        data: imageData
+      }
     })
   }
 
-  if (result) {
-    yield put({ type: requestSuccess(UPDATE_CREW_MEMBER_DETAILS) })
-  } else {
-    yield put({ type: requestRejected(UPDATE_CREW_MEMBER_DETAILS) })
+  if (resolve) {
+    yield resolve()
   }
+
+  return result
 }
 
 export default function* rootSaga() {

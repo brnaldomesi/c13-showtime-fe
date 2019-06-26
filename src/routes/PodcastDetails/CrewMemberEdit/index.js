@@ -14,6 +14,7 @@ import {
   getCrewMemberDetails,
   updateCrewMemberDetails
 } from 'redux/modules/crew'
+import { formSubmit } from 'utils/form'
 import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
@@ -83,12 +84,14 @@ const CrewMemberEdit = ({
   updateCrewMemberDetails,
 }) => {
   const handleSubmit = async (values, actions) => {
-    actions.setSubmitting(true)
     const saveCrewMember = match.params.crewGuid ? updateCrewMemberDetails : createCrewMemberDetails
-    await saveCrewMember({
-      data: values
-    })
-    actions.setSubmitting(false)
+    formSubmit(
+      saveCrewMember,
+      {
+        data: values
+      },
+      actions
+    )
   }
   const { crewGuid } = match.params
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
+import pick from 'lodash/pick'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
@@ -11,52 +12,60 @@ import Hr from 'components/Hr'
 const renderForm = (props) => (
   <form onSubmit={props.handleSubmit}>
     <Field
-      name="subscriptionUrls.GOOGLE_PODCASTS"
+      name="subscriptionUrls.googlePodcasts"
       label="Google Podcasts"
       placeholder="e.g. https://www.google.com/podcasts?feed=..."
       component={FormLockerInput}
       lockerName="subscriptionUrls.locked"
-      lockerValue="GOOGLE_PODCASTS"
+      lockerValue="googlePodcasts"
     />
     <Field
-      name="subscriptionUrls.GOOGLE_PLAY"
+      name="subscriptionUrls.googlePlay"
       label="Google Play"
       placeholder="e.g. https://play.google.com/music/m/..."
       component={FormLockerInput}
       lockerName="subscriptionUrls.locked"
-      lockerValue="GOOGLE_PLAY"
+      lockerValue="googlePlay"
     />
     <Field
-      name="subscriptionUrls.APPLE_PODCASTS"
+      name="subscriptionUrls.applePodcasts"
       label="Apple Podcasts"
       placeholder="e.g. https://itunes.apple.com/podcast/..."
       component={FormLockerInput}
       lockerName="subscriptionUrls.locked"
-      lockerValue="APPLE_PODCASTS"
+      lockerValue="applePodcasts"
     />
     <Field
-      name="subscriptionUrls.SPOTIFY"
+      name="subscriptionUrls.spotify"
       label="Spotify"
       placeholder="e.g. https://open.spotify.com/show/..."
       component={FormLockerInput}
       lockerName="subscriptionUrls.locked"
-      lockerValue="SPOTIFY"
+      lockerValue="spotify"
     />
     <Field
-      name="subscriptionUrls.STITCHER"
+      name="subscriptionUrls.stitcher"
       label="Stitcher"
       placeholder="e.g. http://www.stitcher.com/podcast/..."
       component={FormLockerInput}
       lockerName="subscriptionUrls.locked"
-      lockerValue="STITCHER"
+      lockerValue="stitcher"
     />
     <Field
-      name="subscriptionUrls.RADIO_COM"
+      name="subscriptionUrls.iHeart"
+      label="iHeart"
+      placeholder="e.g. http://www.iheart.com/playlist/..."
+      component={FormLockerInput}
+      lockerName="subscriptionUrls.locked"
+      lockerValue="iHeart"
+    />
+    <Field
+      name="subscriptionUrls.radioCom"
       label="Radio.com"
       placeholder="e.g. https://player.radio.com/listen/station/..."
       component={FormLockerInput}
       lockerName="subscriptionUrls.locked"
-      lockerValue="RADIO_COM"
+      lockerValue="radioCom"
     />
     <Hr />
     <Grid container justify="flex-end" spacing={3}>
@@ -71,10 +80,11 @@ const renderForm = (props) => (
 )
 
 const SubscribeLinks = ({ initialValues, onSubmit }) => {
-  const handleSubmit = async (values, actions) => {
-    actions.setSubmitting(true)
-    await onSubmit(values)
-    actions.setSubmitting(false)
+  const handleSubmit = (values, actions) => {
+    onSubmit(
+      pick(values, ['subscriptionUrls']),
+      actions
+    )
   }
 
   return (

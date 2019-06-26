@@ -12,6 +12,7 @@ import {
   updatePodcastDetails,
   podcastDetailsSelector,
 } from 'redux/modules/podcast'
+import { formSubmit } from 'utils/form'
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
 import GeneralEdit from './GeneralEdit'
@@ -33,8 +34,15 @@ export const PodcastDetails = (props) => {
     [podcastGuid, getPodcastDetails]
   )
 
-  const handleSubmit = (values) => {
-    updatePodcastDetails({ guid: podcastGuid, data: values })
+  const handleSubmit = (values, formActions) => {
+    formSubmit(
+      updatePodcastDetails,
+      {
+        guid: podcastGuid,
+        data: values
+      },
+      formActions
+    )
   }
 
   return (

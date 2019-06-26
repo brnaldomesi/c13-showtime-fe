@@ -33,3 +33,6 @@ export const truncate = (input, len = 100) => {
     return input
   }
 }
+
+export const capitalize = str =>
+  typeof str === 'string' && str.length > 0 ? str.charAt(0).toUpperCase() + str.slice(1) : str

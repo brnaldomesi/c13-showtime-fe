@@ -2,13 +2,16 @@ import React from 'react'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
+import get from 'lodash/get'
 import Grid from '@material-ui/core/Grid'
+import pick from 'lodash/pick'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
 import FileDropzone from 'components/FileDropzone'
 import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
+import LoadingIndicator from 'components/LoadingIndicator'
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),
@@ -23,7 +26,7 @@ const renderForm = (props) => (
       label="Podcast Title"
       component={FormLockerInput}
       placeholder="Enter the podcast title here..."
-      lockerName="locked"
+      lockerName="lockedSyncFields"
       lockerValue="title"
     />
     <Field
@@ -31,7 +34,7 @@ const renderForm = (props) => (
       label="Subtitle"
       component={FormLockerInput}
       placeholder="Enter the podcast subtitle here..."
-      lockerName="locked"
+      lockerName="lockedSyncFields"
       lockerValue="subtitle"
     />
     <Field
@@ -41,7 +44,7 @@ const renderForm = (props) => (
       multiline
       rows={6}
       placeholder="e.g. pod-save-america ..."
-      lockerName="locked"
+      lockerName="lockedSyncFields"
       lockerValue="summary"
     />
     <Field
@@ -49,7 +52,7 @@ const renderForm = (props) => (
       label="Slug"
       component={FormLockerInput}
       placeholder="e.g. pod-save-america ..."
-      lockerName="locked"
+      lockerName="lockedSyncFields"
       lockerValue="slug"
     />
     <Field
@@ -57,7 +60,7 @@ const renderForm = (props) => (
       label="Website URL"
       component={FormLockerInput}
       placeholder="e.g. https://crooked.com/..."
-      lockerName="locked"
+      lockerName="lockedSyncFields"
       lockerValue="websiteUrl"
     />
     <Field
@@ -74,17 +77,27 @@ const renderForm = (props) => (
         <Button variant="contained" color="primary" type="submit">Save Changes</Button>
       </Grid>
     </Grid>
+    {props.isSubmitting && <LoadingIndicator />}
   </form>
 )
 
 const GeneralEdit = ({ podcastDetails, onSubmit }) => {
-  const handleSubmit = async (values, actions) => {
-    actions.setSubmitting(true)
-    await onSubmit(values)
-    actions.setSubmitting(false)
+  const handleSubmit = (values, actions) => {
+    onSubmit(
+      pick(values, [
+        'title',
+        'subtitle',
+        'summary',
+        'slug',
+        'websiteUrl',
+        'lockedSyncFields',
+        'image',
+      ]),
+      actions
+    )
   }
 
-  const initialValues = podcastDetails ? { ...podcastDetails, image: podcastDetails.imageUrls.original } : {}
+  const initialValues = podcastDetails ? { ...podcastDetails, image: get(podcastDetails, 'imageUrls.original') } : {}
   return (
     <Formik
       initialValues={initialValues}

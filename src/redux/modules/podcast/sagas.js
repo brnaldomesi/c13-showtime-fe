@@ -1,11 +1,6 @@
-import { put, takeLatest } from 'redux-saga/effects'
+import { takeLatest } from 'redux-saga/effects'
 
-import {
-  apiCallSaga,
-  requestPending,
-  requestRejected,
-  requestSuccess,
-} from '../api'
+import { apiCallSaga } from '../api'
 import {
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
@@ -32,10 +27,9 @@ const getPodcastDetails = apiCallSaga({
 
 const updatePodcastApi = apiCallSaga({
   type: UPDATE_PODCAST,
-  method: 'put',
+  method: 'patch',
   allowedParamKeys: [],
   path: ({ payload }) => `/podcasts/${payload.guid}`,
-  payloadOnSuccess: data => data.data,
   selectorKey: 'podcastDetails'
 })
 
@@ -44,17 +38,20 @@ const uploadPodcastImage = apiCallSaga({
   method: 'post',
   allowedParamKeys: [],
   path: ({ payload }) => `/podcasts/${payload.guid}/image`,
-  payloadOnSuccess: data => data.data,
   selectorKey: 'podcastDetails.imageUrl'
 })
 
 const updatePodcastDetails = function* (action) {
   const { payload } = action
+  const { resolve, reject } = payload
   const { image, ...podcastData } = payload.data
-  yield put({ type: requestPending(UPDATE_PODCAST_DETAILS) })
   let result = yield updatePodcastApi({
     type: UPDATE_PODCAST,
-    payload: { data: podcastData }
+    payload: {
+      reject,
+      guid: payload.guid,
+      data: podcastData
+    }
   })
 
   if (result && image) {
@@ -63,15 +60,18 @@ const updatePodcastDetails = function* (action) {
 
     result = yield uploadPodcastImage({
       type: UPLOAD_PODCAST_IMAGE,
-      payload: { data: imageData }
+      payload: {
+        reject,
+        data: imageData
+      }
     })
   }
 
-  if (result) {
-    yield put({ type: requestSuccess(UPDATE_PODCAST_DETAILS) })
-  } else {
-    yield put({ type: requestRejected(UPDATE_PODCAST_DETAILS) })
+  if (resolve) {
+    yield resolve()
   }
+
+  return result
 }
 
 export default function* rootSaga() {
