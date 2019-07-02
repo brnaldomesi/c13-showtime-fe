@@ -10,6 +10,7 @@ import * as Yup from 'yup'
 
 import FileDropzone from 'components/FileDropzone'
 import FormLockerInput from 'components/FormLockerInput'
+import FormTagsInput from 'components/FormTagsInput'
 import Hr from 'components/Hr'
 import LoadingIndicator from 'components/LoadingIndicator'
 
@@ -68,6 +69,12 @@ const renderForm = (props) => (
       label="Image"
       component={FileDropzone}
     />
+    <Field
+      name="tags"
+      label="Tags"
+      placeholder="Enter podcast tags here..."
+      component={FormTagsInput}
+    />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
@@ -92,6 +99,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
         'websiteUrl',
         'lockedSyncFields',
         'image',
+        'tags',
       ]),
       actions
     )

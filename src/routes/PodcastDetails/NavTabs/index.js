@@ -10,7 +10,6 @@ import ListItemText from '@material-ui/core/ListItemText'
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft'
 import PeopleIcon from '@material-ui/icons/People'
 import RssFeedIcon from '@material-ui/icons/RssFeed'
-import LabelIcon from '@material-ui/icons/Label'
 import SettingsIcon from '@material-ui/icons/Settings'
 import styles from './styles'
 
@@ -18,7 +17,6 @@ const menuItems = [
   { label: 'General', value: 'general', icon: FormatAlignLeftIcon },
   { label: 'Crew Members', value: 'crew', icon: PeopleIcon },
   { label: 'Subscribe Links', value: 'subscribe-links', icon: RssFeedIcon },
-  { label: 'Tags', value: 'tags', icon: LabelIcon },
   { label: 'Settings', value: 'settings', icon: SettingsIcon },
 ]
 
