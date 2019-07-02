@@ -74,6 +74,8 @@ const renderForm = (props) => (
       label="Tags"
       placeholder="Enter podcast tags here..."
       component={FormTagsInput}
+      lockerName="lockedSyncFields"
+      lockerValue="tags"
     />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
