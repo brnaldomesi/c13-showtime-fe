@@ -33,7 +33,6 @@ const Sidebar = ({ classes, open, toggle }) => {
       <Divider />
       <List>
         <SidebarItem icon={IconCast} text="Podcasts" to="/podcasts" />
-        <SidebarItem icon={IconCast} text="Episodes" />
       </List>
     </div>
   )
