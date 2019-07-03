@@ -14,6 +14,9 @@ export default theme => ({
   actions: {
     whiteSpace: 'nowrap'
   },
+  episodes: {
+    marginRight: theme.spacing(2)
+  },
   edit: {
     marginRight: theme.spacing(2)
   }

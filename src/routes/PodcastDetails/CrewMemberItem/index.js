@@ -48,7 +48,8 @@ const CrewMemberItem = ({ crewMember, match, number }) => {
 }
 
 CrewMemberItem.propTypes = {
-  classes: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+  number: PropTypes.number,
   crewMember: PropTypes.object.isRequired,
 }
 

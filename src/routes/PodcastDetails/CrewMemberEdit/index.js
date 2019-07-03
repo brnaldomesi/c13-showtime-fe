@@ -65,7 +65,7 @@ const renderForm = ({ handleSubmit, match }) => (
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastGuid}/crew`}>
+        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastGuid}/edit/crew`}>
           Cancel
         </Button>
       </Grid>

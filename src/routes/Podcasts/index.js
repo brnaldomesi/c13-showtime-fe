@@ -85,8 +85,17 @@ export const Podcasts = (props) => {
                       <Button
                         variant="contained"
                         color="primary"
+                        className={classes.episodes}
+                        to={`/podcasts/${podcast.guid}/episodes`}
+                        component={Link}
+                      >
+                        Episodes
+                      </Button>
+                      <Button
+                        variant="contained"
+                        color="primary"
                         className={classes.edit}
-                        to={`/podcasts/${podcast.guid}`}
+                        to={`/podcasts/${podcast.guid}/edit`}
                         component={Link}
                       >
                         Edit
@@ -98,7 +107,7 @@ export const Podcasts = (props) => {
               </TableBody>
             </Table>
             <Grid container>
-              <Grid xs />
+              <Grid item xs />
               <Grid item>
                 <IconButton onClick={handlePrevPage} disabled={!podcasts.links.prev}>
                   <ChevronLeftIcon />
