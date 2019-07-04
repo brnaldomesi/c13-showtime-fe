@@ -5,8 +5,12 @@ import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import dfFormat from 'date-fns/format'
 import get from 'lodash/get'
+import Grid from '@material-ui/core/Grid'
+import IconButton from '@material-ui/core/IconButton'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
@@ -27,12 +31,36 @@ import { truncate } from 'utils/helpers'
 import LoadingIndicator from 'components/LoadingIndicator';
 import styles from './styles'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
-import { Grid } from '@material-ui/core';
 
 export const PodcastEpisodes = (props) => {
-  const { classes, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
+  const { classes, location, match, queryParams, getEpisodesList,
+    episodes, episodesLoading, pushWithQuery } = props
   const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const episodesList = episodes ? episodes.results : []
+  const isPrevDisabled = !startAfter && !endBefore ||
+    episodesList.length && episodesList[0].guid === endBefore
+
+  const handlePrevPage = () => {
+    if (!episodesList.length) return
+    pushWithQuery({
+      location,
+      queryParams: {
+        limit,
+        endBefore: episodesList[0].guid,
+      }
+    })
+  }
+
+  const handleNextPage = () => {
+    if (!episodesList.length) return
+    pushWithQuery({
+      location,
+      queryParams: {
+        limit,
+        startAfter: episodesList[episodesList.length - 1].guid,
+      }
+    })
+  }
 
   useEffect(
     () => {
@@ -88,6 +116,17 @@ export const PodcastEpisodes = (props) => {
                 ))}
               </TableBody>
             </Table>
+            <Grid container>
+              <Grid item xs />
+              <Grid item>
+                <IconButton onClick={handlePrevPage} disabled={isPrevDisabled}>
+                  <ChevronLeftIcon />
+                </IconButton>
+                <IconButton onClick={handleNextPage} disabled={!episodes.hasMore}>
+                  <ChevronRightIcon />
+                </IconButton>
+              </Grid>
+            </Grid>
           </>
         )}
       </Paper>

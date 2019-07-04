@@ -10,7 +10,7 @@ import {
 const getEpisodesList = apiCallSaga({
   type: GET_EPISODES_LIST,
   method: 'get',
-  allowedParamKeys: [],
+  allowedParamKeys: ['startAfter', 'endingBefore', 'limit'],
   path: ({ payload }) => `/podcasts/${payload.podcastGuid}/episodes`,
   selectorKey: 'episodesList'
 })
