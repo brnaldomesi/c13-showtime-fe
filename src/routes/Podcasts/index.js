@@ -6,10 +6,6 @@ import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import get from 'lodash/get'
-import IconButton from '@material-ui/core/IconButton'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
@@ -28,21 +24,14 @@ import {
 } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
 import LoadingIndicator from 'components/LoadingIndicator';
+import Pagination from 'components/Pagination'
 import styles from './styles'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 export const Podcasts = (props) => {
-  const { classes, history, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
+  const { classes, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
   const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const podcastsList = podcasts ? podcasts.results : []
-
-  const handlePrevPage = (event) => {
-    history.push(podcasts.links.prev)
-  }
-
-  const handleNextPage = event => {
-    history.push(podcasts.links.next)
-  }
 
   useEffect(
     () => {
@@ -106,17 +95,7 @@ export const Podcasts = (props) => {
                 ))}
               </TableBody>
             </Table>
-            <Grid container>
-              <Grid item xs />
-              <Grid item>
-                <IconButton onClick={handlePrevPage} disabled={!podcasts.links.prev}>
-                  <ChevronLeftIcon />
-                </IconButton>
-                <IconButton onClick={handleNextPage} disabled={!podcasts.links.next}>
-                  <ChevronRightIcon />
-                </IconButton>
-              </Grid>
-            </Grid>
+            <Pagination listData={podcasts} />
           </>
         )}
       </Paper>
