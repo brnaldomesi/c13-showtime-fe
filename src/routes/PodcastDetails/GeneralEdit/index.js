@@ -8,7 +8,7 @@ import pick from 'lodash/pick'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
-import FileDropzone from 'components/FileDropzone'
+// import FileDropzone from 'components/FileDropzone'
 import FormLockerInput from 'components/FormLockerInput'
 import FormTagsInput from 'components/FormTagsInput'
 import Hr from 'components/Hr'
@@ -64,11 +64,11 @@ const renderForm = (props) => (
       lockerName="lockedSyncFields"
       lockerValue="websiteUrl"
     />
-    <Field
+    {/* <Field
       name="image"
       label="Image"
       component={FileDropzone}
-    />
+    /> */}
     <Field
       name="tags"
       label="Tags"
@@ -100,14 +100,14 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
         'slug',
         'websiteUrl',
         'lockedSyncFields',
-        'image',
+        // 'image',
         'tags',
       ]),
       actions
     )
   }
 
-  const initialValues = podcastDetails ? { ...podcastDetails, image: get(podcastDetails, 'imageUrls.original') } : {}
+  const initialValues = podcastDetails // ? { ...podcastDetails, image: get(podcastDetails, 'imageUrls.original') } : {}
   return (
     <Formik
       initialValues={initialValues}

@@ -15,7 +15,7 @@ import {
   updateCrewMemberDetails
 } from 'redux/modules/crew'
 import { formSubmit } from 'utils/form'
-import FileDropzone from 'components/FileDropzone'
+// import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
 
@@ -54,6 +54,7 @@ const renderForm = ({ handleSubmit, match }) => (
           placeholder="Enter biography here..."
         />
       </Grid>
+      {/*
       <Grid item sm={12}>
         <Field
           name="image"
@@ -61,6 +62,7 @@ const renderForm = ({ handleSubmit, match }) => (
           component={FileDropzone}
         />
       </Grid>
+      */}
     </Grid>
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
@@ -102,7 +104,7 @@ const CrewMemberEdit = ({
     [crewGuid, getCrewMemberDetails]
   )
 
-  const initialValues = crewMember ? { ...crewMember, image: crewMember.imageUrl } : {}
+  const initialValues = crewMember // ? { ...crewMember, image: crewMember.imageUrl } : {}
 
   return (
     <Formik
