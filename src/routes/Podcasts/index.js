@@ -5,7 +5,6 @@ import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import get from 'lodash/get'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
@@ -23,9 +22,10 @@ import {
   podcastsListLoadingSelector
 } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
-import LoadingIndicator from 'components/LoadingIndicator';
+import LoadingIndicator from 'components/LoadingIndicator'
 import Pagination from 'components/Pagination'
 import styles from './styles'
+import ThumbnailImage from 'components/ThumbnailImage'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 export const Podcasts = (props) => {
@@ -64,7 +64,12 @@ export const Podcasts = (props) => {
                 {podcastsList.map(podcast => (
                   <TableRow key={podcast.guid}>
                     <TableCell scope="row" width={100}>
-                      <img src={get(podcast, 'imageUrls.original')} width={100} alt="" />
+                      <ThumbnailImage
+                        className={classes.image}
+                        imageUrls={podcast.imageUrls}
+                        title={podcast.title}
+                        type="podcast"
+                      />
                     </TableCell>
                     <TableCell>
                       <Typography variant="subtitle1" color="textPrimary">{podcast.title}</Typography>

@@ -11,6 +11,10 @@ export default theme => ({
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
+  image: {
+    width: 100,
+    height: 100
+  },
   actions: {
     whiteSpace: 'nowrap'
   },
