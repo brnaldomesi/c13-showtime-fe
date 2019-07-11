@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import AppContainer from 'components/AppContainer'
 import Dashboard from './Dashboard'
-import PodcastDetails from './PodcastDetails'
+import PodcastEdit from './PodcastEdit'
 import PodcastEpisodes from './PodcastEpisodes'
 import Podcasts from './Podcasts'
 import MainLayout from 'components/MainLayout'
@@ -16,7 +16,7 @@ const routes = ({ history }) => (
         <Switch>
           <Route exact path="/podcasts" component={Podcasts} />
           <Route path="/podcasts/:podcastGuid/episodes" component={PodcastEpisodes} />
-          <Route path="/podcasts/:podcastGuid/edit/:tabId?" component={PodcastDetails} />
+          <Route path="/podcasts/:podcastGuid/edit/:tabId?" component={PodcastEdit} />
           <Route exact path="/" component={Dashboard} />
         </Switch>
       </MainLayout>

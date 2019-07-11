@@ -23,7 +23,7 @@ import styles from './styles'
 
 const renderComingSoon = () => <div>Coming Soon...</div>
 
-export const PodcastDetails = (props) => {
+export const PodcastEdit = (props) => {
   const { classes, match, getPodcastDetails, podcastDetails, updatePodcastDetails } = props
   const { podcastGuid } = match.params
 
@@ -100,10 +100,6 @@ export const PodcastDetails = (props) => {
             )}
           />
           <Route
-            path={`${match.path}/tags`}
-            render={renderComingSoon}
-          />
-          <Route
             path={`${match.path}/settings`}
             render={renderComingSoon}
           />
@@ -116,7 +112,7 @@ export const PodcastDetails = (props) => {
   )
 }
 
-PodcastDetails.propTypes = {
+PodcastEdit.propTypes = {
   classes: PropTypes.object.isRequired,
   getPodcastDetails: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
@@ -138,4 +134,4 @@ const actions = {
 export default compose(
   connect(selector, actions),
   withStyles(styles)
-)(PodcastDetails)
+)(PodcastEdit)
