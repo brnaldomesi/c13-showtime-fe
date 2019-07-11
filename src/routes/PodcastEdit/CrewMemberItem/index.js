@@ -2,15 +2,14 @@ import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Card from '@material-ui/core/Card'
 import Grid from '@material-ui/core/Grid'
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@material-ui/core/IconButton'
 import EditIcon from '@material-ui/icons/Edit';
 import PropTypes from 'prop-types'
 import Typography from '@material-ui/core/Typography'
 
 import ThumbnailImage from 'components/ThumbnailImage'
 import useStyles from './styles'
-
-const getFullName = (crewMember) => `${crewMember.firstName} ${crewMember.lastName}`
+import { getFullName } from 'utils/helpers'
 
 const CrewMemberItem = ({ crewMember, match, number }) => {
   const classes = useStyles();

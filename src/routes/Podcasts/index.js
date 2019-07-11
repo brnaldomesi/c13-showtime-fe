@@ -80,10 +80,10 @@ export const Podcasts = (props) => {
                         variant="contained"
                         color="primary"
                         className={classes.episodes}
-                        to={`/podcasts/${podcast.guid}/episodes`}
+                        to={`/podcasts/${podcast.guid}`}
                         component={Link}
                       >
-                        Episodes
+                        Details
                       </Button>
                       <Button
                         variant="contained"

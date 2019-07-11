@@ -6,3 +6,5 @@ export const podcastsListSelector = dataSelector('podcastsList', EMPTY_LIST_DATA
 export const podcastsListLoadingSelector = isRequestPending('podcastsList', 'get')
 
 export const podcastDetailsSelector = dataSelector('podcastDetails', null)
+
+export const podcastDetailsLoadingSelector = isRequestPending('podcastDetails', 'get')

@@ -55,7 +55,7 @@ export const PodcastEpisodes = (props) => {
           </Typography>
         </Grid>
         <Grid item>
-          <Button color="primary" component={Link} to={`/podcasts/${match.params.podcastGuid}/edit`}>
+          <Button color="primary" component={Link} to={`/podcasts/${match.params.podcastGuid}`}>
             Back to Podcast
           </Button>
         </Grid>
