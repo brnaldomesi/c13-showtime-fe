@@ -12,6 +12,7 @@ import LoginForm from './LoginForm'
 import styles from './styles'
 import { formSubmit } from 'utils/form'
 import { authLogin } from 'redux/modules/auth'
+import { userIsNotAuthenticatedRedir } from 'hocs/withAuth'
 
 const validationSchema = Yup.object().shape({
   username: Yup.string().required('Username is required'),
@@ -56,6 +57,7 @@ const actions = {
 }
 
 export default compose(
+  userIsNotAuthenticatedRedir,
   connect(null, actions),
   withStyles(styles),
 )(Login)
