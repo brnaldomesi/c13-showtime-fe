@@ -10,7 +10,7 @@ const authLogin = apiCallSaga({
   type: AUTH_LOGIN,
   method: 'post',
   path: '/token/auth',
-  selectorKey: 'todoList',
+  selectorKey: 'authLogin',
   success: function * (payload) {
     yield put(authLoginSuccess(payload))
   },

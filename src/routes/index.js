@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import AppContainer from 'components/AppContainer'
 import Dashboard from './Dashboard'
+import Login from './Login'
 import PodcastDetails from './PodcastDetails'
 import PodcastEdit from './PodcastEdit'
 import PodcastEpisodes from './PodcastEpisodes'
@@ -20,6 +21,7 @@ const routes = ({ history }) => (
           <Route path="/podcasts/:podcastGuid/episodes" component={PodcastEpisodes} />
           <Route path="/podcasts/:podcastGuid/edit/:tabId?" component={PodcastEdit} />
           <Route exact path="/" component={Dashboard} />
+          <Route exact path="/login" component={Login} />
         </Switch>
       </MainLayout>
     </AppContainer>
