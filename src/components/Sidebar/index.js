@@ -15,6 +15,7 @@ import LogoutIcon from '@material-ui/icons/PowerSettingsNew'
 import PropTypes from 'prop-types'
 
 import { authLogout } from 'redux/modules/auth'
+import { userIsAuthenticated } from 'hocs/withAuth'
 import styles from './styles'
 
 const SidebarItem = ({ icon, text, to, onClick }) => {
@@ -75,6 +76,7 @@ const actions = {
 }
 
 export default compose(
+  userIsAuthenticated,
   connect(null, actions),
   withStyles(styles)
 )(Sidebar)
