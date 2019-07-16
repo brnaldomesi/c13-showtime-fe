@@ -2,7 +2,8 @@ import { put, takeLatest } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
 import {
-  AUTH_LOGIN
+  AUTH_LOGIN,
+  AUTH_LOGOUT,
 } from './types'
 import { authLoginSuccess, authLoginFail } from './actions'
 import { saveData } from 'utils/storage'
@@ -21,6 +22,11 @@ const authLogin = apiCallSaga({
   }
 })
 
+const authLogout = function* (action) {
+  yield saveData({ auth: null })
+}
+
 export default function* rootSaga() {
   yield takeLatest(AUTH_LOGIN, authLogin)
+  yield takeLatest(AUTH_LOGOUT, authLogout)
 }

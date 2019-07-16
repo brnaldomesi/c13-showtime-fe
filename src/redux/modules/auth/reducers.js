@@ -7,7 +7,7 @@ import { loadData } from 'utils/storage'
 const getInitialState = () => {
   const { auth } = loadData()
   return {
-    isAuthenticated: get(auth, 'accessCsrf') && get(auth, 'refreshCsrf'),
+    isAuthenticated: Boolean(get(auth, 'accessCsrf') && get(auth, 'refreshCsrf')),
     accessCsrf: get(auth, 'accessCsrf') || null,
     refreshCsrf: get(auth, 'refreshCsrf') || null,
   }
@@ -26,7 +26,13 @@ export default handleActions(
       isAuthenticated: false,
       accessCsrf: null,
       refreshCsrf: null
-    })
+    }),
+    [types.AUTH_LOGOUT]: (state, { payload }) => ({
+      ...state,
+      isAuthenticated: false,
+      accessCsrf: null,
+      refreshCsrf: null
+    }),
   },
   getInitialState()
 )

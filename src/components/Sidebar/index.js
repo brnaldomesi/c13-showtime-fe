@@ -1,4 +1,6 @@
 import React from 'react'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import IconCast from '@material-ui/icons/Cast'
@@ -11,19 +13,21 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import LogoutIcon from '@material-ui/icons/PowerSettingsNew'
 import PropTypes from 'prop-types'
+
+import { authLogout } from 'redux/modules/auth'
 import styles from './styles'
 
-const SidebarItem = ({ icon, text, to }) => {
+const SidebarItem = ({ icon, text, to, onClick }) => {
   const Icon = icon
   return (
-    <ListItem button component={to ? Link : undefined} to={to}>
+    <ListItem button component={to ? Link : undefined} to={to} onClick={onClick}>
       <ListItemIcon><Icon /></ListItemIcon>
       <ListItemText primary={text} />
     </ListItem>
   )
 }
 
-const Sidebar = ({ classes, open, toggle }) => {
+const Sidebar = ({ authLogout, classes, open, toggle }) => {
   const handleToggle = () => toggle(!open)
   const sideList = (
     <div className={classes.list}>
@@ -53,16 +57,24 @@ const Sidebar = ({ classes, open, toggle }) => {
         onClick={handleToggle}
         onKeyDown={handleToggle}
       >
-        <SidebarItem icon={LogoutIcon} text="Logout" />
+        <SidebarItem icon={LogoutIcon} text="Logout" onClick={authLogout} />
       </div>
     </Drawer>
   )
 }
 
 Sidebar.propTypes = {
+  authLogout: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
   open: PropTypes.bool.isRequired,
   toggle: PropTypes.func.isRequired,
 }
 
-export default withStyles(styles)(Sidebar)
+const actions = {
+  authLogout
+}
+
+export default compose(
+  connect(null, actions),
+  withStyles(styles)
+)(Sidebar)
