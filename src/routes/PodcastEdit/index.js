@@ -13,6 +13,7 @@ import {
   podcastDetailsSelector,
 } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
 import GeneralEdit from './GeneralEdit'
@@ -132,6 +133,7 @@ const actions = {
 }
 
 export default compose(
+  userIsAuthenticatedRedir,
   connect(selector, actions),
   withStyles(styles)
 )(PodcastEdit)

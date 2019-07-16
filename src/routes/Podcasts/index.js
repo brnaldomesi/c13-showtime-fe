@@ -22,6 +22,7 @@ import {
   podcastsListLoadingSelector
 } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
 import Pagination from 'components/Pagination'
 import styles from './styles'
@@ -129,6 +130,7 @@ const actions = {
 
 export default compose(
   withRouterAndQueryParams,
+  userIsAuthenticatedRedir,
   connect(selector, actions),
   withStyles(styles)
 )(Podcasts)

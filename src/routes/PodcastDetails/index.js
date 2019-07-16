@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
 import Paper from '@material-ui/core/Paper'
@@ -15,12 +16,12 @@ import {
   podcastDetailsLoadingSelector,
   podcastDetailsSelector,
 } from 'redux/modules/podcast'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import CrewCarousel from './CrewCarousel'
 import LoadingIndicator from 'components/LoadingIndicator'
 import RecentEpisodes from './RecentEpisodes'
 import ThumbnailImage from 'components/ThumbnailImage'
 import styles from './styles'
-import { Button } from '@material-ui/core';
 
 export const PodcastDetails = (props) => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading } = props
@@ -138,6 +139,7 @@ const actions = {
 }
 
 export default compose(
+  userIsAuthenticatedRedir,
   connect(selector, actions),
   withStyles(styles)
 )(PodcastDetails)

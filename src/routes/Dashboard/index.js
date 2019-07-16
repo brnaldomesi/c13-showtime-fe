@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { compose } from 'redux'
 import { withStyles } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
 
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import styles from './styles'
-import Typography from '@material-ui/core/Typography';
+import Typography from '@material-ui/core/Typography'
 
 class Dashboard extends Component {
   static propTypes = {
@@ -22,4 +24,7 @@ class Dashboard extends Component {
   }
 }
 
-export default withStyles(styles)(Dashboard)
+export default compose(
+  userIsAuthenticatedRedir,
+  withStyles(styles)
+)(Dashboard)
