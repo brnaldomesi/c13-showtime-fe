@@ -5,6 +5,7 @@ import {
   AUTH_LOGIN
 } from './types'
 import { authLoginSuccess, authLoginFail } from './actions'
+import { saveData } from 'utils/storage'
 
 const authLogin = apiCallSaga({
   type: AUTH_LOGIN,
@@ -12,6 +13,7 @@ const authLogin = apiCallSaga({
   path: '/token/auth',
   selectorKey: 'authLogin',
   success: function * (payload) {
+    saveData({ auth: payload });
     yield put(authLoginSuccess(payload))
   },
   fail:  function * (payload) {

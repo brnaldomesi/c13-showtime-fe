@@ -1,5 +1,17 @@
 import { handleActions } from 'redux-actions'
+import get from 'lodash/get'
+
 import * as types from './types'
+import { loadData } from 'utils/storage'
+
+const getInitialState = () => {
+  const { auth } = loadData()
+  return {
+    isAuthenticated: get(auth, 'accessCsrf') && get(auth, 'refreshCsrf'),
+    accessCsrf: get(auth, 'accessCsrf') || null,
+    refreshCsrf: get(auth, 'refreshCsrf') || null,
+  }
+}
 
 export default handleActions(
   {
@@ -16,9 +28,5 @@ export default handleActions(
       refreshCsrf: null
     })
   },
-  {
-    isAuthenticated: false,
-    accessCsrf: null,
-    refreshCsrf: null
-  }
+  getInitialState()
 )
