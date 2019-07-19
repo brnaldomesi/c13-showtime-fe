@@ -16,7 +16,7 @@ const LoginForm = ({
   submitting
 }) => (
   <form onSubmit={handleSubmit}>
-    <Field name="username" type="text" placeholder="Username" component={FormInput} fullWidth className={classes.field} />
+    <Field name="username" type="text" placeholder="Email" component={FormInput} fullWidth className={classes.field} />
     <Field name="password" type="password" placeholder="Password" component={FormInput} fullWidth className={classes.field} />
     <section className={classes.sectionSubmit}>
       <Button variant="contained" color="primary" type="submit">
