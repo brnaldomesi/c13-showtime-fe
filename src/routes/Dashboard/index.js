@@ -30,17 +30,17 @@ class Dashboard extends Component {
         <Grid container>
           <Grid item sm={6}>
             <List component="nav" aria-label="Navigation" className={classes.list}>
+              <ListItem button component={Link} to="/networks">
+                <ListItemIcon>
+                  <IconNetwork />
+                </ListItemIcon>
+                <ListItemText primary="View Networks" />
+              </ListItem>
               <ListItem button component={Link} to="/podcasts">
                 <ListItemIcon>
                   <IconCast />
                 </ListItemIcon>
                 <ListItemText primary="View Podcasts" />
-              </ListItem>
-              <ListItem button component={Link} to="/">
-                <ListItemIcon>
-                  <IconNetwork />
-                </ListItemIcon>
-                <ListItemText primary="View Networks (Coming Soon)" />
               </ListItem>
             </List>
           </Grid>

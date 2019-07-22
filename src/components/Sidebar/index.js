@@ -22,7 +22,9 @@ const SidebarItem = ({ icon, text, to, onClick }) => {
   const Icon = icon
   return (
     <ListItem button component={to ? Link : undefined} to={to} onClick={onClick}>
-      <ListItemIcon><Icon /></ListItemIcon>
+      <ListItemIcon>
+        <Icon />
+      </ListItemIcon>
       <ListItemText primary={text} />
     </ListItem>
   )
@@ -37,6 +39,9 @@ const Sidebar = ({ authLogout, classes, open, toggle }) => {
       </List>
       <Divider />
       <List>
+        <SidebarItem icon={IconCast} text="Networks" to="/networks" />
+      </List>
+      <List>
         <SidebarItem icon={IconCast} text="Podcasts" to="/podcasts" />
       </List>
     </div>
@@ -44,20 +49,11 @@ const Sidebar = ({ authLogout, classes, open, toggle }) => {
 
   return (
     <Drawer open={open} onClose={handleToggle}>
-      <div
-        tabIndex={0}
-        role="button"
-        onClick={handleToggle}
-        onKeyDown={handleToggle}
-      >
+      <div tabIndex={0} role="button" onClick={handleToggle} onKeyDown={handleToggle}>
         {sideList}
       </div>
       <div className={classes.spacer} />
-      <div
-        className={classes.footer}
-        onClick={handleToggle}
-        onKeyDown={handleToggle}
-      >
+      <div className={classes.footer} onClick={handleToggle} onKeyDown={handleToggle}>
         <SidebarItem icon={LogoutIcon} text="Logout" onClick={authLogout} />
       </div>
     </Drawer>
@@ -68,7 +64,7 @@ Sidebar.propTypes = {
   authLogout: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
   open: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
+  toggle: PropTypes.func.isRequired
 }
 
 const actions = {
@@ -77,6 +73,9 @@ const actions = {
 
 export default compose(
   userIsAuthenticated,
-  connect(null, actions),
+  connect(
+    null,
+    actions
+  ),
   withStyles(styles)
 )(Sidebar)
