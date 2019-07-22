@@ -1,6 +1,6 @@
 export default theme => ({
   root: {
-    width: '100%',
+    width: '100%'
   },
   table: {
     minWidth: 700,

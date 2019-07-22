@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography'
 class Dashboard extends Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   }
 
   render() {
