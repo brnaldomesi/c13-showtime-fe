@@ -1,13 +1,19 @@
 import axios from 'axios'
 import get from 'lodash/get'
 import pick from 'lodash/pick'
-import { call, put } from 'redux-saga/effects'
+import { call, put, select } from 'redux-saga/effects'
 
 import { requestRejected, requestPending, requestSuccess } from './actions'
+import { tokenSelector } from 'redux/modules/auth/selectors'
 
-const defaultHeaders = () => ({
+const defaultHeaders = token => ({
   'Content-Type': 'application/json',
-  Accept: 'application/json'
+  Accept: 'application/json',
+  ...(token
+    ? {
+        Authorization: `Bearer ${token}`
+      }
+    : {})
 })
 
 export default ({
@@ -46,11 +52,13 @@ export default ({
 
       const queryParams = { ...defaultParams, ...params }
 
+      const token = yield select(tokenSelector)
+
       const res = yield call(axios.request, {
         url: typeof path === 'function' ? path(action) : path,
         method: method.toLowerCase(),
         headers: {
-          ...defaultHeaders(),
+          ...defaultHeaders(token),
           ...headers,
           ...(customHeaders ? customHeaders : {})
         },

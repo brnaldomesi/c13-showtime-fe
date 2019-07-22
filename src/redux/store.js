@@ -3,19 +3,21 @@ import createSagaMiddleware from 'redux-saga'
 import { createStore, applyMiddleware, compose } from 'redux'
 import { routerMiddleware } from 'connected-react-router'
 
+import authMiddleware from './middlewares/auth'
 import getReducers from './modules'
 import sagas from './modules/sagas'
 
 // Create a history of your choosing (we're using a browser history in this case)
 export const history = createBrowserHistory()
 
-// Build the middleware for intercepting and dispatching navigation actions
-const middleware = routerMiddleware(history)
-
 // Redux-saga middleware
 const sagaMiddleware = createSagaMiddleware()
 
-const middlewares = [middleware, sagaMiddleware]
+const middlewares = [
+  routerMiddleware(history), // Build the middleware for intercepting and dispatching navigation actions
+  authMiddleware,
+  sagaMiddleware
+]
 
 const enhancers = [applyMiddleware(...middlewares)]
 
