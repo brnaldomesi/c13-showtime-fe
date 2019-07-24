@@ -15,9 +15,9 @@ import { authLogin } from 'redux/modules/auth'
 import { userIsNotAuthenticatedRedir } from 'hocs/withAuth'
 
 const validationSchema = Yup.object().shape({
-  username: Yup.string().required('Username is required'),
-  password: Yup.string().required('Password is required'),
-});
+  email: Yup.string().required('Email is required'),
+  password: Yup.string().required('Password is required')
+})
 
 class Login extends Component {
   static propTypes = {
@@ -42,11 +42,7 @@ class Login extends Component {
         <Typography variant="h6" align="center" gutterBottom>
           Login
         </Typography>
-        <Formik
-          component={LoginForm}
-          onSubmit={this.handleSubmit}
-          validationSchema={validationSchema}
-        />
+        <Formik component={LoginForm} onSubmit={this.handleSubmit} validationSchema={validationSchema} />
       </Paper>
     )
   }
@@ -58,6 +54,9 @@ const actions = {
 
 export default compose(
   userIsNotAuthenticatedRedir,
-  connect(null, actions),
-  withStyles(styles),
+  connect(
+    null,
+    actions
+  ),
+  withStyles(styles)
 )(Login)

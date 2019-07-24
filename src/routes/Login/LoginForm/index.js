@@ -9,15 +9,17 @@ import FormInput from 'components/FormInput'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
 
-const LoginForm = ({
-  classes,
-  error,
-  handleSubmit,
-  submitting
-}) => (
+const LoginForm = ({ classes, error, handleSubmit, submitting }) => (
   <form onSubmit={handleSubmit}>
-    <Field name="username" type="text" placeholder="Email" component={FormInput} fullWidth className={classes.field} />
-    <Field name="password" type="password" placeholder="Password" component={FormInput} fullWidth className={classes.field} />
+    <Field name="email" type="text" placeholder="Email" component={FormInput} fullWidth className={classes.field} />
+    <Field
+      name="password"
+      type="password"
+      placeholder="Password"
+      component={FormInput}
+      fullWidth
+      className={classes.field}
+    />
     <section className={classes.sectionSubmit}>
       <Button variant="contained" color="primary" type="submit">
         Login
