@@ -6,13 +6,13 @@ import {
   GET_PODCAST_DETAILS,
   UPDATE_PODCAST,
   UPDATE_PODCAST_DETAILS,
-  UPLOAD_PODCAST_IMAGE,
+  UPLOAD_PODCAST_IMAGE
 } from './types'
 
 const getPodcastsList = apiCallSaga({
   type: GET_PODCASTS_LIST,
   method: 'get',
-  allowedParamKeys: ['startAfter', 'endingBefore', 'limit'],
+  allowedParamKeys: ['nextCursor', 'prevCursor', 'limit', 'sortOrder'],
   path: '/podcasts',
   selectorKey: 'podcastsList'
 })
@@ -41,7 +41,7 @@ const uploadPodcastImage = apiCallSaga({
   selectorKey: 'podcastDetails.imageUrl'
 })
 
-const updatePodcastDetails = function* (action) {
+const updatePodcastDetails = function*(action) {
   const { payload } = action
   const { resolve, reject } = payload
   const { image, ...podcastData } = payload.data

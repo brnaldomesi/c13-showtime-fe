@@ -19,11 +19,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE } from 'config/constants'
-import {
-  getEpisodesList,
-  episodesListSelector,
-  episodesListLoadingSelector
-} from 'redux/modules/episode'
+import { getEpisodesList, episodesListSelector, episodesListLoadingSelector } from 'redux/modules/episode'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -31,21 +27,17 @@ import Pagination from 'components/Pagination'
 import styles from './styles'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
-export const PodcastEpisodes = (props) => {
-  const { classes, match, queryParams, getEpisodesList,
-    episodes, episodesLoading } = props
+export const PodcastEpisodes = props => {
+  const { classes, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
   const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
-  const episodesList = episodes ? episodes.results : []
+  const episodesList = episodes ? episodes.data : []
 
-  useEffect(
-    () => {
-      getEpisodesList({
-        podcastGuid: match.params.podcastGuid,
-        params: { startAfter, endBefore, limit }
-      })
-    },
-    [startAfter, endBefore, limit, match, getEpisodesList]
-  )
+  useEffect(() => {
+    getEpisodesList({
+      podcastGuid: match.params.podcastGuid,
+      params: { startAfter, endBefore, limit }
+    })
+  }, [startAfter, endBefore, limit, match, getEpisodesList])
 
   return (
     <div className={classes.root}>
@@ -81,7 +73,9 @@ export const PodcastEpisodes = (props) => {
                       <img src={get(episode, 'imageUrls.original')} width={100} alt="" />
                     </TableCell>
                     <TableCell>
-                      <Typography variant="subtitle1" color="textPrimary">{episode.title}</Typography>
+                      <Typography variant="subtitle1" color="textPrimary">
+                        {episode.title}
+                      </Typography>
                       <Typography color="textSecondary">{truncate(episode.summary)}</Typography>
                     </TableCell>
                     <TableCell align="right" className={classes.actions}>
@@ -107,12 +101,12 @@ PodcastEpisodes.propTypes = {
   episodes: APIListType.isRequired,
   episodesLoading: PropTypes.bool,
   pushWithQuery: PropTypes.func.isRequired,
-  queryParams: PropTypes.object,
+  queryParams: PropTypes.object
 }
 
 const selector = createStructuredSelector({
   episodes: episodesListSelector,
-  episodesLoading: episodesListLoadingSelector,
+  episodesLoading: episodesListLoadingSelector
 })
 
 const actions = {
@@ -122,6 +116,9 @@ const actions = {
 export default compose(
   withRouterAndQueryParams,
   userIsAuthenticatedRedir,
-  connect(selector, actions),
+  connect(
+    selector,
+    actions
+  ),
   withStyles(styles)
 )(PodcastEpisodes)

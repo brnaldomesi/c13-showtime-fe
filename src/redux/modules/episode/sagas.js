@@ -1,16 +1,12 @@
 import { takeLatest } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
-import {
-  GET_EPISODE_DETAILS,
-  GET_EPISODES_LIST,
-  UPDATE_EPISODE_DETAILS,
-} from './types'
+import { GET_EPISODE_DETAILS, GET_EPISODES_LIST, UPDATE_EPISODE_DETAILS } from './types'
 
 const getEpisodesList = apiCallSaga({
   type: GET_EPISODES_LIST,
   method: 'get',
-  allowedParamKeys: ['startAfter', 'endingBefore', 'limit'],
+  allowedParamKeys: ['nextCursor', 'prevCursor', 'limit', 'sortOrder'],
   path: ({ payload }) => `/podcasts/${payload.podcastGuid}/episodes`,
   selectorKey: 'episodesList'
 })

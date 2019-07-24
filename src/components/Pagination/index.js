@@ -10,43 +10,32 @@ import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE } from 'config/constants'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
-export const Pagination = (props) => {
-  const { history, listData, location, pushWithQuery, queryParams } = props
-  const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
-  const results = listData ? listData.results : []
-  const isPrevDisabled = (
-    (!startAfter && !endBefore) || (Boolean(results.length) && results[0].guid === endBefore)
-  ) && !get(listData, 'links.prev')
-  const isNextDisabled = !listData.hasMore && !get(listData, 'links.next')
+export const Pagination = props => {
+  const { listData, location, pushWithQuery, queryParams } = props
+  const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
+  const isPrevDisabled = !prevCursor && !nextCursor && !get(listData, 'prevCursor')
+  const isNextDisabled = !get(listData, 'nextCursor')
 
   const handlePrevPage = () => {
-    if (listData.links) {
-      history.push(listData.links.prev)
-    } else {
-      if (!results.length) return
-      pushWithQuery({
-        location,
-        queryParams: {
-          limit,
-          endBefore: results[0].guid,
-        }
-      })
-    }
+    if (!listData.prevCursor) return
+    pushWithQuery({
+      location,
+      queryParams: {
+        limit,
+        prevCursor: listData.prevCursor
+      }
+    })
   }
 
   const handleNextPage = () => {
-    if (listData.links) {
-      history.push(listData.links.next)
-    } else {
-      if (!results.length) return
-      pushWithQuery({
-        location,
-        queryParams: {
-          limit,
-          startAfter: results[results.length - 1].guid,
-        }
-      })
-    }
+    if (!listData.nextCursor) return
+    pushWithQuery({
+      location,
+      queryParams: {
+        limit,
+        nextCursor: listData.nextCursor
+      }
+    })
   }
 
   return (
@@ -69,7 +58,7 @@ Pagination.propTypes = {
   match: PropTypes.object.isRequired,
   listData: APIListType.isRequired,
   pushWithQuery: PropTypes.func.isRequired,
-  queryParams: PropTypes.object,
+  queryParams: PropTypes.object
 }
 
 export default withRouterAndQueryParams(Pagination)

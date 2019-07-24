@@ -15,29 +15,21 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Typography from '@material-ui/core/Typography'
 
 import { APIListType } from 'utils/propTypes'
-import {
-  getEpisodesList,
-  episodesListSelector,
-  episodesListLoadingSelector
-} from 'redux/modules/episode'
+import { getEpisodesList, episodesListSelector, episodesListLoadingSelector } from 'redux/modules/episode'
 import { truncate } from 'utils/helpers'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
 
-export const RecentEpisodes = (props) => {
-  const { classes, podcastGuid, getEpisodesList,
-    episodes, episodesLoading } = props
-  const episodesList = episodes ? episodes.results : []
+export const RecentEpisodes = props => {
+  const { classes, podcastGuid, getEpisodesList, episodes, episodesLoading } = props
+  const episodesList = episodes ? episodes.data : []
 
-  useEffect(
-    () => {
-      getEpisodesList({
-        podcastGuid: podcastGuid,
-        params: { limit: 5 }
-      })
-    },
-    [podcastGuid, getEpisodesList]
-  )
+  useEffect(() => {
+    getEpisodesList({
+      podcastGuid: podcastGuid,
+      params: { limit: 5 }
+    })
+  }, [podcastGuid, getEpisodesList])
 
   return (
     <div className={classes.root}>
@@ -48,12 +40,7 @@ export const RecentEpisodes = (props) => {
           </Typography>
         </Grid>
         <Grid item>
-          <Button
-            variant="contained"
-            color="primary"
-            component={Link}
-            to={`/podcasts/${podcastGuid}/episodes`}
-          >
+          <Button variant="contained" color="primary" component={Link} to={`/podcasts/${podcastGuid}/episodes`}>
             Browse All
           </Button>
         </Grid>
@@ -71,17 +58,12 @@ export const RecentEpisodes = (props) => {
                   <ListItemText
                     primary={<strong>{episode.title}</strong>}
                     primaryTypographyProps={{
-                      variant: "subtitle2",
+                      variant: 'subtitle2',
                       paragraph: true
                     }}
                     secondary={
                       <>
-                        <Typography
-                          variant="body2"
-                          color="textPrimary"
-                          component="span"
-                          display="block"
-                        >
+                        <Typography variant="body2" color="textPrimary" component="span" display="block">
                           {truncate(episode.summary)}
                         </Typography>
                         {dfFormat(episode.publishedAt, 'MMMM D, YYYY')}
@@ -104,12 +86,12 @@ RecentEpisodes.propTypes = {
   episodes: APIListType.isRequired,
   episodesLoading: PropTypes.bool,
   getEpisodesList: PropTypes.func.isRequired,
-  podcastGuid: PropTypes.string,
+  podcastGuid: PropTypes.string
 }
 
 const selector = createStructuredSelector({
   episodes: episodesListSelector,
-  episodesLoading: episodesListLoadingSelector,
+  episodesLoading: episodesListLoadingSelector
 })
 
 const actions = {
@@ -117,6 +99,9 @@ const actions = {
 }
 
 export default compose(
-  connect(selector, actions),
+  connect(
+    selector,
+    actions
+  ),
   withStyles(styles)
 )(RecentEpisodes)

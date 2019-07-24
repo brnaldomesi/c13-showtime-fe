@@ -27,14 +27,14 @@ import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 export const Podcasts = props => {
   const { classes, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
-  const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
-  const podcastsList = podcasts ? podcasts.results : []
+  const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
+  const podcastsList = podcasts ? podcasts.data : []
 
   useEffect(() => {
     getPodcastsList({
-      params: { startAfter, endBefore, limit }
+      params: { prevCursor, nextCursor, limit }
     })
-  }, [startAfter, endBefore, limit, getPodcastsList])
+  }, [prevCursor, nextCursor, limit, getPodcastsList])
 
   return (
     <div className={classes.root}>
