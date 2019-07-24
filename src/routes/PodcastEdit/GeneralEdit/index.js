@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
 // import FileDropzone from 'components/FileDropzone'
+import FormCheckbox from 'components/FormCheckbox'
 import FormLockerInput from 'components/FormLockerInput'
 import FormTagsInput from 'components/FormTagsInput'
 import Hr from 'components/Hr'
@@ -16,10 +17,10 @@ import LoadingIndicator from 'components/LoadingIndicator'
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),
   summary: Yup.string().required('Summary is required'),
-  slug: Yup.string().required('Slug is required'),
-});
+  slug: Yup.string().required('Slug is required')
+})
 
-const renderForm = (props) => (
+const renderForm = props => (
   <form onSubmit={props.handleSubmit}>
     <Field
       name="title"
@@ -76,13 +77,18 @@ const renderForm = (props) => (
       lockerName="lockedSyncFields"
       lockerValue="tags"
     />
+    <Field name="status" label="Active" toggleValues={['INACTIVE', 'ACTIVE']} component={FormCheckbox} />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to="/podcasts">Cancel</Button>
+        <Button color="primary" type="submit" component={Link} to="/podcasts">
+          Cancel
+        </Button>
       </Grid>
       <Grid item>
-        <Button variant="contained" color="primary" type="submit">Save Changes</Button>
+        <Button variant="contained" color="primary" type="submit">
+          Save Changes
+        </Button>
       </Grid>
     </Grid>
     {props.isSubmitting && <LoadingIndicator />}
@@ -100,7 +106,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
         'websiteUrl',
         'lockedSyncFields',
         // 'image',
-        'tags',
+        'tags'
       ]),
       actions
     )
@@ -119,7 +125,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
 
 GeneralEdit.propTypes = {
   podcastDetails: PropTypes.object.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired
 }
 
 export default GeneralEdit

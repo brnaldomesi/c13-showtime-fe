@@ -16,11 +16,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE } from 'config/constants'
-import {
-  getPodcastsList,
-  podcastsListSelector,
-  podcastsListLoadingSelector
-} from 'redux/modules/podcast'
+import { getPodcastsList, podcastsListSelector, podcastsListLoadingSelector } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -29,19 +25,16 @@ import styles from './styles'
 import ThumbnailImage from 'components/ThumbnailImage'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
-export const Podcasts = (props) => {
+export const Podcasts = props => {
   const { classes, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
   const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const podcastsList = podcasts ? podcasts.results : []
 
-  useEffect(
-    () => {
-      getPodcastsList({
-        params: { startAfter, endBefore, limit }
-      })
-    },
-    [startAfter, endBefore, limit, getPodcastsList]
-  )
+  useEffect(() => {
+    getPodcastsList({
+      params: { startAfter, endBefore, limit }
+    })
+  }, [startAfter, endBefore, limit, getPodcastsList])
 
   return (
     <div className={classes.root}>
@@ -58,6 +51,7 @@ export const Podcasts = (props) => {
                 <TableRow>
                   <TableCell>Thumbnail</TableCell>
                   <TableCell>Title</TableCell>
+                  <TableCell>Status</TableCell>
                   <TableCell />
                 </TableRow>
               </TableHead>
@@ -73,8 +67,15 @@ export const Podcasts = (props) => {
                       />
                     </TableCell>
                     <TableCell>
-                      <Typography variant="subtitle1" color="textPrimary">{podcast.title}</Typography>
+                      <Typography variant="subtitle1" color="textPrimary">
+                        {podcast.title}
+                      </Typography>
                       <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="body2" color="textSecondary">
+                        {podcast.status}
+                      </Typography>
                     </TableCell>
                     <TableCell align="right" className={classes.actions}>
                       <Button
@@ -82,8 +83,7 @@ export const Podcasts = (props) => {
                         color="primary"
                         className={classes.episodes}
                         to={`/podcasts/${podcast.guid}`}
-                        component={Link}
-                      >
+                        component={Link}>
                         Details
                       </Button>
                       <Button
@@ -91,11 +91,9 @@ export const Podcasts = (props) => {
                         color="primary"
                         className={classes.edit}
                         to={`/podcasts/${podcast.guid}/edit`}
-                        component={Link}
-                      >
+                        component={Link}>
                         Edit
                       </Button>
-                      <Button variant="contained" color="secondary">Disable</Button>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -116,12 +114,12 @@ Podcasts.propTypes = {
   podcasts: APIListType.isRequired,
   podcastsLoading: PropTypes.bool,
   pushWithQuery: PropTypes.func.isRequired,
-  queryParams: PropTypes.object,
+  queryParams: PropTypes.object
 }
 
 const selector = createStructuredSelector({
   podcasts: podcastsListSelector,
-  podcastsLoading: podcastsListLoadingSelector,
+  podcastsLoading: podcastsListLoadingSelector
 })
 
 const actions = {
@@ -131,6 +129,9 @@ const actions = {
 export default compose(
   withRouterAndQueryParams,
   userIsAuthenticatedRedir,
-  connect(selector, actions),
+  connect(
+    selector,
+    actions
+  ),
   withStyles(styles)
 )(Podcasts)
