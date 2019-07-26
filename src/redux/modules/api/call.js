@@ -11,7 +11,7 @@ const defaultHeaders = token => ({
   Accept: 'application/json',
   ...(token
     ? {
-        Authorization: `Bearer ${token}`
+        'X-CSRF-Token': token
       }
     : {})
 })
