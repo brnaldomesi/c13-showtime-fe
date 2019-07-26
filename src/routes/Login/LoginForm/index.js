@@ -9,7 +9,7 @@ import FormInput from 'components/FormInput'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
 
-const LoginForm = ({ classes, error, handleSubmit, submitting }) => (
+const LoginForm = ({ classes, errors, handleSubmit, submitting }) => (
   <form onSubmit={handleSubmit}>
     <Field name="email" type="text" placeholder="Email" component={FormInput} fullWidth className={classes.field} />
     <Field
@@ -20,16 +20,16 @@ const LoginForm = ({ classes, error, handleSubmit, submitting }) => (
       fullWidth
       className={classes.field}
     />
+    {errors.globalError && (
+      <Typography color="error" align="center" className={classes.error}>
+        Invalid email or password
+      </Typography>
+    )}
     <section className={classes.sectionSubmit}>
       <Button variant="contained" color="primary" type="submit">
         Login
       </Button>
     </section>
-    {error && (
-      <Typography color="error" align="center" className={classes.error}>
-        {error}
-      </Typography>
-    )}
     {submitting && <LoadingIndicator />}
   </form>
 )

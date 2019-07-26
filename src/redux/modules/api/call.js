@@ -91,7 +91,7 @@ export default ({
 
       return true
     } catch (err) {
-      console.error(err)
+      // console.error(err)
       const errRes = get(err, 'response', err)
       const payload = payloadOnFail ? payloadOnFail(errRes, action) : errRes
       if (!stealthy) {
