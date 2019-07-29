@@ -14,9 +14,11 @@ import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft'
 import PeopleIcon from '@material-ui/icons/People'
 import RssFeedIcon from '@material-ui/icons/RssFeed'
 import SettingsIcon from '@material-ui/icons/Settings'
+import Typography from '@material-ui/core/Typography'
 
 import { SHOWS_DOMAIN } from 'config/constants'
 import styles from './styles'
+import ThumbnailImage from 'components/ThumbnailImage'
 
 const menuItems = [
   { label: 'General', value: 'general', icon: FormatAlignLeftIcon },
@@ -38,13 +40,15 @@ export const NavTabs = ({ classes, history, match, podcastDetails }) => {
         paper: classes.drawerPaper
       }}>
       <div className={classes.toolbar} />
+      <div className={classes.thumbWrapper}>
+        <div className={classes.thumbInner}>
+          <ThumbnailImage imageUrls={podcastDetails.imageUrls} className={classes.image} type="podcast" />
+        </div>
+      </div>
+      <Typography variant="h6" align="center">
+        {podcastDetails.title}
+      </Typography>
       <List>
-        <ListItem component={Link} button to={`/podcasts/${match.params.podcastGuid}`}>
-          <ListItemIcon>
-            <ViewQuitIcon />
-          </ListItemIcon>
-          <ListItemText primary="View Details" />
-        </ListItem>
         <Divider className={classes.divider} />
         {menuItems.map((item, index) => {
           const Icon = item.icon
@@ -58,7 +62,17 @@ export const NavTabs = ({ classes, history, match, podcastDetails }) => {
           )
         })}
       </List>
-      <div className={classes.buttons}>
+      <div className={classes.button}>
+        <Button
+          variant="outlined"
+          component={Link}
+          fullWidth
+          disabled={!podcastDetails}
+          to={`/podcasts/${match.params.podcastGuid}`}>
+          View Details
+        </Button>
+      </div>
+      <div className={classes.button}>
         <Button
           variant="outlined"
           component="a"

@@ -10,11 +10,20 @@ export default theme => ({
     width: drawerWidth
   },
   toolbar: theme.mixins.toolbar,
+  thumbWrapper: {
+    margin: theme.spacing(3)
+  },
+  image: {
+    paddingTop: '100%',
+    width: '100%'
+  },
   divider: {
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(1)
   },
-  buttons: {
-    padding: theme.spacing(3)
+  button: {
+    marginTop: theme.spacing(1),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3)
   }
 })
