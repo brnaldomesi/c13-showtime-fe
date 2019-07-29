@@ -7,7 +7,12 @@ import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 
-import { getPodcastDetails, updatePodcastDetails, podcastDetailsSelector } from 'redux/modules/podcast'
+import {
+  getPodcastDetails,
+  updatePodcastDetails,
+  podcastDetailsSelector,
+  podcastDetailsLoadingSelector
+} from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -21,7 +26,7 @@ import styles from './styles'
 const renderComingSoon = () => <div>Coming Soon...</div>
 
 export const PodcastEdit = props => {
-  const { classes, match, getPodcastDetails, podcastDetails, updatePodcastDetails } = props
+  const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
   const { podcastGuid } = match.params
 
   useEffect(() => {
@@ -42,7 +47,9 @@ export const PodcastEdit = props => {
   return (
     <>
       <NavTabs podcastDetails={podcastDetails} />
-      {podcastDetails ? (
+      {podcastDetailsLoading ? (
+        <LoadingIndicator />
+      ) : podcastDetails ? (
         <Switch>
           <Route
             path={`${match.path}/general`}
@@ -80,9 +87,7 @@ export const PodcastEdit = props => {
           <Route path={`${match.path}/settings`} render={renderComingSoon} />
           <Redirect to={`${match.url}/general`} />
         </Switch>
-      ) : (
-        <LoadingIndicator />
-      )}
+      ) : null}
     </>
   )
 }
@@ -93,12 +98,14 @@ PodcastEdit.propTypes = {
   location: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
   podcastDetails: PropTypes.object,
+  podcastDetailsLoading: PropTypes.bool,
   queryParams: PropTypes.object,
   updatePodcastDetails: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
-  podcastDetails: podcastDetailsSelector
+  podcastDetails: podcastDetailsSelector,
+  podcastDetailsLoading: podcastDetailsLoadingSelector
 })
 
 const actions = {

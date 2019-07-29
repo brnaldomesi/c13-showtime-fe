@@ -16,12 +16,13 @@ import Typography from '@material-ui/core/Typography'
 
 import { APIListType } from 'utils/propTypes'
 import { getEpisodesList, episodesListSelector, episodesListLoadingSelector } from 'redux/modules/episode'
+import { podcastDetailsLoadingSelector } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
 
 export const RecentEpisodes = props => {
-  const { classes, podcastGuid, getEpisodesList, episodes, episodesLoading } = props
+  const { classes, podcastGuid, getEpisodesList, episodes, episodesLoading, podcastDetailsLoading } = props
   const episodesList = episodes ? episodes.data : []
 
   useEffect(() => {
@@ -46,9 +47,7 @@ export const RecentEpisodes = props => {
         </Grid>
       </Grid>
       {episodesLoading ? (
-        <div className={classes.static}>
-          <LoadingIndicator />
-        </div>
+        <div className={classes.relative}>{!podcastDetailsLoading && <LoadingIndicator />}</div>
       ) : (
         <>
           <List className={classes.list}>
@@ -86,12 +85,14 @@ RecentEpisodes.propTypes = {
   episodes: APIListType.isRequired,
   episodesLoading: PropTypes.bool,
   getEpisodesList: PropTypes.func.isRequired,
-  podcastGuid: PropTypes.string
+  podcastGuid: PropTypes.string,
+  podcastDetailsLoading: PropTypes.bool
 }
 
 const selector = createStructuredSelector({
   episodes: episodesListSelector,
-  episodesLoading: episodesListLoadingSelector
+  episodesLoading: episodesListLoadingSelector,
+  podcastDetailsLoading: podcastDetailsLoadingSelector
 })
 
 const actions = {

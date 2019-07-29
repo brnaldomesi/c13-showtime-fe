@@ -2,7 +2,7 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import cn from 'classnames'
 import Divider from '@material-ui/core/Divider'
-import FormHelperText from '@material-ui/core/FormHelperText';
+import FormHelperText from '@material-ui/core/FormHelperText'
 import get from 'lodash/get'
 import IconButton from '@material-ui/core/IconButton'
 import InputBase from '@material-ui/core/InputBase'
@@ -24,7 +24,7 @@ const FormLockerInput = ({
   placeholder,
   multiline,
   type,
-  rows,
+  rows
 }) => {
   const handleToggle = () => {
     const lockerValues = get(form.values, lockerName) || []
@@ -52,11 +52,10 @@ const FormLockerInput = ({
           multiline={multiline}
           placeholder={placeholder}
           {...field}
+          value={field.value || ''}
         />
       </div>
-      {Boolean(error) && (
-        <FormHelperText error>{error}</FormHelperText>
-      )}
+      {Boolean(error) && <FormHelperText error>{error}</FormHelperText>}
     </div>
   )
 }
@@ -70,7 +69,7 @@ FormLockerInput.propTypes = {
   rows: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   lockerName: PropTypes.string.isRequired,
   lockerValue: PropTypes.string.isRequired,
-  type: PropTypes.string,
+  type: PropTypes.string
 }
 
 export default withStyles(styles)(FormLockerInput)

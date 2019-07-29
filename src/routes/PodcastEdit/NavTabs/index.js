@@ -64,6 +64,7 @@ export const NavTabs = ({ classes, history, match, podcastDetails }) => {
           component="a"
           fullWidth
           target="_blank"
+          disabled={!podcastDetails}
           href={`https://${SHOWS_DOMAIN}/podcast/${podcastDetails.slug}`}>
           View on Show Hub
         </Button>

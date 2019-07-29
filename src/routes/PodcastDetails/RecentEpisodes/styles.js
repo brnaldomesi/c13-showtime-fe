@@ -2,9 +2,9 @@ export default theme => ({
   root: {
     position: 'relative'
   },
-  static: {
+  relative: {
     position: 'relative',
-    height: theme.spacing(10)
+    height: theme.spacing(20)
   },
   list: {
     border: `1px solid ${theme.palette.divider}`,

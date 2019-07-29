@@ -116,6 +116,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
   return (
     <Formik
       initialValues={initialValues}
+      enableReinitialize
       onSubmit={handleSubmit}
       render={renderForm}
       validationSchema={validationSchema}
