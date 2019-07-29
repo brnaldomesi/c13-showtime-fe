@@ -4,10 +4,14 @@ export default theme => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    zIndex: theme.zIndex.drawer - 1,
+    zIndex: theme.zIndex.drawer - 1
   },
   drawerPaper: {
-    width: drawerWidth,
+    width: drawerWidth
   },
   toolbar: theme.mixins.toolbar,
+  divider: {
+    marginBottom: theme.spacing(1),
+    marginTop: theme.spacing(1)
+  }
 })
