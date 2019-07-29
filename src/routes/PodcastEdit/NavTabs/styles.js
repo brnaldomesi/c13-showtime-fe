@@ -13,5 +13,8 @@ export default theme => ({
   divider: {
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(1)
+  },
+  buttons: {
+    padding: theme.spacing(3)
   }
 })

@@ -7,11 +7,7 @@ import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 
-import {
-  getPodcastDetails,
-  updatePodcastDetails,
-  podcastDetailsSelector,
-} from 'redux/modules/podcast'
+import { getPodcastDetails, updatePodcastDetails, podcastDetailsSelector } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -24,16 +20,13 @@ import styles from './styles'
 
 const renderComingSoon = () => <div>Coming Soon...</div>
 
-export const PodcastEdit = (props) => {
+export const PodcastEdit = props => {
   const { classes, match, getPodcastDetails, podcastDetails, updatePodcastDetails } = props
   const { podcastGuid } = match.params
 
-  useEffect(
-    () => {
-      getPodcastDetails({ guid: podcastGuid })
-    },
-    [podcastGuid, getPodcastDetails]
-  )
+  useEffect(() => {
+    getPodcastDetails({ guid: podcastGuid })
+  }, [podcastGuid, getPodcastDetails])
 
   const handleSubmit = (values, formActions) => {
     formSubmit(
@@ -48,18 +41,14 @@ export const PodcastEdit = (props) => {
 
   return (
     <>
-      <NavTabs />
+      <NavTabs podcastDetails={podcastDetails} />
       {podcastDetails ? (
         <Switch>
           <Route
             path={`${match.path}/general`}
             render={props => (
               <Paper className={classes.paper}>
-                <GeneralEdit
-                  {...props}
-                  podcastDetails={podcastDetails}
-                  onSubmit={handleSubmit}
-                />
+                <GeneralEdit {...props} podcastDetails={podcastDetails} onSubmit={handleSubmit} />
               </Paper>
             )}
           />
@@ -67,9 +56,7 @@ export const PodcastEdit = (props) => {
             path={`${match.path}/crew/new`}
             render={props => (
               <Paper className={classes.paper}>
-                <CrewMemberEdit
-                  {...props}
-                />
+                <CrewMemberEdit {...props} />
               </Paper>
             )}
           />
@@ -77,33 +64,20 @@ export const PodcastEdit = (props) => {
             path={`${match.path}/crew/:crewGuid/edit`}
             render={props => (
               <Paper className={classes.paper}>
-                <CrewMemberEdit
-                  {...props}
-                />
+                <CrewMemberEdit {...props} />
               </Paper>
             )}
           />
-          <Route
-            path={`${match.path}/crew`}
-            exact
-            component={CrewMembers}
-          />
+          <Route path={`${match.path}/crew`} exact component={CrewMembers} />
           <Route
             path={`${match.path}/subscribe-links`}
             render={props => (
               <Paper className={classes.paper}>
-                <SubscribeLinks
-                  {...props}
-                  initialValues={podcastDetails}
-                  onSubmit={handleSubmit}
-                />
+                <SubscribeLinks {...props} initialValues={podcastDetails} onSubmit={handleSubmit} />
               </Paper>
             )}
           />
-          <Route
-            path={`${match.path}/settings`}
-            render={renderComingSoon}
-          />
+          <Route path={`${match.path}/settings`} render={renderComingSoon} />
           <Redirect to={`${match.url}/general`} />
         </Switch>
       ) : (
@@ -120,7 +94,7 @@ PodcastEdit.propTypes = {
   match: PropTypes.object.isRequired,
   podcastDetails: PropTypes.object,
   queryParams: PropTypes.object,
-  updatePodcastDetails: PropTypes.func.isRequired,
+  updatePodcastDetails: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -129,11 +103,14 @@ const selector = createStructuredSelector({
 
 const actions = {
   getPodcastDetails,
-  updatePodcastDetails,
+  updatePodcastDetails
 }
 
 export default compose(
   userIsAuthenticatedRedir,
-  connect(selector, actions),
+  connect(
+    selector,
+    actions
+  ),
   withStyles(styles)
 )(PodcastEdit)

@@ -2,6 +2,7 @@ import React from 'react'
 import { compose } from 'redux'
 import { Link, withRouter } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
@@ -13,6 +14,8 @@ import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft'
 import PeopleIcon from '@material-ui/icons/People'
 import RssFeedIcon from '@material-ui/icons/RssFeed'
 import SettingsIcon from '@material-ui/icons/Settings'
+
+import { SHOWS_DOMAIN } from 'config/constants'
 import styles from './styles'
 
 const menuItems = [
@@ -22,12 +25,12 @@ const menuItems = [
   { label: 'Settings', value: 'settings', icon: SettingsIcon }
 ]
 
-export const NavTabs = ({ classes, history, match }) => {
+export const NavTabs = ({ classes, history, match, podcastDetails }) => {
   const handleClick = value => () => {
     history.push(`${match.path.replace(':podcastGuid', match.params.podcastGuid).replace(':tabId', value)}`)
   }
 
-  return (
+  return podcastDetails ? (
     <Drawer
       className={classes.drawer}
       variant="permanent"
@@ -55,8 +58,18 @@ export const NavTabs = ({ classes, history, match }) => {
           )
         })}
       </List>
+      <div className={classes.buttons}>
+        <Button
+          variant="outlined"
+          component="a"
+          fullWidth
+          target="_blank"
+          href={`https://${SHOWS_DOMAIN}/podcast/${podcastDetails.slug}`}>
+          View on Show Hub
+        </Button>
+      </div>
     </Drawer>
-  )
+  ) : null
 }
 
 export default compose(
