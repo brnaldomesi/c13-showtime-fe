@@ -6,6 +6,7 @@ import AppContainer from 'components/AppContainer'
 import Dashboard from './Dashboard'
 import Login from './Login'
 import MainLayout from 'components/MainLayout'
+import NetworkDetails from './NetworkDetails'
 import Networks from './Networks'
 import PodcastDetails from './PodcastDetails'
 import PodcastEdit from './PodcastEdit'
@@ -17,7 +18,8 @@ const routes = ({ history }) => (
     <AppContainer>
       <MainLayout>
         <Switch>
-          <Route path="/networks" component={Networks} />
+          <Route exact path="/networks" component={Networks} />
+          <Route exact path="/networks/:networkId" component={NetworkDetails} />
           <Route exact path="/podcasts" component={Podcasts} />
           <Route exact path="/podcasts/:podcastId" component={PodcastDetails} />
           <Route path="/podcasts/:podcastId/episodes" component={PodcastEpisodes} />

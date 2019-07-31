@@ -1,7 +1,13 @@
 import { takeLatest } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
-import { CREATE_NETWORK, GET_NETWORKS_LIST, GET_NETWORK_DETAILS, UPDATE_NETWORK } from './types'
+import {
+  CREATE_NETWORK,
+  GET_NETWORKS_LIST,
+  GET_NETWORK_DETAILS,
+  GET_NETWORK_PODCASTS_LIST,
+  UPDATE_NETWORK
+} from './types'
 
 const createNetwork = apiCallSaga({
   type: CREATE_NETWORK,
@@ -35,9 +41,18 @@ const updateNetwork = apiCallSaga({
   selectorKey: 'networkDetails'
 })
 
+const getNetworkPodcastsList = apiCallSaga({
+  type: GET_NETWORK_PODCASTS_LIST,
+  method: 'get',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/networks/${payload.networkId}/podcasts`,
+  selectorKey: 'networkPodcastsList'
+})
+
 export default function* rootSaga() {
   yield takeLatest(CREATE_NETWORK, createNetwork)
   yield takeLatest(GET_NETWORKS_LIST, getNetworksList)
   yield takeLatest(GET_NETWORK_DETAILS, getNetworkDetails)
   yield takeLatest(UPDATE_NETWORK, updateNetwork)
+  yield takeLatest(GET_NETWORK_PODCASTS_LIST, getNetworkPodcastsList)
 }
