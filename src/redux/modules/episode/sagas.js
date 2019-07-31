@@ -7,7 +7,7 @@ const getEpisodesList = apiCallSaga({
   type: GET_EPISODES_LIST,
   method: 'get',
   allowedParamKeys: ['nextCursor', 'prevCursor', 'limit', 'sortOrder'],
-  path: ({ payload }) => `/podcasts/${payload.podcastGuid}/episodes`,
+  path: ({ payload }) => `/podcasts/${payload.podcastId}/episodes`,
   selectorKey: 'episodesList'
 })
 

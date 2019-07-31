@@ -27,17 +27,17 @@ const renderComingSoon = () => <div>Coming Soon...</div>
 
 export const PodcastEdit = props => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
-  const { podcastGuid } = match.params
+  const { podcastId } = match.params
 
   useEffect(() => {
-    getPodcastDetails({ guid: podcastGuid })
-  }, [podcastGuid, getPodcastDetails])
+    getPodcastDetails({ guid: podcastId })
+  }, [podcastId, getPodcastDetails])
 
   const handleSubmit = (values, formActions) => {
     formSubmit(
       updatePodcastDetails,
       {
-        guid: podcastGuid,
+        guid: podcastId,
         data: values
       },
       formActions

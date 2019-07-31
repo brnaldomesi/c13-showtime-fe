@@ -8,14 +8,14 @@ import {
   CREATE_CREW_MEMBER_DETAILS,
   UPDATE_CREW_MEMBER_DETAILS,
   UPLOAD_CREW_MEMBER_IMAGE,
-  UPDATE_CREW_MEMBER,
+  UPDATE_CREW_MEMBER
 } from './types'
 
 const getCrewMembersList = apiCallSaga({
   type: GET_CREW_MEMBERS_LIST,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/podcasts/${payload.podcastGuid}/crew-members`,
+  path: ({ payload }) => `/podcasts/${payload.podcastId}/crew-members`,
   selectorKey: 'crewMembersList'
 })
 
@@ -31,7 +31,7 @@ const createCrewMemberApi = apiCallSaga({
   type: CREATE_CREW_MEMBER,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/crew-members/${payload.podcastGuid}`,
+  path: ({ payload }) => `/crew-members/${payload.podcastId}`,
   selectorKey: 'crewMemberDetails'
 })
 
@@ -51,7 +51,7 @@ const uploadCrewMemberImage = apiCallSaga({
   selectorKey: 'crewMemberDetails.imageUrl'
 })
 
-const createCrewMemberDetails = function* (action) {
+const createCrewMemberDetails = function*(action) {
   const { payload } = action
   const { image, ...podcastData } = payload.data
   let result = yield createCrewMemberApi({
@@ -71,7 +71,7 @@ const createCrewMemberDetails = function* (action) {
   return result
 }
 
-const updateCrewMemberDetails = function* (action) {
+const updateCrewMemberDetails = function*(action) {
   const { payload } = action
   const { resolve, reject } = payload
   const { image, ...podcastData } = payload.data

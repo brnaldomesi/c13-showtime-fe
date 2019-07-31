@@ -15,8 +15,8 @@ import { getCrewMembersList, crewMembersListSelector } from 'redux/modules/crew'
 import { getFullName } from 'utils/helpers'
 import styles from './styles'
 import ThumbnailImage from 'components/ThumbnailImage'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const sliderSettings = {
   dots: false,
@@ -25,34 +25,22 @@ const sliderSettings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1
-};
+}
 
 const CrewCarouselItem = ({ crewMember, classes }) => (
   <div>
-    <ThumbnailImage
-      className={classes.avatar}
-      imageUrls={crewMember.imageUrls}
-      title={getFullName(crewMember)}
-    />
+    <ThumbnailImage className={classes.avatar} imageUrls={crewMember.imageUrls} title={getFullName(crewMember)} />
     <Typography variant="body2" align="center">
       {getFullName(crewMember)}
     </Typography>
   </div>
 )
 
-const CrewCarousel = ({
-  classes,
-  podcastGuid,
-  crewMembers,
-  getCrewMembersList
-}) => {
+const CrewCarousel = ({ classes, podcastId, crewMembers, getCrewMembersList }) => {
   const sliderRef = useRef(null)
-  useEffect(
-    () => {
-      getCrewMembersList({ podcastGuid })
-    },
-    [podcastGuid, getCrewMembersList]
-  )
+  useEffect(() => {
+    getCrewMembersList({ podcastId })
+  }, [podcastId, getCrewMembersList])
 
   const handleSlideLeft = () => {
     sliderRef.current.slickPrev()
@@ -85,7 +73,7 @@ CrewCarousel.propTypes = {
   classes: PropTypes.object.isRequired,
   crewMembers: PropTypes.array.isRequired,
   getCrewMembersList: PropTypes.func.isRequired,
-  podcastGuid: PropTypes.string.isRequired,
+  podcastId: PropTypes.string.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -97,6 +85,9 @@ const actions = {
 }
 
 export default compose(
-  connect(selector, actions),
+  connect(
+    selector,
+    actions
+  ),
   withStyles(styles)
 )(CrewCarousel)

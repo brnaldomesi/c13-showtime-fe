@@ -28,7 +28,7 @@ const menuItems = [
 
 export const NavTabs = ({ classes, history, match, podcastDetails }) => {
   const handleClick = value => () => {
-    history.push(`${match.path.replace(':podcastGuid', match.params.podcastGuid).replace(':tabId', value)}`)
+    history.push(`${match.path.replace(':podcastId', match.params.podcastId).replace(':tabId', value)}`)
   }
 
   return podcastDetails ? (
@@ -67,7 +67,7 @@ export const NavTabs = ({ classes, history, match, podcastDetails }) => {
           component={Link}
           fullWidth
           disabled={!podcastDetails}
-          to={`/podcasts/${match.params.podcastGuid}`}>
+          to={`/podcasts/${match.params.podcastId}`}>
           View Details
         </Button>
       </div>

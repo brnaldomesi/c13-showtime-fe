@@ -57,7 +57,7 @@ export const Podcasts = props => {
               </TableHead>
               <TableBody>
                 {podcastsList.map(podcast => (
-                  <TableRow key={podcast.guid}>
+                  <TableRow key={podcast.id}>
                     <TableCell scope="row" width={100}>
                       <ThumbnailImage
                         className={classes.image}
@@ -82,7 +82,7 @@ export const Podcasts = props => {
                         variant="contained"
                         color="primary"
                         className={classes.episodes}
-                        to={`/podcasts/${podcast.guid}`}
+                        to={`/podcasts/${podcast.id}`}
                         component={Link}>
                         Details
                       </Button>
@@ -90,7 +90,7 @@ export const Podcasts = props => {
                         variant="contained"
                         color="primary"
                         className={classes.edit}
-                        to={`/podcasts/${podcast.guid}/edit`}
+                        to={`/podcasts/${podcast.id}/edit`}
                         component={Link}>
                         Edit
                       </Button>

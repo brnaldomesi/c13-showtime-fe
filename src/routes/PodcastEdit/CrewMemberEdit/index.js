@@ -9,11 +9,7 @@ import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
 import { crewMemberDetailsSelector } from 'redux/modules/crew'
-import {
-  createCrewMemberDetails,
-  getCrewMemberDetails,
-  updateCrewMemberDetails
-} from 'redux/modules/crew'
+import { createCrewMemberDetails, getCrewMemberDetails, updateCrewMemberDetails } from 'redux/modules/crew'
 import { formSubmit } from 'utils/form'
 // import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
@@ -22,27 +18,17 @@ import Hr from 'components/Hr'
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
   lastName: Yup.string().required('Last name is required'),
-  biography: Yup.string().required('Biography is required'),
-});
+  biography: Yup.string().required('Biography is required')
+})
 
 const renderForm = ({ handleSubmit, match }) => (
   <form onSubmit={handleSubmit}>
     <Grid container spacing={3}>
       <Grid item sm={6}>
-        <Field
-          name="firstName"
-          label="First Name"
-          component={FormInput}
-          placeholder="E.g. John"
-        />
+        <Field name="firstName" label="First Name" component={FormInput} placeholder="E.g. John" />
       </Grid>
       <Grid item sm={6}>
-        <Field
-          name="lastName"
-          label="last Name"
-          component={FormInput}
-          placeholder="E.g. Doe"
-        />
+        <Field name="lastName" label="last Name" component={FormInput} placeholder="E.g. Doe" />
       </Grid>
       <Grid item sm={12}>
         <Field
@@ -67,12 +53,14 @@ const renderForm = ({ handleSubmit, match }) => (
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastGuid}/edit/crew`}>
+        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastId}/edit/crew`}>
           Cancel
         </Button>
       </Grid>
       <Grid item>
-        <Button variant="contained" color="primary" type="submit">Save Changes</Button>
+        <Button variant="contained" color="primary" type="submit">
+          Save Changes
+        </Button>
       </Grid>
     </Grid>
   </form>
@@ -83,7 +71,7 @@ const CrewMemberEdit = ({
   getCrewMemberDetails,
   crewMember,
   createCrewMemberDetails,
-  updateCrewMemberDetails,
+  updateCrewMemberDetails
 }) => {
   const handleSubmit = async (values, actions) => {
     const saveCrewMember = match.params.crewGuid ? updateCrewMemberDetails : createCrewMemberDetails
@@ -97,12 +85,9 @@ const CrewMemberEdit = ({
   }
   const { crewGuid } = match.params
 
-  useEffect(
-    () => {
-      getCrewMemberDetails({ guid: crewGuid })
-    },
-    [crewGuid, getCrewMemberDetails]
-  )
+  useEffect(() => {
+    getCrewMemberDetails({ guid: crewGuid })
+  }, [crewGuid, getCrewMemberDetails])
 
   const initialValues = crewMember // ? { ...crewMember, image: crewMember.imageUrl } : {}
 
@@ -111,7 +96,7 @@ const CrewMemberEdit = ({
       initialValues={initialValues}
       enableReinitialize
       onSubmit={handleSubmit}
-      render={(props) => renderForm({ ...props, match })}
+      render={props => renderForm({ ...props, match })}
       validationSchema={validationSchema}
     />
   )
@@ -121,7 +106,7 @@ CrewMemberEdit.propTypes = {
   createCrewMemberDetails: PropTypes.func.isRequired,
   getCrewMemberDetails: PropTypes.func.isRequired,
   podcastDetails: PropTypes.object.isRequired,
-  updateCrewMemberDetails: PropTypes.func.isRequired,
+  updateCrewMemberDetails: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -131,7 +116,10 @@ const selector = createStructuredSelector({
 const actions = {
   createCrewMemberDetails,
   getCrewMemberDetails,
-  updateCrewMemberDetails,
+  updateCrewMemberDetails
 }
 
-export default connect(selector, actions)(CrewMemberEdit)
+export default connect(
+  selector,
+  actions
+)(CrewMemberEdit)

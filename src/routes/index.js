@@ -19,9 +19,9 @@ const routes = ({ history }) => (
         <Switch>
           <Route path="/networks" component={Networks} />
           <Route exact path="/podcasts" component={Podcasts} />
-          <Route exact path="/podcasts/:podcastGuid" component={PodcastDetails} />
-          <Route path="/podcasts/:podcastGuid/episodes" component={PodcastEpisodes} />
-          <Route path="/podcasts/:podcastGuid/edit/:tabId?" component={PodcastEdit} />
+          <Route exact path="/podcasts/:podcastId" component={PodcastDetails} />
+          <Route path="/podcasts/:podcastId/episodes" component={PodcastEpisodes} />
+          <Route path="/podcasts/:podcastId/edit/:tabId?" component={PodcastEdit} />
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/login" component={Login} />
         </Switch>

@@ -22,15 +22,15 @@ import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
 
 export const RecentEpisodes = props => {
-  const { classes, podcastGuid, getEpisodesList, episodes, episodesLoading, podcastDetailsLoading } = props
+  const { classes, podcastId, getEpisodesList, episodes, episodesLoading, podcastDetailsLoading } = props
   const episodesList = episodes ? episodes.data : []
 
   useEffect(() => {
     getEpisodesList({
-      podcastGuid: podcastGuid,
+      podcastId: podcastId,
       params: { limit: 5 }
     })
-  }, [podcastGuid, getEpisodesList])
+  }, [podcastId, getEpisodesList])
 
   return (
     <div className={classes.root}>
@@ -41,7 +41,7 @@ export const RecentEpisodes = props => {
           </Typography>
         </Grid>
         <Grid item>
-          <Button variant="contained" color="primary" component={Link} to={`/podcasts/${podcastGuid}/episodes`}>
+          <Button variant="contained" color="primary" component={Link} to={`/podcasts/${podcastId}/episodes`}>
             Browse All
           </Button>
         </Grid>
@@ -85,7 +85,7 @@ RecentEpisodes.propTypes = {
   episodes: APIListType.isRequired,
   episodesLoading: PropTypes.bool,
   getEpisodesList: PropTypes.func.isRequired,
-  podcastGuid: PropTypes.string,
+  podcastId: PropTypes.string,
   podcastDetailsLoading: PropTypes.bool
 }
 

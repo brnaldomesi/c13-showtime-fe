@@ -34,7 +34,7 @@ export const PodcastEpisodes = props => {
 
   useEffect(() => {
     getEpisodesList({
-      podcastGuid: match.params.podcastGuid,
+      podcastId: match.params.podcastId,
       params: { startAfter, endBefore, limit }
     })
   }, [startAfter, endBefore, limit, match, getEpisodesList])
@@ -48,7 +48,7 @@ export const PodcastEpisodes = props => {
           </Typography>
         </Grid>
         <Grid item>
-          <Button color="primary" component={Link} to={`/podcasts/${match.params.podcastGuid}`}>
+          <Button color="primary" component={Link} to={`/podcasts/${match.params.podcastId}`}>
             Back to Podcast
           </Button>
         </Grid>

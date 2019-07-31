@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect';
+import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
@@ -10,13 +10,10 @@ import { getCrewMembersList, crewMembersListSelector } from 'redux/modules/crew'
 import CrewMemberItem from '../CrewMemberItem'
 
 const CrewMembers = ({ match, crewMembers, getCrewMembersList }) => {
-  const { podcastGuid } = match.params
-  useEffect(
-    () => {
-      getCrewMembersList({ podcastGuid })
-    },
-    [podcastGuid, getCrewMembersList]
-  )
+  const { podcastId } = match.params
+  useEffect(() => {
+    getCrewMembersList({ podcastId })
+  }, [podcastId, getCrewMembersList])
 
   return (
     <Grid container spacing={2}>
@@ -36,7 +33,7 @@ const CrewMembers = ({ match, crewMembers, getCrewMembersList }) => {
 
 CrewMembers.propTypes = {
   crewMembers: PropTypes.array.isRequired,
-  getCrewMembersList: PropTypes.func.isRequired,
+  getCrewMembersList: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -47,4 +44,7 @@ const actions = {
   getCrewMembersList
 }
 
-export default connect(selector, actions)(CrewMembers)
+export default connect(
+  selector,
+  actions
+)(CrewMembers)
