@@ -10,37 +10,49 @@ import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core'
+import { createStructuredSelector } from 'reselect'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 
 import styles from './styles'
+import { isAuthenticatedSelector } from 'redux/modules/auth'
 
-export const Header = ({ classes, toggleSidebar }) => (
+export const Header = ({ classes, isAuthenticated, toggleSidebar }) => (
   <AppBar position="fixed" className={classes.root}>
     <Toolbar disableGutters>
-      <IconButton color="inherit" onClick={() => toggleSidebar(true)} className={classes.menuButton}>
-        <MenuIcon />
-      </IconButton>
+      {isAuthenticated ? (
+        <IconButton color="inherit" onClick={() => toggleSidebar(true)} className={classes.menuButton}>
+          <MenuIcon />
+        </IconButton>
+      ) : (
+        <div className={classes.menuButton} />
+      )}
       <Typography variant="h6" color="inherit" noWrap>
         Cadence13 Showtime
       </Typography>
-      <div className={classes.search}>
-        <div className={classes.searchIcon}>
-          <SearchIcon />
-        </div>
-        <InputBase
-          placeholder="Find a podcast..."
-          classes={{
-            root: classes.inputRoot,
-            input: classes.inputInput
-          }}
-          inputProps={{ 'aria-label': 'search' }}
-        />
-      </div>
-      <Button component={Link} to="/podcasts" color="inherit">
-        Podcasts
-      </Button>
-      <Button component={Link} to="/networks" color="inherit">
-        Networks
-      </Button>
+      {isAuthenticated && (
+        <>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Find a podcast..."
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
+          <Button component={Link} to="/podcasts" color="inherit">
+            Podcasts
+          </Button>
+          <Button component={Link} to="/networks" color="inherit">
+            Networks
+          </Button>
+        </>
+      )}
     </Toolbar>
   </AppBar>
 )
@@ -50,4 +62,11 @@ Header.propTypes = {
   toggleSidebar: PropTypes.func.isRequired
 }
 
-export default withStyles(styles)(Header)
+const selector = createStructuredSelector({
+  isAuthenticated: isAuthenticatedSelector
+})
+
+export default compose(
+  connect(selector),
+  withStyles(styles)
+)(Header)
