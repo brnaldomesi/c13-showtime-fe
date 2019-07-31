@@ -50,7 +50,8 @@ export const Podcasts = props => {
               <TableHead>
                 <TableRow>
                   <TableCell>Thumbnail</TableCell>
-                  <TableCell>Title</TableCell>
+                  <TableCell width="40%">Title</TableCell>
+                  <TableCell width="20%">Network</TableCell>
                   <TableCell>Status</TableCell>
                   <TableCell />
                 </TableRow>
@@ -71,6 +72,11 @@ export const Podcasts = props => {
                         {podcast.title}
                       </Typography>
                       <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="body2" color="textSecondary">
+                        {podcast.network.name}
+                      </Typography>
                     </TableCell>
                     <TableCell>
                       <Typography variant="body2" color="textSecondary">
