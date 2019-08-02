@@ -77,7 +77,7 @@ export const NetworkDetails = props => {
                     <TableCell scope="row" width={100}>
                       <ThumbnailImage
                         className={classes.image}
-                        imageUrls={podcast.imageUrl}
+                        imageUrls={podcast.imageUrls}
                         title={podcast.title}
                         type="podcast"
                       />
@@ -103,15 +103,11 @@ export const NetworkDetails = props => {
                         variant="contained"
                         color="primary"
                         className={classes.episodes}
-                        to={`/podcasts/${podcast.guid || podcast.id}`}
+                        to={`/podcasts/${podcast.id}`}
                         component={Link}>
                         Details
                       </Button>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        to={`/podcasts/${podcast.guid || podcast.id}/edit`}
-                        component={Link}>
+                      <Button variant="contained" color="primary" to={`/podcasts/${podcast.id}/edit`} component={Link}>
                         Edit
                       </Button>
                     </TableCell>

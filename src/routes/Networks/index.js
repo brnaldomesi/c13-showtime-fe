@@ -58,7 +58,7 @@ export const Networks = props => {
                     <TableCell className={classes.actions}>Active</TableCell>
                     <TableCell className={classes.actions}>
                       <Button className={classes.podcasts} to={`/networks/${network.id}`} component={Link}>
-                        {network.podcasts || 0} Podcasts
+                        {network.podcastCount || 0} Podcasts
                       </Button>
                     </TableCell>
                   </TableRow>
