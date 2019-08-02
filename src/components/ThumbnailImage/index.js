@@ -17,9 +17,12 @@ const ThumbnailImage = ({ className, imageUrls, title, type }) => {
 
 ThumbnailImage.propTypes = {
   className: PropTypes.string,
-  imageUrls: PropTypes.shape({
-    original: PropTypes.string
-  }),
+  imageUrls: PropTypes.oneOfType([
+    PropTypes.shape({
+      original: PropTypes.string
+    }),
+    PropTypes.string
+  ]),
   title: PropTypes.string,
   type: PropTypes.oneOf(['avatar', 'podcast'])
 }

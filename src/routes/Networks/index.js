@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
+import get from 'lodash/get'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
@@ -18,10 +19,11 @@ import { getNetworksList, networksListSelector, networksListLoadingSelector } fr
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
+import { APIListType } from 'utils/propTypes'
 
 export const Networks = props => {
   const { classes, getNetworksList, networks, networksLoading } = props
-  const networksList = networks || []
+  const networksList = get(networks, 'data') || []
 
   useEffect(() => {
     getNetworksList()
@@ -47,7 +49,7 @@ export const Networks = props => {
               </TableHead>
               <TableBody>
                 {networksList.map(network => (
-                  <TableRow key={network.guid}>
+                  <TableRow key={network.id}>
                     <TableCell>
                       <Typography variant="subtitle1" color="textPrimary">
                         {network.name}
@@ -55,7 +57,7 @@ export const Networks = props => {
                     </TableCell>
                     <TableCell className={classes.actions}>Active</TableCell>
                     <TableCell className={classes.actions}>
-                      <Button className={classes.podcasts} to={`/networks/${network.guid}/podcasts`} component={Link}>
+                      <Button className={classes.podcasts} to={`/networks/${network.id}`} component={Link}>
                         {network.podcasts || 0} Podcasts
                       </Button>
                     </TableCell>
@@ -74,7 +76,7 @@ Networks.propTypes = {
   classes: PropTypes.object.isRequired,
   getNetworksList: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
-  networks: PropTypes.array.isRequired,
+  networks: APIListType.isRequired,
   networksLoading: PropTypes.bool
 }
 
