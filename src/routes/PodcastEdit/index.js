@@ -15,15 +15,14 @@ import {
 } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import CrewMemberEdit from './CrewMemberEdit'
+import CrewMembers from './CrewMembers'
+import Episodes from './Episodes'
+import GeneralEdit from './GeneralEdit'
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
-import GeneralEdit from './GeneralEdit'
-import CrewMembers from './CrewMembers'
 import SubscribeLinks from './SubscribeLinks'
-import CrewMemberEdit from './CrewMemberEdit'
 import styles from './styles'
-
-const renderComingSoon = () => <div>Coming Soon...</div>
 
 export const PodcastEdit = props => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
@@ -84,7 +83,7 @@ export const PodcastEdit = props => {
               </Paper>
             )}
           />
-          <Route path={`${match.path}/settings`} render={renderComingSoon} />
+          <Route path={`${match.path}/episodes`} exact component={Episodes} />
           <Redirect to={`${match.url}/general`} />
         </Switch>
       ) : null}

@@ -10,7 +10,6 @@ import NetworkDetails from './NetworkDetails'
 import Networks from './Networks'
 import PodcastDetails from './PodcastDetails'
 import PodcastEdit from './PodcastEdit'
-import PodcastEpisodes from './PodcastEpisodes'
 import Podcasts from './Podcasts'
 
 const routes = ({ history }) => (
@@ -22,7 +21,6 @@ const routes = ({ history }) => (
           <Route exact path="/networks/:networkId" component={NetworkDetails} />
           <Route exact path="/podcasts" component={Podcasts} />
           <Route exact path="/podcasts/:podcastId" component={PodcastDetails} />
-          <Route path="/podcasts/:podcastId/episodes" component={PodcastEpisodes} />
           <Route path="/podcasts/:podcastId/edit/:tabId?" component={PodcastEdit} />
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/login" component={Login} />

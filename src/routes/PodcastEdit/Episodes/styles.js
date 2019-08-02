@@ -1,6 +1,6 @@
 export default theme => ({
   root: {
-    width: '100%',
+    width: '100%'
   },
   paper: {
     marginTop: theme.spacing(1)
@@ -14,10 +14,17 @@ export default theme => ({
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
-  actions: {
+  nowrap: {
     whiteSpace: 'nowrap'
   },
-  edit: {
-    marginRight: theme.spacing(2)
+  image: {
+    width: 100,
+    height: 100
+  }
+})
+
+export const tableCellStyles = theme => ({
+  root: {
+    padding: theme.spacing(1)
   }
 })

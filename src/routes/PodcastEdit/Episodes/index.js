@@ -2,17 +2,13 @@ import React, { useEffect } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
 import dfFormat from 'date-fns/format'
-import get from 'lodash/get'
-import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
+import MuiTableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
@@ -24,8 +20,11 @@ import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import LoadingIndicator from 'components/LoadingIndicator'
 import Pagination from 'components/Pagination'
-import styles from './styles'
+import styles, { tableCellStyles } from './styles'
+import ThumbnailImage from 'components/ThumbnailImage'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
+
+const TableCell = withStyles(tableCellStyles)(MuiTableCell)
 
 export const PodcastEpisodes = props => {
   const { classes, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
@@ -41,45 +40,47 @@ export const PodcastEpisodes = props => {
 
   return (
     <div className={classes.root}>
-      <Grid container alignItems="center">
-        <Grid item xs>
-          <Typography variant="h6" gutterBottom>
-            Episodes
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Button color="primary" component={Link} to={`/podcasts/${match.params.podcastId}`}>
-            Back to Podcast
-          </Button>
-        </Grid>
-      </Grid>
+      <Typography variant="h6" gutterBottom>
+        Episodes
+      </Typography>
       <Paper className={classes.paper}>
         {episodesLoading ? (
           <LoadingIndicator />
         ) : (
           <>
-            <Table className={classes.table}>
+            <Table className={classes.table} size="small">
               <TableHead>
                 <TableRow>
                   <TableCell>Thumbnail</TableCell>
                   <TableCell>Title</TableCell>
-                  <TableCell />
+                  <TableCell className={classes.nowrap}>Publish Date</TableCell>
+                  <TableCell>Description</TableCell>
+                  <TableCell>Status</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {episodesList.map(episode => (
                   <TableRow key={episode.guid}>
                     <TableCell scope="row" width={100}>
-                      <img src={get(episode, 'imageUrls.original')} width={100} alt="" />
+                      <ThumbnailImage imageUrls={episode.imageUrl} type="podcast" className={classes.image} />
                     </TableCell>
                     <TableCell>
                       <Typography variant="subtitle1" color="textPrimary">
                         {episode.title}
                       </Typography>
-                      <Typography color="textSecondary">{truncate(episode.summary)}</Typography>
                     </TableCell>
-                    <TableCell align="right" className={classes.actions}>
-                      <Typography variant="body1">{dfFormat(episode.publishedAt, 'MMMM D, YYYY')}</Typography>
+                    <TableCell className={classes.nowrap}>
+                      <Typography color="textSecondary" variant="caption">
+                        {dfFormat(episode.publishedAt, 'MMMM D, YYYY')}
+                      </Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography color="textSecondary" variant="caption">
+                        {truncate(episode.summary)}
+                      </Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="caption">{episode.status}</Typography>
                     </TableCell>
                   </TableRow>
                 ))}

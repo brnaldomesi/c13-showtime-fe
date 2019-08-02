@@ -12,7 +12,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft'
 import PeopleIcon from '@material-ui/icons/People'
 import RssFeedIcon from '@material-ui/icons/RssFeed'
-import SettingsIcon from '@material-ui/icons/Settings'
+import ViewModuleIcon from '@material-ui/icons/ViewModule'
 import Typography from '@material-ui/core/Typography'
 
 import { SHOWS_DOMAIN } from 'config/constants'
@@ -23,7 +23,7 @@ const menuItems = [
   { label: 'General', value: 'general', icon: FormatAlignLeftIcon },
   { label: 'Crew Members', value: 'crew', icon: PeopleIcon },
   { label: 'Subscribe Links', value: 'subscribe-links', icon: RssFeedIcon },
-  { label: 'Settings', value: 'settings', icon: SettingsIcon }
+  { label: 'Episodes', value: 'episodes', icon: ViewModuleIcon }
 ]
 
 export const NavTabs = ({ classes, history, match, podcastDetails }) => {
