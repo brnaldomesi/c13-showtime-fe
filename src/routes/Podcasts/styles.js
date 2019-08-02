@@ -21,7 +21,13 @@ export default theme => ({
   episodes: {
     marginRight: theme.spacing(2)
   },
-  edit: {
-    marginRight: theme.spacing(2)
+  emptyListWrapper: {
+    padding: theme.spacing(3)
+  }
+})
+
+export const tableCellStyles = theme => ({
+  root: {
+    padding: theme.spacing(1)
   }
 })

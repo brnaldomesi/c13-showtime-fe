@@ -10,44 +10,63 @@ import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
+import MuiTableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
 
 import {
+  getNetworkDetails,
   getNetworkPodcastsList,
+  networkDetailsSelector,
+  networkDetailsLoadingSelector,
   networkPodcastsListSelector,
   networkPodcastsListLoadingSelector
 } from 'redux/modules/network'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import LeftPane from './LeftPane'
 import LoadingIndicator from 'components/LoadingIndicator'
-import styles from './styles'
+import styles, { tableCellStyles } from './styles'
 import ThumbnailImage from 'components/ThumbnailImage'
 
+const TableCell = withStyles(tableCellStyles)(MuiTableCell)
+
 export const NetworkDetails = props => {
-  const { classes, getNetworkPodcastsList, match, podcasts, podcastsLoading } = props
+  const {
+    classes,
+    getNetworkDetails,
+    getNetworkPodcastsList,
+    match,
+    networkDetails,
+    podcasts,
+    podcastsLoading,
+    networkDetailsLoading
+  } = props
 
   useEffect(() => {
+    getNetworkDetails({
+      id: match.params.networkId
+    })
     getNetworkPodcastsList({
       networkId: match.params.networkId
     })
-  }, [match, getNetworkPodcastsList])
+  }, [match, getNetworkDetails, getNetworkPodcastsList])
 
   return (
-    <div className={classes.root}>
+    <>
+      {!podcastsLoading && !networkDetailsLoading && <LeftPane networkDetails={networkDetails} />}
       <Paper className={classes.root}>
-        {podcastsLoading ? (
+        {podcastsLoading || networkDetailsLoading ? (
           <LoadingIndicator />
-        ) : (
+        ) : podcasts.length > 0 ? (
           <>
-            <Table className={classes.table}>
+            <Table className={classes.table} size="small">
               <TableHead>
                 <TableRow>
                   <TableCell>Thumbnail</TableCell>
                   <TableCell width="50%">Title</TableCell>
-                  <TableCell>Last Publish Date</TableCell>
+                  <TableCell className={classes.nowrap}>Last Publish Date</TableCell>
                   <TableCell>Status</TableCell>
                   <TableCell />
                 </TableRow>
@@ -84,15 +103,14 @@ export const NetworkDetails = props => {
                         variant="contained"
                         color="primary"
                         className={classes.episodes}
-                        to={`/podcasts/${podcast.id}`}
+                        to={`/podcasts/${podcast.guid || podcast.id}`}
                         component={Link}>
                         Details
                       </Button>
                       <Button
                         variant="contained"
                         color="primary"
-                        className={classes.edit}
-                        to={`/podcasts/${podcast.id}/edit`}
+                        to={`/podcasts/${podcast.guid || podcast.id}/edit`}
                         component={Link}>
                         Edit
                       </Button>
@@ -102,26 +120,36 @@ export const NetworkDetails = props => {
               </TableBody>
             </Table>
           </>
+        ) : (
+          <div className={classes.emptyListWrapper}>
+            <Typography>No Podcasts.</Typography>
+          </div>
         )}
       </Paper>
-    </div>
+    </>
   )
 }
 
 NetworkDetails.propTypes = {
   classes: PropTypes.object.isRequired,
+  getNetworkDetails: PropTypes.func.isRequired,
   getNetworkPodcastsList: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
+  networkDetails: PropTypes.object,
+  networkDetailsLoading: PropTypes.bool,
   podcasts: PropTypes.array.isRequired,
   podcastsLoading: PropTypes.bool
 }
 
 const selector = createStructuredSelector({
+  networkDetails: networkDetailsSelector,
+  networkDetailsLoading: networkDetailsLoadingSelector,
   podcasts: networkPodcastsListSelector,
   podcastsLoading: networkPodcastsListLoadingSelector
 })
 
 const actions = {
+  getNetworkDetails,
   getNetworkPodcastsList
 }
 

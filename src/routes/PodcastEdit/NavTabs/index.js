@@ -44,9 +44,11 @@ export const NavTabs = ({ classes, history, match, podcastDetails }) => {
           <ThumbnailImage imageUrls={podcastDetails.imageUrls} className={classes.image} type="podcast" />
         </div>
       </div>
-      <Typography variant="h6" align="center">
-        {podcastDetails.title}
-      </Typography>
+      <div className={classes.titleWrapper}>
+        <Typography variant="subtitle1" align="center">
+          {podcastDetails.title}
+        </Typography>
+      </div>
       <List>
         <Divider className={classes.divider} />
         {menuItems.map((item, index) => {

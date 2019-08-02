@@ -13,7 +13,7 @@ const createNetwork = apiCallSaga({
   type: CREATE_NETWORK,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/networks/${payload.guid}/image`,
+  path: ({ payload }) => `/networks/${payload.id}/image`,
   selectorKey: 'networkDetails'
 })
 
@@ -29,7 +29,7 @@ const getNetworkDetails = apiCallSaga({
   type: GET_NETWORK_DETAILS,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/networks/${payload.guid}`,
+  path: ({ payload }) => `/networks/${payload.id}`,
   selectorKey: 'networkDetails'
 })
 
@@ -37,7 +37,7 @@ const updateNetwork = apiCallSaga({
   type: UPDATE_NETWORK,
   method: 'patch',
   allowedParamKeys: [],
-  path: ({ payload }) => `/networks/${payload.guid}`,
+  path: ({ payload }) => `/networks/${payload.id}`,
   selectorKey: 'networkDetails'
 })
 

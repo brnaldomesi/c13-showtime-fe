@@ -6,6 +6,9 @@ export default theme => ({
     minWidth: 700,
     maxWidth: '100%'
   },
+  nowrap: {
+    whiteSpace: 'nowrap'
+  },
   summary: {
     textOverflow: 'ellipsis',
     overflow: 'hidden',
@@ -19,9 +22,15 @@ export default theme => ({
     whiteSpace: 'nowrap'
   },
   episodes: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(1)
   },
-  edit: {
-    marginRight: theme.spacing(2)
+  emptyListWrapper: {
+    padding: theme.spacing(3)
+  }
+})
+
+export const tableCellStyles = theme => ({
+  root: {
+    padding: theme.spacing(1)
   }
 })
