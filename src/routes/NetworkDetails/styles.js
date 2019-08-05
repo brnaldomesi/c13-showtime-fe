@@ -1,5 +1,8 @@
 export default theme => ({
-  root: {
+  content: {
+    width: '100%'
+  },
+  paper: {
     width: '100%'
   },
   table: {

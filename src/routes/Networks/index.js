@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { getNetworksList, networksListSelector, networksListLoadingSelector } from 'redux/modules/network'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import Breadcrumbs from 'components/Breadcrumbs'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles from './styles'
 import { APIListType } from 'utils/propTypes'
@@ -31,6 +32,7 @@ export const Networks = props => {
 
   return (
     <div className={classes.root}>
+      <Breadcrumbs />
       <Typography variant="h6" gutterBottom>
         Networks
       </Typography>

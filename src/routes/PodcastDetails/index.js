@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { getPodcastDetails, podcastDetailsLoadingSelector, podcastDetailsSelector } from 'redux/modules/podcast'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import Breadcrumbs from 'components/Breadcrumbs'
 import CrewCarousel from './CrewCarousel'
 import LoadingIndicator from 'components/LoadingIndicator'
 import RecentEpisodes from './RecentEpisodes'
@@ -28,7 +29,8 @@ export const PodcastDetails = props => {
   }, [podcastId, getPodcastDetails])
 
   return (
-    <>
+    <div className={classes.root}>
+      <Breadcrumbs />
       {podcastDetailsLoading && <LoadingIndicator />}
       {podcastDetails && (
         <Paper className={classes.paper}>
@@ -102,7 +104,7 @@ export const PodcastDetails = props => {
           </Grid>
         </Paper>
       )}
-    </>
+    </div>
   )
 }
 

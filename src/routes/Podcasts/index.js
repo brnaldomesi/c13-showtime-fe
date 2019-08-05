@@ -19,6 +19,7 @@ import { DEFAULT_PAGE_SIZE } from 'config/constants'
 import { getPodcastsList, podcastsListSelector, podcastsListLoadingSelector } from 'redux/modules/podcast'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import Breadcrumbs from 'components/Breadcrumbs'
 import LoadingIndicator from 'components/LoadingIndicator'
 import Pagination from 'components/Pagination'
 import styles, { tableCellStyles } from './styles'
@@ -40,6 +41,7 @@ export const Podcasts = props => {
 
   return (
     <div className={classes.root}>
+      <Breadcrumbs />
       <Typography variant="h6" gutterBottom>
         Podcasts
       </Typography>

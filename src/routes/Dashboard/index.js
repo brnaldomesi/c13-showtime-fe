@@ -14,6 +14,7 @@ import PropTypes from 'prop-types'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import styles from './styles'
 import Typography from '@material-ui/core/Typography'
+import Breadcrumbs from 'components/Breadcrumbs'
 
 class Dashboard extends Component {
   static propTypes = {
@@ -26,6 +27,7 @@ class Dashboard extends Component {
 
     return (
       <div className={classes.root}>
+        <Breadcrumbs />
         <Typography variant="h4">Welcome to Cadence Showtime!</Typography>
         <Grid container>
           <Grid item sm={6}>

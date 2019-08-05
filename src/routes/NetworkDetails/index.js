@@ -25,6 +25,7 @@ import {
 } from 'redux/modules/network'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import Breadcrumbs from 'components/Breadcrumbs'
 import LeftPane from './LeftPane'
 import LoadingIndicator from 'components/LoadingIndicator'
 import styles, { tableCellStyles } from './styles'
@@ -56,72 +57,79 @@ export const NetworkDetails = props => {
   return (
     <>
       {!podcastsLoading && !networkDetailsLoading && <LeftPane networkDetails={networkDetails} />}
-      <Paper className={classes.root}>
-        {podcastsLoading || networkDetailsLoading ? (
-          <LoadingIndicator />
-        ) : podcasts.length > 0 ? (
-          <>
-            <Table className={classes.table} size="small">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Thumbnail</TableCell>
-                  <TableCell width="50%">Title</TableCell>
-                  <TableCell className={classes.nowrap}>Last Publish Date</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell />
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {podcasts.map(podcast => (
-                  <TableRow key={podcast.id}>
-                    <TableCell scope="row" width={100}>
-                      <ThumbnailImage
-                        className={classes.image}
-                        imageUrls={podcast.imageUrls}
-                        title={podcast.title}
-                        type="podcast"
-                      />
-                    </TableCell>
-                    <TableCell>
-                      <Typography variant="subtitle1" color="textPrimary">
-                        {podcast.title}
-                      </Typography>
-                      <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
-                    </TableCell>
-                    <TableCell>
-                      <Typography variant="body2" color="textSecondary">
-                        {dfFormat(podcast.updatedAt, 'MMMM D, YYYY')}
-                      </Typography>
-                    </TableCell>
-                    <TableCell>
-                      <Typography variant="body2" color="textSecondary">
-                        {podcast.status}
-                      </Typography>
-                    </TableCell>
-                    <TableCell align="right" className={classes.actions}>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.episodes}
-                        to={`/podcasts/${podcast.id}`}
-                        component={Link}>
-                        Details
-                      </Button>
-                      <Button variant="contained" color="primary" to={`/podcasts/${podcast.id}/edit`} component={Link}>
-                        Edit
-                      </Button>
-                    </TableCell>
+      <div className={classes.content}>
+        <Breadcrumbs />
+        <Paper className={classes.paper}>
+          {podcastsLoading || networkDetailsLoading ? (
+            <LoadingIndicator />
+          ) : podcasts.length > 0 ? (
+            <>
+              <Table className={classes.table} size="small">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Thumbnail</TableCell>
+                    <TableCell width="50%">Title</TableCell>
+                    <TableCell className={classes.nowrap}>Last Publish Date</TableCell>
+                    <TableCell>Status</TableCell>
+                    <TableCell />
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </>
-        ) : (
-          <div className={classes.emptyListWrapper}>
-            <Typography>No Podcasts.</Typography>
-          </div>
-        )}
-      </Paper>
+                </TableHead>
+                <TableBody>
+                  {podcasts.map(podcast => (
+                    <TableRow key={podcast.id}>
+                      <TableCell scope="row" width={100}>
+                        <ThumbnailImage
+                          className={classes.image}
+                          imageUrls={podcast.imageUrls}
+                          title={podcast.title}
+                          type="podcast"
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="subtitle1" color="textPrimary">
+                          {podcast.title}
+                        </Typography>
+                        <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="body2" color="textSecondary">
+                          {dfFormat(podcast.updatedAt, 'MMMM D, YYYY')}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="body2" color="textSecondary">
+                          {podcast.status}
+                        </Typography>
+                      </TableCell>
+                      <TableCell align="right" className={classes.actions}>
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          className={classes.episodes}
+                          to={`/podcasts/${podcast.id}`}
+                          component={Link}>
+                          Details
+                        </Button>
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          to={`/podcasts/${podcast.id}/edit`}
+                          component={Link}>
+                          Edit
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </>
+          ) : (
+            <div className={classes.emptyListWrapper}>
+              <Typography>No Podcasts.</Typography>
+            </div>
+          )}
+        </Paper>
+      </div>
     </>
   )
 }

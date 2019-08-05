@@ -15,6 +15,7 @@ import {
 } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import Breadcrumbs from 'components/Breadcrumbs'
 import CrewMemberEdit from './CrewMemberEdit'
 import CrewMembers from './CrewMembers'
 import Episodes from './Episodes'
@@ -46,47 +47,50 @@ export const PodcastEdit = props => {
   return (
     <>
       <NavTabs podcastDetails={podcastDetails} />
-      {podcastDetailsLoading ? (
-        <LoadingIndicator />
-      ) : podcastDetails ? (
-        <Switch>
-          <Route
-            path={`${match.path}/general`}
-            render={props => (
-              <Paper className={classes.paper}>
-                <GeneralEdit {...props} podcastDetails={podcastDetails} onSubmit={handleSubmit} />
-              </Paper>
-            )}
-          />
-          <Route
-            path={`${match.path}/crew/new`}
-            render={props => (
-              <Paper className={classes.paper}>
-                <CrewMemberEdit {...props} />
-              </Paper>
-            )}
-          />
-          <Route
-            path={`${match.path}/crew/:crewGuid/edit`}
-            render={props => (
-              <Paper className={classes.paper}>
-                <CrewMemberEdit {...props} />
-              </Paper>
-            )}
-          />
-          <Route path={`${match.path}/crew`} exact component={CrewMembers} />
-          <Route
-            path={`${match.path}/subscribe-links`}
-            render={props => (
-              <Paper className={classes.paper}>
-                <SubscribeLinks {...props} initialValues={podcastDetails} onSubmit={handleSubmit} />
-              </Paper>
-            )}
-          />
-          <Route path={`${match.path}/episodes`} exact component={Episodes} />
-          <Redirect to={`${match.url}/general`} />
-        </Switch>
-      ) : null}
+      <div className={classes.content}>
+        <Breadcrumbs />
+        {podcastDetailsLoading ? (
+          <LoadingIndicator />
+        ) : podcastDetails ? (
+          <Switch>
+            <Route
+              path={`${match.path}/general`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <GeneralEdit {...props} podcastDetails={podcastDetails} onSubmit={handleSubmit} />
+                </Paper>
+              )}
+            />
+            <Route
+              path={`${match.path}/crew/new`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <CrewMemberEdit {...props} />
+                </Paper>
+              )}
+            />
+            <Route
+              path={`${match.path}/crew/:crewId/edit`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <CrewMemberEdit {...props} />
+                </Paper>
+              )}
+            />
+            <Route path={`${match.path}/crew`} exact component={CrewMembers} />
+            <Route
+              path={`${match.path}/subscribe-links`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <SubscribeLinks {...props} initialValues={podcastDetails} onSubmit={handleSubmit} />
+                </Paper>
+              )}
+            />
+            <Route path={`${match.path}/episodes`} exact component={Episodes} />
+            <Redirect to={`${match.url}/general`} />
+          </Switch>
+        ) : null}
+      </div>
     </>
   )
 }
