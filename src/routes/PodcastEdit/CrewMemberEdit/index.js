@@ -75,7 +75,6 @@ const CrewMemberEdit = ({
   updateCrewMemberDetails
 }) => {
   const { crewId, podcastId } = match.params
-  console.log(match.params)
   const handleSubmit = async (values, actions) => {
     const saveCrewMember = crewId && crewId !== 'new' ? updateCrewMemberDetails : createCrewMemberDetails
     formSubmit(
@@ -91,8 +90,8 @@ const CrewMemberEdit = ({
   }
 
   useEffect(() => {
-    getCrewMemberDetails({ crewId })
-  }, [crewId, getCrewMemberDetails])
+    getCrewMemberDetails({ crewId, podcastId })
+  }, [crewId, podcastId, getCrewMemberDetails])
 
   const initialValues = crewMember // ? { ...crewMember, image: crewMember.imageUrl } : {}
 

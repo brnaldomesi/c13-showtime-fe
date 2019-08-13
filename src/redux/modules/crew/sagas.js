@@ -23,7 +23,7 @@ const getCrewMemberDetails = apiCallSaga({
   type: GET_CREW_MEMBER_DETAILS,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/crew-members/${payload.crewId}`,
+  path: ({ payload }) => `/podcasts/${payload.podcastId}/crew-members/${payload.crewId}`,
   selectorKey: 'crewMemberDetails'
 })
 
