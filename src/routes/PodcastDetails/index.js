@@ -25,7 +25,7 @@ export const PodcastDetails = props => {
   const { podcastId } = match.params
 
   useEffect(() => {
-    getPodcastDetails({ guid: podcastId })
+    getPodcastDetails({ id: podcastId })
   }, [podcastId, getPodcastDetails])
 
   return (

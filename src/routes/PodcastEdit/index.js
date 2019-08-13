@@ -30,14 +30,14 @@ export const PodcastEdit = props => {
   const { podcastId } = match.params
 
   useEffect(() => {
-    getPodcastDetails({ guid: podcastId })
+    getPodcastDetails({ id: podcastId })
   }, [podcastId, getPodcastDetails])
 
   const handleSubmit = (values, formActions) => {
     formSubmit(
       updatePodcastDetails,
       {
-        guid: podcastId,
+        id: podcastId,
         data: values
       },
       formActions
@@ -82,7 +82,7 @@ export const PodcastEdit = props => {
               path={`${match.path}/subscribe-links`}
               render={props => (
                 <Paper className={classes.paper}>
-                  <SubscribeLinks {...props} initialValues={podcastDetails} onSubmit={handleSubmit} />
+                  <SubscribeLinks {...props} initialValues={podcastDetails.subscriptionUrls} onSubmit={handleSubmit} />
                 </Paper>
               )}
             />

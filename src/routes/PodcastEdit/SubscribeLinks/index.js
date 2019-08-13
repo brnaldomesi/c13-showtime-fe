@@ -1,104 +1,117 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
-import pick from 'lodash/pick'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
+import pick from 'lodash/pick'
 import PropTypes from 'prop-types'
 
+import { formSubmit } from 'utils/form'
+import { updateSubscriptionUrls } from 'redux/modules/podcast'
 import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
 
-const renderForm = (props) => (
+const renderForm = props => (
   <form onSubmit={props.handleSubmit}>
     <Field
-      name="subscriptionUrls.googlePodcasts"
+      name="googlePodcasts"
       label="Google Podcasts"
       placeholder="e.g. https://www.google.com/podcasts?feed=..."
       component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
+      lockerName="lockedSyncFields"
       lockerValue="googlePodcasts"
     />
     <Field
-      name="subscriptionUrls.googlePlay"
+      name="googlePlay"
       label="Google Play"
       placeholder="e.g. https://play.google.com/music/m/..."
       component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
+      lockerName="lockedSyncFields"
       lockerValue="googlePlay"
     />
     <Field
-      name="subscriptionUrls.applePodcasts"
+      name="applePodcasts"
       label="Apple Podcasts"
       placeholder="e.g. https://itunes.apple.com/podcast/..."
       component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
+      lockerName="lockedSyncFields"
       lockerValue="applePodcasts"
     />
     <Field
-      name="subscriptionUrls.spotify"
+      name="spotify"
       label="Spotify"
       placeholder="e.g. https://open.spotify.com/show/..."
       component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
+      lockerName="lockedSyncFields"
       lockerValue="spotify"
     />
     <Field
-      name="subscriptionUrls.stitcher"
-      label="Stitcher"
-      placeholder="e.g. http://www.stitcher.com/podcast/..."
-      component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
-      lockerValue="stitcher"
-    />
-    <Field
-      name="subscriptionUrls.iHeart"
-      label="iHeart"
-      placeholder="e.g. http://www.iheart.com/playlist/..."
-      component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
-      lockerValue="iHeart"
-    />
-    <Field
-      name="subscriptionUrls.radioCom"
+      name="radioCom"
       label="Radio.com"
       placeholder="e.g. https://player.radio.com/listen/station/..."
       component={FormLockerInput}
-      lockerName="subscriptionUrls.locked"
+      lockerName="lockedSyncFields"
       lockerValue="radioCom"
     />
+    {/* <Field
+      name="stitcher"
+      label="Stitcher"
+      placeholder="e.g. http://www.stitcher.com/podcast/..."
+      component={FormLockerInput}
+      lockerName="lockedSyncFields"
+      lockerValue="stitcher"
+    />
+    <Field
+      name="iHeart"
+      label="iHeart"
+      placeholder="e.g. http://www.iheart.com/playlist/..."
+      component={FormLockerInput}
+      lockerName="lockedSyncFields"
+      lockerValue="iHeart"
+    /> */}
     <Hr />
     <Grid container justify="flex-end" spacing={3}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to="/podcasts">Cancel</Button>
+        <Button color="primary" type="submit" component={Link} to="/podcasts">
+          Cancel
+        </Button>
       </Grid>
       <Grid item>
-        <Button variant="contained" color="primary" type="submit">Save Changes</Button>
+        <Button variant="contained" color="primary" type="submit">
+          Save Changes
+        </Button>
       </Grid>
     </Grid>
   </form>
 )
 
-const SubscribeLinks = ({ initialValues, onSubmit }) => {
-  const handleSubmit = (values, actions) => {
-    onSubmit(
-      pick(values, ['subscriptionUrls']),
+const SubscribeLinks = ({ initialValues, match, updateSubscriptionUrls }) => {
+  const handleSubmit = async (values, actions) => {
+    formSubmit(
+      updateSubscriptionUrls,
+      {
+        id: match.params.podcastId,
+        data: pick(values, ['googlePodcasts', 'googlePlay', 'applePodcasts', 'spotify', 'radioCom'])
+      },
       actions
     )
   }
 
-  return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-      render={renderForm}
-    />
-  )
+  return <Formik initialValues={initialValues} onSubmit={handleSubmit} render={renderForm} />
 }
 
 SubscribeLinks.propTypes = {
+  match: PropTypes.object.isRequired,
   initialValues: PropTypes.object.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  updateSubscriptionUrls: PropTypes.func.isRequired
 }
 
-export default SubscribeLinks
+const actions = {
+  updateSubscriptionUrls
+}
+
+export default connect(
+  null,
+  actions
+)(SubscribeLinks)

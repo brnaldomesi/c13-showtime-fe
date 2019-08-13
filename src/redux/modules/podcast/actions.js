@@ -9,3 +9,5 @@ export const getPodcastDetails = createAction(types.GET_PODCAST_DETAILS)
 export const updatePodcastDetails = createAction(types.UPDATE_PODCAST_DETAILS)
 
 export const uploadPodcastImage = createAction(types.UPLOAD_PODCAST_IMAGE)
+
+export const updateSubscriptionUrls = createAction(types.UPDATE_SUBSCRIPTION_URLS)
