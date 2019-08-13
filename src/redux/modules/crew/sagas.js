@@ -23,7 +23,7 @@ const getCrewMemberDetails = apiCallSaga({
   type: GET_CREW_MEMBER_DETAILS,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/crew-members/${payload.guid}`,
+  path: ({ payload }) => `/crew-members/${payload.crewId}`,
   selectorKey: 'crewMemberDetails'
 })
 
@@ -31,7 +31,7 @@ const createCrewMemberApi = apiCallSaga({
   type: CREATE_CREW_MEMBER,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/crew-members/${payload.podcastId}`,
+  path: ({ payload }) => `/podcasts/${payload.podcastId}/crew-members`,
   selectorKey: 'crewMemberDetails'
 })
 
@@ -39,7 +39,8 @@ const updateCrewMemberApi = apiCallSaga({
   type: UPDATE_CREW_MEMBER,
   method: 'patch',
   allowedParamKeys: [],
-  path: ({ payload }) => `/crew-members/${payload.guid}`,
+  path: ({ payload }) => `/podcasts/${payload.podcastId}/crew-members/${payload.crewId}`,
+  payloadOnSuccess: (data, payload) => payload.data,
   selectorKey: 'crewMemberDetails'
 })
 
@@ -47,7 +48,7 @@ const uploadCrewMemberImage = apiCallSaga({
   type: UPLOAD_CREW_MEMBER_IMAGE,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/crew-members/${payload.guid}/image`,
+  path: ({ payload }) => `/crew-members/${payload.crewId}/image`,
   selectorKey: 'crewMemberDetails.imageUrl'
 })
 
@@ -56,7 +57,10 @@ const createCrewMemberDetails = function*(action) {
   const { image, ...podcastData } = payload.data
   let result = yield createCrewMemberApi({
     type: CREATE_CREW_MEMBER,
-    payload: { data: podcastData }
+    payload: {
+      ...payload, // TODO: extract out `resolve` field if image field is ready
+      data: podcastData
+    }
   })
 
   if (result && image) {
@@ -78,7 +82,7 @@ const updateCrewMemberDetails = function*(action) {
   let result = yield updateCrewMemberApi({
     type: UPDATE_CREW_MEMBER,
     payload: {
-      reject,
+      ...payload, // TODO: extract out `resolve` field if image field is ready
       data: podcastData
     }
   })

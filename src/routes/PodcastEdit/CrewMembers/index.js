@@ -6,10 +6,11 @@ import Button from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 
-import { getCrewMembersList, crewMembersListSelector } from 'redux/modules/crew'
+import { getCrewMembersList, crewMembersListSelector, crewMembersListLoadingSelector } from 'redux/modules/crew'
 import CrewMemberItem from '../CrewMemberItem'
+import LoadingIndicator from 'components/LoadingIndicator'
 
-const CrewMembers = ({ match, crewMembers, getCrewMembersList }) => {
+const CrewMembers = ({ match, crewMembers, getCrewMembersList, crewMembersListLoading }) => {
   const { podcastId } = match.params
   useEffect(() => {
     getCrewMembersList({ podcastId })
@@ -17,8 +18,9 @@ const CrewMembers = ({ match, crewMembers, getCrewMembersList }) => {
 
   return (
     <Grid container spacing={2}>
+      {crewMembersListLoading && <LoadingIndicator />}
       {crewMembers.map((item, index) => (
-        <Grid item xs={12} key={item.guid}>
+        <Grid item xs={12} key={item.id}>
           <CrewMemberItem number={index + 1} crewMember={item} />
         </Grid>
       ))}
@@ -37,7 +39,8 @@ CrewMembers.propTypes = {
 }
 
 const selector = createStructuredSelector({
-  crewMembers: crewMembersListSelector
+  crewMembers: crewMembersListSelector,
+  crewMembersListLoading: crewMembersListLoadingSelector
 })
 
 const actions = {

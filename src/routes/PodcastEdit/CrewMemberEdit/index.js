@@ -67,26 +67,31 @@ const renderForm = ({ handleSubmit, match }) => (
 )
 
 const CrewMemberEdit = ({
-  match,
-  getCrewMemberDetails,
-  crewMember,
   createCrewMemberDetails,
+  crewMember,
+  getCrewMemberDetails,
+  history,
+  match,
   updateCrewMemberDetails
 }) => {
+  const { crewId, podcastId } = match.params
+  console.log(match.params)
   const handleSubmit = async (values, actions) => {
-    const saveCrewMember = match.params.crewId ? updateCrewMemberDetails : createCrewMemberDetails
+    const saveCrewMember = crewId && crewId !== 'new' ? updateCrewMemberDetails : createCrewMemberDetails
     formSubmit(
       saveCrewMember,
       {
-        data: values
+        podcastId,
+        crewId,
+        data: values,
+        success: () => history.push(`/podcasts/${podcastId}/edit/crew`)
       },
       actions
     )
   }
-  const { crewId } = match.params
 
   useEffect(() => {
-    getCrewMemberDetails({ guid: crewId })
+    getCrewMemberDetails({ crewId })
   }, [crewId, getCrewMemberDetails])
 
   const initialValues = crewMember // ? { ...crewMember, image: crewMember.imageUrl } : {}
@@ -104,8 +109,10 @@ const CrewMemberEdit = ({
 
 CrewMemberEdit.propTypes = {
   createCrewMemberDetails: PropTypes.func.isRequired,
+  crewMember: PropTypes.object,
   getCrewMemberDetails: PropTypes.func.isRequired,
-  podcastDetails: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
   updateCrewMemberDetails: PropTypes.func.isRequired
 }
 

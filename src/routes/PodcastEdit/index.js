@@ -28,6 +28,7 @@ import styles from './styles'
 export const PodcastEdit = props => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
   const { podcastId } = match.params
+  const basePath = `/podcasts/:podcastId/edit`
 
   useEffect(() => {
     getPodcastDetails({ id: podcastId })
@@ -54,7 +55,7 @@ export const PodcastEdit = props => {
         ) : podcastDetails ? (
           <Switch>
             <Route
-              path={`${match.path}/general`}
+              path={`${basePath}/general`}
               render={props => (
                 <Paper className={classes.paper}>
                   <GeneralEdit {...props} podcastDetails={podcastDetails} onSubmit={handleSubmit} />
@@ -62,7 +63,7 @@ export const PodcastEdit = props => {
               )}
             />
             <Route
-              path={`${match.path}/crew/new`}
+              path={`${basePath}/crew/new`}
               render={props => (
                 <Paper className={classes.paper}>
                   <CrewMemberEdit {...props} />
@@ -70,24 +71,24 @@ export const PodcastEdit = props => {
               )}
             />
             <Route
-              path={`${match.path}/crew/:crewId/edit`}
+              path={`${basePath}/crew/:crewId/edit`}
               render={props => (
                 <Paper className={classes.paper}>
                   <CrewMemberEdit {...props} />
                 </Paper>
               )}
             />
-            <Route path={`${match.path}/crew`} exact component={CrewMembers} />
+            <Route path={`${basePath}/crew`} exact component={CrewMembers} />
             <Route
-              path={`${match.path}/subscribe-links`}
+              path={`${basePath}/subscribe-links`}
               render={props => (
                 <Paper className={classes.paper}>
                   <SubscribeLinks {...props} initialValues={podcastDetails.subscriptionUrls} onSubmit={handleSubmit} />
                 </Paper>
               )}
             />
-            <Route path={`${match.path}/episodes`} exact component={Episodes} />
-            <Redirect to={`${match.url}/general`} />
+            <Route path={`${basePath}/episodes`} exact component={Episodes} />
+            <Redirect to={`${basePath}/general`} />
           </Switch>
         ) : null}
       </div>

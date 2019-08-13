@@ -29,7 +29,6 @@ const tabNames = {
 
 const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, crewMemberDetails }) => {
   const { podcastId, networkId, tabId, crewId } = match.params
-  console.log(match.params)
   const results = [
     {
       name: 'Home',
