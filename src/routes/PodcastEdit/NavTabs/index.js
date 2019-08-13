@@ -28,7 +28,7 @@ const menuItems = [
 
 export const NavTabs = ({ classes, history, match, podcastDetails }) => {
   const handleClick = value => () => {
-    history.push(`${match.path.replace(':podcastId', match.params.podcastId).replace(':tabId', value)}`)
+    history.push(`/podcasts/${match.params.podcastId}/edit/${value}`)
   }
 
   return podcastDetails ? (
