@@ -11,13 +11,15 @@ CMD ["npm", "start"]
 
 # Deployment builder
 FROM base as builder
+ARG BUILD_ENV=prod
 COPY . /app
+COPY config/env.$BUILD_ENV /app/.env
 RUN npm run build
 
-# Production environment
-FROM nginx:alpine as prod
+# Nginx server
+FROM nginx:alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx/nginx.conf /etc/nginx/conf.d
+COPY config/nginx/nginx.conf /etc/nginx/conf.d
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
