@@ -11,11 +11,13 @@ import Networks from './Networks'
 import PodcastDetails from './PodcastDetails'
 import PodcastEdit from './PodcastEdit'
 import Podcasts from './Podcasts'
+import TokenMonitor from 'components/TokenMonitor'
 
 const routes = ({ history }) => (
   <ConnectedRouter history={history}>
     <AppContainer>
       <MainLayout>
+        <TokenMonitor />
         <Switch>
           <Route exact path="/networks" component={Networks} />
           <Route exact path="/networks/:networkId" component={NetworkDetails} />

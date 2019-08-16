@@ -8,3 +8,5 @@ export const EMPTY_LIST_DATA = {
 }
 
 export const SHOWS_DOMAIN = process.env.REACT_APP_SHOWS_DOMAIN || 'shows.cadence13.com'
+
+export const TOKEN_FRESH_INTERVAL = 30000

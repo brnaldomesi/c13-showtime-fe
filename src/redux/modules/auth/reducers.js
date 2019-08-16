@@ -9,7 +9,7 @@ const getInitialState = () => {
   return {
     isAuthenticated: Boolean(get(auth, 'accessCsrf') && get(auth, 'refreshCsrf')),
     accessCsrf: get(auth, 'accessCsrf') || null,
-    refreshCsrf: get(auth, 'refreshCsrf') || null,
+    refreshCsrf: get(auth, 'refreshCsrf') || null
   }
 }
 
@@ -20,6 +20,10 @@ export default handleActions(
       isAuthenticated: true,
       accessCsrf: payload.accessCsrf,
       refreshCsrf: payload.refreshCsrf
+    }),
+    [types.AUTH_REFRESH_TOKEN_SUCCESS]: (state, { payload }) => ({
+      ...state,
+      accessCsrf: payload.accessCsrf
     }),
     [types.AUTH_LOGIN_FAIL]: (state, { payload }) => ({
       ...state,
@@ -32,7 +36,7 @@ export default handleActions(
       isAuthenticated: false,
       accessCsrf: null,
       refreshCsrf: null
-    }),
+    })
   },
   getInitialState()
 )
