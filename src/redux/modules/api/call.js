@@ -57,6 +57,7 @@ export default ({
       const res = yield call(axios.request, {
         url: typeof path === 'function' ? path(action) : path,
         method: method.toLowerCase(),
+        withCredentials: true,
         headers: {
           ...defaultHeaders(token),
           ...headers,
