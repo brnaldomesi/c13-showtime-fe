@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { TOKEN_FRESH_INTERVAL } from 'config/constants'
 import { compose } from 'redux'
 import { connect } from 'react-redux'

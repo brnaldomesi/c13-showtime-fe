@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest, throttle } from 'redux-saga/effects'
+import { put, select, takeLatest, throttle } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
 import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_REFRESH_TOKEN } from './types'

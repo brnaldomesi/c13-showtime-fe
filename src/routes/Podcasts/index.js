@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
+import get from 'lodash/get'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
@@ -79,7 +80,7 @@ export const Podcasts = props => {
                     </TableCell>
                     <TableCell>
                       <Typography variant="body2" color="textSecondary">
-                        {podcast.network.name}
+                        {get(podcast, 'network.name')}
                       </Typography>
                     </TableCell>
                     <TableCell>
