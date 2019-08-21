@@ -28,15 +28,15 @@ const TableCell = withStyles(tableCellStyles)(MuiTableCell)
 
 export const PodcastEpisodes = props => {
   const { classes, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
-  const { startAfter = null, endBefore = null, limit = DEFAULT_PAGE_SIZE } = queryParams
+  const { nextCursor = null, prevCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const episodesList = episodes ? episodes.data : []
 
   useEffect(() => {
     getEpisodesList({
       podcastId: match.params.podcastId,
-      params: { startAfter, endBefore, limit }
+      params: { nextCursor, prevCursor, limit }
     })
-  }, [startAfter, endBefore, limit, match, getEpisodesList])
+  }, [nextCursor, prevCursor, limit, match, getEpisodesList])
 
   return (
     <div className={classes.root}>

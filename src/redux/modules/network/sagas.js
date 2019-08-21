@@ -20,7 +20,7 @@ const createNetwork = apiCallSaga({
 const getNetworksList = apiCallSaga({
   type: GET_NETWORKS_LIST,
   method: 'get',
-  allowedParamKeys: ['startAfter', 'endingBefore', 'limit'],
+  allowedParamKeys: ['nextCursor', 'prevCursor', 'limit'],
   path: '/networks',
   selectorKey: 'networksList'
 })
