@@ -5,6 +5,7 @@ import {
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
   UPDATE_PODCAST,
+  UPDATE_PODCAST_CONFIG,
   UPDATE_PODCAST_DETAILS,
   UPLOAD_PODCAST_IMAGE,
   UPDATE_SUBSCRIPTION_URLS
@@ -26,12 +27,20 @@ const getPodcastDetails = apiCallSaga({
   selectorKey: 'podcastDetails'
 })
 
-const updatePodcastApi = apiCallSaga({
+const updatePodcast = apiCallSaga({
   type: UPDATE_PODCAST,
   method: 'patch',
   allowedParamKeys: [],
   path: ({ payload }) => `/podcasts/${payload.id}`,
   selectorKey: 'podcastDetails'
+})
+
+const updatePodcastConfig = apiCallSaga({
+  type: UPDATE_PODCAST_CONFIG,
+  method: 'patch',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts/${payload.id}/config`,
+  selectorKey: 'podcastDetails.config'
 })
 
 const uploadPodcastImage = apiCallSaga({
@@ -53,15 +62,26 @@ const updateSubscriptionUrls = apiCallSaga({
 const updatePodcastDetails = function*(action) {
   const { payload } = action
   const { resolve, reject } = payload
-  const { image, ...podcastData } = payload.data
-  let result = yield updatePodcastApi({
+  const { image, config: podcastConfig, ...podcastData } = payload.data
+  let result = yield updatePodcast({
     type: UPDATE_PODCAST,
     payload: {
       reject,
-      guid: payload.guid,
+      id: payload.id,
       data: podcastData
     }
   })
+
+  if (result) {
+    result = yield updatePodcastConfig({
+      type: UPDATE_PODCAST_CONFIG,
+      payload: {
+        reject,
+        id: payload.id,
+        data: podcastConfig
+      }
+    })
+  }
 
   if (result && image) {
     const imageData = new FormData()
@@ -71,6 +91,7 @@ const updatePodcastDetails = function*(action) {
       type: UPLOAD_PODCAST_IMAGE,
       payload: {
         reject,
+        id: payload.id,
         data: imageData
       }
     })
@@ -87,6 +108,7 @@ export default function* rootSaga() {
   yield takeLatest(GET_PODCASTS_LIST, getPodcastsList)
   yield takeLatest(GET_PODCAST_DETAILS, getPodcastDetails)
   yield takeLatest(UPDATE_PODCAST_DETAILS, updatePodcastDetails)
+  yield takeLatest(UPDATE_PODCAST_CONFIG, updatePodcastConfig)
   yield takeLatest(UPLOAD_PODCAST_IMAGE, uploadPodcastImage)
   yield takeLatest(UPDATE_SUBSCRIPTION_URLS, updateSubscriptionUrls)
 }

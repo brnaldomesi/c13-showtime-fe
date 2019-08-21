@@ -77,7 +77,7 @@ const renderForm = props => (
       lockerName="lockedSyncFields"
       lockerValue="tags"
     />
-    <Field name="status" label="Active" toggleValues={['INACTIVE', 'ACTIVE']} component={FormCheckbox} />
+    <Field name="config.enableShowpage" label="Active" toggleValues={[false, true]} component={FormCheckbox} />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
@@ -105,6 +105,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
         'slug',
         'websiteUrl',
         'lockedSyncFields',
+        'config',
         // 'image',
         'tags'
       ]),
@@ -112,7 +113,12 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
     )
   }
 
-  const initialValues = podcastDetails // ? { ...podcastDetails, image: get(podcastDetails, 'imageUrls.original') } : {}
+  const initialValues = podcastDetails
+    ? {
+        ...podcastDetails,
+        config: { enableShowpage: podcastDetails.config.enableShowpage }
+      }
+    : {}
   return (
     <Formik
       initialValues={initialValues}
