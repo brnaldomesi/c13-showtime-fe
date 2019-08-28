@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Typography from '@material-ui/core/Typography'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { Formik } from 'formik'
+import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import * as Yup from 'yup'
 
@@ -12,6 +13,7 @@ import LoginForm from './LoginForm'
 import styles from './styles'
 import { formSubmit } from 'utils/form'
 import { authLogin } from 'redux/modules/auth'
+import { SNACKBAR_TYPE } from 'config/constants'
 import { userIsNotAuthenticatedRedir } from 'hocs/withAuth'
 
 const validationSchema = Yup.object().shape({
@@ -19,33 +21,35 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required('Password is required')
 })
 
-class Login extends Component {
-  static propTypes = {
-    authLogin: PropTypes.func.isRequired
-  }
+const Login = props => {
+  const { classes } = props
+  const { enqueueSnackbar } = useSnackbar()
 
-  handleSubmit = (values, formActions) => {
-    const { authLogin } = this.props
+  const handleSubmit = (values, formActions) => {
+    const { authLogin } = props
     return formSubmit(
       authLogin,
       {
-        data: values
+        data: values,
+        success: () => enqueueSnackbar('Logged in successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
       },
       formActions
     )
   }
 
-  render() {
-    const { classes } = this.props
-    return (
-      <Paper className={classes.paper}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Login
-        </Typography>
-        <Formik component={LoginForm} onSubmit={this.handleSubmit} validationSchema={validationSchema} />
-      </Paper>
-    )
-  }
+  return (
+    <Paper className={classes.paper}>
+      <Typography variant="h6" align="center" gutterBottom>
+        Login
+      </Typography>
+      <Formik component={LoginForm} onSubmit={handleSubmit} validationSchema={validationSchema} />
+    </Paper>
+  )
+}
+
+Login.propTypes = {
+  authLogin: PropTypes.func.isRequired,
+  classes: PropTypes.object
 }
 
 const actions = {

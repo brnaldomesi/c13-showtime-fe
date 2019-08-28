@@ -3,6 +3,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import dfFormat from 'date-fns/format'
@@ -23,6 +24,7 @@ import {
   networkPodcastsListSelector,
   networkPodcastsListLoadingSelector
 } from 'redux/modules/network'
+import { SNACKBAR_TYPE } from 'config/constants'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
@@ -44,15 +46,18 @@ export const NetworkDetails = props => {
     podcastsLoading,
     networkDetailsLoading
   } = props
+  const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
     getNetworkDetails({
-      id: match.params.networkId
+      id: match.params.networkId,
+      fail: () => enqueueSnackbar('Failed to load network details!', { variant: SNACKBAR_TYPE.ERROR })
     })
     getNetworkPodcastsList({
-      networkId: match.params.networkId
+      networkId: match.params.networkId,
+      fail: () => enqueueSnackbar('Failed to load podcasts of the network!', { variant: SNACKBAR_TYPE.ERROR })
     })
-  }, [match, getNetworkDetails, getNetworkPodcastsList])
+  }, [match, getNetworkDetails, getNetworkPodcastsList, enqueueSnackbar])
 
   return (
     <>

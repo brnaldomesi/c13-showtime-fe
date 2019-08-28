@@ -3,6 +3,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Redirect, Route, Switch } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
@@ -14,6 +15,7 @@ import {
   podcastDetailsLoadingSelector
 } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
+import { SNACKBAR_TYPE } from 'config/constants'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
 import CrewMemberEdit from './CrewMemberEdit'
@@ -29,17 +31,22 @@ export const PodcastEdit = props => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
   const { podcastId } = match.params
   const basePath = `/podcasts/:podcastId/edit`
+  const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
-    getPodcastDetails({ id: podcastId })
-  }, [podcastId, getPodcastDetails])
+    getPodcastDetails({
+      id: podcastId,
+      fail: () => enqueueSnackbar('Failed to load the podcast details.', { variant: SNACKBAR_TYPE.ERROR })
+    })
+  }, [podcastId, getPodcastDetails, enqueueSnackbar])
 
   const handleSubmit = (values, formActions) => {
     formSubmit(
       updatePodcastDetails,
       {
         id: podcastId,
-        data: values
+        data: values,
+        fail: () => enqueueSnackbar('Failed to save the podcast details.', { variant: SNACKBAR_TYPE.ERROR })
       },
       formActions
     )

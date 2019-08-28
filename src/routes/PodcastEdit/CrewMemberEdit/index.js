@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
@@ -11,6 +12,7 @@ import * as Yup from 'yup'
 import { crewMemberDetailsSelector } from 'redux/modules/crew'
 import { createCrewMemberDetails, getCrewMemberDetails, updateCrewMemberDetails } from 'redux/modules/crew'
 import { formSubmit } from 'utils/form'
+import { SNACKBAR_TYPE } from 'config/constants'
 // import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
@@ -75,6 +77,7 @@ const CrewMemberEdit = ({
   updateCrewMemberDetails
 }) => {
   const { crewId, podcastId } = match.params
+  const { enqueueSnackbar } = useSnackbar()
   const handleSubmit = async (values, actions) => {
     const saveCrewMember = crewId && crewId !== 'new' ? updateCrewMemberDetails : createCrewMemberDetails
     formSubmit(
@@ -83,7 +86,8 @@ const CrewMemberEdit = ({
         podcastId,
         crewId,
         data: values,
-        success: () => history.push(`/podcasts/${podcastId}/edit/crew`)
+        success: () => history.push(`/podcasts/${podcastId}/edit/crew`),
+        fail: () => enqueueSnackbar('Failed to save the crew member details.', { variant: SNACKBAR_TYPE.ERROR })
       },
       actions
     )

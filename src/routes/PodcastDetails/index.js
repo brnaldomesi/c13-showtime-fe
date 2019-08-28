@@ -3,6 +3,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
@@ -13,6 +14,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { getPodcastDetails, podcastDetailsLoadingSelector, podcastDetailsSelector } from 'redux/modules/podcast'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import { SNACKBAR_TYPE } from 'config/constants'
 import Breadcrumbs from 'components/Breadcrumbs'
 import CrewCarousel from './CrewCarousel'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -23,10 +25,14 @@ import styles from './styles'
 export const PodcastDetails = props => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading } = props
   const { podcastId } = match.params
+  const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
-    getPodcastDetails({ id: podcastId })
-  }, [podcastId, getPodcastDetails])
+    getPodcastDetails({
+      id: podcastId,
+      fail: () => enqueueSnackbar('Failed to load podcast details.', { variant: SNACKBAR_TYPE.ERROR })
+    })
+  }, [podcastId, getPodcastDetails, enqueueSnackbar])
 
   return (
     <div className={classes.root}>

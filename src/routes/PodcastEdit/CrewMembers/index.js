@@ -2,19 +2,25 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Link } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 import Button from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 
 import { getCrewMembersList, crewMembersListSelector, crewMembersListLoadingSelector } from 'redux/modules/crew'
+import { SNACKBAR_TYPE } from 'config/constants'
 import CrewMemberItem from '../CrewMemberItem'
 import LoadingIndicator from 'components/LoadingIndicator'
 
 const CrewMembers = ({ match, crewMembers, getCrewMembersList, crewMembersListLoading }) => {
   const { podcastId } = match.params
+  const { enqueueSnackbar } = useSnackbar()
   useEffect(() => {
-    getCrewMembersList({ podcastId })
-  }, [podcastId, getCrewMembersList])
+    getCrewMembersList({
+      podcastId,
+      fail: () => enqueueSnackbar('Failed to load crew members of the podcast.', { variant: SNACKBAR_TYPE.ERROR })
+    })
+  }, [podcastId, getCrewMembersList, enqueueSnackbar])
 
   return (
     <Grid container spacing={2}>

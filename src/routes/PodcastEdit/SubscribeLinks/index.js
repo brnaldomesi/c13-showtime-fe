@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import pick from 'lodash/pick'
@@ -9,6 +10,7 @@ import PropTypes from 'prop-types'
 
 import { formSubmit } from 'utils/form'
 import { updateSubscriptionUrls } from 'redux/modules/podcast'
+import { SNACKBAR_TYPE } from 'config/constants'
 import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
 
@@ -87,12 +89,15 @@ const renderForm = props => (
 )
 
 const SubscribeLinks = ({ initialValues, match, updateSubscriptionUrls }) => {
+  const { enqueueSnackbar } = useSnackbar()
   const handleSubmit = async (values, actions) => {
     formSubmit(
       updateSubscriptionUrls,
       {
         id: match.params.podcastId,
-        data: pick(values, ['googlePodcasts', 'googlePlay', 'applePodcasts', 'spotify', 'radioCom'])
+        data: pick(values, ['googlePodcasts', 'googlePlay', 'applePodcasts', 'spotify', 'radioCom']),
+        fail: () =>
+          enqueueSnackbar('Failed to save the subscribe links for the podcast.', { variant: SNACKBAR_TYPE.ERROR })
       },
       actions
     )

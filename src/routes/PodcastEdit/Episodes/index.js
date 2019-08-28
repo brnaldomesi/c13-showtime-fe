@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
+import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import dfFormat from 'date-fns/format'
 import Paper from '@material-ui/core/Paper'
@@ -14,7 +15,7 @@ import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
 
 import { APIListType } from 'utils/propTypes'
-import { DEFAULT_PAGE_SIZE } from 'config/constants'
+import { DEFAULT_PAGE_SIZE, SNACKBAR_TYPE } from 'config/constants'
 import { getEpisodesList, episodesListSelector, episodesListLoadingSelector } from 'redux/modules/episode'
 import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
@@ -30,13 +31,15 @@ export const PodcastEpisodes = props => {
   const { classes, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
   const { nextCursor = null, prevCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const episodesList = episodes ? episodes.data : []
+  const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
     getEpisodesList({
       podcastId: match.params.podcastId,
-      params: { nextCursor, prevCursor, limit }
+      params: { nextCursor, prevCursor, limit },
+      fail: () => enqueueSnackbar('Failed to load episodes of the podcast.', { variant: SNACKBAR_TYPE.ERROR })
     })
-  }, [nextCursor, prevCursor, limit, match, getEpisodesList])
+  }, [nextCursor, prevCursor, limit, match, getEpisodesList, enqueueSnackbar])
 
   return (
     <div className={classes.root}>
