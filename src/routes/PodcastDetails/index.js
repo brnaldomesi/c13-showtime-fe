@@ -56,12 +56,14 @@ export const PodcastDetails = props => {
               <Typography variant="subtitle1" gutterBottom>
                 <strong>iTunes Categories</strong>
               </Typography>
-              {podcastDetails.itunesCategories && podcastDetails.itunesCategories.length > 0 ? (
-                podcastDetails.itunesCategories.map((category, index) => (
-                  <Typography variant="body2" key={index}>
-                    {category}
-                  </Typography>
-                ))
+              {podcastDetails.categories && podcastDetails.categories.length > 0 ? (
+                <div className={classes.categories}>
+                  {podcastDetails.categories.map((category, index) => (
+                    <Typography variant="body2" key={index}>
+                      {category.name}
+                    </Typography>
+                  ))}
+                </div>
               ) : (
                 <Typography variant="body2" paragraph>
                   <em>No iTunes categories specified.</em>
