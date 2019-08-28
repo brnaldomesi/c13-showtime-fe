@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 import Typography from '@material-ui/core/Typography'
 import Slider from 'react-slick'
 
-import { getCrewMembersList, crewMembersListSelector } from 'redux/modules/crew'
+import { getCrewMembersList, crewMembersListSelector, crewMembersListLoadingSelector } from 'redux/modules/crew'
 import { getFullName } from 'utils/helpers'
 import styles from './styles'
 import ThumbnailImage from 'components/ThumbnailImage'
@@ -36,7 +36,7 @@ const CrewCarouselItem = ({ crewMember, classes }) => (
   </div>
 )
 
-const CrewCarousel = ({ classes, podcastId, crewMembers, getCrewMembersList }) => {
+const CrewCarousel = ({ classes, podcastId, crewMembers, getCrewMembersList, crewMembersLoading }) => {
   const sliderRef = useRef(null)
   useEffect(() => {
     getCrewMembersList({ podcastId })
@@ -50,7 +50,7 @@ const CrewCarousel = ({ classes, podcastId, crewMembers, getCrewMembersList }) =
     sliderRef.current.slickNext()
   }
 
-  return (
+  return crewMembers.length > 0 ? (
     <div className={classes.root}>
       <IconButton className={classes.arrowLeft} onClick={handleSlideLeft}>
         <ChevronLeftIcon fontSize="inherit" />
@@ -66,18 +66,24 @@ const CrewCarousel = ({ classes, podcastId, crewMembers, getCrewMembersList }) =
         </Slider>
       </Grid>
     </div>
-  )
+  ) : !crewMembersLoading ? (
+    <Typography variant="body1" paragraph>
+      <em>No cast and crews available for this podcast.</em>
+    </Typography>
+  ) : null
 }
 
 CrewCarousel.propTypes = {
   classes: PropTypes.object.isRequired,
   crewMembers: PropTypes.array.isRequired,
+  crewMembersLoading: PropTypes.bool.isRequired,
   getCrewMembersList: PropTypes.func.isRequired,
   podcastId: PropTypes.string.isRequired
 }
 
 const selector = createStructuredSelector({
-  crewMembers: crewMembersListSelector
+  crewMembers: crewMembersListSelector,
+  crewMembersLoading: crewMembersListLoadingSelector
 })
 
 const actions = {
