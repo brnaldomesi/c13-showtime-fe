@@ -8,6 +8,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import PropTypes from 'prop-types'
+import Typography from '@material-ui/core/Typography'
 
 import { authLogout } from 'redux/modules/auth'
 import styles from './styles'
@@ -55,13 +56,13 @@ const UserActionsMenu = ({ authLogout }) => {
           <ListItemIcon className={classes.itemIcon}>
             <AccountCircle />
           </ListItemIcon>
-          Profile
+          <Typography variant="body2">Profile</Typography>
         </MenuItem>
         <MenuItem onClick={handleLogout}>
           <ListItemIcon className={classes.itemIcon}>
             <LogoutIcon />
           </ListItemIcon>
-          Logout
+          <Typography variant="body2">Logout</Typography>
         </MenuItem>
       </Menu>
     </div>
