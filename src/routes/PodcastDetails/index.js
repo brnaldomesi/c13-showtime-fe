@@ -2,117 +2,104 @@ import React, { useEffect } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { Link } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
-import Hidden from '@material-ui/core/Hidden'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
-import Typography from '@material-ui/core/Typography'
 
-import { getPodcastDetails, podcastDetailsLoadingSelector, podcastDetailsSelector } from 'redux/modules/podcast'
-import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import {
+  getPodcastDetails,
+  updatePodcastDetails,
+  podcastDetailsSelector,
+  podcastDetailsLoadingSelector
+} from 'redux/modules/podcast'
+import { formSubmit } from 'utils/form'
 import { SNACKBAR_TYPE } from 'config/constants'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
-import CrewCarousel from './CrewCarousel'
+import CrewMemberEdit from './CrewMemberEdit'
+import CrewMembers from './CrewMembers'
+import Episodes from './Episodes'
+import GeneralEdit from './GeneralEdit'
 import LoadingIndicator from 'components/LoadingIndicator'
-import RecentEpisodes from './RecentEpisodes'
-import ThumbnailImage from 'components/ThumbnailImage'
+import NavTabs from './NavTabs'
+import SubscribeLinks from './SubscribeLinks'
 import styles from './styles'
 
 export const PodcastDetails = props => {
-  const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading } = props
+  const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
   const { podcastId } = match.params
+  const basePath = `/podcasts/:podcastId`
   const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
     getPodcastDetails({
       id: podcastId,
-      fail: () => enqueueSnackbar('Failed to load podcast details.', { variant: SNACKBAR_TYPE.ERROR })
+      fail: () => enqueueSnackbar('Failed to load the podcast details.', { variant: SNACKBAR_TYPE.ERROR })
     })
   }, [podcastId, getPodcastDetails, enqueueSnackbar])
 
+  const handleSubmit = (values, formActions) => {
+    formSubmit(
+      updatePodcastDetails,
+      {
+        id: podcastId,
+        data: values,
+        fail: () => enqueueSnackbar('Failed to save the podcast details.', { variant: SNACKBAR_TYPE.ERROR })
+      },
+      formActions
+    )
+  }
+
   return (
-    <div className={classes.root}>
-      <Breadcrumbs />
-      {podcastDetailsLoading && <LoadingIndicator />}
-      {podcastDetails && (
-        <Paper className={classes.paper}>
-          <Hidden smUp>
-            <Button
-              className={classes.mobileEdit}
-              variant="contained"
-              color="primary"
-              component={Link}
-              to={`/podcasts/${podcastId}/edit`}>
-              Edit
-            </Button>
-          </Hidden>
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={3}>
-              <ThumbnailImage imageUrls={podcastDetails.imageUrls} className={classes.image} type="podcast" />
-              <Typography variant="subtitle1" gutterBottom>
-                <strong>iTunes Categories</strong>
-              </Typography>
-              {podcastDetails.categories && podcastDetails.categories.length > 0 ? (
-                <div className={classes.categories}>
-                  {podcastDetails.categories.map((category, index) => (
-                    <Typography variant="body2" key={index}>
-                      {category.name}
-                    </Typography>
-                  ))}
-                </div>
-              ) : (
-                <Typography variant="body2" paragraph>
-                  <em>No iTunes categories specified.</em>
-                </Typography>
+    <>
+      <NavTabs podcastDetails={podcastDetails} />
+      <div className={classes.content}>
+        <Breadcrumbs />
+        {podcastDetailsLoading ? (
+          <LoadingIndicator />
+        ) : podcastDetails ? (
+          <Switch>
+            <Route
+              path={`${basePath}/general`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <GeneralEdit {...props} podcastDetails={podcastDetails} onSubmit={handleSubmit} />
+                </Paper>
               )}
-              <Typography variant="subtitle1" gutterBottom>
-                <strong>Tags</strong>
-              </Typography>
-              {podcastDetails.tags && podcastDetails.tags.length > 0 ? (
-                <Typography variant="body2">{podcastDetails.tags.join(', ')}</Typography>
-              ) : (
-                <Typography variant="body2">
-                  <em>No tags specified.</em>
-                </Typography>
+            />
+            <Route
+              path={`${basePath}/crew/new`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <CrewMemberEdit {...props} />
+                </Paper>
               )}
-            </Grid>
-            <Grid item xs={12} sm={9}>
-              <Grid container spacing={2} direction="row-reverse">
-                <Hidden xsDown>
-                  <Grid item>
-                    <Button variant="contained" color="primary" component={Link} to={`/podcasts/${podcastId}/edit`}>
-                      Edit
-                    </Button>
-                  </Grid>
-                </Hidden>
-                <Grid item xs={12} sm>
-                  <Typography variant="h5" gutterBottom>
-                    {podcastDetails.title}
-                  </Typography>
-                </Grid>
-              </Grid>
-              {podcastDetails.subtitle && (
-                <Typography variant="h6" gutterBottom>
-                  {podcastDetails.subtitle}
-                </Typography>
+            />
+            <Route
+              path={`${basePath}/crew/:crewId`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <CrewMemberEdit {...props} />
+                </Paper>
               )}
-              <Typography variant="body1" paragraph>
-                {podcastDetails.summary}
-              </Typography>
-              <Typography variant="subtitle1" gutterBottom>
-                <strong>Cast and Crew</strong>
-              </Typography>
-              <CrewCarousel podcastId={podcastDetails.guid} />
-              <RecentEpisodes podcastId={podcastDetails.guid} />
-            </Grid>
-          </Grid>
-        </Paper>
-      )}
-    </div>
+            />
+            <Route path={`${basePath}/crew`} exact component={CrewMembers} />
+            <Route
+              path={`${basePath}/subscribe-links`}
+              render={props => (
+                <Paper className={classes.paper}>
+                  <SubscribeLinks {...props} initialValues={podcastDetails.subscriptionUrls} onSubmit={handleSubmit} />
+                </Paper>
+              )}
+            />
+            <Route path={`${basePath}/episodes`} exact component={Episodes} />
+            <Redirect to={`${basePath}/general`} />
+          </Switch>
+        ) : null}
+      </div>
+    </>
   )
 }
 
@@ -121,7 +108,10 @@ PodcastDetails.propTypes = {
   getPodcastDetails: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
-  podcastDetails: PropTypes.object
+  podcastDetails: PropTypes.object,
+  podcastDetailsLoading: PropTypes.bool,
+  queryParams: PropTypes.object,
+  updatePodcastDetails: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -130,7 +120,8 @@ const selector = createStructuredSelector({
 })
 
 const actions = {
-  getPodcastDetails
+  getPodcastDetails,
+  updatePodcastDetails
 }
 
 export default compose(

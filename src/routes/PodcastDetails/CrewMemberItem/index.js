@@ -23,7 +23,7 @@ const CrewMemberItem = ({ crewMember, match, number }) => {
           <ThumbnailImage className={classes.cover} imageUrls={crewMember.imageUrls} title={getFullName(crewMember)} />
         </Grid>
         <Grid item xs>
-          <IconButton className={classes.edit} component={Link} to={`${match.url}/${crewMember.id}/edit`}>
+          <IconButton className={classes.edit} component={Link} to={`${match.url}/${crewMember.id}`}>
             <EditIcon />
           </IconButton>
           <Typography variant="subtitle1" className={classes.title}>

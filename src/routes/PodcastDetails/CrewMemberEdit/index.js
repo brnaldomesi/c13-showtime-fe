@@ -55,7 +55,7 @@ const renderForm = ({ handleSubmit, match }) => (
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
-        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastId}/edit/crew`}>
+        <Button color="primary" type="submit" component={Link} to={`/podcasts/${match.params.podcastId}/crew`}>
           Cancel
         </Button>
       </Grid>
@@ -86,7 +86,7 @@ const CrewMemberEdit = ({
         podcastId,
         crewId,
         data: values,
-        success: () => history.push(`/podcasts/${podcastId}/edit/crew`),
+        success: () => history.push(`/podcasts/${podcastId}/crew`),
         fail: () => enqueueSnackbar('Failed to save the crew member details.', { variant: SNACKBAR_TYPE.ERROR })
       },
       actions

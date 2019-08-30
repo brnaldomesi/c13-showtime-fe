@@ -27,6 +27,6 @@ export default theme => ({
   avatar: {
     width: '100%',
     paddingTop: '100%',
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(1)
   }
 })

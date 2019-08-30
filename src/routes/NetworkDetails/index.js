@@ -111,15 +111,11 @@ export const NetworkDetails = props => {
                           variant="contained"
                           color="primary"
                           className={classes.episodes}
-                          to={`/podcasts/${podcast.id}`}
+                          to={`/podcasts/${podcast.id}/preview`}
                           component={Link}>
-                          Details
+                          Preview
                         </Button>
-                        <Button
-                          variant="contained"
-                          color="primary"
-                          to={`/podcasts/${podcast.id}/edit`}
-                          component={Link}>
+                        <Button variant="contained" color="primary" to={`/podcasts/${podcast.id}`} component={Link}>
                           Edit
                         </Button>
                       </TableCell>

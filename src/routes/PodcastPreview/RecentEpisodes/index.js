@@ -41,7 +41,7 @@ export const RecentEpisodes = props => {
           </Typography>
         </Grid>
         <Grid item>
-          <Button variant="contained" color="primary" component={Link} to={`/podcasts/${podcastId}/edit/episodes`}>
+          <Button variant="contained" color="primary" component={Link} to={`/podcasts/${podcastId}/episodes`}>
             Browse All
           </Button>
         </Grid>

@@ -9,7 +9,7 @@ import MainLayout from 'components/MainLayout'
 import NetworkDetails from './NetworkDetails'
 import Networks from './Networks'
 import PodcastDetails from './PodcastDetails'
-import PodcastEdit from './PodcastEdit'
+import PodcastPreview from './PodcastPreview'
 import Podcasts from './Podcasts'
 import TokenMonitor from 'components/TokenMonitor'
 
@@ -19,14 +19,14 @@ const routes = ({ history }) => (
       <MainLayout>
         <TokenMonitor />
         <Switch>
-          <Route exact path="/networks" component={Networks} />
-          <Route exact path="/networks/:networkId" component={NetworkDetails} />
-          <Route exact path="/podcasts" component={Podcasts} />
-          <Route exact path="/podcasts/:podcastId" component={PodcastDetails} />
-          <Route path="/podcasts/:podcastId/edit/:tabId/:crewId" component={PodcastEdit} />
-          <Route path="/podcasts/:podcastId/edit/:tabId?" component={PodcastEdit} />
-          <Route exact path="/" component={Dashboard} />
-          <Route exact path="/login" component={Login} />
+          <Route path="/networks" exact component={Networks} />
+          <Route path="/networks/:networkId" exact component={NetworkDetails} />
+          <Route path="/podcasts" exact component={Podcasts} />
+          <Route path="/podcasts/:podcastId/preview" exact component={PodcastPreview} />
+          <Route path="/podcasts/:podcastId/:tabId/:crewId" component={PodcastDetails} />
+          <Route path="/podcasts/:podcastId/:tabId?" component={PodcastDetails} />
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/login" exact component={Login} />
         </Switch>
       </MainLayout>
     </AppContainer>
