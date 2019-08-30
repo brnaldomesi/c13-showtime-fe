@@ -42,5 +42,8 @@ export default theme => ({
     [theme.breakpoints.up('md')]: {
       width: 200
     }
+  },
+  spacer: {
+    flex: 1
   }
 })

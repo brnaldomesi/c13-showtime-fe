@@ -15,6 +15,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 
 import styles from './styles'
+import UserActionsMenu from 'components/UserActionsMenu'
 import { isAuthenticatedSelector } from 'redux/modules/auth'
 
 export const Header = ({ classes, isAuthenticated, toggleSidebar }) => (
@@ -51,6 +52,8 @@ export const Header = ({ classes, isAuthenticated, toggleSidebar }) => (
           <Button component={Link} to="/networks" color="inherit">
             Networks
           </Button>
+          <div className={classes.spacer} />
+          <UserActionsMenu />
         </>
       )}
     </Toolbar>
