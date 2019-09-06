@@ -18,7 +18,13 @@ import Typography from '@material-ui/core/Typography'
 import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE, SNACKBAR_TYPE } from 'config/constants'
 import { getFullName } from 'utils/helpers'
-import { getUsersList, usersListSelector, usersListLoadingSelector } from 'redux/modules/user'
+import {
+  getUsersList,
+  confirmAndDeleteUser,
+  usersListSelector,
+  usersListLoadingSelector,
+  userDeletingSelector
+} from 'redux/modules/user'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -27,7 +33,7 @@ import styles from './styles'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 export const Users = props => {
-  const { classes, queryParams, getUsersList, users, usersLoading } = props
+  const { classes, confirmAndDeleteUser, getUsersList, queryParams, users, userDeleting, usersLoading } = props
   const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const usersList = users ? users.data : []
   const { enqueueSnackbar } = useSnackbar()
@@ -40,7 +46,13 @@ export const Users = props => {
   }, [prevCursor, nextCursor, limit, getUsersList, enqueueSnackbar])
 
   const handleDelete = id => () => {
-    console.log({ id })
+    confirmAndDeleteUser({
+      id,
+      success: () =>
+        getUsersList({
+          params: { prevCursor, nextCursor, limit }
+        })
+    })
   }
 
   return (
@@ -50,9 +62,8 @@ export const Users = props => {
         Users
       </Typography>
       <Paper className={classes.root}>
-        {usersLoading ? (
-          <LoadingIndicator />
-        ) : (
+        {(usersLoading || userDeleting) && <LoadingIndicator />}
+        {usersList.length > 0 && (
           <>
             <Table className={classes.table}>
               <TableHead>
@@ -100,18 +111,22 @@ export const Users = props => {
 
 Users.propTypes = {
   classes: PropTypes.object.isRequired,
+  confirmAndDeleteUser: PropTypes.func.isRequired,
   getUsersList: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
   users: APIListType.isRequired,
+  userLoading: PropTypes.bool,
   usersLoading: PropTypes.bool
 }
 
 const selector = createStructuredSelector({
   users: usersListSelector,
-  usersLoading: usersListLoadingSelector
+  usersLoading: usersListLoadingSelector,
+  userDeleting: userDeletingSelector
 })
 
 const actions = {
+  confirmAndDeleteUser,
   getUsersList
 }
 

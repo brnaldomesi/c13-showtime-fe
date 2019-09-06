@@ -13,3 +13,5 @@ export const updateUser = createAction(types.UPDATE_USER)
 export const deleteUser = createAction(types.DELETE_USER)
 
 export const validateEmail = createAction(types.VALIDATE_EMAIL)
+
+export const confirmAndDeleteUser = createAction(types.CONFIRM_AND_DELETE_USER)

@@ -8,3 +8,5 @@ export const usersListLoadingSelector = isRequestPending('usersList', 'get')
 export const userSelector = dataSelector('user', null)
 
 export const userLoadingSelector = isRequestPending('user', 'get')
+
+export const userDeletingSelector = isRequestPending('user', 'delete')

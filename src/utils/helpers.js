@@ -37,5 +37,19 @@ export const truncate = (input, len = 100) => {
 export const capitalize = str =>
   typeof str === 'string' && str.length > 0 ? str.charAt(0).toUpperCase() + str.slice(1) : str
 
+export const getFullName = person => `${person.firstName} ${person.lastName}`
 
-export const getFullName = (person) => `${person.firstName} ${person.lastName}`
+export const bindCallbackToPromise = () => {
+  let _resolve
+  const promise = () => {
+    return new Promise(resolve => {
+      _resolve = resolve
+    })
+  }
+  const cb = args => _resolve(args)
+
+  return {
+    promise,
+    cb
+  }
+}

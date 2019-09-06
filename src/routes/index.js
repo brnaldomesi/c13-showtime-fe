@@ -3,6 +3,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Route, Switch } from 'react-router-dom'
 
 import AppContainer from 'components/AppContainer'
+import ConfirmModal from 'components/ConfirmModal'
 import Dashboard from './Dashboard'
 import Login from './Login'
 import MainLayout from 'components/MainLayout'
@@ -14,7 +15,6 @@ import Podcasts from './Podcasts'
 import TokenMonitor from 'components/TokenMonitor'
 import UserEdit from './UserEdit'
 import Users from './Users'
-
 const routes = ({ history }) => (
   <ConnectedRouter history={history}>
     <AppContainer>
@@ -32,6 +32,7 @@ const routes = ({ history }) => (
           <Route path="/" exact component={Dashboard} />
           <Route path="/login" exact component={Login} />
         </Switch>
+        <ConfirmModal />
       </MainLayout>
     </AppContainer>
   </ConnectedRouter>

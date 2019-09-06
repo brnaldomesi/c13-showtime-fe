@@ -1,7 +1,17 @@
-import { takeLatest } from 'redux-saga/effects'
+import { call, race, put, takeLatest } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
-import { GET_USER, GET_USERS_LIST, CREATE_USER, UPDATE_USER, DELETE_USER, VALIDATE_EMAIL } from './types'
+import {
+  GET_USER,
+  GET_USERS_LIST,
+  CREATE_USER,
+  UPDATE_USER,
+  DELETE_USER,
+  VALIDATE_EMAIL,
+  CONFIRM_AND_DELETE_USER
+} from './types'
+import { bindCallbackToPromise } from 'utils/helpers'
+import { show } from 'redux-modal'
 
 const getUsersList = apiCallSaga({
   type: GET_USERS_LIST,
@@ -45,11 +55,35 @@ const deleteUser = apiCallSaga({
 
 const validateEmail = apiCallSaga({
   type: VALIDATE_EMAIL,
-  method: 'delete',
+  method: 'post',
   allowedParamKeys: [],
   path: '/users/validate-email',
   selectorKey: 'user'
 })
+
+const confirmDelete = function*() {
+  const confirmProm = bindCallbackToPromise()
+  const cancelProm = bindCallbackToPromise()
+  yield put(
+    show('confirmModal', {
+      onConfirm: confirmProm.cb,
+      onCancel: cancelProm.cb,
+      title: 'Are you sure you want to delete this user?'
+    })
+  )
+  const result = yield race({
+    confirmed: call(confirmProm.promise),
+    canceled: call(cancelProm.promise)
+  })
+  return Object.keys(result).includes('confirmed') ? true : false
+}
+
+const confirmAndDeleteUser = function*(action) {
+  const confirmed = yield call(confirmDelete)
+  if (confirmed) {
+    yield call(deleteUser, action)
+  }
+}
 
 export default function* rootSaga() {
   yield takeLatest(GET_USERS_LIST, getUsersList)
@@ -58,4 +92,5 @@ export default function* rootSaga() {
   yield takeLatest(UPDATE_USER, updateUser)
   yield takeLatest(DELETE_USER, deleteUser)
   yield takeLatest(VALIDATE_EMAIL, validateEmail)
+  yield takeLatest(CONFIRM_AND_DELETE_USER, confirmAndDeleteUser)
 }
