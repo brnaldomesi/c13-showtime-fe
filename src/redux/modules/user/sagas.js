@@ -32,7 +32,6 @@ const updateUser = apiCallSaga({
   method: 'patch',
   allowedParamKeys: [],
   path: ({ payload }) => `/users/${payload.id}`,
-  payloadOnSuccess: (data, payload) => payload.data,
   selectorKey: 'user'
 })
 

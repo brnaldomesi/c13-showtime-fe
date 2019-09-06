@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { TOKEN_FRESH_INTERVAL } from 'config/constants'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
@@ -18,7 +18,7 @@ const TokenMonitor = ({ authRefreshToken }) => {
     }
   })
 
-  return <div />
+  return null
 }
 
 const actions = {
