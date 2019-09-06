@@ -13,7 +13,7 @@ import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 export const Pagination = props => {
   const { listData, location, pushWithQuery, queryParams } = props
   const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
-  const isPrevDisabled = !prevCursor && !nextCursor && !get(listData, 'prevCursor')
+  const isPrevDisabled = (!prevCursor && !nextCursor) || !get(listData, 'prevCursor')
   const isNextDisabled = !get(listData, 'nextCursor')
 
   const handlePrevPage = () => {

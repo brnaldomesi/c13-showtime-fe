@@ -13,6 +13,7 @@ import { crewMemberDetailsSelector } from 'redux/modules/crew'
 import { getFullName } from 'utils/helpers'
 import { networkDetailsSelector } from 'redux/modules/network'
 import { podcastDetailsSelector } from 'redux/modules/podcast'
+import { userSelector } from 'redux/modules/user'
 import styles from './styles'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
@@ -27,8 +28,8 @@ const tabNames = {
   crew: 'Crew Members'
 }
 
-const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, crewMemberDetails }) => {
-  const { podcastId, networkId, tabId, crewId } = match.params
+const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, crewMemberDetails, user }) => {
+  const { userId, podcastId, networkId, tabId, crewId } = match.params
   const results = [
     {
       name: 'Home',
@@ -37,6 +38,7 @@ const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, 
   ]
   const isNetworkRoute = location.pathname.startsWith('/networks')
   const isPodcastRoute = location.pathname.startsWith('/podcasts')
+  const isUserRoute = location.pathname.startsWith('/users')
 
   if (isNetworkRoute) {
     results.push({
@@ -77,6 +79,17 @@ const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, 
         path: '/podcasts'
       })
     }
+  } else if (isUserRoute) {
+    results.push({
+      name: 'Users',
+      path: '/users'
+    })
+    if (user && user.id === userId) {
+      results.push({
+        name: getFullName(user),
+        path: `/users/${userId}`
+      })
+    }
   }
   return results
 }
@@ -107,7 +120,8 @@ const Breadcrumbs = props => {
 const selector = createStructuredSelector({
   crewMemberDetails: crewMemberDetailsSelector,
   networkDetails: networkDetailsSelector,
-  podcastDetails: podcastDetailsSelector
+  podcastDetails: podcastDetailsSelector,
+  user: userSelector
 })
 
 export default compose(

@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import IconCast from '@material-ui/icons/Cast'
 import IconNetwork from '@material-ui/icons/Share'
+import IconPeopleOutline from '@material-ui/icons/PeopleOutline'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -43,6 +44,12 @@ class Dashboard extends Component {
                   <IconCast />
                 </ListItemIcon>
                 <ListItemText primary="View Podcasts" />
+              </ListItem>
+              <ListItem button component={Link} to="/users">
+                <ListItemIcon>
+                  <IconPeopleOutline />
+                </ListItemIcon>
+                <ListItemText primary="Manage Users" />
               </ListItem>
             </List>
           </Grid>
