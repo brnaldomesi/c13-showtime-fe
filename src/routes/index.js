@@ -13,8 +13,8 @@ import PodcastDetails from './PodcastDetails'
 import PodcastPreview from './PodcastPreview'
 import Podcasts from './Podcasts'
 import TokenMonitor from 'components/TokenMonitor'
-import UserEdit from './UserEdit'
 import Users from './Users'
+
 const routes = ({ history }) => (
   <ConnectedRouter history={history}>
     <AppContainer>
@@ -27,8 +27,7 @@ const routes = ({ history }) => (
           <Route path="/podcasts/:podcastId/preview" exact component={PodcastPreview} />
           <Route path="/podcasts/:podcastId/:tabId/:crewId" component={PodcastDetails} />
           <Route path="/podcasts/:podcastId/:tabId?" component={PodcastDetails} />
-          <Route path="/users" exact component={Users} />
-          <Route path="/users/:userId" exact component={UserEdit} />
+          <Route path="/users" component={Users} />
           <Route path="/" exact component={Dashboard} />
           <Route path="/login" exact component={Login} />
         </Switch>

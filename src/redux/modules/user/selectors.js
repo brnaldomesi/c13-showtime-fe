@@ -9,4 +9,6 @@ export const userSelector = dataSelector('user', null)
 
 export const userLoadingSelector = isRequestPending('user', 'get')
 
+export const userCreatingSelector = isRequestPending('user', 'post')
+
 export const userDeletingSelector = isRequestPending('user', 'delete')
