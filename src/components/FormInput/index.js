@@ -2,18 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 
-const FormInput = ({
-  className,
-  field,
-  form,
-  fullWidth,
-  label,
-  multiline,
-  placeholder,
-  rows,
-  type,
-  variant,
-}) => {
+const FormInput = ({ className, field, form, fullWidth, label, multiline, placeholder, rows, type, variant }) => {
   const error = form.touched[field.name] && form.errors[field.name]
   return (
     <TextField
@@ -49,13 +38,13 @@ FormInput.propTypes = {
   rows: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   multiline: PropTypes.bool,
   type: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.string
 }
 
 FormInput.defaultProps = {
   fullWidth: true,
   type: 'text',
-  variant: 'outlined',
+  variant: 'outlined'
 }
 
 export default FormInput

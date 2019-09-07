@@ -58,7 +58,9 @@ const UserEdit = ({ user, userLoading, updateUser, getUser, match }) => {
           initialValues={user}
           enableReinitialize
           onSubmit={handleSubmit}
-          render={UserForm}
+          validateOnChange={false}
+          validateOnBlur
+          component={UserForm}
           validationSchema={validationSchema}
         />
       </Paper>

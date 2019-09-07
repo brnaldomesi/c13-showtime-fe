@@ -1,4 +1,4 @@
-import { call, race, put, takeLatest } from 'redux-saga/effects'
+import { call, race, put, takeLatest, throttle } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
 import {
@@ -91,6 +91,6 @@ export default function* rootSaga() {
   yield takeLatest(CREATE_USER, createUser)
   yield takeLatest(UPDATE_USER, updateUser)
   yield takeLatest(DELETE_USER, deleteUser)
-  yield takeLatest(VALIDATE_EMAIL, validateEmail)
   yield takeLatest(CONFIRM_AND_DELETE_USER, confirmAndDeleteUser)
+  yield throttle(500, VALIDATE_EMAIL, validateEmail)
 }

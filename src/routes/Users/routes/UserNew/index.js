@@ -17,7 +17,13 @@ import styles from './styles'
 
 const useStyles = makeStyles(styles)
 
-const UserNew = ({ user, userLoading, createUser, match, history }) => {
+const initialValues = {
+  firstName: '',
+  lastName: '',
+  email: ''
+}
+
+const UserNew = ({ userLoading, createUser, match, history }) => {
   const classes = useStyles()
 
   const handleSubmit = (values, actions) => {
@@ -44,10 +50,11 @@ const UserNew = ({ user, userLoading, createUser, match, history }) => {
       </Typography>
       <Paper className={classes.paper}>
         <Formik
-          initialValues={user}
-          enableReinitialize
+          initialValues={initialValues}
           onSubmit={handleSubmit}
-          render={UserForm}
+          component={UserForm}
+          validateOnChange={false}
+          validateOnBlur
           validationSchema={validationSchema}
         />
       </Paper>
@@ -57,8 +64,7 @@ const UserNew = ({ user, userLoading, createUser, match, history }) => {
 
 UserNew.propTypes = {
   createUser: PropTypes.func.isRequired,
-  user: PropTypes.object,
-  userLoading: PropTypes.bool.isRequired
+  user: PropTypes.object
 }
 
 const selector = createStructuredSelector({
