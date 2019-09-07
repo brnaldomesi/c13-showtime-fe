@@ -90,6 +90,12 @@ const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, 
         path: `/users/${userId}`
       })
     }
+    if (location.pathname.startsWith('/users/new')) {
+      results.push({
+        name: 'New User',
+        path: `/users/new`
+      })
+    }
   }
   return results
 }
