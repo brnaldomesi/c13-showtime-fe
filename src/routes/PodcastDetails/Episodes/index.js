@@ -63,7 +63,7 @@ export const PodcastEpisodes = props => {
               </TableHead>
               <TableBody>
                 {episodesList.map(episode => (
-                  <TableRow key={episode.guid}>
+                  <TableRow key={episode.id}>
                     <TableCell scope="row" width={100}>
                       <ThumbnailImage imageUrls={episode.imageUrl} type="podcast" className={classes.image} />
                     </TableCell>

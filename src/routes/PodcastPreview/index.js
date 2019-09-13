@@ -106,8 +106,8 @@ export const PodcastPreview = props => {
               <Typography variant="subtitle1" gutterBottom>
                 <strong>Cast and Crew</strong>
               </Typography>
-              <CrewCarousel podcastId={podcastDetails.guid} />
-              <RecentEpisodes podcastId={podcastDetails.guid} />
+              <CrewCarousel podcastId={podcastDetails.id} />
+              <RecentEpisodes podcastId={podcastDetails.id} />
             </Grid>
           </Grid>
         </Paper>

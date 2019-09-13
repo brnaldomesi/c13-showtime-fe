@@ -61,7 +61,7 @@ const CrewCarousel = ({ classes, podcastId, crewMembers, getCrewMembersList, cre
       <Grid item xs>
         <Slider {...sliderSettings} ref={sliderRef}>
           {crewMembers.map(item => (
-            <CrewCarouselItem key={item.guid} crewMember={item} classes={classes} />
+            <CrewCarouselItem key={item.id} crewMember={item} classes={classes} />
           ))}
         </Slider>
       </Grid>

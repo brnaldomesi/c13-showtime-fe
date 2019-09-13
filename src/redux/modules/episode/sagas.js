@@ -15,7 +15,7 @@ const getEpisodeDetails = apiCallSaga({
   type: GET_EPISODE_DETAILS,
   method: 'get',
   allowedParamKeys: [],
-  path: ({ payload }) => `/episodes/${payload.guid}`,
+  path: ({ payload }) => `/episodes/${payload.id}`,
   selectorKey: 'episodeDetails'
 })
 
@@ -23,7 +23,7 @@ const updateEpisodeDetails = apiCallSaga({
   type: UPDATE_EPISODE_DETAILS,
   method: 'patch',
   allowedParamKeys: [],
-  path: ({ payload }) => `/episodes/${payload.guid}`,
+  path: ({ payload }) => `/episodes/${payload.id}`,
   selectorKey: 'episodeDetails'
 })
 

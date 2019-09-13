@@ -98,7 +98,7 @@ export const Podcasts = props => {
                         className={classes.episodes}
                         to={`/podcasts/${podcast.id}/preview`}
                         component={Link}>
-                        Details
+                        Preview
                       </Button>
                       <Button variant="contained" color="primary" to={`/podcasts/${podcast.id}`} component={Link}>
                         Edit

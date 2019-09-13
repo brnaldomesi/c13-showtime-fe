@@ -52,7 +52,7 @@ export const RecentEpisodes = props => {
         <>
           <List className={classes.list}>
             {episodesList.map(episode => (
-              <React.Fragment key={episode.guid}>
+              <React.Fragment key={episode.id}>
                 <ListItem>
                   <ListItemText
                     primary={<strong>{episode.title}</strong>}

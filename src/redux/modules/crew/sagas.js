@@ -95,7 +95,7 @@ const updateCrewMemberDetails = function*(action) {
       type: UPLOAD_CREW_MEMBER_IMAGE,
       payload: {
         reject,
-        guid: payload.guid,
+        id: payload.id,
         data: imageData
       }
     })
