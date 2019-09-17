@@ -10,10 +10,10 @@ export const formSubmit = (actionCreator, payload, formActions) => {
       const errors = res.data || res.error || res // TODO: assumes backend response are wrapped within data or error field
 
       if (typeof errors === 'object') {
-        const { message, fieldErrors, ...otherFieldErrors } = errors
+        const { detail, fieldErrors, ...otherFieldErrors } = errors
 
         formActions.setErrors({
-          globalError: message,
+          globalError: detail,
           ...fieldErrors,
           ...otherFieldErrors
         })
