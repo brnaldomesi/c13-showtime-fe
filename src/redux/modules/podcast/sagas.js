@@ -14,7 +14,7 @@ import {
 const getPodcastsList = apiCallSaga({
   type: GET_PODCASTS_LIST,
   method: 'get',
-  allowedParamKeys: ['nextCursor', 'prevCursor', 'limit', 'sortOrder'],
+  allowedParamKeys: ['nextCursor', 'prevCursor', 'limit', 'sortOrder', 'search'],
   path: '/podcasts',
   selectorKey: 'podcastsList'
 })
