@@ -32,16 +32,16 @@ const TableCell = withStyles(tableCellStyles)(MuiTableCell)
 
 export const Podcasts = props => {
   const { classes, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
-  const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
+  const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE, search } = queryParams
   const podcastsList = podcasts ? podcasts.data : []
   const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
     getPodcastsList({
-      params: { prevCursor, nextCursor, limit },
+      params: { prevCursor, nextCursor, limit, search },
       fail: () => enqueueSnackbar('Failed to load podcasts!', { variant: SNACKBAR_TYPE.ERROR })
     })
-  }, [prevCursor, nextCursor, limit, getPodcastsList, enqueueSnackbar])
+  }, [prevCursor, nextCursor, limit, getPodcastsList, enqueueSnackbar, search])
 
   return (
     <div className={classes.root}>
