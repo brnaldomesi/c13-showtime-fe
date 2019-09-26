@@ -39,6 +39,7 @@ export default ({
       headers: customHeaders,
       success: successCallback,
       fail: failCallback,
+      cancelToken,
       onUploadProgress,
       onDownloadProgress,
       resolve,
@@ -66,6 +67,7 @@ export default ({
         data,
         params: allowedParamKeys ? pick(queryParams, allowedParamKeys) : queryParams,
         baseURL: process.env.REACT_APP_API_HOST,
+        cancelToken,
         onUploadProgress,
         onDownloadProgress
       })
