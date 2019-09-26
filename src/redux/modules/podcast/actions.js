@@ -15,3 +15,5 @@ export const updateSubscriptionUrls = createAction(types.UPDATE_SUBSCRIPTION_URL
 export const getPodcastConfig = createAction(types.GET_PODCAST_CONFIG)
 
 export const updatePodcastConfig = createAction(types.UPDATE_PODCAST_CONFIG)
+
+export const searchPodcasts = createAction(types.SEARCH_PODCASTS)

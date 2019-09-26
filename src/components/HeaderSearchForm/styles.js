@@ -2,6 +2,9 @@ import { fade } from '@material-ui/core/styles'
 
 export default theme => ({
   root: {
+    position: 'relative'
+  },
+  inputWrapper: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
@@ -35,5 +38,15 @@ export default theme => ({
     [theme.breakpoints.up('md')]: {
       width: 200
     }
+  },
+  suggestionImage: {
+    minWidth: 40,
+    height: 40,
+    marginRight: 10
+  },
+  suggestionText: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   }
 })

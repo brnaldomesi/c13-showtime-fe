@@ -8,3 +8,5 @@ export const podcastsListLoadingSelector = isRequestPending('podcastsList', 'get
 export const podcastDetailsSelector = dataSelector('podcastDetails', null)
 
 export const podcastDetailsLoadingSelector = isRequestPending('podcastDetails', 'get')
+
+export const podcastsSearchResultsSelector = dataSelector('podcastsSearch', [])

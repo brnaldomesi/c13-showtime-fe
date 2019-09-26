@@ -4,6 +4,7 @@ import { apiCallSaga } from '../api'
 import {
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
+  SEARCH_PODCASTS,
   UPDATE_PODCAST,
   UPDATE_PODCAST_CONFIG,
   UPDATE_PODCAST_DETAILS,
@@ -104,6 +105,14 @@ const updatePodcastDetails = function*(action) {
   return result
 }
 
+const searchPodcasts = apiCallSaga({
+  type: SEARCH_PODCASTS,
+  method: 'get',
+  allowedParamKeys: ['search'],
+  path: '/podcasts/search',
+  selectorKey: 'podcastsSearch'
+})
+
 export default function* rootSaga() {
   yield takeLatest(GET_PODCASTS_LIST, getPodcastsList)
   yield takeLatest(GET_PODCAST_DETAILS, getPodcastDetails)
@@ -111,4 +120,5 @@ export default function* rootSaga() {
   yield takeLatest(UPDATE_PODCAST_CONFIG, updatePodcastConfig)
   yield takeLatest(UPLOAD_PODCAST_IMAGE, uploadPodcastImage)
   yield takeLatest(UPDATE_SUBSCRIPTION_URLS, updateSubscriptionUrls)
+  yield takeLatest(SEARCH_PODCASTS, searchPodcasts)
 }
