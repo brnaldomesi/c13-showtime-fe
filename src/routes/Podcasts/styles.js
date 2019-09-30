@@ -12,8 +12,8 @@ export default theme => ({
     whiteSpace: 'nowrap'
   },
   image: {
-    width: 100,
-    height: 100
+    width: 50,
+    height: 50
   },
   actions: {
     whiteSpace: 'nowrap'

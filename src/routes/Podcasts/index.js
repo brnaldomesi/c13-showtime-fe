@@ -19,7 +19,6 @@ import Typography from '@material-ui/core/Typography'
 import { APIListType } from 'utils/propTypes'
 import { DEFAULT_PAGE_SIZE, SNACKBAR_TYPE } from 'config/constants'
 import { getPodcastsList, podcastsListSelector, podcastsListLoadingSelector } from 'redux/modules/podcast'
-import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -57,17 +56,18 @@ export const Podcasts = props => {
             <Table className={classes.table}>
               <TableHead>
                 <TableRow>
-                  <TableCell>Thumbnail</TableCell>
-                  <TableCell width="40%">Title</TableCell>
-                  <TableCell width="20%">Network</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell />
+                  <TableCell width={66}>Thumbnail</TableCell>
+                  <TableCell>Title</TableCell>
+                  <TableCell width="15%">Slug</TableCell>
+                  <TableCell width="12%">Network</TableCell>
+                  <TableCell width="8%">Status</TableCell>
+                  <TableCell width={210} />
                 </TableRow>
               </TableHead>
               <TableBody>
                 {podcastsList.map(podcast => (
                   <TableRow key={podcast.id}>
-                    <TableCell scope="row" width={100}>
+                    <TableCell scope="row" width={50}>
                       <ThumbnailImage
                         className={classes.image}
                         imageUrls={podcast.imageUrls}
@@ -79,7 +79,11 @@ export const Podcasts = props => {
                       <Typography variant="subtitle1" color="textPrimary">
                         {podcast.title}
                       </Typography>
-                      <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="body2" color="textSecondary">
+                        {podcast.slug}
+                      </Typography>
                     </TableCell>
                     <TableCell>
                       <Typography variant="body2" color="textSecondary">
