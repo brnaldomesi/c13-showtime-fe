@@ -25,7 +25,7 @@ import styles from './styles'
 import { APIListType } from 'utils/propTypes'
 
 export const Networks = props => {
-  const { classes, getNetworksList, networks, networksLoading } = props
+  const { classes, getNetworksList, history, networks, networksLoading } = props
   const networksList = get(networks, 'data') || []
   const { enqueueSnackbar } = useSnackbar()
 
@@ -34,6 +34,10 @@ export const Networks = props => {
       fail: () => enqueueSnackbar('Failed to load networks!', { variant: SNACKBAR_TYPE.ERROR })
     })
   }, [getNetworksList, enqueueSnackbar])
+
+  const handleRowClick = networkId => () => {
+    history.push(`/networks/${networkId}`)
+  }
 
   return (
     <div className={classes.root}>
@@ -56,7 +60,7 @@ export const Networks = props => {
               </TableHead>
               <TableBody>
                 {networksList.map(network => (
-                  <TableRow key={network.id}>
+                  <TableRow key={network.id} hover onClick={handleRowClick(network.id)} className={classes.row}>
                     <TableCell>
                       <Typography variant="subtitle1" color="textPrimary">
                         {network.name}
@@ -64,9 +68,9 @@ export const Networks = props => {
                     </TableCell>
                     <TableCell className={classes.actions}>Active</TableCell>
                     <TableCell className={classes.actions}>
-                      <Button className={classes.podcasts} to={`/networks/${network.id}`} component={Link}>
+                      <Typography variant="subtitle1" color="textPrimary">
                         {network.podcastCount || 0} Podcasts
-                      </Button>
+                      </Typography>
                     </TableCell>
                   </TableRow>
                 ))}

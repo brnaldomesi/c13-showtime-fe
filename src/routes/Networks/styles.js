@@ -6,6 +6,9 @@ export default theme => ({
     minWidth: 700,
     maxWidth: '100%'
   },
+  row: {
+    cursor: 'pointer'
+  },
   podcasts: {
     textTransform: 'none'
   }
