@@ -2,31 +2,40 @@ import React, { useEffect } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { Link } from 'react-router-dom'
 import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import get from 'lodash/get'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
-import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
 
+import { APIListType } from 'utils/propTypes'
 import { getNetworksList, networksListSelector, networksListLoadingSelector } from 'redux/modules/network'
 import { SNACKBAR_TYPE } from 'config/constants'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
 import LoadingIndicator from 'components/LoadingIndicator'
+import SortableTableHead from 'components/SortableTableHead'
 import styles from './styles'
-import { APIListType } from 'utils/propTypes'
+import withSortHandler from 'hocs/withSortHandler'
+
+const columns = [
+  { id: 'name', numeric: false, disablePadding: true, label: 'Title' },
+  { id: 'status', numeric: true, disablePadding: false, label: 'Status' },
+  { id: 'podcastCount', numeric: true, disablePadding: false, label: 'Podcasts' }
+]
 
 export const Networks = props => {
-  const { classes, getNetworksList, history, networks, networksLoading } = props
-  const networksList = get(networks, 'data') || []
+  const {
+    classes,
+    getNetworksList,
+    history,
+    networksLoading,
+    sortProps: { onRequestSort, sortedList, order, orderBy }
+  } = props
   const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
@@ -51,15 +60,9 @@ export const Networks = props => {
         ) : (
           <>
             <Table className={classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Title</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell>Podcasts</TableCell>
-                </TableRow>
-              </TableHead>
+              <SortableTableHead columns={columns} onRequestSort={onRequestSort} order={order} orderBy={orderBy} />
               <TableBody>
-                {networksList.map(network => (
+                {sortedList.map(network => (
                   <TableRow key={network.id} hover onClick={handleRowClick(network.id)} className={classes.row}>
                     <TableCell>
                       <Typography variant="subtitle1" color="textPrimary">
@@ -106,5 +109,6 @@ export default compose(
     selector,
     actions
   ),
+  withSortHandler({ listPropName: 'networks.data' }),
   withStyles(styles)
 )(Networks)
