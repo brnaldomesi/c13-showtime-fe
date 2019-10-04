@@ -1,4 +1,7 @@
 export default theme => ({
+  root: {
+    width: '100%'
+  },
   paper: {
     width: '100%',
     flexGrow: 1,

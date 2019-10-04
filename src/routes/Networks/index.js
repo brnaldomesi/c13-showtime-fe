@@ -23,9 +23,9 @@ import styles from './styles'
 import withSortHandler from 'hocs/withSortHandler'
 
 const columns = [
-  { id: 'name', numeric: false, disablePadding: true, label: 'Title' },
-  { id: 'status', numeric: true, disablePadding: false, label: 'Status' },
-  { id: 'podcastCount', numeric: true, disablePadding: false, label: 'Podcasts' }
+  { id: 'name', label: 'Title' },
+  { id: 'status', label: 'Status' },
+  { id: 'podcastCount', label: 'Podcasts' }
 ]
 
 export const Networks = props => {

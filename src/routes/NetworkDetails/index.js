@@ -12,7 +12,6 @@ import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import MuiTableCell from '@material-ui/core/TableCell'
-import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
 
@@ -25,15 +24,24 @@ import {
   networkPodcastsListLoadingSelector
 } from 'redux/modules/network'
 import { SNACKBAR_TYPE } from 'config/constants'
-import { truncate } from 'utils/helpers'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
 import LeftPane from './LeftPane'
 import LoadingIndicator from 'components/LoadingIndicator'
+import SortableTableHead from 'components/SortableTableHead'
 import styles, { tableCellStyles } from './styles'
 import ThumbnailImage from 'components/ThumbnailImage'
+import withSortHandler from 'hocs/withSortHandler'
 
 const TableCell = withStyles(tableCellStyles)(MuiTableCell)
+
+const columns = [
+  { id: 'thumbnail', label: 'Thumbnail', sortable: false, props: { width: 66 } },
+  { id: 'title', label: 'Title' },
+  { id: 'updatedAt', label: 'Last Publish Date', props: { width: 180 } },
+  { id: 'status', label: 'Status', props: { width: 50 } },
+  { id: 'actions', label: '', sortable: false }
+]
 
 export const NetworkDetails = props => {
   const {
@@ -44,7 +52,8 @@ export const NetworkDetails = props => {
     networkDetails,
     podcasts,
     podcastsLoading,
-    networkDetailsLoading
+    networkDetailsLoading,
+    sortProps: { onRequestSort, sortedList, order, orderBy }
   } = props
   const { enqueueSnackbar } = useSnackbar()
 
@@ -70,18 +79,10 @@ export const NetworkDetails = props => {
           ) : podcasts.length > 0 ? (
             <>
               <Table className={classes.table} size="small">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Thumbnail</TableCell>
-                    <TableCell width="50%">Title</TableCell>
-                    <TableCell className={classes.nowrap}>Last Publish Date</TableCell>
-                    <TableCell>Status</TableCell>
-                    <TableCell />
-                  </TableRow>
-                </TableHead>
+                <SortableTableHead columns={columns} onRequestSort={onRequestSort} order={order} orderBy={orderBy} />
                 <TableBody>
-                  {podcasts.map(podcast => (
-                    <TableRow key={podcast.id}>
+                  {sortedList.map(podcast => (
+                    <TableRow hover key={podcast.id}>
                       <TableCell scope="row" width={100}>
                         <ThumbnailImage
                           className={classes.image}
@@ -92,9 +93,10 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="subtitle1" color="textPrimary">
-                          {podcast.title}
+                          <Button variant="link" component={Link} to={`/podcasts/${podcast.id}/preview`}>
+                            {podcast.title}
+                          </Button>
                         </Typography>
-                        <Typography color="textSecondary">{truncate(podcast.summary)}</Typography>
                       </TableCell>
                       <TableCell>
                         <Typography variant="body2" color="textSecondary">
@@ -164,5 +166,6 @@ export default compose(
     selector,
     actions
   ),
+  withSortHandler({ listPropName: 'podcasts' }),
   withStyles(styles)
 )(NetworkDetails)

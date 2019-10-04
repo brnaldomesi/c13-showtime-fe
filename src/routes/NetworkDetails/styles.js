@@ -9,17 +9,14 @@ export default theme => ({
     minWidth: 700,
     maxWidth: '100%'
   },
-  nowrap: {
-    whiteSpace: 'nowrap'
-  },
   summary: {
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
   image: {
-    width: 100,
-    height: 100
+    width: 50,
+    height: 50
   },
   actions: {
     whiteSpace: 'nowrap'

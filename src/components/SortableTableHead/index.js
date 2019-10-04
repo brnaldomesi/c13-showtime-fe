@@ -17,15 +17,19 @@ export const SortableTableHead = ({ onRequestSort, order, orderBy, columns, clas
     <TableHead>
       <TableRow>
         {columns.map(column => (
-          <TableCell key={column.id}>
-            <TableSortLabel active={orderBy === column.id} direction={order} onClick={createSortHandler(column.id)}>
-              {column.label}
-              {orderBy === column.id ? (
-                <span className={classes.visuallyHidden}>
-                  {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                </span>
-              ) : null}
-            </TableSortLabel>
+          <TableCell key={column.id} {...column.props}>
+            {column.sortable !== false ? (
+              <TableSortLabel active={orderBy === column.id} direction={order} onClick={createSortHandler(column.id)}>
+                {column.label}
+                {orderBy === column.id ? (
+                  <span className={classes.visuallyHidden}>
+                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                  </span>
+                ) : null}
+              </TableSortLabel>
+            ) : (
+              column.label
+            )}
           </TableCell>
         ))}
       </TableRow>
