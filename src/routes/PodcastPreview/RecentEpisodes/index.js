@@ -27,7 +27,7 @@ export const RecentEpisodes = props => {
 
   useEffect(() => {
     getEpisodesList({
-      podcastId: podcastId,
+      podcastId,
       params: { limit: 5 }
     })
   }, [podcastId, getEpisodesList])
@@ -53,7 +53,7 @@ export const RecentEpisodes = props => {
           <List className={classes.list}>
             {episodesList.map(episode => (
               <React.Fragment key={episode.id}>
-                <ListItem>
+                <ListItem button component={Link} to={`/podcasts/${podcastId}/episodes/${episode.id}`}>
                   <ListItemText
                     primary={<strong>{episode.title}</strong>}
                     primaryTypographyProps={{

@@ -5,4 +5,6 @@ export const episodesListSelector = dataSelector('episodesList', EMPTY_LIST_DATA
 
 export const episodeDetailsSelector = dataSelector('episodeDetails', null)
 
+export const episodeDetailsLoadingSelector = isRequestPending('episodeDetails', 'get')
+
 export const episodesListLoadingSelector = isRequestPending('episodesList', 'get')

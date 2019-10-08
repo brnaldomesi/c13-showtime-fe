@@ -44,7 +44,7 @@ const renderForm = props => (
       component={FormLockerInput}
       multiline
       rows={6}
-      placeholder="e.g. pod-save-america ..."
+      placeholder="Enter podcast summary here..."
       lockerName="lockedSyncFields"
       lockerValue="summary"
     />

@@ -10,7 +10,8 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import Typography from '@material-ui/core/Typography'
 
 import { crewMemberDetailsSelector } from 'redux/modules/crew'
-import { getFullName } from 'utils/helpers'
+import { episodeDetailsSelector } from 'redux/modules/episode'
+import { getFullName, truncate } from 'utils/helpers'
 import { networkDetailsSelector } from 'redux/modules/network'
 import { podcastDetailsSelector } from 'redux/modules/podcast'
 import { userSelector } from 'redux/modules/user'
@@ -28,8 +29,8 @@ const tabNames = {
   crew: 'Crew Members'
 }
 
-const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, crewMemberDetails, user }) => {
-  const { userId, podcastId, networkId, tabId, crewId } = match.params
+const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcastDetails, crewMemberDetails, user }) => {
+  const { userId, podcastId, networkId, tabId, instanceId } = match.params
   const results = [
     {
       name: 'Home',
@@ -39,7 +40,8 @@ const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, 
   const isNetworkRoute = location.pathname.startsWith('/networks')
   const isPodcastRoute = location.pathname.startsWith('/podcasts')
   const isUserRoute = location.pathname.startsWith('/users')
-
+  const crewId = tabId === 'crew' ? instanceId : undefined
+  const episodeId = tabId === 'episodes' ? instanceId : undefined
   if (isNetworkRoute) {
     results.push({
       name: 'Networks',
@@ -71,6 +73,12 @@ const buildBredcrumbItems = ({ match, location, networkDetails, podcastDetails, 
         results.push({
           name: getFullName(crewMemberDetails),
           path: `/podcasts/${podcastId}/crew/${crewId}`
+        })
+      }
+      if (episodeId && episode) {
+        results.push({
+          name: truncate(episode.title, 40),
+          path: `/podcasts/${podcastId}/episode/${episodeId}`
         })
       }
     } else {
@@ -127,6 +135,7 @@ const selector = createStructuredSelector({
   crewMemberDetails: crewMemberDetailsSelector,
   networkDetails: networkDetailsSelector,
   podcastDetails: podcastDetailsSelector,
+  episode: episodeDetailsSelector,
   user: userSelector
 })
 

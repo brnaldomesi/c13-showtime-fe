@@ -5,11 +5,11 @@ import { createStructuredSelector } from 'reselect'
 import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import dfFormat from 'date-fns/format'
+import MuiTableCell from '@material-ui/core/TableCell'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
-import MuiTableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
@@ -28,18 +28,23 @@ import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 const TableCell = withStyles(tableCellStyles)(MuiTableCell)
 
 export const PodcastEpisodes = props => {
-  const { classes, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
+  const { classes, history, match, queryParams, getEpisodesList, episodes, episodesLoading } = props
   const { nextCursor = null, prevCursor = null, limit = DEFAULT_PAGE_SIZE } = queryParams
   const episodesList = episodes ? episodes.data : []
+  const { podcastId } = match.params
   const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
     getEpisodesList({
-      podcastId: match.params.podcastId,
+      podcastId,
       params: { nextCursor, prevCursor, limit },
       fail: () => enqueueSnackbar('Failed to load episodes of the podcast.', { variant: SNACKBAR_TYPE.ERROR })
     })
-  }, [nextCursor, prevCursor, limit, match, getEpisodesList, enqueueSnackbar])
+  }, [nextCursor, prevCursor, limit, podcastId, getEpisodesList, enqueueSnackbar])
+
+  const handleClick = episodeId => () => {
+    history.push(`/podcasts/${podcastId}/episodes/${episodeId}`)
+  }
 
   return (
     <div className={classes.root}>
@@ -63,7 +68,7 @@ export const PodcastEpisodes = props => {
               </TableHead>
               <TableBody>
                 {episodesList.map(episode => (
-                  <TableRow key={episode.id}>
+                  <TableRow hover key={episode.id} onClick={handleClick(episode.id)} className={classes.row}>
                     <TableCell scope="row" width={100}>
                       <ThumbnailImage imageUrls={episode.imageUrl} type="podcast" className={classes.image} />
                     </TableCell>

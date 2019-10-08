@@ -25,7 +25,7 @@ const routes = ({ history }) => (
           <Route path="/networks/:networkId" exact component={NetworkDetails} />
           <Route path="/podcasts" exact component={Podcasts} />
           <Route path="/podcasts/:podcastId/preview" exact component={PodcastPreview} />
-          <Route path="/podcasts/:podcastId/:tabId/:crewId" component={PodcastDetails} />
+          <Route path="/podcasts/:podcastId/:tabId/:instanceId" component={PodcastDetails} />
           <Route path="/podcasts/:podcastId/:tabId?" component={PodcastDetails} />
           <Route path="/users" component={Users} />
           <Route path="/" exact component={Dashboard} />
