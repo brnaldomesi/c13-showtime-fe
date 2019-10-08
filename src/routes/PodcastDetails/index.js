@@ -20,6 +20,7 @@ import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import Breadcrumbs from 'components/Breadcrumbs'
 import CrewMemberEdit from './CrewMemberEdit'
 import CrewMembers from './CrewMembers'
+import EpisodeEdit from './EpisodeEdit'
 import Episodes from './Episodes'
 import GeneralEdit from './GeneralEdit'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -94,6 +95,7 @@ export const PodcastDetails = props => {
                 </Paper>
               )}
             />
+            <Route path={`${basePath}/episodes/:episodeId/`} component={EpisodeEdit} />
             <Route path={`${basePath}/episodes`} exact component={Episodes} />
             <Redirect to={`${basePath}/general`} />
           </Switch>
