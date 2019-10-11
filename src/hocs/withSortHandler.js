@@ -28,7 +28,7 @@ const getSorting = (order, orderBy) => {
 const withSortHandler = ({ listPropName }) => WrappedComponent => {
   const SortHandlerWrapper = props => {
     const [order, setOrder] = useState('asc')
-    const [orderBy, setOrderBy] = useState('title')
+    const [orderBy, setOrderBy] = useState('name')
 
     const handleRequestSort = property => {
       const isDesc = orderBy === property && order === 'desc'
