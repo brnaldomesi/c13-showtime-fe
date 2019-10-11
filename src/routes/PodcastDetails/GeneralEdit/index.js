@@ -31,14 +31,6 @@ const renderForm = props => (
       lockerValue="title"
     />
     <Field
-      name="subtitle"
-      label="Subtitle"
-      component={FormLockerInput}
-      placeholder="Enter the podcast subtitle here..."
-      lockerName="lockedSyncFields"
-      lockerValue="subtitle"
-    />
-    <Field
       name="summary"
       label="Summary"
       component={FormLockerInput}
@@ -100,7 +92,6 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
     onSubmit(
       pick(values, [
         'title',
-        'subtitle',
         'summary',
         'slug',
         'websiteUrl',

@@ -36,7 +36,6 @@ const validationSchema = Yup.object().shape({
 const renderForm = withRouter(props => (
   <form onSubmit={props.handleSubmit}>
     <Field name="title" label="Podcast Title" component={FormInput} placeholder="Enter the episode title here..." />
-    <Field name="subtitle" label="Subtitle" component={FormInput} placeholder="Enter the episode subtitle here..." />
     <Field
       name="summary"
       label="Summary"
@@ -88,7 +87,7 @@ const EpisodeEdit = ({ getEpisodeDetails, episode, updateEpisodeDetails, history
     getEpisodeDetails({ episodeId, podcastId })
   }, [episodeId, podcastId, getEpisodeDetails])
 
-  const initialValues = episode ? pick(episode, ['title', 'subtitle', 'summary']) : {}
+  const initialValues = episode ? pick(episode, ['title', 'summary']) : {}
   return loading ? (
     <LoadingIndicator />
   ) : (
