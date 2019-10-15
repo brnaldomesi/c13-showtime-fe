@@ -21,21 +21,16 @@ import xor from 'lodash/xor'
 import styles from './styles'
 
 // In case we need to support suggestions with async loading
-const suggestions = [
-].map(suggestion => ({
+const suggestions = [].map(suggestion => ({
   value: suggestion.label,
-  label: suggestion.label,
+  label: suggestion.label
 }))
 
 const useStyles = makeStyles(styles)
 
 function NoOptionsMessage(props) {
   return (
-    <Typography
-      color="textSecondary"
-      className={props.selectProps.classes.noOptionsMessage}
-      {...props.innerProps}
-    >
+    <Typography color="textSecondary" className={props.selectProps.classes.noOptionsMessage} {...props.innerProps}>
       {props.children}
     </Typography>
   )
@@ -44,7 +39,7 @@ function NoOptionsMessage(props) {
 NoOptionsMessage.propTypes = {
   children: PropTypes.node,
   innerProps: PropTypes.object,
-  selectProps: PropTypes.object.isRequired,
+  selectProps: PropTypes.object.isRequired
 }
 
 function inputComponent({ inputRef, ...props }) {
@@ -52,7 +47,7 @@ function inputComponent({ inputRef, ...props }) {
 }
 
 inputComponent.propTypes = {
-  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
 }
 
 function Control(props) {
@@ -60,7 +55,7 @@ function Control(props) {
     children,
     innerProps,
     innerRef,
-    selectProps: { classes, TextFieldProps },
+    selectProps: { classes, TextFieldProps }
   } = props
 
   return (
@@ -73,8 +68,8 @@ function Control(props) {
           className: classes.input,
           ref: innerRef,
           children,
-          ...innerProps,
-        },
+          ...innerProps
+        }
       }}
       {...TextFieldProps}
     />
@@ -85,7 +80,7 @@ Control.propTypes = {
   children: PropTypes.node,
   innerProps: PropTypes.object,
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-  selectProps: PropTypes.object.isRequired,
+  selectProps: PropTypes.object.isRequired
 }
 
 function Option(props) {
@@ -95,10 +90,9 @@ function Option(props) {
       selected={props.isFocused}
       component="div"
       style={{
-        fontWeight: props.isSelected ? 500 : 400,
+        fontWeight: props.isSelected ? 500 : 400
       }}
-      {...props.innerProps}
-    >
+      {...props.innerProps}>
       {props.children}
     </MenuItem>
   )
@@ -109,16 +103,12 @@ Option.propTypes = {
   innerProps: PropTypes.object,
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   isFocused: PropTypes.bool,
-  isSelected: PropTypes.bool,
+  isSelected: PropTypes.bool
 }
 
 function Placeholder(props) {
   return (
-    <Typography
-      color="textSecondary"
-      className={props.selectProps.classes.placeholder}
-      {...props.innerProps}
-    >
+    <Typography color="textSecondary" className={props.selectProps.classes.placeholder} {...props.innerProps}>
       {props.children}
     </Typography>
   )
@@ -127,7 +117,7 @@ function Placeholder(props) {
 Placeholder.propTypes = {
   children: PropTypes.node,
   innerProps: PropTypes.object,
-  selectProps: PropTypes.object.isRequired,
+  selectProps: PropTypes.object.isRequired
 }
 
 function ValueContainer(props) {
@@ -136,7 +126,7 @@ function ValueContainer(props) {
 
 ValueContainer.propTypes = {
   children: PropTypes.node,
-  selectProps: PropTypes.object.isRequired,
+  selectProps: PropTypes.object.isRequired
 }
 
 function MultiValue(props) {
@@ -145,7 +135,7 @@ function MultiValue(props) {
       tabIndex={-1}
       label={props.children}
       className={cn(props.selectProps.classes.chip, {
-        [props.selectProps.classes.chipFocused]: props.isFocused,
+        [props.selectProps.classes.chipFocused]: props.isFocused
       })}
       onDelete={props.removeProps.onClick}
       deleteIcon={<CancelIcon {...props.removeProps} />}
@@ -157,7 +147,7 @@ MultiValue.propTypes = {
   children: PropTypes.node,
   isFocused: PropTypes.bool,
   removeProps: PropTypes.object.isRequired,
-  selectProps: PropTypes.object.isRequired,
+  selectProps: PropTypes.object.isRequired
 }
 
 function Menu(props) {
@@ -171,7 +161,7 @@ function Menu(props) {
 Menu.propTypes = {
   children: PropTypes.node,
   innerProps: PropTypes.object,
-  selectProps: PropTypes.object,
+  selectProps: PropTypes.object
 }
 
 const components = {
@@ -182,36 +172,27 @@ const components = {
   Option,
   Placeholder,
   ValueContainer,
-  DropdownIndicator: null,
+  DropdownIndicator: null
 }
 
 const getNoOptionsMessage = () => 'Start typing to add tags'
 
-const getOptionValueFromValue = (values) =>
+const getOptionValueFromValue = values =>
   (values || []).map(item => ({
     label: item,
     value: item
   }))
 
-  
-export const FormTagsInput = ({
-  label,
-  className,
-  field,
-  form,
-  lockerName,
-  lockerValue,
-  placeholder,
-}) => {
+export const FormTagsInput = ({ label, className, field, form, lockerName, lockerValue, placeholder }) => {
   const classes = useStyles()
   const theme = useTheme()
   const [inputValue, setInputValue] = useState('')
 
-  const handleInputChange = (inputValue) => {
+  const handleInputChange = inputValue => {
     setInputValue(inputValue)
   }
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = event => {
     if (!inputValue) return
     switch (event.key) {
       case 'Enter':
@@ -225,7 +206,7 @@ export const FormTagsInput = ({
     }
   }
 
-  const handleChange = (values) => {
+  const handleChange = values => {
     form.setFieldValue(field.name, values ? values.map(item => item.value) : null)
   }
 
@@ -239,23 +220,27 @@ export const FormTagsInput = ({
       ...base,
       color: theme.palette.text.primary,
       '& input': {
-        font: 'inherit',
-      },
-    }),
+        font: 'inherit'
+      }
+    })
   }
 
   return (
     <div className={cn(classes.root, className)}>
       {label && <FormHelperText className={classes.label}>{label}</FormHelperText>}
       <div className={classes.inputRow}>
-        <IconButton onClick={handleToggle} className={classes.iconButton}>
-          {(get(form.values, lockerName) || []).includes(lockerValue) ? (
-            <LockIcon color="primary" />
-          ) : (
-            <LockOpenIcon color="inherit" />
-          )}
-        </IconButton>
-        <Divider className={classes.divider} />
+        {lockerName && (
+          <>
+            <IconButton onClick={handleToggle} className={classes.iconButton}>
+              {(get(form.values, lockerName) || []).includes(lockerValue) ? (
+                <LockIcon color="primary" />
+              ) : (
+                <LockOpenIcon color="inherit" />
+              )}
+            </IconButton>
+            <Divider className={classes.divider} />
+          </>
+        )}
         <CreatableSelect
           className={classes.select}
           classes={classes}
@@ -264,9 +249,9 @@ export const FormTagsInput = ({
           TextFieldProps={{
             InputLabelProps: {
               htmlFor: 'react-select-multiple',
-              shrink: true,
+              shrink: true
             },
-            placeholder,
+            placeholder
           }}
           placeholder={placeholder}
           menuIsOpen={false}

@@ -93,7 +93,7 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="subtitle1" color="textPrimary">
-                          <Button variant="link" component={Link} to={`/podcasts/${podcast.id}/preview`}>
+                          <Button component={Link} to={`/podcasts/${podcast.id}/preview`}>
                             {podcast.title}
                           </Button>
                         </Typography>

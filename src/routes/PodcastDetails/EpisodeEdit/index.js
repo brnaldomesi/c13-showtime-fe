@@ -13,6 +13,7 @@ import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
 import FormInput from 'components/FormInput'
+import FormTagsInput from 'components/FormTagsInput'
 import Hr from 'components/Hr'
 import LoadingIndicator from 'components/LoadingIndicator'
 import {
@@ -29,13 +30,12 @@ const useStyles = makeStyles(styles)
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),
-  summary: Yup.string().required('Summary is required'),
-  subtitle: Yup.string().required('Subtitle is required')
+  summary: Yup.string().required('Summary is required')
 })
 
 const renderForm = withRouter(props => (
   <form onSubmit={props.handleSubmit}>
-    <Field name="title" label="Podcast Title" component={FormInput} placeholder="Enter the episode title here..." />
+    <Field name="title" label="Episode Title" component={FormInput} placeholder="Enter the episode title here..." />
     <Field
       name="summary"
       label="Summary"
@@ -44,6 +44,7 @@ const renderForm = withRouter(props => (
       rows={6}
       placeholder="e.g. pod-save-america ..."
     />
+    <Field name="tags" label="Tags" placeholder="Enter episode tags here..." component={FormTagsInput} />
     <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
@@ -87,7 +88,7 @@ const EpisodeEdit = ({ getEpisodeDetails, episode, updateEpisodeDetails, history
     getEpisodeDetails({ episodeId, podcastId })
   }, [episodeId, podcastId, getEpisodeDetails])
 
-  const initialValues = episode ? pick(episode, ['title', 'summary']) : {}
+  const initialValues = episode ? pick(episode, ['title', 'summary', 'tags']) : {}
   return loading ? (
     <LoadingIndicator />
   ) : (
