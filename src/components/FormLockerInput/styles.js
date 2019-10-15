@@ -13,8 +13,10 @@ export default theme => ({
     border: `1px solid rgba(0, 0, 0, .23)`
   },
   input: {
-    paddingLeft: 8,
-    flex: 1
+    minHeight: 40,
+    flex: 1,
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1)
   },
   iconButton: {
     padding: 10
