@@ -33,6 +33,11 @@ const validationSchema = Yup.object().shape({
   summary: Yup.string().required('Summary is required')
 })
 
+const serializeEpisode = values => ({
+  ...values,
+  tags: values.tags || []
+})
+
 const renderForm = withRouter(props => (
   <form onSubmit={props.handleSubmit}>
     <Field name="title" label="Episode Title" component={FormInput} placeholder="Enter the episode title here..." />
@@ -76,7 +81,7 @@ const EpisodeEdit = ({ getEpisodeDetails, episode, updateEpisodeDetails, history
       {
         podcastId,
         episodeId,
-        data: values,
+        data: serializeEpisode(values),
         success: () => history.push(`/podcasts/${podcastId}/episodes`),
         fail: () => enqueueSnackbar('Failed to save the episode details.', { variant: SNACKBAR_TYPE.ERROR })
       },
