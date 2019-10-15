@@ -71,6 +71,17 @@ const renderForm = props => (
     />
     <Field name="config.enableShowpage" label="Active" toggleValues={[false, true]} component={FormCheckbox} />
     <Hr />
+    <Field name="seoTitle" label="SEO Title" component={FormLockerInput} placeholder="Enter SEO title here..." />
+    <Field name="seoHeader" label="SEO Header" component={FormLockerInput} placeholder="Enter SEO header here..." />
+    <Field
+      name="seoDescription"
+      label="SEO Description"
+      component={FormLockerInput}
+      multiline
+      rows={5}
+      placeholder="Enter SEO description here..."
+    />
+    <Hr />
     <Grid container justify="flex-end" spacing={2}>
       <Grid item>
         <Button color="primary" type="submit" component={Link} to="/podcasts">
@@ -98,7 +109,10 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
         'lockedSyncFields',
         'config',
         // 'image',
-        'tags'
+        'tags',
+        'seoTitle',
+        'seoHeader',
+        'seoDescription'
       ]),
       actions
     )

@@ -37,14 +37,18 @@ const FormLockerInput = ({
     <div className={cn(classes.root, className)}>
       {label && <FormHelperText className={classes.label}>{label}</FormHelperText>}
       <div className={classes.inputRow}>
-        <IconButton onClick={handleToggle} className={classes.iconButton}>
-          {(get(form.values, lockerName) || []).includes(lockerValue) ? (
-            <LockIcon color="primary" />
-          ) : (
-            <LockOpenIcon color="inherit" />
-          )}
-        </IconButton>
-        <Divider className={classes.divider} />
+        {lockerName && (
+          <>
+            <IconButton onClick={handleToggle} className={classes.iconButton}>
+              {(get(form.values, lockerName) || []).includes(lockerValue) ? (
+                <LockIcon color="primary" />
+              ) : (
+                <LockOpenIcon color="inherit" />
+              )}
+            </IconButton>
+            <Divider className={classes.divider} />
+          </>
+        )}
         <InputBase
           className={classes.input}
           rows={rows}
@@ -67,8 +71,8 @@ FormLockerInput.propTypes = {
   multiline: PropTypes.bool,
   placeholder: PropTypes.string,
   rows: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  lockerName: PropTypes.string.isRequired,
-  lockerValue: PropTypes.string.isRequired,
+  lockerName: PropTypes.string,
+  lockerValue: PropTypes.string,
   type: PropTypes.string
 }
 
