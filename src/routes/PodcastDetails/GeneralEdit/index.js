@@ -2,6 +2,7 @@ import React from 'react'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
+import get from 'lodash/get'
 import Grid from '@material-ui/core/Grid'
 import pick from 'lodash/pick'
 import PropTypes from 'prop-types'
@@ -121,7 +122,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
   const initialValues = podcastDetails
     ? {
         ...podcastDetails,
-        config: { enableShowpage: podcastDetails.config.enableShowpage }
+        config: { enableShowpage: get(podcastDetails, 'config.enableShowpage') || false }
       }
     : {}
   return (
