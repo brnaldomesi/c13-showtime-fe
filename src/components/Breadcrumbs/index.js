@@ -55,10 +55,12 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
     }
   } else if (isPodcastRoute) {
     if (podcastDetails && podcastDetails.id === podcastId) {
-      results.push({
-        name: podcastDetails.network.name,
-        path: `/networks/${podcastDetails.network.id}`
-      })
+      if (podcastDetails.network) {
+        results.push({
+          name: podcastDetails.network.name,
+          path: `/networks/${podcastDetails.network.id}`
+        })
+      }
       results.push({
         name: podcastDetails.title,
         path: `/podcasts/${podcastId}`

@@ -1,3 +1,4 @@
+import get from 'lodash/get'
 import set from 'lodash/set'
 import unset from 'lodash/unset'
 import { combineReducers } from 'redux'
@@ -45,7 +46,16 @@ export const requests = handleActions(
 
 export const data = handleActions(
   {
-    [REQUEST_SUCCESS]: (state, { payload }) => set(state, payload.selectorKey, payload.data),
+    [REQUEST_SUCCESS]: (state, { payload }) => {
+      const newState = set({ ...state }, payload.selectorKey, payload.data)
+      const subKeys = payload.selectorKey.split('.')
+      subKeys.reduce((accKey, key) => {
+        accKey = accKey ? [accKey, key].join('.') : key
+        set(newState, accKey, { ...get(newState, accKey) })
+        return accKey
+      }, '')
+      return newState
+    },
 
     [REQUEST_REJECTED]: (state, { payload }) => {
       if (payload.method.toLowerCase() === 'get') {

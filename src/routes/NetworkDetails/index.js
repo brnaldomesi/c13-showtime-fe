@@ -7,6 +7,7 @@ import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import dfFormat from 'date-fns/format'
+import get from 'lodash/get'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
@@ -105,7 +106,7 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="body2" color="textSecondary">
-                          {podcast.status}
+                          {get(podcast, 'config.enableShowpage') ? 'Active' : 'Inactive'}
                         </Typography>
                       </TableCell>
                       <TableCell align="right" className={classes.actions}>
