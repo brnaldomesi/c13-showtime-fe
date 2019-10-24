@@ -105,6 +105,7 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="body2" color="textSecondary">
+                          {get(podcast, 'config.enableShowpage') ? 'Active' : 'Inactive'}
                           {podcast.status}
                         </Typography>
                       </TableCell>
