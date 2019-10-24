@@ -2,12 +2,11 @@ import React from 'react'
 import { Formik, Field } from 'formik'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
-import get from 'lodash/get'
 import Grid from '@material-ui/core/Grid'
-import pick from 'lodash/pick'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
+import { deserializePodcast, serializePodcast } from 'utils/serializers'
 // import FileDropzone from 'components/FileDropzone'
 import FormCheckbox from 'components/FormCheckbox'
 import FormLockerInput from 'components/FormLockerInput'
@@ -101,30 +100,10 @@ const renderForm = props => (
 
 const GeneralEdit = ({ podcastDetails, onSubmit }) => {
   const handleSubmit = (values, actions) => {
-    onSubmit(
-      pick(values, [
-        'title',
-        'summary',
-        'slug',
-        'websiteUrl',
-        'lockedSyncFields',
-        'config',
-        // 'image',
-        'tags',
-        'seoTitle',
-        'seoHeader',
-        'seoDescription'
-      ]),
-      actions
-    )
+    onSubmit(deserializePodcast(values), actions)
   }
 
-  const initialValues = podcastDetails
-    ? {
-        ...podcastDetails,
-        config: { enableShowpage: get(podcastDetails, 'config.enableShowpage') || false }
-      }
-    : {}
+  const initialValues = podcastDetails ? serializePodcast(podcastDetails) : {}
   return (
     <Formik
       initialValues={initialValues}
