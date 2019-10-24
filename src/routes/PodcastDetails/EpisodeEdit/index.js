@@ -8,7 +8,6 @@ import { useSnackbar } from 'notistack'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import pick from 'lodash/pick'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
@@ -22,6 +21,7 @@ import {
   getEpisodeDetails,
   updateEpisodeDetails
 } from 'redux/modules/episode'
+import { deserializeEpisode, serializeEpisode } from 'utils/serializers'
 import { formSubmit } from 'utils/form'
 import { SNACKBAR_TYPE } from 'config/constants'
 import styles from './styles'
@@ -31,11 +31,6 @@ const useStyles = makeStyles(styles)
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),
   summary: Yup.string().required('Summary is required')
-})
-
-const serializeEpisode = values => ({
-  ...values,
-  tags: values.tags || []
 })
 
 const renderForm = withRouter(props => (
@@ -93,7 +88,8 @@ const EpisodeEdit = ({ getEpisodeDetails, episode, updateEpisodeDetails, history
     getEpisodeDetails({ episodeId, podcastId })
   }, [episodeId, podcastId, getEpisodeDetails])
 
-  const initialValues = episode ? pick(episode, ['title', 'summary', 'tags']) : {}
+  const initialValues = episode ? deserializeEpisode(episode) : {}
+  console.log({ initialValues })
   return loading ? (
     <LoadingIndicator />
   ) : (
