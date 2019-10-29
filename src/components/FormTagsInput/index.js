@@ -189,7 +189,13 @@ export const FormTagsInput = ({ label, className, field, form, lockerName, locke
   const [inputValue, setInputValue] = useState('')
 
   const handleInputChange = inputValue => {
-    setInputValue(inputValue)
+    const tags = inputValue.split(',').map(tag => tag.trim())
+    const newInputValue = tags[tags.length - 1]
+    if (tags.length > 1) {
+      const tagsToAdd = tags.slice(0, tags.length - 1)
+      form.setFieldValue(field.name, uniq([...(field.value || []), ...tagsToAdd]))
+    }
+    setInputValue(newInputValue)
   }
 
   const handleKeyDown = event => {
@@ -197,6 +203,7 @@ export const FormTagsInput = ({ label, className, field, form, lockerName, locke
     switch (event.key) {
       case 'Enter':
       case 'Tab':
+      case ',':
         setInputValue('')
         form.setFieldValue(field.name, uniq([...(field.value || []), inputValue]))
         event.preventDefault()
