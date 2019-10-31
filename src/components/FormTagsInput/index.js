@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useCallback } from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { useDrag, useDrop } from 'react-dnd'
 import CancelIcon from '@material-ui/icons/Cancel'
 import Chip from '@material-ui/core/Chip'
 import cn from 'classnames'
@@ -54,9 +55,19 @@ function Control(props) {
   const {
     children,
     innerProps,
+    innerProps: { onMouseDown },
     innerRef,
     selectProps: { classes, TextFieldProps }
   } = props
+
+  const handleMouseDown = useCallback(
+    event => {
+      if (!event.target.closest('.tagChip')) {
+        onMouseDown(event)
+      }
+    },
+    [onMouseDown]
+  )
 
   return (
     <TextField
@@ -68,7 +79,8 @@ function Control(props) {
           className: classes.input,
           ref: innerRef,
           children,
-          ...innerProps
+          ...innerProps,
+          onMouseDown: handleMouseDown
         }
       }}
       {...TextFieldProps}
@@ -130,12 +142,49 @@ ValueContainer.propTypes = {
 }
 
 function MultiValue(props) {
+  const ref = useRef(null)
+  const {
+    data: { value }
+  } = props
+  const values = props.selectProps.value
+  const index = values.findIndex(item => item.value === value)
+  const [, drop] = useDrop(
+    {
+      accept: 'tagChip',
+      hover(item, monitor) {
+        if (!ref.current) {
+          return
+        }
+        const dragIndex = item.index
+        const hoverIndex = index
+        if (dragIndex === hoverIndex) {
+          return
+        }
+        const valueToMove = values[dragIndex]
+        values.splice(dragIndex, 1)
+        values.splice(hoverIndex, 0, valueToMove)
+        props.setValue(values)
+        item.values = values
+        item.index = hoverIndex
+      }
+    },
+    [values]
+  )
+  const [{ isDragging }, drag] = useDrag({
+    item: { type: 'tagChip', index, values },
+    collect: monitor => ({
+      isDragging: monitor.isDragging()
+    })
+  })
+  drag(drop(ref))
   return (
     <Chip
+      ref={ref}
       tabIndex={-1}
       label={props.children}
-      className={cn(props.selectProps.classes.chip, {
-        [props.selectProps.classes.chipFocused]: props.isFocused
+      className={cn('tagChip', props.selectProps.classes.chip, {
+        [props.selectProps.classes.chipFocused]: props.isFocused,
+        [props.selectProps.classes.chipDragging]: isDragging
       })}
       onDelete={props.removeProps.onClick}
       deleteIcon={<CancelIcon {...props.removeProps} />}
