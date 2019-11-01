@@ -42,6 +42,7 @@ export default theme => ({
     padding: theme.spacing(0, 1)
   },
   chip: {
+    cursor: 'move',
     transform: 'translate(0, 0)',
     margin: theme.spacing(0.5, 0.25)
   },
