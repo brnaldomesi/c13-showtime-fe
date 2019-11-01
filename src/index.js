@@ -11,12 +11,12 @@ import { SNACKBAR_MAX_STACK, SNACKBAR_AUTOHIDE_TIMEOUT } from 'config/constants'
 import registerServiceWorker from './registerServiceWorker'
 import Routes from './routes'
 import store, { history } from './redux/store'
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
-import theme from './theme'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from './config/theme'
 import './styles/styles.scss'
 
 ReactDOM.render(
-  <MuiThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     <Provider store={store}>
       <SnackbarProvider
         maxSnack={SNACKBAR_MAX_STACK}
@@ -27,7 +27,7 @@ ReactDOM.render(
         </DndProvider>
       </SnackbarProvider>
     </Provider>
-  </MuiThemeProvider>,
+  </ThemeProvider>,
   document.getElementById('root')
 )
 registerServiceWorker()
