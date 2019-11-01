@@ -42,10 +42,15 @@ export default theme => ({
     padding: theme.spacing(0, 1)
   },
   chip: {
+    cursor: 'move',
+    transform: 'translate(0, 0)',
     margin: theme.spacing(0.5, 0.25)
   },
   chipFocused: {
     backgroundColor: emphasize(theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[700], 0.08)
+  },
+  chipDragging: {
+    opacity: 0
   },
   noOptionsMessage: {
     padding: theme.spacing(1, 2)

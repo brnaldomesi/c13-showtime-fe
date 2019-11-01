@@ -17,7 +17,10 @@ import LoadingIndicator from 'components/LoadingIndicator'
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),
   summary: Yup.string().required('Summary is required'),
-  slug: Yup.string().required('Slug is required')
+  slug: Yup.string().required('Slug is required'),
+  websiteUrl: Yup.string()
+    .url('Must be a valid URL')
+    .required('Website URL is required')
 })
 
 const renderForm = props => (
@@ -27,7 +30,7 @@ const renderForm = props => (
       label="Podcast Title"
       component={FormLockerInput}
       placeholder="Enter the podcast title here..."
-      lockerName="lockedSyncFields"
+      lockerName="config.lockedSyncFields"
       lockerValue="title"
     />
     <Field
@@ -37,7 +40,7 @@ const renderForm = props => (
       multiline
       rows={6}
       placeholder="Enter podcast summary here..."
-      lockerName="lockedSyncFields"
+      lockerName="config.lockedSyncFields"
       lockerValue="summary"
     />
     <Field
@@ -45,7 +48,7 @@ const renderForm = props => (
       label="Slug"
       component={FormLockerInput}
       placeholder="e.g. pod-save-america ..."
-      lockerName="lockedSyncFields"
+      lockerName="config.lockedSyncFields"
       lockerValue="slug"
     />
     <Field
@@ -53,7 +56,7 @@ const renderForm = props => (
       label="Website URL"
       component={FormLockerInput}
       placeholder="e.g. https://crooked.com/..."
-      lockerName="lockedSyncFields"
+      lockerName="config.lockedSyncFields"
       lockerValue="websiteUrl"
     />
     {/* <Field
@@ -66,7 +69,7 @@ const renderForm = props => (
       label="Tags"
       placeholder="Enter podcast tags here..."
       component={FormTagsInput}
-      lockerName="lockedSyncFields"
+      lockerName="config.lockedSyncFields"
       lockerValue="tags"
     />
     <Field name="config.enableShowpage" label="Active" toggleValues={[false, true]} component={FormCheckbox} />

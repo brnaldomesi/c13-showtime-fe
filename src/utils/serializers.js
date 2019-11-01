@@ -1,8 +1,20 @@
 import fp from 'lodash/fp'
+import get from 'lodash/get'
 
 export const deserializePodcast = podcast => ({
-  ...podcast,
-  config: { enableShowpage: fp.get('config.enableShowpage')(podcast) || false }
+  title: podcast.title,
+  summary: podcast.summary,
+  slug: podcast.slug,
+  websiteUrl: podcast.websiteUrl,
+  // image: podcast.image,
+  tags: podcast.tags,
+  seoTitle: podcast.seoTitle,
+  seoHeader: podcast.seoHeader,
+  seoDescription: podcast.seoDescription,
+  config: {
+    enableShowpage: get(podcast, 'config.enableShowpage') || false,
+    lockedSyncFields: get(podcast, 'config.lockedSyncFields') || []
+  }
 })
 
 export const serializePodcast = fp.pick([
@@ -10,7 +22,6 @@ export const serializePodcast = fp.pick([
   'summary',
   'slug',
   'websiteUrl',
-  'lockedSyncFields',
   'config',
   // 'image',
   'tags',
