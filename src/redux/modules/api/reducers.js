@@ -51,7 +51,8 @@ export const data = handleActions(
       const subKeys = payload.selectorKey.split('.')
       subKeys.reduce((accKey, key) => {
         accKey = accKey ? [accKey, key].join('.') : key
-        set(newState, accKey, { ...get(newState, accKey) })
+        const fieldVal = get(newState, accKey)
+        set(newState, accKey, Array.isArray(fieldVal) ? [...fieldVal] : { ...fieldVal })
         return accKey
       }, '')
       return newState
