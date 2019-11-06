@@ -100,9 +100,7 @@ export const PodcastPreview = props => {
                   {podcastDetails.subtitle}
                 </Typography>
               )}
-              <Typography variant="body1" paragraph>
-                {podcastDetails.summary}
-              </Typography>
+              <Typography variant="body1" paragraph dangerouslySetInnerHTML={{ __html: podcastDetails.summary }} />
               <Typography variant="subtitle1" gutterBottom>
                 <strong>Cast and Crew</strong>
               </Typography>

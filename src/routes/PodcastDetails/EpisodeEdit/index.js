@@ -89,7 +89,6 @@ const EpisodeEdit = ({ getEpisodeDetails, episode, updateEpisodeDetails, history
   }, [episodeId, podcastId, getEpisodeDetails])
 
   const initialValues = episode ? deserializeEpisode(episode) : {}
-  console.log({ initialValues })
   return loading ? (
     <LoadingIndicator />
   ) : (

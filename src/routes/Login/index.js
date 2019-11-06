@@ -21,6 +21,11 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required('Password is required')
 })
 
+const initialValues = {
+  email: '',
+  password: ''
+}
+
 const Login = props => {
   const { classes } = props
   const { enqueueSnackbar } = useSnackbar()
@@ -42,7 +47,12 @@ const Login = props => {
       <Typography variant="h6" align="center" gutterBottom>
         Login
       </Typography>
-      <Formik component={LoginForm} onSubmit={handleSubmit} validationSchema={validationSchema} />
+      <Formik
+        component={LoginForm}
+        onSubmit={handleSubmit}
+        validationSchema={validationSchema}
+        initialValues={initialValues}
+      />
     </Paper>
   )
 }

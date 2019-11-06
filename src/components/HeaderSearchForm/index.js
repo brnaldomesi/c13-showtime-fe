@@ -63,7 +63,7 @@ const renderSuggestion = classes => (suggestion, { query, isHighlighted }) => {
 
 const getSuggestionValue = suggestion => suggestion.title
 
-export const HeaderSearchForm = ({ classes, pushWithQuery, searchPodcasts }) => {
+export const HeaderSearchForm = ({ classes, pushWithQuery, queryParams, searchPodcasts }) => {
   const handleSubmit = values => {
     pushWithQuery({
       location: { pathname: '/podcasts' },
@@ -76,9 +76,12 @@ export const HeaderSearchForm = ({ classes, pushWithQuery, searchPodcasts }) => 
       location: { pathname: `/podcasts/${suggestion.id}` }
     })
   }
+  const initialValues = {
+    search: queryParams.search || ''
+  }
 
   return (
-    <Formik onSubmit={handleSubmit}>
+    <Formik onSubmit={handleSubmit} initialValues={initialValues}>
       {({ setFieldValue, values, handleSubmit }) => (
         <form className={classes.root} onSubmit={handleSubmit}>
           <AutoSuggest
