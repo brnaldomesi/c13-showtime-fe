@@ -33,7 +33,7 @@ const UserEdit = ({ user, userLoading, updateUser, getUser, match }) => {
   }, [userId, getUser, enqueueSnackbar])
 
   const handleSubmit = (values, actions) => {
-    formSubmit(
+    return formSubmit(
       updateUser,
       {
         id: match.params.userId,

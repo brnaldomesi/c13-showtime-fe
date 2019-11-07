@@ -12,10 +12,12 @@ import * as Yup from 'yup'
 import { crewMemberDetailsSelector } from 'redux/modules/crew'
 import { createCrewMemberDetails, getCrewMemberDetails, updateCrewMemberDetails } from 'redux/modules/crew'
 import { formSubmit } from 'utils/form'
+import { deserializeCrewMember, initializeCrewMember, serializeCrewMember } from 'utils/serializers'
 import { SNACKBAR_TYPE } from 'config/constants'
 // import FileDropzone from 'components/FileDropzone'
 import FormInput from 'components/FormInput'
 import Hr from 'components/Hr'
+import LoadingIndicator from 'components/LoadingIndicator'
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
@@ -23,7 +25,7 @@ const validationSchema = Yup.object().shape({
   biography: Yup.string().required('Biography is required')
 })
 
-const renderForm = ({ handleSubmit, match }) => (
+const renderForm = ({ handleSubmit, match, isSubmitting }) => (
   <form onSubmit={handleSubmit}>
     <Grid container spacing={3}>
       <Grid item sm={6}>
@@ -65,6 +67,7 @@ const renderForm = ({ handleSubmit, match }) => (
         </Button>
       </Grid>
     </Grid>
+    {isSubmitting && <LoadingIndicator />}
   </form>
 )
 
@@ -78,14 +81,14 @@ const CrewMemberEdit = ({
 }) => {
   const { crewId, podcastId } = match.params
   const { enqueueSnackbar } = useSnackbar()
-  const handleSubmit = async (values, actions) => {
+  const handleSubmit = (values, actions) => {
     const saveCrewMember = crewId && crewId !== 'new' ? updateCrewMemberDetails : createCrewMemberDetails
-    formSubmit(
+    return formSubmit(
       saveCrewMember,
       {
         podcastId,
         crewId,
-        data: values,
+        data: serializeCrewMember(values),
         success: () => history.push(`/podcasts/${podcastId}/crew`),
         fail: () => enqueueSnackbar('Failed to save the crew member details.', { variant: SNACKBAR_TYPE.ERROR })
       },
@@ -94,10 +97,12 @@ const CrewMemberEdit = ({
   }
 
   useEffect(() => {
-    getCrewMemberDetails({ crewId, podcastId })
+    if (crewId) {
+      getCrewMemberDetails({ crewId, podcastId })
+    }
   }, [crewId, podcastId, getCrewMemberDetails])
 
-  const initialValues = crewMember // ? { ...crewMember, image: crewMember.imageUrl } : {}
+  const initialValues = crewMember ? deserializeCrewMember(crewMember) : initializeCrewMember()
 
   return (
     <Formik

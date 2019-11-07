@@ -70,8 +70,8 @@ const EpisodeEdit = ({ getEpisodeDetails, episode, updateEpisodeDetails, history
   const { episodeId, podcastId } = match.params
   const { enqueueSnackbar } = useSnackbar()
   const classes = useStyles()
-  const handleSubmit = async (values, actions) => {
-    formSubmit(
+  const handleSubmit = (values, actions) => {
+    return formSubmit(
       updateEpisodeDetails,
       {
         podcastId,

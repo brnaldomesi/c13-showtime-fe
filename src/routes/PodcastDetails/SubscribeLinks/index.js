@@ -13,6 +13,7 @@ import { updateSubscriptionUrls } from 'redux/modules/podcast'
 import { SNACKBAR_TYPE } from 'config/constants'
 import FormLockerInput from 'components/FormLockerInput'
 import Hr from 'components/Hr'
+import LoadingIndicator from 'components/LoadingIndicator'
 
 const renderForm = props => (
   <form onSubmit={props.handleSubmit}>
@@ -85,13 +86,14 @@ const renderForm = props => (
         </Button>
       </Grid>
     </Grid>
+    {props.isSubmitting && <LoadingIndicator />}
   </form>
 )
 
 const SubscribeLinks = ({ initialValues, match, updateSubscriptionUrls }) => {
   const { enqueueSnackbar } = useSnackbar()
   const handleSubmit = async (values, actions) => {
-    formSubmit(
+    return formSubmit(
       updateSubscriptionUrls,
       {
         id: match.params.podcastId,

@@ -42,7 +42,7 @@ export const PodcastDetails = props => {
   }, [podcastId, getPodcastDetails, enqueueSnackbar])
 
   const handleSubmit = (values, formActions) => {
-    formSubmit(
+    return formSubmit(
       updatePodcastDetails,
       {
         id: podcastId,

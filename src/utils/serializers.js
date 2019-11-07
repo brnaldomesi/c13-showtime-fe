@@ -2,9 +2,9 @@ import fp from 'lodash/fp'
 import get from 'lodash/get'
 
 export const deserializePodcast = podcast => ({
-  title: podcast.title,
-  summary: podcast.summary,
-  slug: podcast.slug,
+  title: podcast.title || '',
+  summary: podcast.summary || '',
+  slug: podcast.slug || '',
   websiteUrl: podcast.websiteUrl,
   // image: podcast.image,
   tags: podcast.tags,
@@ -12,23 +12,26 @@ export const deserializePodcast = podcast => ({
   seoHeader: podcast.seoHeader,
   seoDescription: podcast.seoDescription,
   config: {
-    enableShowpage: get(podcast, 'config.enableShowpage') || false,
+    enableShowPage: get(podcast, 'config.enableShowPage') || false,
     lockedSyncFields: get(podcast, 'config.lockedSyncFields') || []
   }
 })
 
-export const serializePodcast = fp.pick([
-  'title',
-  'summary',
-  'slug',
-  'websiteUrl',
-  'config',
-  // 'image',
-  'tags',
-  'seoTitle',
-  'seoHeader',
-  'seoDescription'
-])
+export const serializePodcast = values => ({
+  title: values.title,
+  summary: values.summary,
+  slug: values.slug,
+  websiteUrl: values.websiteUrl,
+  // image: values.image,
+  tags: values.tags,
+  seoTitle: values.seoTitle || null,
+  seoHeader: values.seoHeader || null,
+  seoDescription: values.seoDescription || null,
+  config: {
+    enableShowPage: get(values, 'config.enableShowPage') || false,
+    lockedSyncFields: get(values, 'config.lockedSyncFields') || []
+  }
+})
 
 export const deserializeEpisode = episode => ({
   title: episode.title,
@@ -37,3 +40,17 @@ export const deserializeEpisode = episode => ({
 })
 
 export const serializeEpisode = fp.pick(['title', 'summary', 'tags'])
+
+export const initializeCrewMember = () => ({
+  firstName: '',
+  lastName: '',
+  biography: ''
+})
+
+export const serializeCrewMember = fp.pick(['firstName', 'lastName', 'biography'])
+
+export const deserializeCrewMember = crewMember => ({
+  firstName: crewMember.firstName || '',
+  lastName: crewMember.lastName || '',
+  biography: crewMember.biography || ''
+})

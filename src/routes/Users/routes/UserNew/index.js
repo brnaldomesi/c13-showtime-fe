@@ -27,7 +27,7 @@ const UserNew = ({ userLoading, createUser, match, history }) => {
   const classes = useStyles()
 
   const handleSubmit = (values, actions) => {
-    formSubmit(
+    return formSubmit(
       createUser,
       {
         id: match.params.userId,
