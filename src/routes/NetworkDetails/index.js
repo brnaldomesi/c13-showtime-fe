@@ -106,7 +106,7 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="body2" color="textSecondary">
-                          {get(podcast, 'config.enableShowpage') ? 'Active' : 'Inactive'}
+                          {get(podcast, 'config.enableShowPage') ? 'Active' : 'Inactive'}
                         </Typography>
                       </TableCell>
                       <TableCell align="right" className={classes.actions}>

@@ -72,7 +72,7 @@ const renderForm = props => (
       lockerName="config.lockedSyncFields"
       lockerValue="tags"
     />
-    <Field name="config.enableShowpage" label="Active" toggleValues={[false, true]} component={FormCheckbox} />
+    <Field name="config.enableShowPage" label="Active" toggleValues={[false, true]} component={FormCheckbox} />
     <Hr />
     <Field name="seoTitle" label="SEO Title" component={FormLockerInput} placeholder="Enter SEO title here..." />
     <Field name="seoHeader" label="SEO Header" component={FormLockerInput} placeholder="Enter SEO header here..." />
@@ -103,10 +103,10 @@ const renderForm = props => (
 
 const GeneralEdit = ({ podcastDetails, onSubmit }) => {
   const handleSubmit = (values, actions) => {
-    onSubmit(deserializePodcast(values), actions)
+    onSubmit(serializePodcast(values), actions)
   }
 
-  const initialValues = podcastDetails ? serializePodcast(podcastDetails) : {}
+  const initialValues = podcastDetails ? deserializePodcast(podcastDetails) : {}
   return (
     <Formik
       initialValues={initialValues}
