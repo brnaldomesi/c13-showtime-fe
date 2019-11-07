@@ -40,3 +40,17 @@ export const deserializeEpisode = episode => ({
 })
 
 export const serializeEpisode = fp.pick(['title', 'summary', 'tags'])
+
+export const initializeCrewMember = () => ({
+  firstName: '',
+  lastName: '',
+  biography: ''
+})
+
+export const serializeCrewMember = fp.pick(['firstName', 'lastName', 'biography'])
+
+export const deserializeCrewMember = crewMember => ({
+  firstName: crewMember.firstName || '',
+  lastName: crewMember.lastName || '',
+  biography: crewMember.biography || ''
+})

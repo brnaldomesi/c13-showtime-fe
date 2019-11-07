@@ -1,29 +1,32 @@
 export const formSubmit = (actionCreator, payload, formActions) => {
-  formActions.setSubmitting(true)
-  actionCreator({
-    ...payload,
-    resolve: () => {
-      formActions.setSubmitting(false)
-    },
-    reject: ex => {
-      const res = ex.response ? ex.response : ex
-      const errors = res.data || res.error || res // TODO: assumes backend response are wrapped within data or error field
+  return new Promise((resolve, reject) => {
+    formActions.setSubmitting(true)
+    actionCreator({
+      ...payload,
+      resolve: () => {
+        resolve()
+        formActions.setSubmitting(false)
+      },
+      reject
+    })
+  }).catch(ex => {
+    const res = ex.response ? ex.response : ex
+    const errors = res.data || res.error || res // TODO: assumes backend response are wrapped within data or error field
 
-      if (typeof errors === 'object') {
-        const { detail, fieldErrors, ...otherFieldErrors } = errors
+    formActions.setSubmitting(false)
 
-        formActions.setErrors({
-          globalError: detail,
-          ...fieldErrors,
-          ...otherFieldErrors
-        })
-      } else {
-        formActions.setErrors({
-          globalError: typeof errors === 'string' ? errors : 'Internal Server Error'
-        })
-      }
+    if (typeof errors === 'object') {
+      const { detail, fieldErrors, ...otherFieldErrors } = errors
 
-      formActions.setSubmitting(false)
+      formActions.setErrors({
+        globalError: detail,
+        ...fieldErrors,
+        ...otherFieldErrors
+      })
+    } else {
+      formActions.setErrors({
+        globalError: typeof errors === 'string' ? errors : 'Internal Server Error'
+      })
     }
   })
 }

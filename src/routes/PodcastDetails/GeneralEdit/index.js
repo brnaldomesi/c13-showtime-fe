@@ -103,7 +103,7 @@ const renderForm = props => (
 
 const GeneralEdit = ({ podcastDetails, onSubmit }) => {
   const handleSubmit = (values, actions) => {
-    onSubmit(serializePodcast(values), actions)
+    return onSubmit(serializePodcast(values), actions)
   }
 
   const initialValues = podcastDetails ? deserializePodcast(podcastDetails) : {}

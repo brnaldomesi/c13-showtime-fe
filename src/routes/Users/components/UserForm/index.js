@@ -22,10 +22,15 @@ export const validationSchema = Yup.object().shape({
   lastName: Yup.string().required('Last name is required')
 })
 
-const emailValidationCreator = validateEmailAction => value => asyncValidateField(validateEmailAction, 'email', value)
+const emailValidationCreator = (validateEmailAction, initialEmail) => value =>
+  initialEmail !== value ? asyncValidateField(validateEmailAction, 'email', value) : undefined
 
-const UserForm = ({ handleSubmit, isSubmitting, isValid, validateEmail }) => {
-  const emailValidator = useMemo(() => emailValidationCreator(validateEmail), [validateEmail])
+const UserForm = ({ handleSubmit, isSubmitting, isValid, validateEmail, initialValues }) => {
+  const { email: initialEmail } = initialValues
+  const emailValidator = useMemo(() => emailValidationCreator(validateEmail, initialEmail), [
+    validateEmail,
+    initialEmail
+  ])
   return (
     <form onSubmit={handleSubmit}>
       <Grid container spacing={3}>
