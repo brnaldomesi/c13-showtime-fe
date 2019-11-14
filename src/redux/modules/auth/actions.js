@@ -13,3 +13,5 @@ export const authLogout = createAction(types.AUTH_LOGOUT)
 export const authRefreshToken = createAction(types.AUTH_REFRESH_TOKEN)
 
 export const authRefreshTokenSuccess = createAction(types.AUTH_REFRESH_TOKEN_SUCCESS)
+
+export const authTestToken = createAction(types.AUTH_TEST_TOKEN)

@@ -27,7 +27,7 @@ export const jsonToQueryString = obj => {
 }
 
 export const truncate = (input, len = 100) => {
-  let str = input.replace(/<[^>]+>/g, '')
+  let str = (input || '').replace(/<[^>]+>/g, '')
   if (str && str.length > len) {
     return `${str.substring(0, len)}...`
   } else {
