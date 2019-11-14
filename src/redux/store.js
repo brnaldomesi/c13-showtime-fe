@@ -3,6 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import { createStore, applyMiddleware, compose } from 'redux'
 import { routerMiddleware } from 'connected-react-router'
 
+import { authTestToken, isAuthenticatedSelector } from './modules/auth'
 import authMiddleware from './middlewares/auth'
 import getReducers from './modules'
 import sagas from './modules/sagas'
@@ -34,5 +35,9 @@ const composeEnhancers =
 export const store = createStore(getReducers(history), {}, composeEnhancers(...enhancers))
 
 sagaMiddleware.run(sagas)
+
+if (isAuthenticatedSelector(store.getState())) {
+  store.dispatch(authTestToken())
+}
 
 export default store

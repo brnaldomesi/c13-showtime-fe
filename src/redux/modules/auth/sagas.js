@@ -1,7 +1,7 @@
 import { put, select, takeLatest, throttle } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
-import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_REFRESH_TOKEN } from './types'
+import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_REFRESH_TOKEN, AUTH_TEST_TOKEN } from './types'
 import { authLoginSuccess, authLoginFail, authRefreshTokenSuccess } from './actions'
 import { saveData, loadData } from 'utils/storage'
 import { TOKEN_FRESH_INTERVAL } from 'config/constants'
@@ -49,8 +49,16 @@ const authLogout = function*(action) {
   yield saveData({ auth: null })
 }
 
+const authTestToken = apiCallSaga({
+  type: AUTH_TEST_TOKEN,
+  method: 'post',
+  path: '/test',
+  selectorKey: 'authTestToken'
+})
+
 export default function* rootSaga() {
   yield takeLatest(AUTH_LOGIN, authLogin)
   yield takeLatest(AUTH_LOGOUT, authLogout)
+  yield takeLatest(AUTH_TEST_TOKEN, authTestToken)
   yield throttle(TOKEN_FRESH_INTERVAL, AUTH_REFRESH_TOKEN, authRefreshToken)
 }
