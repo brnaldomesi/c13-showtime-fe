@@ -238,10 +238,10 @@ export const FormTagsInput = ({ label, className, field, form, lockerName, locke
   const [inputValue, setInputValue] = useState('')
 
   const handleInputChange = inputValue => {
-    const tags = inputValue.split(',').map(tag => tag.trim())
+    const tags = inputValue.split(',')
     const newInputValue = tags[tags.length - 1]
     if (tags.length > 1) {
-      const tagsToAdd = tags.slice(0, tags.length - 1)
+      const tagsToAdd = tags.slice(0, tags.length - 1).map(tag => tag.trim())
       form.setFieldValue(field.name, uniq([...(field.value || []), ...tagsToAdd]))
     }
     setInputValue(newInputValue)
