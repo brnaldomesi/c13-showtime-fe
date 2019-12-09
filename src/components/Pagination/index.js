@@ -16,7 +16,7 @@ import styles from './styles'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 const useStyles = makeStyles(styles)
-const pageSizeItems = [10, 25, 50, 100]
+const pageSizeItems = [10, 25, 50, 100, 500]
 
 export const Pagination = props => {
   const classes = useStyles()
