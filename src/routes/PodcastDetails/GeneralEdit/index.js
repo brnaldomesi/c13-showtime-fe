@@ -72,7 +72,12 @@ const renderForm = props => (
       lockerName="config.lockedSyncFields"
       lockerValue="tags"
     />
-    <Field name="config.enableShowPage" label="Active" toggleValues={[false, true]} component={FormCheckbox} />
+    <Field
+      name="config.enableShowPage"
+      label="Enabled on Show Hub"
+      toggleValues={[false, true]}
+      component={FormCheckbox}
+    />
     <Hr />
     <Field name="seoTitle" label="SEO Title" component={FormLockerInput} placeholder="Enter SEO title here..." />
     <Field name="seoHeader" label="SEO Header" component={FormLockerInput} placeholder="Enter SEO header here..." />

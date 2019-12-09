@@ -60,7 +60,7 @@ export const Podcasts = props => {
                   <TableCell>Title</TableCell>
                   <TableCell width="15%">Slug</TableCell>
                   <TableCell width="12%">Network</TableCell>
-                  <TableCell width="8%">Status</TableCell>
+                  <TableCell width="8%">Show Hub Status</TableCell>
                   <TableCell width={210} />
                 </TableRow>
               </TableHead>
@@ -92,7 +92,7 @@ export const Podcasts = props => {
                     </TableCell>
                     <TableCell>
                       <Typography variant="body2" color="textSecondary">
-                        {get(podcast, 'config.enableShowPage') ? 'Active' : 'Inactive'}
+                        {get(podcast, 'config.enableShowPage') ? 'Enabled' : 'Disabled'}
                       </Typography>
                     </TableCell>
                     <TableCell align="right" className={classes.actions}>
@@ -146,9 +146,6 @@ const actions = {
 export default compose(
   withRouterAndQueryParams,
   userIsAuthenticatedRedir,
-  connect(
-    selector,
-    actions
-  ),
+  connect(selector, actions),
   withStyles(styles)
 )(Podcasts)
