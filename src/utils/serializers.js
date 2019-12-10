@@ -39,7 +39,11 @@ export const deserializeEpisode = episode => ({
   tags: fp.isNil(episode.tags) ? episode.snackableTags || [] : episode.tags || []
 })
 
-export const serializeEpisode = fp.pick(['title', 'summary', 'tags'])
+export const serializeEpisode = values => ({
+  title: values.title,
+  summary: values.summary,
+  tags: values.tags || []
+})
 
 export const initializeCrewMember = () => ({
   firstName: '',
