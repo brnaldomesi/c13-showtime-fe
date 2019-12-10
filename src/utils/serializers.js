@@ -23,7 +23,7 @@ export const serializePodcast = values => ({
   slug: values.slug,
   websiteUrl: values.websiteUrl,
   // image: values.image,
-  tags: values.tags,
+  tags: values.tags || [],
   seoTitle: values.seoTitle || null,
   seoHeader: values.seoHeader || null,
   seoDescription: values.seoDescription || null,
