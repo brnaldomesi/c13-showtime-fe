@@ -1,19 +1,19 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Formik, Field } from 'formik'
-import { Link } from 'react-router-dom'
-import { useSnackbar } from 'notistack'
-import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
-import pick from 'lodash/pick'
-import PropTypes from 'prop-types'
+import { Field, Formik } from 'formik'
 
-import { formSubmit } from 'utils/form'
-import { updateSubscriptionUrls } from 'redux/modules/podcast'
-import { SNACKBAR_TYPE } from 'config/constants'
+import Button from '@material-ui/core/Button'
 import FormLockerInput from 'components/FormLockerInput'
+import Grid from '@material-ui/core/Grid'
 import Hr from 'components/Hr'
+import { Link } from 'react-router-dom'
 import LoadingIndicator from 'components/LoadingIndicator'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { SNACKBAR_TYPE } from 'config/constants'
+import { connect } from 'react-redux'
+import { formSubmit } from 'utils/form'
+import pick from 'lodash/pick'
+import { updateSubscriptionUrls } from 'redux/modules/podcast'
+import { useSnackbar } from 'notistack'
 
 const renderForm = props => (
   <form onSubmit={props.handleSubmit}>
@@ -57,7 +57,7 @@ const renderForm = props => (
       lockerName="lockedSyncFields"
       lockerValue="radioCom"
     />
-    {/* <Field
+    <Field
       name="stitcher"
       label="Stitcher"
       placeholder="e.g. http://www.stitcher.com/podcast/..."
@@ -66,13 +66,13 @@ const renderForm = props => (
       lockerValue="stitcher"
     />
     <Field
-      name="iHeart"
-      label="iHeart"
-      placeholder="e.g. http://www.iheart.com/playlist/..."
+      name="castbox"
+      label="Castbox"
+      placeholder="e.g. http://www.castbox.com/playlist/..."
       component={FormLockerInput}
       lockerName="lockedSyncFields"
-      lockerValue="iHeart"
-    /> */}
+      lockerValue="castbox"
+    />
     <Hr />
     <Grid container justify="flex-end" spacing={3}>
       <Grid item>
@@ -97,7 +97,15 @@ const SubscribeLinks = ({ initialValues, match, updateSubscriptionUrls }) => {
       updateSubscriptionUrls,
       {
         id: match.params.podcastId,
-        data: pick(values, ['googlePodcasts', 'googlePlay', 'applePodcasts', 'spotify', 'radioCom']),
+        data: pick(values, [
+          'googlePodcasts',
+          'googlePlay',
+          'applePodcasts',
+          'spotify',
+          'radioCom',
+          'stitcher',
+          'castbox'
+        ]),
         fail: () =>
           enqueueSnackbar('Failed to save the subscribe links for the podcast.', { variant: SNACKBAR_TYPE.ERROR })
       },
@@ -118,7 +126,4 @@ const actions = {
   updateSubscriptionUrls
 }
 
-export default connect(
-  null,
-  actions
-)(SubscribeLinks)
+export default connect(null, actions)(SubscribeLinks)
