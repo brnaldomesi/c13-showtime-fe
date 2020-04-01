@@ -1,18 +1,19 @@
-import React from 'react'
-import { Formik, Field } from 'formik'
-import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
-import PropTypes from 'prop-types'
 import * as Yup from 'yup'
 
+import { Field, Formik } from 'formik'
 import { deserializePodcast, serializePodcast } from 'utils/serializers'
+
+import Button from '@material-ui/core/Button'
 // import FileDropzone from 'components/FileDropzone'
 import FormCheckbox from 'components/FormCheckbox'
 import FormLockerInput from 'components/FormLockerInput'
 import FormTagsInput from 'components/FormTagsInput'
+import Grid from '@material-ui/core/Grid'
 import Hr from 'components/Hr'
+import { Link } from 'react-router-dom'
 import LoadingIndicator from 'components/LoadingIndicator'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required('Podcast title is required'),
@@ -117,9 +118,9 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
       initialValues={initialValues}
       enableReinitialize
       onSubmit={handleSubmit}
-      render={renderForm}
-      validationSchema={validationSchema}
-    />
+      validationSchema={validationSchema}>
+      {renderForm}
+    </Formik>
   )
 }
 

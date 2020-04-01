@@ -1,6 +1,3 @@
-import { takeLatest } from 'redux-saga/effects'
-
-import { apiCallSaga } from '../api'
 import {
   CREATE_NETWORK,
   GET_NETWORKS_LIST,
@@ -8,6 +5,9 @@ import {
   GET_NETWORK_PODCASTS_LIST,
   UPDATE_NETWORK
 } from './types'
+
+import { apiCallSaga } from '../api'
+import { takeLatest } from 'redux-saga/effects'
 
 const createNetwork = apiCallSaga({
   type: CREATE_NETWORK,

@@ -3,7 +3,8 @@ export default theme => ({
     width: '100%'
   },
   paper: {
-    width: '100%'
+    width: '100%',
+    padding: theme.spacing(3)
   },
   table: {
     minWidth: 700,

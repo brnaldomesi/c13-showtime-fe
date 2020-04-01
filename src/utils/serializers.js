@@ -1,6 +1,16 @@
 import fp from 'lodash/fp'
 import get from 'lodash/get'
 
+export const deserializeNetwork = network => ({
+  name: network.name || '',
+  status: network.status || 'ACTIVE'
+})
+
+export const serializeNetwork = values => ({
+  name: values.name || '',
+  status: values.status || 'ACTIVE'
+})
+
 export const deserializePodcast = podcast => ({
   title: podcast.title || '',
   summary: podcast.summary || '',

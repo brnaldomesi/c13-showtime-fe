@@ -1,26 +1,26 @@
 import React, { useEffect } from 'react'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
-import { useSnackbar } from 'notistack'
-import { withStyles } from '@material-ui/core/styles'
+import { getNetworksList, networksListLoadingSelector, networksListSelector } from 'redux/modules/network'
+
+import { APIListType } from 'utils/propTypes'
+import Breadcrumbs from 'components/Breadcrumbs'
+import LoadingIndicator from 'components/LoadingIndicator'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
+import { SNACKBAR_TYPE } from 'config/constants'
+import SortableTableHead from 'components/SortableTableHead'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableRow from '@material-ui/core/TableRow'
 import Typography from '@material-ui/core/Typography'
-
-import { APIListType } from 'utils/propTypes'
-import { getNetworksList, networksListSelector, networksListLoadingSelector } from 'redux/modules/network'
-import { SNACKBAR_TYPE } from 'config/constants'
-import { userIsAuthenticatedRedir } from 'hocs/withAuth'
-import Breadcrumbs from 'components/Breadcrumbs'
-import LoadingIndicator from 'components/LoadingIndicator'
-import SortableTableHead from 'components/SortableTableHead'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 import styles from './styles'
+import { useSnackbar } from 'notistack'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import withSortHandler from 'hocs/withSortHandler'
+import { withStyles } from '@material-ui/core/styles'
 
 const columns = [
   { id: 'name', label: 'Title' },
@@ -69,7 +69,7 @@ export const Networks = props => {
                         {network.name}
                       </Typography>
                     </TableCell>
-                    <TableCell className={classes.actions}>Active</TableCell>
+                    <TableCell className={classes.actions}>{network.status}</TableCell>
                     <TableCell className={classes.actions}>
                       <Typography variant="subtitle1" color="textPrimary">
                         {network.podcastCount || 0} Podcasts
@@ -105,10 +105,7 @@ const actions = {
 
 export default compose(
   userIsAuthenticatedRedir,
-  connect(
-    selector,
-    actions
-  ),
+  connect(selector, actions),
   withSortHandler({ listPropName: 'networks.data' }),
   withStyles(styles)
 )(Networks)

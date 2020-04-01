@@ -1,38 +1,41 @@
 import React, { useEffect } from 'react'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
-import { Link } from 'react-router-dom'
-import { useSnackbar } from 'notistack'
-import { withStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import dfFormat from 'date-fns/format'
-import get from 'lodash/get'
-import Paper from '@material-ui/core/Paper'
-import PropTypes from 'prop-types'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import MuiTableCell from '@material-ui/core/TableCell'
-import TableRow from '@material-ui/core/TableRow'
-import Typography from '@material-ui/core/Typography'
-
 import {
   getNetworkDetails,
   getNetworkPodcastsList,
-  networkDetailsSelector,
   networkDetailsLoadingSelector,
+  networkDetailsSelector,
+  networkPodcastsListLoadingSelector,
   networkPodcastsListSelector,
-  networkPodcastsListLoadingSelector
+  updateNetwork
 } from 'redux/modules/network'
-import { SNACKBAR_TYPE } from 'config/constants'
-import { userIsAuthenticatedRedir } from 'hocs/withAuth'
-import Breadcrumbs from 'components/Breadcrumbs'
-import LeftPane from './LeftPane'
-import LoadingIndicator from 'components/LoadingIndicator'
-import SortableTableHead from 'components/SortableTableHead'
 import styles, { tableCellStyles } from './styles'
+
+import Breadcrumbs from 'components/Breadcrumbs'
+import Button from '@material-ui/core/Button'
+import GeneralEdit from './GeneralEdit'
+import LeftPane from './LeftPane'
+import { Link } from 'react-router-dom'
+import LoadingIndicator from 'components/LoadingIndicator'
+import MuiTableCell from '@material-ui/core/TableCell'
+import Paper from '@material-ui/core/Paper'
+import PropTypes from 'prop-types'
+import { SNACKBAR_TYPE } from 'config/constants'
+import SortableTableHead from 'components/SortableTableHead'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableRow from '@material-ui/core/TableRow'
 import ThumbnailImage from 'components/ThumbnailImage'
+import Typography from '@material-ui/core/Typography'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+import dfFormat from 'date-fns/format'
+import { formSubmit } from 'utils/form'
+import get from 'lodash/get'
+import { useSnackbar } from 'notistack'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import withSortHandler from 'hocs/withSortHandler'
+import { withStyles } from '@material-ui/core/styles'
 
 const TableCell = withStyles(tableCellStyles)(MuiTableCell)
 
@@ -54,6 +57,7 @@ export const NetworkDetails = props => {
     podcasts,
     podcastsLoading,
     networkDetailsLoading,
+    updateNetwork,
     sortProps: { onRequestSort, sortedList, order, orderBy }
   } = props
   const { enqueueSnackbar } = useSnackbar()
@@ -69,6 +73,25 @@ export const NetworkDetails = props => {
     })
   }, [match, getNetworkDetails, getNetworkPodcastsList, enqueueSnackbar])
 
+  const handleSubmit = (values, formActions) => {
+    return formSubmit(
+      updateNetwork,
+      {
+        id: match.params.networkId,
+        data: values,
+        success: () => {
+          enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+          getNetworkPodcastsList({
+            networkId: match.params.networkId,
+            fail: () => enqueueSnackbar('Failed to load podcasts of the network!', { variant: SNACKBAR_TYPE.ERROR })
+          })
+        },
+        fail: () => enqueueSnackbar('Failed to save the network details.', { variant: SNACKBAR_TYPE.ERROR })
+      },
+      formActions
+    )
+  }
+
   return (
     <>
       {!podcastsLoading && !networkDetailsLoading && <LeftPane networkDetails={networkDetails} />}
@@ -79,6 +102,7 @@ export const NetworkDetails = props => {
             <LoadingIndicator />
           ) : podcasts.length > 0 ? (
             <>
+              <GeneralEdit networkDetails={networkDetails} onSubmit={handleSubmit} />
               <Table className={classes.table} size="small">
                 <SortableTableHead columns={columns} onRequestSort={onRequestSort} order={order} orderBy={orderBy} />
                 <TableBody>
@@ -146,7 +170,8 @@ NetworkDetails.propTypes = {
   networkDetails: PropTypes.object,
   networkDetailsLoading: PropTypes.bool,
   podcasts: PropTypes.array.isRequired,
-  podcastsLoading: PropTypes.bool
+  podcastsLoading: PropTypes.bool,
+  updateNetwork: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -158,15 +183,13 @@ const selector = createStructuredSelector({
 
 const actions = {
   getNetworkDetails,
-  getNetworkPodcastsList
+  getNetworkPodcastsList,
+  updateNetwork
 }
 
 export default compose(
   userIsAuthenticatedRedir,
-  connect(
-    selector,
-    actions
-  ),
+  connect(selector, actions),
   withSortHandler({ listPropName: 'podcasts' }),
   withStyles(styles)
 )(NetworkDetails)
