@@ -98,11 +98,11 @@ export const NetworkDetails = props => {
       <div className={classes.content}>
         <Breadcrumbs />
         <Paper className={classes.paper}>
+          {networkDetails && <GeneralEdit networkDetails={networkDetails} onSubmit={handleSubmit} />}
           {podcastsLoading || networkDetailsLoading ? (
             <LoadingIndicator />
           ) : podcasts.length > 0 ? (
             <>
-              <GeneralEdit networkDetails={networkDetails} onSubmit={handleSubmit} />
               <Table className={classes.table} size="small">
                 <SortableTableHead columns={columns} onRequestSort={onRequestSort} order={order} orderBy={orderBy} />
                 <TableBody>

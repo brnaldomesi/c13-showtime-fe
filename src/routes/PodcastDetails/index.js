@@ -1,22 +1,12 @@
 import React, { useEffect } from 'react'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import { useSnackbar } from 'notistack'
-import { withStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import PropTypes from 'prop-types'
-
 import {
   getPodcastDetails,
-  updatePodcastDetails,
+  podcastDetailsLoadingSelector,
   podcastDetailsSelector,
-  podcastDetailsLoadingSelector
+  updatePodcastDetails
 } from 'redux/modules/podcast'
-import { formSubmit } from 'utils/form'
-import { SNACKBAR_TYPE } from 'config/constants'
-import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+
 import Breadcrumbs from 'components/Breadcrumbs'
 import CrewMemberEdit from './CrewMemberEdit'
 import CrewMembers from './CrewMembers'
@@ -25,8 +15,18 @@ import Episodes from './Episodes'
 import GeneralEdit from './GeneralEdit'
 import LoadingIndicator from 'components/LoadingIndicator'
 import NavTabs from './NavTabs'
+import Paper from '@material-ui/core/Paper'
+import PropTypes from 'prop-types'
+import { SNACKBAR_TYPE } from 'config/constants'
 import SubscribeLinks from './SubscribeLinks'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+import { formSubmit } from 'utils/form'
 import styles from './styles'
+import { useSnackbar } from 'notistack'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import { withStyles } from '@material-ui/core/styles'
 
 export const PodcastDetails = props => {
   const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
@@ -126,11 +126,4 @@ const actions = {
   updatePodcastDetails
 }
 
-export default compose(
-  userIsAuthenticatedRedir,
-  connect(
-    selector,
-    actions
-  ),
-  withStyles(styles)
-)(PodcastDetails)
+export default compose(userIsAuthenticatedRedir, connect(selector, actions), withStyles(styles))(PodcastDetails)
