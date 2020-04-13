@@ -1,21 +1,23 @@
 import React, { Component } from 'react'
-import { compose } from 'redux'
-import { Link } from 'react-router-dom'
-import { withStyles } from '@material-ui/core/styles'
+
+import Breadcrumbs from 'components/Breadcrumbs'
+import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import IconCast from '@material-ui/icons/Cast'
 import IconNetwork from '@material-ui/icons/Share'
 import IconPeopleOutline from '@material-ui/icons/PeopleOutline'
+import { Link } from 'react-router-dom'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import PropTypes from 'prop-types'
-
-import { userIsAuthenticatedRedir } from 'hocs/withAuth'
-import styles from './styles'
 import Typography from '@material-ui/core/Typography'
-import Breadcrumbs from 'components/Breadcrumbs'
+import { compose } from 'redux'
+import styles from './styles'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import { withStyles } from '@material-ui/core/styles'
 
 class Dashboard extends Component {
   static propTypes = {
@@ -38,6 +40,11 @@ class Dashboard extends Component {
                   <IconNetwork />
                 </ListItemIcon>
                 <ListItemText primary="View Networks" />
+                <ListItemSecondaryAction>
+                  <Button color="primary" variant="contained" component={Link} to="/networks/new">
+                    ADD NEW NETWORK
+                  </Button>
+                </ListItemSecondaryAction>
               </ListItem>
               <ListItem button component={Link} to="/podcasts">
                 <ListItemIcon>
@@ -59,7 +66,4 @@ class Dashboard extends Component {
   }
 }
 
-export default compose(
-  userIsAuthenticatedRedir,
-  withStyles(styles)
-)(Dashboard)
+export default compose(userIsAuthenticatedRedir, withStyles(styles))(Dashboard)

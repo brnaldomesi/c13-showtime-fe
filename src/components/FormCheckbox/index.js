@@ -1,9 +1,9 @@
-import React from 'react'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormControl from '@material-ui/core/FormControl'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 const FormInput = ({ color, field, form, label, toggleValues }) => {
   const error = form.touched[field.name] && form.errors[field.name]

@@ -3,8 +3,7 @@ export default theme => ({
     width: '100%'
   },
   paper: {
-    width: '100%',
-    padding: theme.spacing(3)
+    width: '100%'
   },
   table: {
     minWidth: 700,
@@ -27,11 +26,14 @@ export default theme => ({
   },
   emptyListWrapper: {
     padding: theme.spacing(3)
+  },
+  titleButton: {
+    paddingLeft: 0
   }
 })
 
 export const tableCellStyles = theme => ({
   root: {
-    padding: theme.spacing(1)
+    //padding: theme.spacing(1)
   }
 })

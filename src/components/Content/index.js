@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import cn from 'classnames'
+
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import cn from 'classnames'
 import styles from './styles'
+import { withStyles } from '@material-ui/core/styles'
 
 class Content extends Component {
   static propTypes = {

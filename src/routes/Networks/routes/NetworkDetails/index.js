@@ -5,15 +5,13 @@ import {
   networkDetailsLoadingSelector,
   networkDetailsSelector,
   networkPodcastsListLoadingSelector,
-  networkPodcastsListSelector,
-  updateNetwork
+  networkPodcastsListSelector
 } from 'redux/modules/network'
 import styles, { tableCellStyles } from './styles'
 
 import Breadcrumbs from 'components/Breadcrumbs'
 import Button from '@material-ui/core/Button'
-import GeneralEdit from './GeneralEdit'
-import LeftPane from './LeftPane'
+import LeftPane from '../../components/LeftPane'
 import { Link } from 'react-router-dom'
 import LoadingIndicator from 'components/LoadingIndicator'
 import MuiTableCell from '@material-ui/core/TableCell'
@@ -30,10 +28,8 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import dfFormat from 'date-fns/format'
-import { formSubmit } from 'utils/form'
 import get from 'lodash/get'
 import { useSnackbar } from 'notistack'
-import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import withSortHandler from 'hocs/withSortHandler'
 import { withStyles } from '@material-ui/core/styles'
 
@@ -57,10 +53,10 @@ export const NetworkDetails = props => {
     podcasts,
     podcastsLoading,
     networkDetailsLoading,
-    updateNetwork,
     sortProps: { onRequestSort, sortedList, order, orderBy }
   } = props
   const { enqueueSnackbar } = useSnackbar()
+  const leftPaneState = match.path.endsWith('/podcasts') ? 'NETWORK_PODCASTS' : 'NETWORK_DETAILS'
 
   useEffect(() => {
     getNetworkDetails({
@@ -73,32 +69,12 @@ export const NetworkDetails = props => {
     })
   }, [match, getNetworkDetails, getNetworkPodcastsList, enqueueSnackbar])
 
-  const handleSubmit = (values, formActions) => {
-    return formSubmit(
-      updateNetwork,
-      {
-        id: match.params.networkId,
-        data: values,
-        success: () => {
-          enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
-          getNetworkPodcastsList({
-            networkId: match.params.networkId,
-            fail: () => enqueueSnackbar('Failed to load podcasts of the network!', { variant: SNACKBAR_TYPE.ERROR })
-          })
-        },
-        fail: () => enqueueSnackbar('Failed to save the network details.', { variant: SNACKBAR_TYPE.ERROR })
-      },
-      formActions
-    )
-  }
-
   return (
     <>
-      {!podcastsLoading && !networkDetailsLoading && <LeftPane networkDetails={networkDetails} />}
+      {!podcastsLoading && !networkDetailsLoading && <LeftPane networkDetails={networkDetails} state={leftPaneState} />}
       <div className={classes.content}>
         <Breadcrumbs />
         <Paper className={classes.paper}>
-          {networkDetails && <GeneralEdit networkDetails={networkDetails} onSubmit={handleSubmit} />}
           {podcastsLoading || networkDetailsLoading ? (
             <LoadingIndicator />
           ) : podcasts.length > 0 ? (
@@ -118,7 +94,10 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="subtitle1" color="textPrimary">
-                          <Button component={Link} to={`/podcasts/${podcast.id}/preview`}>
+                          <Button
+                            component={Link}
+                            to={`/podcasts/${podcast.id}/preview`}
+                            className={classes.titleButton}>
                             {podcast.title}
                           </Button>
                         </Typography>
@@ -130,21 +109,29 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="body2" color="textSecondary">
-                          {get(podcast, 'config.enableShowPage') ? 'Active' : 'Inactive'}
+                          {get(podcast, 'config.enableShowPage') ? 'ACTIVE' : 'INACTIVE'}
                         </Typography>
                       </TableCell>
                       <TableCell align="right" className={classes.actions}>
-                        <Button
-                          variant="contained"
-                          color="primary"
-                          className={classes.episodes}
-                          to={`/podcasts/${podcast.id}/preview`}
-                          component={Link}>
-                          Preview
-                        </Button>
-                        <Button variant="contained" color="primary" to={`/podcasts/${podcast.id}`} component={Link}>
-                          Edit
-                        </Button>
+                        {match.path.endsWith('/podcasts') ? (
+                          <Button variant="contained" color="primary">
+                            REMOVE PODCAST
+                          </Button>
+                        ) : (
+                          <>
+                            <Button
+                              variant="contained"
+                              color="primary"
+                              className={classes.episodes}
+                              to={`/podcasts/${podcast.id}/preview`}
+                              component={Link}>
+                              Preview
+                            </Button>
+                            <Button variant="contained" color="primary" to={`/podcasts/${podcast.id}`} component={Link}>
+                              Edit
+                            </Button>
+                          </>
+                        )}
                       </TableCell>
                     </TableRow>
                   ))}
@@ -170,8 +157,7 @@ NetworkDetails.propTypes = {
   networkDetails: PropTypes.object,
   networkDetailsLoading: PropTypes.bool,
   podcasts: PropTypes.array.isRequired,
-  podcastsLoading: PropTypes.bool,
-  updateNetwork: PropTypes.func.isRequired
+  podcastsLoading: PropTypes.bool
 }
 
 const selector = createStructuredSelector({
@@ -183,12 +169,10 @@ const selector = createStructuredSelector({
 
 const actions = {
   getNetworkDetails,
-  getNetworkPodcastsList,
-  updateNetwork
+  getNetworkPodcastsList
 }
 
 export default compose(
-  userIsAuthenticatedRedir,
   connect(selector, actions),
   withSortHandler({ listPropName: 'podcasts' }),
   withStyles(styles)

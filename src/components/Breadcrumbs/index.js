@@ -1,21 +1,21 @@
-import React from 'react'
-import { Link as RouterLink } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
+import { getFullName, truncate } from 'utils/helpers'
+
 import Link from '@material-ui/core/Link'
 import MuiBreadcrumbs from '@material-ui/core/Breadcrumbs'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
+import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
-
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 import { crewMemberDetailsSelector } from 'redux/modules/crew'
 import { episodeDetailsSelector } from 'redux/modules/episode'
-import { getFullName, truncate } from 'utils/helpers'
+import { makeStyles } from '@material-ui/core/styles'
 import { networkDetailsSelector } from 'redux/modules/network'
 import { podcastDetailsSelector } from 'redux/modules/podcast'
-import { userSelector } from 'redux/modules/user'
 import styles from './styles'
+import { userSelector } from 'redux/modules/user'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 
 const LinkRouter = props => <Link {...props} component={RouterLink} />
@@ -48,9 +48,21 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
       path: '/networks'
     })
     if (networkDetails && networkDetails.id === networkId) {
+      if (location.pathname.endsWith('/edit')) {
+        results.push({
+          name: 'Edit network',
+          path: `/networks/${networkId}/edit`
+        })
+      } else {
+        results.push({
+          name: networkDetails.name,
+          path: `/networks/${networkId}`
+        })
+      }
+    } else if (location.pathname.endsWith('/new')) {
       results.push({
-        name: networkDetails.name,
-        path: `/networks/${networkId}`
+        name: 'Add New Network',
+        path: `/networks/new`
       })
     }
   } else if (isPodcastRoute) {
@@ -141,7 +153,4 @@ const selector = createStructuredSelector({
   user: userSelector
 })
 
-export default compose(
-  withRouterAndQueryParams,
-  connect(selector)
-)(Breadcrumbs)
+export default compose(withRouterAndQueryParams, connect(selector))(Breadcrumbs)

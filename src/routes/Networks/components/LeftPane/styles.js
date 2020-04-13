@@ -1,4 +1,4 @@
-const drawerWidth = 240
+const drawerWidth = 260
 
 export default theme => ({
   drawer: {
@@ -19,15 +19,17 @@ export default theme => ({
   },
   image: {
     paddingTop: '100%',
-    width: '100%'
+    width: '100%',
+    position: 'relative'
   },
   divider: {
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(1)
   },
   button: {
-    marginTop: theme.spacing(1),
-    marginLeft: theme.spacing(3),
-    marginRight: theme.spacing(3)
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3)
   }
 })
