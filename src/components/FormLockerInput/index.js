@@ -1,17 +1,16 @@
-import React from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import cn from 'classnames'
 import Divider from '@material-ui/core/Divider'
 import FormHelperText from '@material-ui/core/FormHelperText'
-import get from 'lodash/get'
 import IconButton from '@material-ui/core/IconButton'
 import InputBase from '@material-ui/core/InputBase'
 import LockIcon from '@material-ui/icons/Lock'
 import LockOpenIcon from '@material-ui/icons/LockOpen'
 import PropTypes from 'prop-types'
-import xor from 'lodash/xor'
-
+import React from 'react'
+import cn from 'classnames'
+import get from 'lodash/get'
 import styles from './styles'
+import { withStyles } from '@material-ui/core/styles'
+import xor from 'lodash/xor'
 
 const FormLockerInput = ({
   label,

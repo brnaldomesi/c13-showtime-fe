@@ -104,7 +104,8 @@ const SubscribeLinks = ({ initialValues, match, updateSubscriptionUrls }) => {
           'spotify',
           'radioCom',
           'stitcher',
-          'castbox'
+          'castbox',
+          'lockedSyncFields'
         ]),
         fail: () =>
           enqueueSnackbar('Failed to save the subscribe links for the podcast.', { variant: SNACKBAR_TYPE.ERROR })

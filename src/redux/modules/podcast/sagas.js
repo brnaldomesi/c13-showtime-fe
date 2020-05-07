@@ -1,6 +1,3 @@
-import { takeLatest } from 'redux-saga/effects'
-
-import { apiCallSaga } from '../api'
 import {
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
@@ -8,9 +5,12 @@ import {
   UPDATE_PODCAST,
   UPDATE_PODCAST_CONFIG,
   UPDATE_PODCAST_DETAILS,
-  UPLOAD_PODCAST_IMAGE,
-  UPDATE_SUBSCRIPTION_URLS
+  UPDATE_SUBSCRIPTION_URLS,
+  UPLOAD_PODCAST_IMAGE
 } from './types'
+
+import { apiCallSaga } from '../api'
+import { takeLatest } from 'redux-saga/effects'
 
 const getPodcastsList = apiCallSaga({
   type: GET_PODCASTS_LIST,
