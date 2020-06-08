@@ -1,20 +1,20 @@
+import { podcastsSearchResultsSelector, searchPodcasts } from 'redux/modules/podcast'
+
+import AutoSuggest from 'components/AutoSuggest'
+import { Formik } from 'formik'
+import InputBase from '@material-ui/core/InputBase'
+import MenuItem from '@material-ui/core/MenuItem'
+import PropTypes from 'prop-types'
 import React from 'react'
+import SearchIcon from '@material-ui/icons/Search'
+import ThumbnailImage from 'components/ThumbnailImage'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { Formik } from 'formik'
-import { withStyles } from '@material-ui/core'
-import InputBase from '@material-ui/core/InputBase'
 import match from 'autosuggest-highlight/match'
-import MenuItem from '@material-ui/core/MenuItem'
 import parse from 'autosuggest-highlight/parse'
-import PropTypes from 'prop-types'
-import SearchIcon from '@material-ui/icons/Search'
-
-import { podcastsSearchResultsSelector, searchPodcasts } from 'redux/modules/podcast'
-import AutoSuggest from 'components/AutoSuggest'
-import ThumbnailImage from 'components/ThumbnailImage'
-import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
 import styles from './styles'
+import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
+import { withStyles } from '@material-ui/core'
 
 const renderInputComponent = classes => inputProps => {
   const { inputRef = () => {}, ref, InputLabelProps, ...other } = inputProps
@@ -109,11 +109,4 @@ const actions = {
   searchPodcasts
 }
 
-export default compose(
-  withRouterAndQueryParams,
-  connect(
-    null,
-    actions
-  ),
-  withStyles(styles)
-)(HeaderSearchForm)
+export default compose(withRouterAndQueryParams, connect(null, actions), withStyles(styles))(HeaderSearchForm)

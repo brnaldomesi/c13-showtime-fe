@@ -13,8 +13,8 @@ const createNetwork = apiCallSaga({
   type: CREATE_NETWORK,
   method: 'post',
   allowedParamKeys: [],
-  path: ({ payload }) => `/networks/${payload.id}/image`,
-  selectorKey: 'networkDetails'
+  path: ({ payload }) => `/networks`,
+  selectorKey: 'createdNetwork'
 })
 
 const getNetworksList = apiCallSaga({

@@ -1,22 +1,21 @@
-import React from 'react'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { withStyles } from '@material-ui/core/styles'
-import IconCast from '@material-ui/icons/Cast'
 import Divider from '@material-ui/core/Divider'
 import Drawer from '@material-ui/core/Drawer'
+import IconCast from '@material-ui/icons/Cast'
 import IconHome from '@material-ui/icons/Home'
+import { Link } from 'react-router-dom'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import LogoutIcon from '@material-ui/icons/PowerSettingsNew'
 import PropTypes from 'prop-types'
-
+import React from 'react'
 import { authLogout } from 'redux/modules/auth'
-import { userIsAuthenticated } from 'hocs/withAuth'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 import styles from './styles'
+import { userIsAuthenticated } from 'hocs/withAuth'
+import { withStyles } from '@material-ui/core/styles'
 
 const SidebarItem = ({ icon, text, to, onClick }) => {
   const Icon = icon
@@ -43,6 +42,9 @@ const Sidebar = ({ authLogout, classes, open, toggle }) => {
       </List>
       <List>
         <SidebarItem icon={IconCast} text="Podcasts" to="/podcasts" />
+      </List>
+      <List>
+        <SidebarItem icon={IconCast} text="Featured Podcasts" to="/featuredPodcasts" />
       </List>
       <List>
         <SidebarItem icon={IconCast} text="Users" to="/users" />
@@ -74,11 +76,4 @@ const actions = {
   authLogout
 }
 
-export default compose(
-  userIsAuthenticated,
-  connect(
-    null,
-    actions
-  ),
-  withStyles(styles)
-)(Sidebar)
+export default compose(userIsAuthenticated, connect(null, actions), withStyles(styles))(Sidebar)

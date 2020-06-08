@@ -40,6 +40,7 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
   const isNetworkRoute = location.pathname.startsWith('/networks')
   const isPodcastRoute = location.pathname.startsWith('/podcasts')
   const isUserRoute = location.pathname.startsWith('/users')
+  const isFeaturedPodcastRoute = location.pathname.startsWith('/featuredPodcasts')
   const crewId = tabId === 'crew' ? instanceId : undefined
   const episodeId = tabId === 'episodes' ? instanceId : undefined
   if (isNetworkRoute) {
@@ -116,6 +117,17 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
       results.push({
         name: 'New User',
         path: `/users/new`
+      })
+    }
+  } else if (isFeaturedPodcastRoute) {
+    results.push({
+      name: 'Show Hub Featured Podcasts',
+      path: '/featuredPodcasts'
+    })
+    if (location.pathname.startsWith('/featuredPodcasts/new')) {
+      results.push({
+        name: 'Add New Featured Section',
+        path: `/featuredPodcasts/new`
       })
     }
   }

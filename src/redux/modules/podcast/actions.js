@@ -1,6 +1,6 @@
-import { createAction } from 'redux-actions'
-
 import * as types from './types'
+
+import { createAction } from 'redux-actions'
 
 export const getPodcastsList = createAction(types.GET_PODCASTS_LIST)
 
@@ -17,3 +17,7 @@ export const getPodcastConfig = createAction(types.GET_PODCAST_CONFIG)
 export const updatePodcastConfig = createAction(types.UPDATE_PODCAST_CONFIG)
 
 export const searchPodcasts = createAction(types.SEARCH_PODCASTS)
+
+export const getFeaturedPodcastsList = createAction(types.GET_FEATURED_PODCASTS_LIST)
+
+export const updateFeaturedPodcast = createAction(types.UPDATE_FEATURED_PODCAST)

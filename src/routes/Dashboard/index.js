@@ -13,6 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import PropTypes from 'prop-types'
+import ThumbUpIcon from '@material-ui/icons/ThumbUp'
 import Typography from '@material-ui/core/Typography'
 import { compose } from 'redux'
 import styles from './styles'
@@ -51,6 +52,12 @@ class Dashboard extends Component {
                   <IconCast />
                 </ListItemIcon>
                 <ListItemText primary="View Podcasts" />
+              </ListItem>
+              <ListItem button component={Link} to="/featuredPodcasts">
+                <ListItemIcon>
+                  <ThumbUpIcon />
+                </ListItemIcon>
+                <ListItemText primary="Show Hub Featured Podcasts" />
               </ListItem>
               <ListItem button component={Link} to="/users">
                 <ListItemIcon>

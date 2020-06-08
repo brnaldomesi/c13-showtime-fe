@@ -4,6 +4,8 @@ import AppContainer from 'components/AppContainer'
 import ConfirmModal from 'components/ConfirmModal'
 import { ConnectedRouter } from 'connected-react-router'
 import Dashboard from './Dashboard'
+import FeaturedPodcastNew from './FeaturedPodcasts'
+import FeaturedPodcasts from './FeaturedPodcasts'
 import Login from './Login'
 import MainLayout from 'components/MainLayout'
 import Networks from './Networks'
@@ -25,6 +27,8 @@ const routes = ({ history }) => (
           <Route path="/podcasts/:podcastId/preview" exact component={PodcastPreview} />
           <Route path="/podcasts/:podcastId/:tabId/:instanceId" component={PodcastDetails} />
           <Route path="/podcasts/:podcastId/:tabId?" component={PodcastDetails} />
+          <Route path="/featuredPodcasts" exact component={FeaturedPodcasts} />
+          <Route path="/featuredPodcasts/new" exact component={FeaturedPodcastNew} />
           <Route path="/users" component={Users} />
           <Route path="/" exact component={Dashboard} />
           <Route path="/login" exact component={Login} />

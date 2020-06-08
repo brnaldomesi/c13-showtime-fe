@@ -1,7 +1,9 @@
 import {
+  GET_FEATURED_PODCASTS_LIST,
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
   SEARCH_PODCASTS,
+  UPDATE_FEATURED_PODCAST,
   UPDATE_PODCAST,
   UPDATE_PODCAST_CONFIG,
   UPDATE_PODCAST_DETAILS,
@@ -113,6 +115,22 @@ const searchPodcasts = apiCallSaga({
   selectorKey: 'podcastsSearch'
 })
 
+const getFeaturedPodcastsList = apiCallSaga({
+  type: GET_FEATURED_PODCASTS_LIST,
+  method: 'get',
+  allowedParamKeys: [],
+  path: '/podcasts',
+  selectorKey: 'featuredPodcastsList'
+})
+
+const updateFeaturedPodcast = apiCallSaga({
+  type: UPDATE_FEATURED_PODCAST,
+  method: 'patch',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts/${payload.id}`,
+  selectorKey: 'featuredPodcastDetails'
+})
+
 export default function* rootSaga() {
   yield takeLatest(GET_PODCASTS_LIST, getPodcastsList)
   yield takeLatest(GET_PODCAST_DETAILS, getPodcastDetails)
@@ -121,4 +139,6 @@ export default function* rootSaga() {
   yield takeLatest(UPLOAD_PODCAST_IMAGE, uploadPodcastImage)
   yield takeLatest(UPDATE_SUBSCRIPTION_URLS, updateSubscriptionUrls)
   yield takeLatest(SEARCH_PODCASTS, searchPodcasts)
+  yield takeLatest(GET_FEATURED_PODCASTS_LIST, getFeaturedPodcastsList)
+  yield takeLatest(UPDATE_FEATURED_PODCAST, updateFeaturedPodcast)
 }

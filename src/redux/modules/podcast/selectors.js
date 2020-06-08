@@ -1,4 +1,5 @@
 import { dataSelector, isRequestPending } from '../api'
+
 import { EMPTY_LIST_DATA } from 'config/constants'
 
 export const podcastsListSelector = dataSelector('podcastsList', EMPTY_LIST_DATA)
@@ -10,3 +11,7 @@ export const podcastDetailsSelector = dataSelector('podcastDetails', null)
 export const podcastDetailsLoadingSelector = isRequestPending('podcastDetails', 'get')
 
 export const podcastsSearchResultsSelector = dataSelector('podcastsSearch', [])
+
+export const featuredPodcastsListSelector = dataSelector('featuredPodcastsList', [])
+
+export const featuredPodcastsListLoadingSelector = isRequestPending('featuredPodcastsList', 'get')
