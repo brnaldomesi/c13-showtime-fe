@@ -1,18 +1,18 @@
+import UserForm, { validationSchema } from '../../components/UserForm'
+import { createUser, userCreatingSelector } from 'redux/modules/user'
+
+import Breadcrumbs from 'components/Breadcrumbs'
+import { Formik } from 'formik'
+import LoadingIndicator from 'components/LoadingIndicator'
+import Paper from '@material-ui/core/Paper'
+import PropTypes from 'prop-types'
 import React from 'react'
+import Typography from '@material-ui/core/Typography'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { Formik } from 'formik'
-import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-import pick from 'lodash/pick'
-import PropTypes from 'prop-types'
-
 import { formSubmit } from 'utils/form'
-import { getUser, createUser, userCreatingSelector } from 'redux/modules/user'
-import Breadcrumbs from 'components/Breadcrumbs'
-import LoadingIndicator from 'components/LoadingIndicator'
-import UserForm, { validationSchema } from '../../components/UserForm'
+import { makeStyles } from '@material-ui/core/styles'
+import pick from 'lodash/pick'
 import styles from './styles'
 
 const useStyles = makeStyles(styles)
@@ -72,11 +72,7 @@ const selector = createStructuredSelector({
 })
 
 const actions = {
-  getUser,
   createUser
 }
 
-export default connect(
-  selector,
-  actions
-)(UserNew)
+export default connect(selector, actions)(UserNew)

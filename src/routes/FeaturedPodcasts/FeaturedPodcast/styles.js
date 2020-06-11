@@ -6,5 +6,8 @@ export default theme => ({
   },
   paper: {
     padding: theme.spacing(3)
+  },
+  dragDropIcon: {
+    //marginLeft: theme.spacing(-1)
   }
 })

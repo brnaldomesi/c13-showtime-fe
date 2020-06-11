@@ -1,28 +1,48 @@
-import FeaturedPodcastForm, { validationSchema } from '../../components/FeaturedPodcastForm'
+import FeaturedPodcastForm, { validationSchema } from '../components/FeaturedPodcastForm'
 
 import { Formik } from 'formik'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
+import { createFeaturedPodcast } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
 import { makeStyles } from '@material-ui/core/styles'
 import styles from './styles'
-import { updateFeaturedPodcast } from 'redux/modules/podcast'
 
 const useStyles = makeStyles(styles)
 
-const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match }) => {
-  const featuredPodcastId = featuredPodcast.id
+const initialValues = {
+  title: '',
+  featuredPodcasts: [
+    {
+      id: 1,
+      imageUrls: {
+        original:
+          'https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/uploads_2F1568815781454-qok6p4fxqo-ab964001f7207e83966bc54d11cc5d4b_2F48_promo_apple_3000x3000.jpg?ixlib=rails-2.1.2'
+      },
+      title: '48-Hours'
+    },
+    {
+      id: 2,
+      imageUrls: {
+        original:
+          'https://megaphone.imgix.net/podcasts/42befcfc-5d6b-11ea-8c0e-ef801c4fa7fc/image/image.jpg?ixlib=rails-2.1.2'
+      },
+      title: '4th and Forever'
+    }
+  ]
+}
+
+const FeaturedPodcastNew = ({ createFeaturedPodcast, history }) => {
   const classes = useStyles()
 
   const handleSubmit = (values, actions) => {
     return formSubmit(
-      updateFeaturedPodcast,
+      createFeaturedPodcast,
       {
-        id: featuredPodcastId,
-        data: values
+        data: values,
+        success: () => history.push('/featuredPodcasts')
       },
       actions
     )
@@ -32,26 +52,24 @@ const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match }) => {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Formik
-          initialValues={featuredPodcast}
+          initialValues={initialValues}
           enableReinitialize
           onSubmit={handleSubmit}
-          component={FeaturedPodcastForm}
-          validationSchema={validationSchema}
-        />
+          validationSchema={validationSchema}>
+          {formikProps => <FeaturedPodcastForm {...formikProps} open={true} edit={false} />}
+        </Formik>
       </Paper>
     </div>
   )
 }
 
-FeaturedPodcast.propTypes = {
-  updateFeaturedPodcast: PropTypes.func.isRequired,
+FeaturedPodcastNew.propTypes = {
+  createFeaturedPodcast: PropTypes.func.isRequired,
   featuredPodcast: PropTypes.object
 }
 
-const selector = createStructuredSelector({})
-
 const actions = {
-  updateFeaturedPodcast
+  createFeaturedPodcast
 }
 
-export default connect(selector, actions)(FeaturedPodcast)
+export default connect(null, actions)(FeaturedPodcastNew)

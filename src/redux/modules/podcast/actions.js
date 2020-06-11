@@ -20,4 +20,6 @@ export const searchPodcasts = createAction(types.SEARCH_PODCASTS)
 
 export const getFeaturedPodcastsList = createAction(types.GET_FEATURED_PODCASTS_LIST)
 
+export const createFeaturedPodcast = createAction(types.CREATE_FEATURED_PODCAST)
+
 export const updateFeaturedPodcast = createAction(types.UPDATE_FEATURED_PODCAST)

@@ -7,7 +7,6 @@ import React from 'react'
 import { TextField } from '@material-ui/core'
 import ThumbnailImage from 'components/ThumbnailImage'
 import cn from 'classnames'
-import mapValues from 'lodash/mapValues'
 import match from 'autosuggest-highlight/match'
 import parse from 'autosuggest-highlight/parse'
 import styles from './styles'
@@ -20,6 +19,7 @@ const FormAutoComplete = ({
   field,
   form,
   options,
+  defaultValue,
   optionLabel,
   multiple,
   onChange,
@@ -40,6 +40,8 @@ const FormAutoComplete = ({
         id={field.name}
         renderInput={params => <TextField {...params} variant={variant} error={Boolean(error)} />}
         disabled={disabled}
+        defaultValue={defaultValue}
+        getOptionSelected={(option, value) => value.id === option.id}
         renderOption={(option, { inputValue, selected }) => {
           const matches = match(option.title, inputValue)
           const parts = parse(option.title, matches)
@@ -66,7 +68,7 @@ const FormAutoComplete = ({
               }}
               avatar={<ThumbnailImage imageUrls={option.imageUrls.original} />}
               label={option.title}
-              {...mapValues(getTagProps({ index }), v => (disabled ? undefined : v))}
+              {...getTagProps({ index })}
             />
           ))
         }
@@ -85,7 +87,9 @@ FormAutoComplete.propTypes = {
   lockerValue: PropTypes.string,
   onChange: PropTypes.func,
   variant: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  options: PropTypes.array.isRequired,
+  defaultValue: PropTypes.array
 }
 
 export default withStyles(styles)(FormAutoComplete)

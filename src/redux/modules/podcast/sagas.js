@@ -1,4 +1,5 @@
 import {
+  CREATE_FEATURED_PODCAST,
   GET_FEATURED_PODCASTS_LIST,
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
@@ -123,6 +124,14 @@ const getFeaturedPodcastsList = apiCallSaga({
   selectorKey: 'featuredPodcastsList'
 })
 
+const createFeaturedPodcast = apiCallSaga({
+  type: CREATE_FEATURED_PODCAST,
+  method: 'post',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts`,
+  selectorKey: 'featuredPodcastDetails'
+})
+
 const updateFeaturedPodcast = apiCallSaga({
   type: UPDATE_FEATURED_PODCAST,
   method: 'patch',
@@ -140,5 +149,6 @@ export default function* rootSaga() {
   yield takeLatest(UPDATE_SUBSCRIPTION_URLS, updateSubscriptionUrls)
   yield takeLatest(SEARCH_PODCASTS, searchPodcasts)
   yield takeLatest(GET_FEATURED_PODCASTS_LIST, getFeaturedPodcastsList)
+  yield takeLatest(CREATE_FEATURED_PODCAST, createFeaturedPodcast)
   yield takeLatest(UPDATE_FEATURED_PODCAST, updateFeaturedPodcast)
 }

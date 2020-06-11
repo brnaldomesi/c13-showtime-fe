@@ -23,7 +23,8 @@ const FormLockerInput = ({
   placeholder,
   multiline,
   type,
-  rows
+  rows,
+  disabled
 }) => {
   const handleToggle = () => {
     const lockerValues = get(form.values, lockerName) || []
@@ -56,6 +57,7 @@ const FormLockerInput = ({
           placeholder={placeholder}
           {...field}
           value={field.value || ''}
+          disabled={disabled}
         />
       </div>
       {Boolean(error) && <FormHelperText error>{error}</FormHelperText>}
@@ -72,7 +74,8 @@ FormLockerInput.propTypes = {
   rows: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   lockerName: PropTypes.string,
   lockerValue: PropTypes.string,
-  type: PropTypes.string
+  type: PropTypes.string,
+  disabled: PropTypes.bool
 }
 
 export default withStyles(styles)(FormLockerInput)
