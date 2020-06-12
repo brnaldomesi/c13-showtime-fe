@@ -23,3 +23,7 @@ export const getFeaturedPodcastsList = createAction(types.GET_FEATURED_PODCASTS_
 export const createFeaturedPodcast = createAction(types.CREATE_FEATURED_PODCAST)
 
 export const updateFeaturedPodcast = createAction(types.UPDATE_FEATURED_PODCAST)
+
+export const deleteFeaturedPodcast = createAction(types.DELETE_FEATURED_PODCAST)
+
+export const confirmAndDeleteFeaturedPodcast = createAction(types.CONFIRM_AND_DELETE_FEATURED_PODCAST)

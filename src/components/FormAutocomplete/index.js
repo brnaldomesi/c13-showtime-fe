@@ -19,7 +19,7 @@ const FormAutoComplete = ({
   field,
   form,
   options,
-  defaultValue,
+  value,
   optionLabel,
   multiple,
   onChange,
@@ -40,7 +40,7 @@ const FormAutoComplete = ({
         id={field.name}
         renderInput={params => <TextField {...params} variant={variant} error={Boolean(error)} />}
         disabled={disabled}
-        defaultValue={defaultValue}
+        value={value}
         getOptionSelected={(option, value) => value.id === option.id}
         renderOption={(option, { inputValue, selected }) => {
           const matches = match(option.title, inputValue)
@@ -89,7 +89,7 @@ FormAutoComplete.propTypes = {
   variant: PropTypes.string,
   disabled: PropTypes.bool,
   options: PropTypes.array.isRequired,
-  defaultValue: PropTypes.array
+  value: PropTypes.array
 }
 
 export default withStyles(styles)(FormAutoComplete)

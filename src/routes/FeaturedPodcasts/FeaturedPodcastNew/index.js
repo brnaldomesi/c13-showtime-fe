@@ -1,9 +1,11 @@
 import FeaturedPodcastForm, { validationSchema } from '../components/FeaturedPodcastForm'
 
+import Breadcrumbs from 'components/Breadcrumbs'
 import { Formik } from 'formik'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Typography from '@material-ui/core/Typography'
 import { connect } from 'react-redux'
 import { createFeaturedPodcast } from 'redux/modules/podcast'
 import { formSubmit } from 'utils/form'
@@ -14,24 +16,7 @@ const useStyles = makeStyles(styles)
 
 const initialValues = {
   title: '',
-  featuredPodcasts: [
-    {
-      id: 1,
-      imageUrls: {
-        original:
-          'https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/uploads_2F1568815781454-qok6p4fxqo-ab964001f7207e83966bc54d11cc5d4b_2F48_promo_apple_3000x3000.jpg?ixlib=rails-2.1.2'
-      },
-      title: '48-Hours'
-    },
-    {
-      id: 2,
-      imageUrls: {
-        original:
-          'https://megaphone.imgix.net/podcasts/42befcfc-5d6b-11ea-8c0e-ef801c4fa7fc/image/image.jpg?ixlib=rails-2.1.2'
-      },
-      title: '4th and Forever'
-    }
-  ]
+  featuredPodcasts: []
 }
 
 const FeaturedPodcastNew = ({ createFeaturedPodcast, history }) => {
@@ -48,15 +33,24 @@ const FeaturedPodcastNew = ({ createFeaturedPodcast, history }) => {
     )
   }
 
+  const handleCancel = () => {
+    history.goBack()
+  }
+
   return (
     <div className={classes.root}>
+      <Breadcrumbs />
+      <Typography variant="h6" gutterBottom>
+        Create a New Featured Podcast
+      </Typography>
       <Paper className={classes.paper}>
         <Formik
           initialValues={initialValues}
-          enableReinitialize
+          validateOnChange
+          validateOnBlur
           onSubmit={handleSubmit}
           validationSchema={validationSchema}>
-          {formikProps => <FeaturedPodcastForm {...formikProps} open={true} edit={false} />}
+          {formikProps => <FeaturedPodcastForm {...formikProps} open={true} edit={true} onCancel={handleCancel} />}
         </Formik>
       </Paper>
     </div>

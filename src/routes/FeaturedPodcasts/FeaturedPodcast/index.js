@@ -1,14 +1,19 @@
 import FeaturedPodcastForm, { validationSchema } from '../components/FeaturedPodcastForm'
 import React, { useEffect, useState } from 'react'
+import { confirmAndDeleteFeaturedPodcast, featuredPodcastDeletingSelector } from 'redux/modules/podcast'
 
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
 import Box from '@material-ui/core/Box'
+import DeleteIcon from '@material-ui/icons/Delete'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { Formik } from 'formik'
 import IconButton from '@material-ui/core/IconButton'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import MovePositionPopOver from '../components/MovePositionPopOver'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
+import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
@@ -19,7 +24,7 @@ import { updateFeaturedPodcast } from 'redux/modules/podcast'
 
 const useStyles = makeStyles(styles)
 
-const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match, openAll }) => {
+const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, openAll, confirmAndDeleteFeaturedPodcast }) => {
   const featuredPodcastId = featuredPodcast.id
   const classes = useStyles()
   const [open, setOpen] = useState(openAll)
@@ -28,8 +33,9 @@ const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match, openAl
     setOpen(openAll)
   }, [openAll])
 
-  const handleExpand = value => {
+  const handleCancel = (value, setValues) => {
     setOpen(value)
+    setValues(featuredPodcast, true)
   }
 
   const handleSubmit = (values, actions) => {
@@ -45,20 +51,42 @@ const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match, openAl
 
   const handleToggleOpen = () => setOpen(!open)
 
+  const handleDelete = id => () => {
+    confirmAndDeleteFeaturedPodcast({
+      id,
+      success: () => {}
+    })
+  }
+
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <Box display="flex">
-          <Box ml={-2}>
-            <IconButton className={classes.dragDropIcon}>
-              <MoreVertIcon color="action" />
+        <Box display="flex" justifyContent="space-between">
+          <Box display="flex">
+            <Box ml={-2}>
+              <IconButton>
+                <MoreVertIcon color="action" />
+              </IconButton>
+            </Box>
+            <IconButton onClick={handleToggleOpen}>
+              {open ? <ExpandLessIcon color="action" /> : <ExpandMoreIcon color="action" />}
             </IconButton>
+            <Box my="auto">
+              <Typography>{open ? 'Collapse' : 'Expand'}</Typography>
+            </Box>
           </Box>
-          <IconButton onClick={handleToggleOpen}>
-            {open ? <ExpandLessIcon color="action" /> : <ExpandMoreIcon color="action" />}
-          </IconButton>
-          <Box my="auto">
-            <Typography>{open ? 'Collapse' : 'Expand'}</Typography>
+          <Box display="flex">
+            <MovePositionPopOver />
+            <IconButton>
+              <Tooltip title="to top">
+                <ArrowUpwardIcon />
+              </Tooltip>
+            </IconButton>
+            <IconButton onClick={handleDelete(featuredPodcastId)}>
+              <Tooltip title="delete">
+                <DeleteIcon />
+              </Tooltip>
+            </IconButton>
           </Box>
         </Box>
         <Formik
@@ -67,7 +95,7 @@ const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match, openAl
           validateOnBlur
           onSubmit={handleSubmit}
           validationSchema={validationSchema}>
-          {formikProps => <FeaturedPodcastForm {...formikProps} open={open} edit={false} onExpand={handleExpand} />}
+          {formikProps => <FeaturedPodcastForm {...formikProps} open={open} edit={false} onCancel={handleCancel} />}
         </Formik>
       </Paper>
     </div>
@@ -77,13 +105,18 @@ const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, match, openAl
 FeaturedPodcast.propTypes = {
   updateFeaturedPodcast: PropTypes.func.isRequired,
   featuredPodcast: PropTypes.object.isRequired,
-  openAll: PropTypes.bool.isRequired
+  openAll: PropTypes.bool.isRequired,
+  confirmAndDeleteFeaturedPodcast: PropTypes.func.isRequired,
+  featuredPodcastDeleting: PropTypes.bool
 }
 
-const selector = createStructuredSelector({})
+const selector = createStructuredSelector({
+  featuredPodcastDeleting: featuredPodcastDeletingSelector
+})
 
 const actions = {
-  updateFeaturedPodcast
+  updateFeaturedPodcast,
+  confirmAndDeleteFeaturedPodcast
 }
 
 export default connect(selector, actions)(FeaturedPodcast)

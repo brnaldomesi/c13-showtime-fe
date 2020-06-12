@@ -1,5 +1,7 @@
 import {
+  CONFIRM_AND_DELETE_FEATURED_PODCAST,
   CREATE_FEATURED_PODCAST,
+  DELETE_FEATURED_PODCAST,
   GET_FEATURED_PODCASTS_LIST,
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
@@ -11,9 +13,11 @@ import {
   UPDATE_SUBSCRIPTION_URLS,
   UPLOAD_PODCAST_IMAGE
 } from './types'
+import { call, put, race, takeLatest } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
-import { takeLatest } from 'redux-saga/effects'
+import { bindCallbackToPromise } from 'utils/helpers'
+import { show } from 'redux-modal'
 
 const getPodcastsList = apiCallSaga({
   type: GET_PODCASTS_LIST,
@@ -140,6 +144,38 @@ const updateFeaturedPodcast = apiCallSaga({
   selectorKey: 'featuredPodcastDetails'
 })
 
+const deleteFeaturedPodcast = apiCallSaga({
+  type: DELETE_FEATURED_PODCAST,
+  method: 'delete',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts/${payload.id}`,
+  selectorKey: 'featuredPodcastDetails'
+})
+
+const confirmDelete = function*() {
+  const confirmProm = bindCallbackToPromise()
+  const cancelProm = bindCallbackToPromise()
+  yield put(
+    show('confirmModal', {
+      onConfirm: confirmProm.cb,
+      onCancel: cancelProm.cb,
+      title: 'ARE YOU SURE YOU WANT TO DELETE?'
+    })
+  )
+  const result = yield race({
+    confirmed: call(confirmProm.promise),
+    canceled: call(cancelProm.promise)
+  })
+  return Object.keys(result).includes('confirmed') ? true : false
+}
+
+const confirmAndDeleteFeaturedPodcast = function*(action) {
+  const confirmed = yield call(confirmDelete)
+  if (confirmed) {
+    yield call(deleteFeaturedPodcast, action)
+  }
+}
+
 export default function* rootSaga() {
   yield takeLatest(GET_PODCASTS_LIST, getPodcastsList)
   yield takeLatest(GET_PODCAST_DETAILS, getPodcastDetails)
@@ -151,4 +187,6 @@ export default function* rootSaga() {
   yield takeLatest(GET_FEATURED_PODCASTS_LIST, getFeaturedPodcastsList)
   yield takeLatest(CREATE_FEATURED_PODCAST, createFeaturedPodcast)
   yield takeLatest(UPDATE_FEATURED_PODCAST, updateFeaturedPodcast)
+  yield takeLatest(DELETE_FEATURED_PODCAST, deleteFeaturedPodcast)
+  yield takeLatest(CONFIRM_AND_DELETE_FEATURED_PODCAST, confirmAndDeleteFeaturedPodcast)
 }

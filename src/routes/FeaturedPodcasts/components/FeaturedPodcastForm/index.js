@@ -7,11 +7,9 @@ import { Field } from 'formik'
 import FormAutocomplete from 'components/FormAutocomplete'
 import FormLockerInput from 'components/FormLockerInput'
 import Grid from '@material-ui/core/Grid'
-import { Link } from 'react-router-dom'
 import LoadingIndicator from 'components/LoadingIndicator'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { useHistory } from 'react-router-dom'
 
 export const validationSchema = Yup.object().shape({
   title: Yup.string().required('Title is required')
@@ -56,24 +54,25 @@ const FeaturedPodcastForm = ({
   handleSubmit,
   isSubmitting,
   isValid,
-  initialValues,
+  setValues,
+  setFieldTouched,
   setFieldValue,
   open,
   edit,
-  onExpand
+  onCancel,
+  values
 }) => {
   const [editable, setEditable] = useState(edit)
-  const history = useHistory()
 
   const handleFeaturedPodcastsChange = (event, featuredPodcasts) => {
+    setFieldTouched('featuredPodcasts', true)
     setFieldValue('featuredPodcasts', featuredPodcasts)
   }
 
   const handleEditable = value => () => {
     setEditable(value)
-    onExpand(value)
+    onCancel(value, setValues)
   }
-
   return (
     <form onSubmit={handleSubmit}>
       <Field name="title" label="Featured Podcast Section Title" component={FormLockerInput} disabled={!editable} />
@@ -87,7 +86,7 @@ const FeaturedPodcastForm = ({
           optionLabel="title"
           validate={featuredPodcastsValidator}
           onChange={handleFeaturedPodcastsChange}
-          defaultValue={initialValues.featuredPodcasts}
+          value={values.featuredPodcasts}
           variant="outlined"
           multiple
           disabled={!editable}
@@ -109,7 +108,7 @@ const FeaturedPodcastForm = ({
           </>
         ) : (
           <Grid item>
-            <Button variant="contained" onClick={handleEditable(true)} color="primary" disabled={!isValid}>
+            <Button variant="contained" onClick={handleEditable(true)} color="primary">
               Edit
             </Button>
           </Grid>
@@ -125,7 +124,7 @@ FeaturedPodcastForm.propTypes = {
   isSubmitting: PropTypes.bool,
   open: PropTypes.bool.isRequired,
   edit: PropTypes.bool.isRequired,
-  onExpand: PropTypes.func
+  onCancel: PropTypes.func
 }
 
 const actions = {}
