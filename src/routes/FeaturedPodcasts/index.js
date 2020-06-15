@@ -1,3 +1,4 @@
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import React, { useEffect, useState } from 'react'
 import {
   featuredPodcastsListLoadingSelector,
@@ -26,7 +27,7 @@ import { withStyles } from '@material-ui/core/styles'
 
 const fpods = [
   {
-    id: 1,
+    id: '1a',
     title: '2020 Webby Awards Nominees',
     featuredPodcasts: [
       {
@@ -48,7 +49,7 @@ const fpods = [
     ]
   },
   {
-    id: 2,
+    id: '2a',
     title: 'Stay Home, Stay Healthy',
     featuredPodcasts: [
       {
@@ -70,7 +71,7 @@ const fpods = [
     ]
   },
   {
-    id: 3,
+    id: '3a',
     title: 'New & Notable',
     featuredPodcasts: [
       {
@@ -93,10 +94,39 @@ const fpods = [
   }
 ]
 
+// a little function to help us with reordering the result
+const reorder = (list, startIndex, endIndex) => {
+  const result = Array.from(list)
+  const [removed] = result.splice(startIndex, 1)
+  result.splice(endIndex, 0, removed)
+  return result
+}
+
+const grid = 8
+
+const getItemStyle = (isDragging, draggableStyle) => ({
+  // some basic styles to make the items look a bit nicer
+  userSelect: 'none',
+  padding: grid * 2,
+  margin: `0 0 ${grid}px 0`,
+
+  // change background colour if dragging
+  background: isDragging ? 'lightgreen' : 'grey',
+
+  // styles we need to apply on draggables
+  ...draggableStyle
+})
+
+const getListStyle = isDraggingOver => ({
+  background: isDraggingOver ? 'lightblue' : 'lightgrey',
+  padding: grid,
+  width: 250
+})
+
 export const FeaturedPodcasts = props => {
   const { classes, featuredPodcasts, getFeaturedPodcastsList, history, featuredPodcastsLoading } = props
   const { enqueueSnackbar } = useSnackbar()
-
+  const [items, setItems] = useState(fpods)
   const [openAll, setOpenAll] = useState(false)
   // useEffect(() => {
   //   getFeaturedPodcastsList({
@@ -105,6 +135,16 @@ export const FeaturedPodcasts = props => {
   // }, [getFeaturedPodcastsList, enqueueSnackbar])
 
   const handleToggleOpenAll = () => setOpenAll(!openAll)
+
+  const handleOnDragEnd = result => {
+    if (!result.destination) {
+      return
+    }
+
+    const orderedItems = reorder(items, result.source.index, result.destination.index)
+
+    setItems(orderedItems)
+  }
 
   return (
     <div className={classes.root}>
@@ -130,11 +170,27 @@ export const FeaturedPodcasts = props => {
       {featuredPodcastsLoading ? (
         <LoadingIndicator />
       ) : (
-        <>
-          {fpods.map(featuredPodcast => (
-            <FeaturedPodcast key={featuredPodcast.id} featuredPodcast={featuredPodcast} openAll={openAll} />
-          ))}
-        </>
+        <DragDropContext onDragEnd={handleOnDragEnd}>
+          <Droppable droppableId="droppable">
+            {(provided, snapshot) => (
+              <div {...provided.droppableProps} ref={provided.innerRef}>
+                {items &&
+                  items.map((featuredPodcast, index) => (
+                    <Draggable key={featuredPodcast.id} draggableId={featuredPodcast.id} index={index}>
+                      {(provided, snapshot) => (
+                        <FeaturedPodcast
+                          featuredPodcast={featuredPodcast}
+                          openAll={openAll}
+                          draggableProvided={provided}
+                        />
+                      )}
+                    </Draggable>
+                  ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
       )}
     </div>
   )

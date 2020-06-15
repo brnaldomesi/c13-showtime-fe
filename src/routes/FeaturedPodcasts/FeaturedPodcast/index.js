@@ -24,7 +24,13 @@ import { updateFeaturedPodcast } from 'redux/modules/podcast'
 
 const useStyles = makeStyles(styles)
 
-const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, openAll, confirmAndDeleteFeaturedPodcast }) => {
+const FeaturedPodcast = ({
+  featuredPodcast,
+  updateFeaturedPodcast,
+  openAll,
+  confirmAndDeleteFeaturedPodcast,
+  draggableProvided
+}) => {
   const featuredPodcastId = featuredPodcast.id
   const classes = useStyles()
   const [open, setOpen] = useState(openAll)
@@ -59,12 +65,12 @@ const FeaturedPodcast = ({ featuredPodcast, updateFeaturedPodcast, openAll, conf
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={draggableProvided.innerRef} {...draggableProvided.draggableProps}>
       <Paper className={classes.paper}>
         <Box display="flex" justifyContent="space-between">
           <Box display="flex">
             <Box ml={-2}>
-              <IconButton>
+              <IconButton {...draggableProvided.dragHandleProps}>
                 <MoreVertIcon color="action" />
               </IconButton>
             </Box>
@@ -107,7 +113,8 @@ FeaturedPodcast.propTypes = {
   featuredPodcast: PropTypes.object.isRequired,
   openAll: PropTypes.bool.isRequired,
   confirmAndDeleteFeaturedPodcast: PropTypes.func.isRequired,
-  featuredPodcastDeleting: PropTypes.bool
+  featuredPodcastDeleting: PropTypes.bool,
+  draggableProvided: PropTypes.object
 }
 
 const selector = createStructuredSelector({
