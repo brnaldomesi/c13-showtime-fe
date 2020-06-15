@@ -16,6 +16,7 @@ import IconButton from '@material-ui/core/IconButton'
 import { Link } from 'react-router-dom'
 import LoadingIndicator from 'components/LoadingIndicator'
 import PropTypes from 'prop-types'
+import { SNACKBAR_TYPE } from 'config/constants'
 import Typography from '@material-ui/core/Typography'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
@@ -146,6 +147,11 @@ export const FeaturedPodcasts = props => {
     setItems(orderedItems)
   }
 
+  const handleMovePosition = (oldIndex, newIndex) => {
+    const orderedItems = reorder(items, oldIndex, newIndex)
+    setItems(orderedItems)
+  }
+
   return (
     <div className={classes.root}>
       <Breadcrumbs />
@@ -182,6 +188,8 @@ export const FeaturedPodcasts = props => {
                           featuredPodcast={featuredPodcast}
                           openAll={openAll}
                           draggableProvided={provided}
+                          onMovePosition={handleMovePosition}
+                          index={index}
                         />
                       )}
                     </Draggable>

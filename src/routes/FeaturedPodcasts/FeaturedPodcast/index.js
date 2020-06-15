@@ -29,7 +29,9 @@ const FeaturedPodcast = ({
   updateFeaturedPodcast,
   openAll,
   confirmAndDeleteFeaturedPodcast,
-  draggableProvided
+  draggableProvided,
+  onMovePosition,
+  index
 }) => {
   const featuredPodcastId = featuredPodcast.id
   const classes = useStyles()
@@ -64,6 +66,10 @@ const FeaturedPodcast = ({
     })
   }
 
+  const handleMoveTop = () => {
+    onMovePosition(index, 0)
+  }
+
   return (
     <div className={classes.root} ref={draggableProvided.innerRef} {...draggableProvided.draggableProps}>
       <Paper className={classes.paper}>
@@ -82,8 +88,8 @@ const FeaturedPodcast = ({
             </Box>
           </Box>
           <Box display="flex">
-            <MovePositionPopOver />
-            <IconButton>
+            <MovePositionPopOver onMovePosition={onMovePosition} index={index} />
+            <IconButton onClick={handleMoveTop}>
               <Tooltip title="to top">
                 <ArrowUpwardIcon />
               </Tooltip>
@@ -114,7 +120,9 @@ FeaturedPodcast.propTypes = {
   openAll: PropTypes.bool.isRequired,
   confirmAndDeleteFeaturedPodcast: PropTypes.func.isRequired,
   featuredPodcastDeleting: PropTypes.bool,
-  draggableProvided: PropTypes.object
+  draggableProvided: PropTypes.object.isRequired,
+  onMovePosition: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired
 }
 
 const selector = createStructuredSelector({
