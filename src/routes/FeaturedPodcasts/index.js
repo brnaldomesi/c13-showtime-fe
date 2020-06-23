@@ -57,7 +57,8 @@ export const FeaturedPodcasts = props => {
   const [orderChanged, setOrderChanged] = useState(false)
 
   useEffect(() => {
-    if (featuredPodcasts.length === 0) {
+    console.log('aa', featuredPodcasts)
+    if (featuredPodcasts && featuredPodcasts.length === 0) {
       getFeaturedPodcastsList({
         fail: () => enqueueSnackbar('Failed to load featured podcasts!', { variant: SNACKBAR_TYPE.ERROR }),
         success: res => setCategories(res)
