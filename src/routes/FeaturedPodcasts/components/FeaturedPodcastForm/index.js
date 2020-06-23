@@ -2,6 +2,7 @@ import * as Yup from 'yup'
 
 import React, { useState } from 'react'
 
+import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import { Field } from 'formik'
 import FormAutocomplete from 'components/FormAutocomplete'
@@ -9,10 +10,12 @@ import FormLockerInput from 'components/FormLockerInput'
 import Grid from '@material-ui/core/Grid'
 import LoadingIndicator from 'components/LoadingIndicator'
 import PropTypes from 'prop-types'
+import { allPodcastsSelector } from 'redux/modules/podcast'
 import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 
 export const validationSchema = Yup.object().shape({
-  title: Yup.string().required('Title is required')
+  name: Yup.string().required('Title is required')
 })
 
 const featuredPodcastsValidator = value => {
@@ -22,33 +25,6 @@ const featuredPodcastsValidator = value => {
     return undefined
   }
 }
-
-const options = [
-  {
-    id: 1,
-    imageUrls: {
-      original:
-        'https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/uploads_2F1568815781454-qok6p4fxqo-ab964001f7207e83966bc54d11cc5d4b_2F48_promo_apple_3000x3000.jpg?ixlib=rails-2.1.2'
-    },
-    title: '48-Hours'
-  },
-  {
-    id: 2,
-    imageUrls: {
-      original:
-        'https://megaphone.imgix.net/podcasts/42befcfc-5d6b-11ea-8c0e-ef801c4fa7fc/image/image.jpg?ixlib=rails-2.1.2'
-    },
-    title: '4th and Forever'
-  },
-  {
-    id: 3,
-    imageUrls: {
-      original:
-        'https://content.production.cdn.art19.com/images/59/68/84/c8/596884c8-62fe-4b0b-b318-dbaadb2da4fc/8d7691e1e27e64d274bc08e032ec67a2dd5e9fa9c930abd247c46dc685407865bca1d31d04297ef7f9342e7ee701ccdfbdf48ce7c49ddb99ebe0334ac3da65d1.jpeg'
-    },
-    title: 'Alabama Insider'
-  }
-]
 
 const FeaturedPodcastForm = ({
   handleSubmit,
@@ -60,61 +36,70 @@ const FeaturedPodcastForm = ({
   open,
   edit,
   onCancel,
-  values
+  values,
+  allPodcasts
 }) => {
   const [editable, setEditable] = useState(edit)
 
   const handleFeaturedPodcastsChange = (event, featuredPodcasts) => {
-    setFieldTouched('featuredPodcasts', true)
-    setFieldValue('featuredPodcasts', featuredPodcasts)
+    setFieldTouched('podcasts', true)
+    setFieldValue('podcasts', featuredPodcasts)
   }
 
   const handleEditable = value => () => {
     setEditable(value)
     onCancel(value, setValues)
   }
+
   return (
     <form onSubmit={handleSubmit}>
-      <Field name="title" label="Featured Podcast Section Title" component={FormLockerInput} disabled={!editable} />
-      {open && (
-        <Field
-          id="featuredPodcasts"
-          name="featuredPodcasts"
-          label="Featured Podcasts"
-          component={FormAutocomplete}
-          options={options}
-          optionLabel="title"
-          validate={featuredPodcastsValidator}
-          onChange={handleFeaturedPodcastsChange}
-          value={values.featuredPodcasts}
-          variant="outlined"
-          multiple
-          disabled={!editable}
-        />
-      )}
-      <Grid container justify="flex-end" spacing={2}>
-        {editable ? (
-          <>
-            <Grid item>
-              <Button color="primary" onClick={handleEditable(false)}>
-                Cancel
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button variant="contained" color="primary" type="submit" disabled={!isValid}>
-                Save Changes
-              </Button>
-            </Grid>
-          </>
-        ) : (
-          <Grid item>
-            <Button variant="contained" onClick={handleEditable(true)} color="primary">
-              Edit
-            </Button>
+      {isSubmitting ? (
+        <Box display="flex" justifyContent="center">
+          <LoadingIndicator isStatic />
+        </Box>
+      ) : (
+        <>
+          <Field name="name" label="Featured Podcast Section Title" component={FormLockerInput} disabled={!editable} />
+          {open && allPodcasts.length > 0 && (
+            <Field
+              id="podcasts"
+              name="podcasts"
+              label="Featured Podcasts"
+              component={FormAutocomplete}
+              options={allPodcasts}
+              optionLabel="title"
+              validate={featuredPodcastsValidator}
+              onChange={handleFeaturedPodcastsChange}
+              value={values.podcasts}
+              variant="outlined"
+              multiple
+              disabled={!editable}
+            />
+          )}
+          <Grid container justify="flex-end" spacing={2}>
+            {editable ? (
+              <>
+                <Grid item>
+                  <Button color="primary" onClick={handleEditable(false)}>
+                    Cancel
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="contained" color="primary" type="submit" disabled={!isValid}>
+                    Save Changes
+                  </Button>
+                </Grid>
+              </>
+            ) : (
+              <Grid item>
+                <Button variant="contained" onClick={handleEditable(true)} color="primary">
+                  Edit
+                </Button>
+              </Grid>
+            )}
           </Grid>
-        )}
-      </Grid>
-      {isSubmitting && <LoadingIndicator />}
+        </>
+      )}
     </form>
   )
 }
@@ -127,6 +112,8 @@ FeaturedPodcastForm.propTypes = {
   onCancel: PropTypes.func
 }
 
-const actions = {}
+const selector = createStructuredSelector({
+  allPodcasts: allPodcastsSelector
+})
 
-export default connect(null, actions)(FeaturedPodcastForm)
+export default connect(selector, null)(FeaturedPodcastForm)

@@ -18,12 +18,4 @@ export const updatePodcastConfig = createAction(types.UPDATE_PODCAST_CONFIG)
 
 export const searchPodcasts = createAction(types.SEARCH_PODCASTS)
 
-export const getFeaturedPodcastsList = createAction(types.GET_FEATURED_PODCASTS_LIST)
-
-export const createFeaturedPodcast = createAction(types.CREATE_FEATURED_PODCAST)
-
-export const updateFeaturedPodcast = createAction(types.UPDATE_FEATURED_PODCAST)
-
-export const deleteFeaturedPodcast = createAction(types.DELETE_FEATURED_PODCAST)
-
-export const confirmAndDeleteFeaturedPodcast = createAction(types.CONFIRM_AND_DELETE_FEATURED_PODCAST)
+export const getAllPodcasts = createAction(types.GET_ALL_PODCASTS)

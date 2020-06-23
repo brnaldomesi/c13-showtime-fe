@@ -1,10 +1,14 @@
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import React, { useEffect, useState } from 'react'
+import { allPodcastsLoadingSelector, allPodcastsSelector, getAllPodcasts } from 'redux/modules/podcast'
 import {
+  featuredPodcastDeletingSelector,
   featuredPodcastsListLoadingSelector,
   featuredPodcastsListSelector,
-  getFeaturedPodcastsList
-} from 'redux/modules/podcast'
+  getFeaturedPodcastsList,
+  updateCategories,
+  updateCategoriesLoadingSelector
+} from 'redux/modules/category'
 
 import Box from '@material-ui/core/Box'
 import Breadcrumbs from 'components/Breadcrumbs'
@@ -26,75 +30,6 @@ import { useSnackbar } from 'notistack'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import { withStyles } from '@material-ui/core/styles'
 
-const fpods = [
-  {
-    id: '1a',
-    title: '2020 Webby Awards Nominees',
-    featuredPodcasts: [
-      {
-        id: 1,
-        imageUrls: {
-          original:
-            'https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/uploads_2F1568815781454-qok6p4fxqo-ab964001f7207e83966bc54d11cc5d4b_2F48_promo_apple_3000x3000.jpg?ixlib=rails-2.1.2'
-        },
-        title: '48-Hours'
-      },
-      {
-        id: 2,
-        imageUrls: {
-          original:
-            'https://megaphone.imgix.net/podcasts/42befcfc-5d6b-11ea-8c0e-ef801c4fa7fc/image/image.jpg?ixlib=rails-2.1.2'
-        },
-        title: '4th and Forever'
-      }
-    ]
-  },
-  {
-    id: '2a',
-    title: 'Stay Home, Stay Healthy',
-    featuredPodcasts: [
-      {
-        id: 1,
-        imageUrls: {
-          original:
-            'https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/uploads_2F1568815781454-qok6p4fxqo-ab964001f7207e83966bc54d11cc5d4b_2F48_promo_apple_3000x3000.jpg?ixlib=rails-2.1.2'
-        },
-        title: '48-Hours'
-      },
-      {
-        id: 2,
-        imageUrls: {
-          original:
-            'https://megaphone.imgix.net/podcasts/42befcfc-5d6b-11ea-8c0e-ef801c4fa7fc/image/image.jpg?ixlib=rails-2.1.2'
-        },
-        title: '4th and Forever'
-      }
-    ]
-  },
-  {
-    id: '3a',
-    title: 'New & Notable',
-    featuredPodcasts: [
-      {
-        id: 1,
-        imageUrls: {
-          original:
-            'https://megaphone.imgix.net/podcasts/0999f4c0-4334-11e8-954f-e7892b5b3609/image/uploads_2F1568815781454-qok6p4fxqo-ab964001f7207e83966bc54d11cc5d4b_2F48_promo_apple_3000x3000.jpg?ixlib=rails-2.1.2'
-        },
-        title: '48-Hours'
-      },
-      {
-        id: 2,
-        imageUrls: {
-          original:
-            'https://megaphone.imgix.net/podcasts/42befcfc-5d6b-11ea-8c0e-ef801c4fa7fc/image/image.jpg?ixlib=rails-2.1.2'
-        },
-        title: '4th and Forever'
-      }
-    ]
-  }
-]
-
 // a little function to help us with reordering the result
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list)
@@ -103,37 +38,44 @@ const reorder = (list, startIndex, endIndex) => {
   return result
 }
 
-const grid = 8
-
-const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
-  userSelect: 'none',
-  padding: grid * 2,
-  margin: `0 0 ${grid}px 0`,
-
-  // change background colour if dragging
-  background: isDragging ? 'lightgreen' : 'grey',
-
-  // styles we need to apply on draggables
-  ...draggableStyle
-})
-
-const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'lightgrey',
-  padding: grid,
-  width: 250
-})
-
 export const FeaturedPodcasts = props => {
-  const { classes, featuredPodcasts, getFeaturedPodcastsList, history, featuredPodcastsLoading } = props
+  const {
+    classes,
+    featuredPodcasts,
+    getFeaturedPodcastsList,
+    featuredPodcastsLoading,
+    getAllPodcasts,
+    allPodcasts,
+    allPodcastsLoading,
+    updateCategories,
+    updateCategoriesLoading,
+    featuredPodcastDeleting
+  } = props
   const { enqueueSnackbar } = useSnackbar()
-  const [items, setItems] = useState(fpods)
   const [openAll, setOpenAll] = useState(false)
-  // useEffect(() => {
-  //   getFeaturedPodcastsList({
-  //     fail: () => enqueueSnackbar('Failed to load featured podcasts!', { variant: SNACKBAR_TYPE.ERROR })
-  //   })
-  // }, [getFeaturedPodcastsList, enqueueSnackbar])
+  const [categories, setCategories] = useState(featuredPodcasts)
+  const [orderChanged, setOrderChanged] = useState(false)
+
+  useEffect(() => {
+    if (featuredPodcasts.length === 0) {
+      getFeaturedPodcastsList({
+        fail: () => enqueueSnackbar('Failed to load featured podcasts!', { variant: SNACKBAR_TYPE.ERROR }),
+        success: res => setCategories(res)
+      })
+    }
+  }, [getFeaturedPodcastsList, enqueueSnackbar, featuredPodcasts])
+
+  useEffect(() => {
+    if (allPodcasts.length === 0) {
+      getAllPodcasts({
+        fail: () => enqueueSnackbar('Failed to load all podcasts!', { variant: SNACKBAR_TYPE.ERROR })
+      })
+    }
+  }, [getAllPodcasts, enqueueSnackbar, allPodcasts])
+
+  useEffect(() => {
+    setCategories(featuredPodcasts)
+  }, [featuredPodcasts])
 
   const handleToggleOpenAll = () => setOpenAll(!openAll)
 
@@ -142,14 +84,37 @@ export const FeaturedPodcasts = props => {
       return
     }
 
-    const orderedItems = reorder(items, result.source.index, result.destination.index)
+    if (!orderChanged) {
+      setOrderChanged(true)
+    }
 
-    setItems(orderedItems)
+    updateCategoryPriorites(result.source.index, result.destination.index)
   }
 
-  const handleMovePosition = (oldIndex, newIndex) => {
-    const orderedItems = reorder(items, oldIndex, newIndex)
-    setItems(orderedItems)
+  const handleMovePosition = (sourceIndex, destinationIndex) => {
+    if (!orderChanged) {
+      setOrderChanged(true)
+    }
+    updateCategoryPriorites(sourceIndex, destinationIndex)
+  }
+
+  const updateCategoryPriorites = (sourceIndex, destinationIndex) => {
+    const orderedArr = reorder(categories, sourceIndex, destinationIndex)
+    setCategories(orderedArr)
+  }
+
+  const saveOrder = () => {
+    const length = categories.length
+    const orderedIdAndPriorityArr = categories.map((item, index) => ({
+      id: item.id,
+      priority: length - index
+    }))
+
+    updateCategories({
+      data: orderedIdAndPriorityArr,
+      fail: () => enqueueSnackbar('Failed to change category priority!', { variant: SNACKBAR_TYPE.ERROR }),
+      success: () => setOrderChanged(false)
+    })
   }
 
   return (
@@ -159,29 +124,38 @@ export const FeaturedPodcasts = props => {
         <Box flexGrow={1} display="flex" mb={1} alignItems="flex-end">
           <Typography variant="h6">Show Hub Featured Podcasts</Typography>
         </Box>
-        <Box mb={2}>
+        <Box mb={2} mr={1}>
           <Button color="primary" variant="contained" component={Link} to="/featuredPodcasts/new">
             ADD NEW FEATURED SECTION
           </Button>
         </Box>
+        {orderChanged && categories && (
+          <Box mb={2}>
+            <Button color="primary" variant="contained" onClick={saveOrder}>
+              SAVE ORDER
+            </Button>
+          </Box>
+        )}
       </Box>
-      <Box display="flex">
-        <IconButton onClick={handleToggleOpenAll}>
-          {openAll ? <ExpandLessIcon color="action" /> : <ExpandMoreIcon color="action" />}
-        </IconButton>
-        <Box my="auto">
-          <Typography>{openAll ? 'Collapse All' : 'Expand All'}</Typography>
+      {featuredPodcasts && featuredPodcasts.length > 0 && (
+        <Box display="flex">
+          <IconButton onClick={handleToggleOpenAll}>
+            {openAll ? <ExpandLessIcon color="action" /> : <ExpandMoreIcon color="action" />}
+          </IconButton>
+          <Box my="auto">
+            <Typography>{openAll ? 'Collapse All' : 'Expand All'}</Typography>
+          </Box>
         </Box>
-      </Box>
-      {featuredPodcastsLoading ? (
+      )}
+      {featuredPodcastsLoading || allPodcastsLoading || updateCategoriesLoading || featuredPodcastDeleting ? (
         <LoadingIndicator />
       ) : (
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="droppable">
             {(provided, snapshot) => (
               <div {...provided.droppableProps} ref={provided.innerRef}>
-                {items &&
-                  items.map((featuredPodcast, index) => (
+                {categories &&
+                  categories.map((featuredPodcast, index) => (
                     <Draggable key={featuredPodcast.id} draggableId={featuredPodcast.id} index={index}>
                       {(provided, snapshot) => (
                         <FeaturedPodcast
@@ -190,6 +164,7 @@ export const FeaturedPodcasts = props => {
                           draggableProvided={provided}
                           onMovePosition={handleMovePosition}
                           index={index}
+                          length={featuredPodcasts.length}
                         />
                       )}
                     </Draggable>
@@ -208,16 +183,22 @@ FeaturedPodcasts.propTypes = {
   classes: PropTypes.object.isRequired,
   getFeaturedPodcastsList: PropTypes.func.isRequired,
   featuredPodcasts: PropTypes.array.isRequired,
-  featuredPodcastsLoading: PropTypes.bool
+  featuredPodcastsLoading: PropTypes.bool.isRequired
 }
 
 const selector = createStructuredSelector({
   featuredPodcasts: featuredPodcastsListSelector,
-  featuredPodcastsLoading: featuredPodcastsListLoadingSelector
+  featuredPodcastsLoading: featuredPodcastsListLoadingSelector,
+  allPodcasts: allPodcastsSelector,
+  allPodcastsLoading: allPodcastsLoadingSelector,
+  updateCategoriesLoading: updateCategoriesLoadingSelector,
+  featuredPodcastDeleting: featuredPodcastDeletingSelector
 })
 
 const actions = {
-  getFeaturedPodcastsList
+  getFeaturedPodcastsList,
+  getAllPodcasts,
+  updateCategories
 }
 
 export default compose(userIsAuthenticatedRedir, connect(selector, actions), withStyles(styles))(FeaturedPodcasts)

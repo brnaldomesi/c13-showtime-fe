@@ -1,6 +1,5 @@
 import FeaturedPodcastForm, { validationSchema } from '../components/FeaturedPodcastForm'
 import React, { useEffect, useState } from 'react'
-import { confirmAndDeleteFeaturedPodcast, featuredPodcastDeletingSelector } from 'redux/modules/podcast'
 
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
 import Box from '@material-ui/core/Box'
@@ -13,14 +12,17 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import MovePositionPopOver from '../components/MovePositionPopOver'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
+import { SNACKBAR_TYPE } from 'config/constants'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
+import { confirmAndDeleteFeaturedPodcast } from 'redux/modules/category'
 import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
 import { formSubmit } from 'utils/form'
 import { makeStyles } from '@material-ui/core/styles'
+import pick from 'lodash/pick'
 import styles from './styles'
-import { updateFeaturedPodcast } from 'redux/modules/podcast'
+import { updateFeaturedPodcast } from 'redux/modules/category'
+import { useSnackbar } from 'notistack'
 
 const useStyles = makeStyles(styles)
 
@@ -31,10 +33,12 @@ const FeaturedPodcast = ({
   confirmAndDeleteFeaturedPodcast,
   draggableProvided,
   onMovePosition,
-  index
+  index,
+  length
 }) => {
   const featuredPodcastId = featuredPodcast.id
   const classes = useStyles()
+  const { enqueueSnackbar } = useSnackbar()
   const [open, setOpen] = useState(openAll)
 
   useEffect(() => {
@@ -47,11 +51,15 @@ const FeaturedPodcast = ({
   }
 
   const handleSubmit = (values, actions) => {
+    const length = values.podcasts.length
+    const podcastsWithPriority = values.podcasts.map((podcast, index) => ({ ...podcast, priority: length - index }))
+    values.podcasts = podcastsWithPriority
     return formSubmit(
       updateFeaturedPodcast,
       {
         id: featuredPodcastId,
-        data: values
+        data: pick(values, ['name', 'podcasts', 'priority', 'slug']),
+        success: () => enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
       },
       actions
     )
@@ -62,7 +70,7 @@ const FeaturedPodcast = ({
   const handleDelete = id => () => {
     confirmAndDeleteFeaturedPodcast({
       id,
-      success: () => {}
+      success: () => enqueueSnackbar('Category deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
     })
   }
 
@@ -88,7 +96,7 @@ const FeaturedPodcast = ({
             </Box>
           </Box>
           <Box display="flex">
-            <MovePositionPopOver onMovePosition={onMovePosition} index={index} />
+            <MovePositionPopOver onMovePosition={onMovePosition} index={index} length={length} />
             <IconButton onClick={handleMoveTop}>
               <Tooltip title="to top">
                 <ArrowUpwardIcon />
@@ -122,16 +130,13 @@ FeaturedPodcast.propTypes = {
   featuredPodcastDeleting: PropTypes.bool,
   draggableProvided: PropTypes.object.isRequired,
   onMovePosition: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
+  length: PropTypes.number.isRequired
 }
-
-const selector = createStructuredSelector({
-  featuredPodcastDeleting: featuredPodcastDeletingSelector
-})
 
 const actions = {
   updateFeaturedPodcast,
   confirmAndDeleteFeaturedPodcast
 }
 
-export default connect(selector, actions)(FeaturedPodcast)
+export default connect(null, actions)(FeaturedPodcast)

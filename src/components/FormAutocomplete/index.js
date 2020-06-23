@@ -43,12 +43,12 @@ const FormAutoComplete = ({
         value={value}
         getOptionSelected={(option, value) => value.id === option.id}
         renderOption={(option, { inputValue, selected }) => {
-          const matches = match(option.title, inputValue)
-          const parts = parse(option.title, matches)
+          const matches = match(option[optionLabel], inputValue)
+          const parts = parse(option[optionLabel], matches)
 
           return (
             <MenuItem selected={selected} component="div">
-              <ThumbnailImage imageUrls={option.imageUrls.original} className={classes.suggestionImage} />
+              <ThumbnailImage imageUrls={option.imageUrl} className={classes.suggestionImage} />
               <div className={classes.suggestionText}>
                 {parts.map(part => (
                   <span key={part.text} style={{ fontWeight: part.highlight ? 700 : 400 }}>
@@ -66,8 +66,8 @@ const FormAutoComplete = ({
                 root: classes.chipRoot,
                 avatar: classes.chipAvatar
               }}
-              avatar={<ThumbnailImage imageUrls={option.imageUrls.original} />}
-              label={option.title}
+              avatar={<ThumbnailImage imageUrls={option.imageUrl} />}
+              label={option[optionLabel]}
               {...getTagProps({ index })}
             />
           ))

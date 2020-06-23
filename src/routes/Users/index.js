@@ -1,6 +1,6 @@
-import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+import React from 'react'
 import UserEdit from './routes/UserEdit'
 import UserList from './routes/UserList'
 import UserNew from './routes/UserNew'

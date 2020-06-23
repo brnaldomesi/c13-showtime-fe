@@ -1,9 +1,9 @@
+import api from './api'
+import auth from './auth'
+import category from './category'
 import { combineReducers } from 'redux'
 import { connectRouter } from 'connected-react-router'
 import { reducer as modal } from 'redux-modal'
-
-import api from './api'
-import auth from './auth'
 import todo from './todo'
 
 export default history =>
@@ -12,5 +12,6 @@ export default history =>
     auth,
     todo,
     modal,
+    category,
     router: connectRouter(history)
   })

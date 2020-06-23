@@ -12,8 +12,6 @@ export const podcastDetailsLoadingSelector = isRequestPending('podcastDetails', 
 
 export const podcastsSearchResultsSelector = dataSelector('podcastsSearch', [])
 
-export const featuredPodcastsListSelector = dataSelector('featuredPodcastsList', [])
+export const allPodcastsSelector = dataSelector('allPodcasts', [])
 
-export const featuredPodcastsListLoadingSelector = isRequestPending('featuredPodcastsList', 'get')
-
-export const featuredPodcastDeletingSelector = isRequestPending('featuredPodcastDetails', 'delete')
+export const allPodcastsLoadingSelector = isRequestPending('allPodcasts', 'get')

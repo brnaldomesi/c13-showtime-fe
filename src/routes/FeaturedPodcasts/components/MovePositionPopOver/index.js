@@ -17,19 +17,20 @@ import { useSnackbar } from 'notistack'
 
 const useStyles = makeStyles(styles)
 
-const MovePositionPopOver = ({ onMovePosition, index }) => {
+const MovePositionPopOver = ({ onMovePosition, index, length }) => {
   const classes = useStyles()
   const inputEl = useRef(null)
   const { enqueueSnackbar } = useSnackbar()
 
-  const handleApply = () => {
+  const handleApply = popupState => () => {
     const newPosition = inputEl.current.value
-    if (newPosition < 1 || newPosition > 3) {
+    if (newPosition < 1 || newPosition > length) {
       enqueueSnackbar('Index is out of range', { variant: SNACKBAR_TYPE.WARNING })
       inputEl.current.focus()
       return
     }
     onMovePosition(index, newPosition - 1)
+    popupState.close()
   }
 
   return (
@@ -65,14 +66,15 @@ const MovePositionPopOver = ({ onMovePosition, index }) => {
                   inputRef={inputEl}
                   InputProps={{
                     inputProps: {
-                      max: 3,
+                      max: length,
                       min: 1
                     }
                   }}
+                  defaultValue={index + 1}
                 />
               </Box>
               <Box mx={1}>
-                <Button variant="contained" onClick={handleApply} color="primary">
+                <Button variant="contained" onClick={handleApply(popupState)} color="primary">
                   Apply
                 </Button>
               </Box>
@@ -86,7 +88,8 @@ const MovePositionPopOver = ({ onMovePosition, index }) => {
 
 MovePositionPopOver.propTypes = {
   onMovePosition: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
+  length: PropTypes.number.isRequired
 }
 
 export default MovePositionPopOver
