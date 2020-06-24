@@ -48,7 +48,7 @@ const FeaturedPodcastForm = ({
 
   const handleEditable = value => () => {
     setEditable(value)
-    onCancel(value, setValues)
+    onCancel(setValues)
   }
 
   return (

@@ -45,8 +45,8 @@ const FeaturedPodcast = ({
     setOpen(openAll)
   }, [openAll])
 
-  const handleCancel = (value, setValues) => {
-    setOpen(value)
+  const handleCancel = setValues => {
+    setOpen(true)
     setValues(featuredPodcast, true)
   }
 

@@ -38,7 +38,7 @@ const FormAutoComplete = ({
         onChange={onChange}
         onBlur={field.onBlur}
         id={field.name}
-        renderInput={params => <TextField {...params} variant={variant} error={Boolean(error)} />}
+        renderInput={params => <TextField className="qwerqwer" {...params} variant={variant} error={Boolean(error)} />}
         disabled={disabled}
         value={value}
         getOptionSelected={(option, value) => value.id === option.id}
