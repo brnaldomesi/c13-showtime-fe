@@ -6,8 +6,7 @@ import {
   featuredPodcastsListLoadingSelector,
   featuredPodcastsListSelector,
   getFeaturedPodcastsList,
-  updateCategories,
-  updateCategoriesLoadingSelector
+  updateCategories
 } from 'redux/modules/category'
 
 import Box from '@material-ui/core/Box'
@@ -48,16 +47,13 @@ export const FeaturedPodcasts = props => {
     allPodcasts,
     allPodcastsLoading,
     updateCategories,
-    updateCategoriesLoading,
     featuredPodcastDeleting
   } = props
   const { enqueueSnackbar } = useSnackbar()
-  const [openAll, setOpenAll] = useState(false)
+  const [openAll, setOpenAll] = useState(true)
   const [categories, setCategories] = useState(featuredPodcasts)
-  const [orderChanged, setOrderChanged] = useState(false)
 
   useEffect(() => {
-    console.log('aa', featuredPodcasts)
     if (featuredPodcasts && featuredPodcasts.length === 0) {
       getFeaturedPodcastsList({
         fail: () => enqueueSnackbar('Failed to load featured podcasts!', { variant: SNACKBAR_TYPE.ERROR }),
@@ -85,36 +81,25 @@ export const FeaturedPodcasts = props => {
       return
     }
 
-    if (!orderChanged) {
-      setOrderChanged(true)
-    }
-
     updateCategoryPriorites(result.source.index, result.destination.index)
   }
 
   const handleMovePosition = (sourceIndex, destinationIndex) => {
-    if (!orderChanged) {
-      setOrderChanged(true)
-    }
     updateCategoryPriorites(sourceIndex, destinationIndex)
   }
 
   const updateCategoryPriorites = (sourceIndex, destinationIndex) => {
     const orderedArr = reorder(categories, sourceIndex, destinationIndex)
     setCategories(orderedArr)
-  }
-
-  const saveOrder = () => {
-    const length = categories.length
-    const orderedIdAndPriorityArr = categories.map((item, index) => ({
+    const length = orderedArr.length
+    const orderedIdAndPriorityArr = orderedArr.map((item, index) => ({
       id: item.id,
       priority: length - index
     }))
 
     updateCategories({
       data: orderedIdAndPriorityArr,
-      fail: () => enqueueSnackbar('Failed to change category priority!', { variant: SNACKBAR_TYPE.ERROR }),
-      success: () => setOrderChanged(false)
+      fail: () => enqueueSnackbar('Failed to change category priority!', { variant: SNACKBAR_TYPE.ERROR })
     })
   }
 
@@ -130,13 +115,6 @@ export const FeaturedPodcasts = props => {
             ADD NEW FEATURED SECTION
           </Button>
         </Box>
-        {orderChanged && categories && (
-          <Box mb={2}>
-            <Button color="primary" variant="contained" onClick={saveOrder}>
-              SAVE ORDER
-            </Button>
-          </Box>
-        )}
       </Box>
       {featuredPodcasts && featuredPodcasts.length > 0 && (
         <Box display="flex">
@@ -148,7 +126,7 @@ export const FeaturedPodcasts = props => {
           </Box>
         </Box>
       )}
-      {featuredPodcastsLoading || allPodcastsLoading || updateCategoriesLoading || featuredPodcastDeleting ? (
+      {featuredPodcastsLoading || allPodcastsLoading || featuredPodcastDeleting ? (
         <LoadingIndicator />
       ) : (
         <DragDropContext onDragEnd={handleOnDragEnd}>
@@ -192,7 +170,6 @@ const selector = createStructuredSelector({
   featuredPodcastsLoading: featuredPodcastsListLoadingSelector,
   allPodcasts: allPodcastsSelector,
   allPodcastsLoading: allPodcastsLoadingSelector,
-  updateCategoriesLoading: updateCategoriesLoadingSelector,
   featuredPodcastDeleting: featuredPodcastDeletingSelector
 })
 
