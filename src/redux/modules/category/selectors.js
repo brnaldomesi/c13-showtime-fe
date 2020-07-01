@@ -5,6 +5,16 @@ import { isRequestPending } from '../api'
 export const categorySelector = fp.get('category')
 
 export const featuredPodcastsListSelector = createSelector(categorySelector, fp.get('categoriesList'))
+export const categoriesInPodcastSelector = createSelector(
+  categorySelector,
+  fp.compose(
+    fp.map(category => ({
+      id: category.id,
+      name: category.name
+    })),
+    fp.get('categoriesList')
+  )
+)
 
 export const featuredPodcastsListLoadingSelector = isRequestPending('featuredPodcastsList', 'get')
 

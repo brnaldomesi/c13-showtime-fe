@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import { Field } from 'formik'
-import FormAutocomplete from 'components/FormAutocomplete'
+import FormDraggableAutocomplete from 'components/FormDraggableAutocomplete'
 import FormLockerInput from 'components/FormLockerInput'
 import Grid from '@material-ui/core/Grid'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -65,7 +65,7 @@ const FeaturedPodcastForm = ({
               id="podcasts"
               name="podcasts"
               label="Featured Podcasts"
-              component={FormAutocomplete}
+              component={FormDraggableAutocomplete}
               options={allPodcasts}
               optionLabel="title"
               validate={featuredPodcastsValidator}

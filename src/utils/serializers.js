@@ -24,7 +24,8 @@ export const deserializePodcast = podcast => ({
   config: {
     enableShowPage: get(podcast, 'config.enableShowPage') || false,
     lockedSyncFields: get(podcast, 'config.lockedSyncFields') || []
-  }
+  },
+  categories: podcast.categories
 })
 
 export const serializePodcast = values => ({
@@ -40,7 +41,8 @@ export const serializePodcast = values => ({
   config: {
     enableShowPage: get(values, 'config.enableShowPage') || false,
     lockedSyncFields: get(values, 'config.lockedSyncFields') || []
-  }
+  },
+  categories: values.categories
 })
 
 export const deserializeEpisode = episode => ({

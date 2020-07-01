@@ -4,6 +4,7 @@ import { Field, Formik } from 'formik'
 import { deserializePodcast, serializePodcast } from 'utils/serializers'
 
 import Button from '@material-ui/core/Button'
+import FormAutocomplete from 'components/FormAutocomplete'
 // import FileDropzone from 'components/FileDropzone'
 import FormCheckbox from 'components/FormCheckbox'
 import FormLockerInput from 'components/FormLockerInput'
@@ -24,90 +25,110 @@ const validationSchema = Yup.object().shape({
     .required('Website URL is required')
 })
 
-const renderForm = props => (
-  <form onSubmit={props.handleSubmit}>
-    <Field
-      name="title"
-      label="Podcast Title"
-      component={FormLockerInput}
-      placeholder="Enter the podcast title here..."
-      lockerName="config.lockedSyncFields"
-      lockerValue="title"
-    />
-    <Field
-      name="summary"
-      label="Summary"
-      component={FormLockerInput}
-      multiline
-      rows={6}
-      placeholder="Enter podcast summary here..."
-      lockerName="config.lockedSyncFields"
-      lockerValue="summary"
-    />
-    <Field
-      name="slug"
-      label="Slug"
-      component={FormLockerInput}
-      placeholder="e.g. pod-save-america ..."
-      lockerName="config.lockedSyncFields"
-      lockerValue="slug"
-    />
-    <Field
-      name="websiteUrl"
-      label="Website URL"
-      component={FormLockerInput}
-      placeholder="e.g. https://crooked.com/..."
-      lockerName="config.lockedSyncFields"
-      lockerValue="websiteUrl"
-    />
-    {/* <Field
-      name="image"
-      label="Image"
-      component={FileDropzone}
-    /> */}
-    <Field
-      name="tags"
-      label="Tags"
-      placeholder="Enter podcast tags here..."
-      component={FormTagsInput}
-      lockerName="config.lockedSyncFields"
-      lockerValue="tags"
-    />
-    <Field
-      name="config.enableShowPage"
-      label="Enabled on Show Hub"
-      toggleValues={[false, true]}
-      component={FormCheckbox}
-    />
-    <Hr />
-    <Field name="seoTitle" label="SEO Title" component={FormLockerInput} placeholder="Enter SEO title here..." />
-    <Field name="seoHeader" label="SEO Header" component={FormLockerInput} placeholder="Enter SEO header here..." />
-    <Field
-      name="seoDescription"
-      label="SEO Description"
-      component={FormLockerInput}
-      multiline
-      rows={5}
-      placeholder="Enter SEO description here..."
-    />
-    <Hr />
-    <Grid container justify="flex-end" spacing={2}>
-      <Grid item>
-        <Button color="primary" type="submit" component={Link} to="/podcasts">
-          Cancel
-        </Button>
-      </Grid>
-      <Grid item>
-        <Button variant="contained" color="primary" type="submit">
-          Save Changes
-        </Button>
-      </Grid>
-    </Grid>
-    {props.isSubmitting && <LoadingIndicator />}
-  </form>
-)
+const RenderForm = ({ handleSubmit, values, categories, isSubmitting, setFieldValue }) => {
+  const handleCategoriesChange = (event, categories) => {
+    setFieldValue('categories', categories)
+  }
 
-const GeneralEdit = ({ podcastDetails, onSubmit }) => {
+  return (
+    <form onSubmit={handleSubmit}>
+      <Field
+        name="title"
+        label="Podcast Title"
+        component={FormLockerInput}
+        placeholder="Enter the podcast title here..."
+        lockerName="config.lockedSyncFields"
+        lockerValue="title"
+      />
+      <Field
+        name="summary"
+        label="Summary"
+        component={FormLockerInput}
+        multiline
+        rows={6}
+        placeholder="Enter podcast summary here..."
+        lockerName="config.lockedSyncFields"
+        lockerValue="summary"
+      />
+      <Field
+        name="slug"
+        label="Slug"
+        component={FormLockerInput}
+        placeholder="e.g. pod-save-america ..."
+        lockerName="config.lockedSyncFields"
+        lockerValue="slug"
+      />
+      <Field
+        name="websiteUrl"
+        label="Website URL"
+        component={FormLockerInput}
+        placeholder="e.g. https://crooked.com/..."
+        lockerName="config.lockedSyncFields"
+        lockerValue="websiteUrl"
+      />
+      {/* <Field
+        name="image"
+        label="Image"
+        component={FileDropzone}
+      /> */}
+      <Field
+        name="tags"
+        label="Tags"
+        placeholder="Enter podcast tags here..."
+        component={FormTagsInput}
+        lockerName="config.lockedSyncFields"
+        lockerValue="tags"
+      />
+      <Field
+        name="config.enableShowPage"
+        label="Enabled on Show Hub"
+        toggleValues={[false, true]}
+        component={FormCheckbox}
+      />
+      <Hr />
+      <Field name="seoTitle" label="SEO Title" component={FormLockerInput} placehol der="Enter SEO title here..." />
+      <Field name="seoHeader" label="SEO Header" component={FormLockerInput} placeholder="Enter SEO header here..." />
+      <Field
+        name="seoDescription"
+        label="SEO Description"
+        component={FormLockerInput}
+        multiline
+        rows={5}
+        placeholder="Enter SEO description here..."
+      />
+      {values.categories && (
+        <Field
+          id="categories"
+          name="categories"
+          label="Categories"
+          component={FormAutocomplete}
+          options={categories}
+          optionLabel="name"
+          onChange={handleCategoriesChange}
+          value={values.categories}
+          variant="outlined"
+          multiple
+        />
+      )}
+      <Hr />
+      <Grid container justify="flex-end" spacing={2}>
+        <Grid item>
+          <Button color="primary" type="submit" component={Link} to="/podcasts">
+            Cancel
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button variant="contained" color="primary" type="submit">
+            Save Changes
+          </Button>
+        </Grid>
+      </Grid>
+      {isSubmitting && <LoadingIndicator />}
+    </form>
+  )
+}
+
+const GeneralEdit = ({ podcastDetails, onSubmit, categories }) => {
   const handleSubmit = (values, actions) => {
     return onSubmit(serializePodcast(values), actions)
   }
@@ -119,7 +140,7 @@ const GeneralEdit = ({ podcastDetails, onSubmit }) => {
       enableReinitialize
       onSubmit={handleSubmit}
       validationSchema={validationSchema}>
-      {renderForm}
+      {formikProps => <RenderForm {...formikProps} categories={categories} />}
     </Formik>
   )
 }

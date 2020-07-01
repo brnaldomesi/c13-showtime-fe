@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import {
+  categoriesInPodcastSelector,
+  featuredPodcastsListLoadingSelector,
+  getFeaturedPodcastsList
+} from 'redux/modules/category'
+import {
   getPodcastDetails,
   podcastDetailsLoadingSelector,
   podcastDetailsSelector,
@@ -29,7 +34,17 @@ import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import { withStyles } from '@material-ui/core/styles'
 
 export const PodcastDetails = props => {
-  const { classes, match, getPodcastDetails, podcastDetails, podcastDetailsLoading, updatePodcastDetails } = props
+  const {
+    classes,
+    match,
+    getPodcastDetails,
+    podcastDetails,
+    podcastDetailsLoading,
+    updatePodcastDetails,
+    categories,
+    categoriesLoading,
+    getFeaturedPodcastsList
+  } = props
   const { podcastId } = match.params
   const basePath = `/podcasts/:podcastId`
   const { enqueueSnackbar } = useSnackbar()
@@ -40,6 +55,14 @@ export const PodcastDetails = props => {
       fail: () => enqueueSnackbar('Failed to load the podcast details.', { variant: SNACKBAR_TYPE.ERROR })
     })
   }, [podcastId, getPodcastDetails, enqueueSnackbar])
+
+  useEffect(() => {
+    if (categories && categories.length === 0) {
+      getFeaturedPodcastsList({
+        fail: () => enqueueSnackbar('Failed to load categories!', { variant: SNACKBAR_TYPE.ERROR })
+      })
+    }
+  }, [getFeaturedPodcastsList, enqueueSnackbar, categories])
 
   const handleSubmit = (values, formActions) => {
     return formSubmit(
@@ -58,7 +81,7 @@ export const PodcastDetails = props => {
       <NavTabs podcastDetails={podcastDetails} />
       <div className={classes.content}>
         <Breadcrumbs />
-        {podcastDetailsLoading ? (
+        {podcastDetailsLoading || categoriesLoading ? (
           <LoadingIndicator />
         ) : podcastDetails ? (
           <Switch>
@@ -66,7 +89,12 @@ export const PodcastDetails = props => {
               path={`${basePath}/general`}
               render={props => (
                 <Paper className={classes.paper}>
-                  <GeneralEdit {...props} podcastDetails={podcastDetails} onSubmit={handleSubmit} />
+                  <GeneralEdit
+                    {...props}
+                    podcastDetails={podcastDetails}
+                    onSubmit={handleSubmit}
+                    categories={categories}
+                  />
                 </Paper>
               )}
             />
@@ -113,15 +141,20 @@ PodcastDetails.propTypes = {
   podcastDetails: PropTypes.object,
   podcastDetailsLoading: PropTypes.bool,
   queryParams: PropTypes.object,
-  updatePodcastDetails: PropTypes.func.isRequired
+  updatePodcastDetails: PropTypes.func.isRequired,
+  categories: PropTypes.array.isRequired,
+  categoriesLoading: PropTypes.bool.isRequired
 }
 
 const selector = createStructuredSelector({
   podcastDetails: podcastDetailsSelector,
-  podcastDetailsLoading: podcastDetailsLoadingSelector
+  podcastDetailsLoading: podcastDetailsLoadingSelector,
+  categories: categoriesInPodcastSelector,
+  categoriesLoading: featuredPodcastsListLoadingSelector
 })
 
 const actions = {
+  getFeaturedPodcastsList,
   getPodcastDetails,
   updatePodcastDetails
 }
