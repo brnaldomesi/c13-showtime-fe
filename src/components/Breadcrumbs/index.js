@@ -121,7 +121,7 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
     }
   } else if (isFeaturedPodcastRoute) {
     results.push({
-      name: 'Show Hub Featured Podcasts',
+      name: 'Show Hub Categories',
       path: '/featuredPodcasts'
     })
     if (location.pathname.startsWith('/featuredPodcasts/new')) {

@@ -101,7 +101,7 @@ export const FeaturedPodcasts = props => {
       <Breadcrumbs />
       <Box display="flex">
         <Box flexGrow={1} display="flex" mb={1} alignItems="flex-end">
-          <Typography variant="h6">Show Hub Featured Podcasts</Typography>
+          <Typography variant="h6">Show Hub Categories</Typography>
         </Box>
         <Box mb={2} mr={1}>
           <Button color="primary" variant="contained" component={Link} to="/featuredPodcasts/new">

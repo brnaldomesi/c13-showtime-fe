@@ -33,6 +33,12 @@ const RenderForm = ({ handleSubmit, values, categories, isSubmitting, setFieldVa
   return (
     <form onSubmit={handleSubmit}>
       <Field
+        name="config.enableShowPage"
+        label="Display on Show Hub"
+        toggleValues={[false, true]}
+        component={FormCheckbox}
+      />
+      <Field
         name="title"
         label="Podcast Title"
         component={FormLockerInput}
@@ -78,12 +84,6 @@ const RenderForm = ({ handleSubmit, values, categories, isSubmitting, setFieldVa
         component={FormTagsInput}
         lockerName="config.lockedSyncFields"
         lockerValue="tags"
-      />
-      <Field
-        name="config.enableShowPage"
-        label="Enabled on Show Hub"
-        toggleValues={[false, true]}
-        component={FormCheckbox}
       />
       <Hr />
       <Field name="seoTitle" label="SEO Title" component={FormLockerInput} placehol der="Enter SEO title here..." />

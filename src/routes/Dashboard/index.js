@@ -57,7 +57,7 @@ class Dashboard extends Component {
                 <ListItemIcon>
                   <ThumbUpIcon />
                 </ListItemIcon>
-                <ListItemText primary="Show Hub Featured Podcasts" />
+                <ListItemText primary="Show Hub Categories" />
               </ListItem>
               <ListItem button component={Link} to="/users">
                 <ListItemIcon>
