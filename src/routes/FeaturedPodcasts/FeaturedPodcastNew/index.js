@@ -86,8 +86,7 @@ const FeaturedPodcastNew = ({ createFeaturedPodcast, history, getAllPodcasts, al
 }
 
 FeaturedPodcastNew.propTypes = {
-  createFeaturedPodcast: PropTypes.func.isRequired,
-  featuredPodcast: PropTypes.object
+  createFeaturedPodcast: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({

@@ -40,6 +40,7 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
   const isNetworkRoute = location.pathname.startsWith('/networks')
   const isPodcastRoute = location.pathname.startsWith('/podcasts')
   const isUserRoute = location.pathname.startsWith('/users')
+  const isTakeoverRoute = location.pathname.startsWith('/takeover')
   const isFeaturedPodcastRoute = location.pathname.startsWith('/featuredPodcasts')
   const crewId = tabId === 'crew' ? instanceId : undefined
   const episodeId = tabId === 'episodes' ? instanceId : undefined
@@ -130,6 +131,11 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
         path: `/featuredPodcasts/new`
       })
     }
+  } else if (isTakeoverRoute) {
+    results.push({
+      name: 'Show Hub Takeover',
+      path: '/takeover'
+    })
   }
   return results
 }

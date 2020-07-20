@@ -44,6 +44,9 @@ const Sidebar = ({ authLogout, classes, open, toggle }) => {
         <SidebarItem icon={IconCast} text="Podcasts" to="/podcasts" />
       </List>
       <List>
+        <SidebarItem icon={IconCast} text="Takeover" to="/takeover" />
+      </List>
+      <List>
         <SidebarItem icon={IconCast} text="Show Hub" to="/featuredPodcasts" />
       </List>
       <List>

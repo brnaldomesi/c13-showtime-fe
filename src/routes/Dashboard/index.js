@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Breadcrumbs from 'components/Breadcrumbs'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
+import HomeIcon from '@material-ui/icons/Home'
 import IconCast from '@material-ui/icons/Cast'
 import IconNetwork from '@material-ui/icons/Share'
 import IconPeopleOutline from '@material-ui/icons/PeopleOutline'
@@ -52,6 +53,12 @@ class Dashboard extends Component {
                   <IconCast />
                 </ListItemIcon>
                 <ListItemText primary="View Podcasts" />
+              </ListItem>
+              <ListItem button component={Link} to="/takeover">
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Show Hub Takeover" />
               </ListItem>
               <ListItem button component={Link} to="/featuredPodcasts">
                 <ListItemIcon>

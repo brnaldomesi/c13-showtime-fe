@@ -13,6 +13,7 @@ import PodcastDetails from './PodcastDetails'
 import PodcastPreview from './PodcastPreview'
 import Podcasts from './Podcasts'
 import React from 'react'
+import Takeover from './Takeover'
 import TokenMonitor from 'components/TokenMonitor'
 import Users from './Users'
 
@@ -27,6 +28,7 @@ const routes = ({ history }) => (
           <Route path="/podcasts/:podcastId/preview" exact component={PodcastPreview} />
           <Route path="/podcasts/:podcastId/:tabId/:instanceId" component={PodcastDetails} />
           <Route path="/podcasts/:podcastId/:tabId?" component={PodcastDetails} />
+          <Route path="/takeover" exact component={Takeover} />
           <Route path="/featuredPodcasts" exact component={FeaturedPodcasts} />
           <Route path="/featuredPodcasts/new" exact component={FeaturedPodcastNew} />
           <Route path="/users" component={Users} />
