@@ -58,7 +58,7 @@ const FeaturedPodcast = ({
       updateFeaturedPodcast,
       {
         id: featuredPodcastId,
-        data: pick(values, ['name', 'podcasts', 'priority', 'slug']),
+        data: pick(values, ['name', 'podcasts', 'priority', 'slug', 'hidden']),
         success: () => enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
       },
       actions
@@ -115,7 +115,17 @@ const FeaturedPodcast = ({
           validateOnBlur
           onSubmit={handleSubmit}
           validationSchema={validationSchema}>
-          {formikProps => <FeaturedPodcastForm {...formikProps} open={open} edit={false} onCancel={handleCancel} />}
+          {formikProps => (
+            <FeaturedPodcastForm
+              {...formikProps}
+              type={featuredPodcast.type}
+              name={featuredPodcast.name}
+              hidden={featuredPodcast.hidden}
+              open={open}
+              edit={false}
+              onCancel={handleCancel}
+            />
+          )}
         </Formik>
       </Paper>
     </div>
