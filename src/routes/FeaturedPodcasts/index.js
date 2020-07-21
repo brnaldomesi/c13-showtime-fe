@@ -105,7 +105,7 @@ export const FeaturedPodcasts = props => {
         </Box>
         <Box mb={2} mr={1}>
           <Button color="primary" variant="contained" component={Link} to="/featuredPodcasts/new">
-            ADD NEW FEATURED SECTION
+            ADD NEW CUSTOM CATEGORY
           </Button>
         </Box>
       </Box>
