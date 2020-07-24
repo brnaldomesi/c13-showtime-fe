@@ -5,11 +5,13 @@ import React, { useState } from 'react'
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import { Field } from 'formik'
+import FormCheckbox from 'components/FormCheckbox'
 import FormDraggableAutocomplete from 'components/FormDraggableAutocomplete'
 import FormLockerInput from 'components/FormLockerInput'
 import Grid from '@material-ui/core/Grid'
 import LoadingIndicator from 'components/LoadingIndicator'
 import PropTypes from 'prop-types'
+import Typography from '@material-ui/core/Typography'
 import { allPodcastsSelector } from 'redux/modules/podcast'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
@@ -37,7 +39,9 @@ const FeaturedPodcastForm = ({
   edit,
   onCancel,
   values,
-  allPodcasts
+  allPodcasts,
+  type,
+  name
 }) => {
   const [editable, setEditable] = useState(edit)
 
@@ -59,7 +63,21 @@ const FeaturedPodcastForm = ({
         </Box>
       ) : (
         <>
-          <Field name="name" label="Featured Podcast Section Title" component={FormLockerInput} disabled={!editable} />
+          {type === 'APPLE_GENRE' ? (
+            <Typography variant="subtitle1" gutterBottom>
+              Apple Category: {name}
+            </Typography>
+          ) : (
+            <Field name="name" label="Category Title" component={FormLockerInput} disabled={!editable} />
+          )}
+          <Field
+            name="hidden"
+            label="Hide on Show Hub"
+            toggleValues={[false, true]}
+            component={FormCheckbox}
+            classes={{}}
+            disabled={!editable}
+          />
           {open && allPodcasts.length > 0 && (
             <Field
               id="podcasts"

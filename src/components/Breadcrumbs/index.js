@@ -127,7 +127,7 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
     })
     if (location.pathname.startsWith('/featuredPodcasts/new')) {
       results.push({
-        name: 'Add New Featured Section',
+        name: 'Create New Custom Category',
         path: `/featuredPodcasts/new`
       })
     }

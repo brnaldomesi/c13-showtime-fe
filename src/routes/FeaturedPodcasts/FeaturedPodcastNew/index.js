@@ -65,7 +65,7 @@ const FeaturedPodcastNew = ({ createFeaturedPodcast, history, getAllPodcasts, al
     <div className={classes.root}>
       <Breadcrumbs />
       <Typography variant="h6" gutterBottom>
-        Create a New Featured Podcast
+        Create a New Custom Category
       </Typography>
       <Paper className={classes.paper}>
         {allPodcastsLoading ? (
