@@ -15,33 +15,35 @@ import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import { SNACKBAR_TYPE } from 'config/constants'
 import Typography from '@material-ui/core/Typography'
+import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { formSubmit } from 'utils/form'
 import { makeStyles } from '@material-ui/core/styles'
 import styles from './styles'
 import { useSnackbar } from 'notistack'
+import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 
 const useStyles = makeStyles(styles)
 
 const initialValues = {
   headline: '',
   subHeadline: '',
-  backgroundImgUrl: '',
-  logoImgUrl: ''
+  backgroundImg: null,
+  logoImg: null
 }
 
 const Takeover = ({ takeover, takeoverLoading, takeoverUpdating, getTakeover, updateTakeover }) => {
   const classes = useStyles()
   const { enqueueSnackbar } = useSnackbar()
 
-  useEffect(() => {
-    if (takeover === null) {
-      getTakeover({
-        fail: () => enqueueSnackbar('Failed to load all takeover!', { variant: SNACKBAR_TYPE.ERROR })
-      })
-    }
-  }, [getTakeover, enqueueSnackbar, takeover])
+  // useEffect(() => {
+  //   if (takeover === null) {
+  //     getTakeover({
+  //       fail: () => enqueueSnackbar('Failed to load all takeover!', { variant: SNACKBAR_TYPE.ERROR })
+  //     })
+  //   }
+  // }, [getTakeover, enqueueSnackbar, takeover])
 
   const handleSubmit = (values, actions) => {
     return formSubmit(
@@ -69,7 +71,7 @@ const Takeover = ({ takeover, takeoverLoading, takeoverUpdating, getTakeover, up
         ) : (
           <Formik
             initialValues={initialValues}
-            validateOnChange={false}
+            validateOnChange
             validateOnBlur
             onSubmit={handleSubmit}
             validationSchema={validationSchema}>
@@ -97,4 +99,4 @@ const actions = {
   updateTakeover
 }
 
-export default connect(selector, actions)(Takeover)
+export default compose(userIsAuthenticatedRedir, connect(selector, actions))(Takeover)

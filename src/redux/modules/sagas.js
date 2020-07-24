@@ -5,9 +5,10 @@ import { saga as crew } from './crew'
 import { saga as episode } from './episode'
 import { saga as network } from './network'
 import { saga as podcast } from './podcast'
+import { saga as takeover } from './takeover'
 import { saga as todo } from './todo'
 import { saga as user } from './user'
 
 export default function* rootSaga() {
-  yield all([auth(), network(), podcast(), crew(), episode(), user(), todo(), category()])
+  yield all([auth(), network(), podcast(), crew(), episode(), user(), todo(), category(), takeover()])
 }

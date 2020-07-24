@@ -1,15 +1,15 @@
-import { call, race, put, takeLatest, throttle } from 'redux-saga/effects'
-
-import { apiCallSaga } from '../api'
 import {
+  CONFIRM_AND_DELETE_USER,
+  CREATE_USER,
+  DELETE_USER,
   GET_USER,
   GET_USERS_LIST,
-  CREATE_USER,
   UPDATE_USER,
-  DELETE_USER,
-  VALIDATE_EMAIL,
-  CONFIRM_AND_DELETE_USER
+  VALIDATE_EMAIL
 } from './types'
+import { call, put, race, takeLatest, throttle } from 'redux-saga/effects'
+
+import { apiCallSaga } from '../api'
 import { bindCallbackToPromise } from 'utils/helpers'
 import { show } from 'redux-modal'
 
