@@ -28,6 +28,6 @@ export default theme => ({
 
 export const tableCellStyles = theme => ({
   root: {
-    padding: theme.spacing(1)
+    padding: theme.spacing(2)
   }
 })

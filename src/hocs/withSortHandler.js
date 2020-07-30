@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+
 import get from 'lodash/get'
 
 const desc = (a, b, orderBy) => {
-  if (b[orderBy] < a[orderBy]) {
+  if (get(b, orderBy) < get(a, orderBy)) {
     return -1
   }
-  if (b[orderBy] > a[orderBy]) {
+  if (get(b, orderBy) > get(a, orderBy)) {
     return 1
   }
   return 0

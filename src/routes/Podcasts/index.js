@@ -1,36 +1,54 @@
+import { DEFAULT_PAGE_SIZE, SNACKBAR_TYPE } from 'config/constants'
 import React, { useEffect } from 'react'
+import { getPodcastsList, podcastsListLoadingSelector, podcastsListSelector } from 'redux/modules/podcast'
+import styles, { tableCellStyles } from './styles'
+
+import { APIListType } from 'utils/propTypes'
+import Breadcrumbs from 'components/Breadcrumbs'
+import Button from '@material-ui/core/Button'
+import { Link } from 'react-router-dom'
+import LoadingIndicator from 'components/LoadingIndicator'
+import MuiTableCell from '@material-ui/core/TableCell'
+import Pagination from 'components/Pagination'
+import Paper from '@material-ui/core/Paper'
+import PropTypes from 'prop-types'
+import SortableTableHead from 'components/SortableTableHead'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import ThumbnailImage from 'components/ThumbnailImage'
+import Typography from '@material-ui/core/Typography'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { Link } from 'react-router-dom'
-import { useSnackbar } from 'notistack'
-import { withStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
 import get from 'lodash/get'
-import Paper from '@material-ui/core/Paper'
-import PropTypes from 'prop-types'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import MuiTableCell from '@material-ui/core/TableCell'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
-import Typography from '@material-ui/core/Typography'
-
-import { APIListType } from 'utils/propTypes'
-import { DEFAULT_PAGE_SIZE, SNACKBAR_TYPE } from 'config/constants'
-import { getPodcastsList, podcastsListSelector, podcastsListLoadingSelector } from 'redux/modules/podcast'
+import { useSnackbar } from 'notistack'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
-import Breadcrumbs from 'components/Breadcrumbs'
-import LoadingIndicator from 'components/LoadingIndicator'
-import Pagination from 'components/Pagination'
-import styles, { tableCellStyles } from './styles'
-import ThumbnailImage from 'components/ThumbnailImage'
 import withRouterAndQueryParams from 'hocs/withRouterAndQueryParams'
+import withSortHandler from 'hocs/withSortHandler'
+import { withStyles } from '@material-ui/core/styles'
 
 const TableCell = withStyles(tableCellStyles)(MuiTableCell)
 
+const columns = [
+  { id: 'imageUrls', label: 'Thumbnail', sortable: false, props: { width: 66 } },
+  { id: 'title', label: 'Title' },
+  { id: 'slug', label: 'Slug', props: { width: '15%' } },
+  { id: 'network.name', label: 'Network', props: { width: '12%' } },
+  { id: 'config.enableShowPage', label: 'Show Hub Status', props: { width: '9%' } },
+  { id: 'actions', label: '', sortable: false, props: { width: 210 } }
+]
+
 export const Podcasts = props => {
-  const { classes, queryParams, getPodcastsList, podcasts, podcastsLoading } = props
+  const {
+    classes,
+    queryParams,
+    getPodcastsList,
+    podcasts,
+    podcastsLoading,
+    sortProps: { onRequestSort, sortedList, order, orderBy }
+  } = props
   const { prevCursor = null, nextCursor = null, limit = DEFAULT_PAGE_SIZE, search } = queryParams
   const podcastsList = podcasts ? podcasts.data : []
   const { enqueueSnackbar } = useSnackbar()
@@ -54,7 +72,7 @@ export const Podcasts = props => {
         ) : podcastsList.length > 0 ? (
           <>
             <Table className={classes.table}>
-              <TableHead>
+              {/* <TableHead>
                 <TableRow>
                   <TableCell width={66}>Thumbnail</TableCell>
                   <TableCell>Title</TableCell>
@@ -63,9 +81,10 @@ export const Podcasts = props => {
                   <TableCell width="8%">Show Hub Status</TableCell>
                   <TableCell width={210} />
                 </TableRow>
-              </TableHead>
+              </TableHead> */}
+              <SortableTableHead columns={columns} onRequestSort={onRequestSort} order={order} orderBy={orderBy} />
               <TableBody>
-                {podcastsList.map(podcast => (
+                {sortedList.map(podcast => (
                   <TableRow key={podcast.id}>
                     <TableCell scope="row" width={50}>
                       <ThumbnailImage
@@ -147,5 +166,6 @@ export default compose(
   withRouterAndQueryParams,
   userIsAuthenticatedRedir,
   connect(selector, actions),
+  withSortHandler({ listPropName: 'podcasts.data' }),
   withStyles(styles)
 )(Podcasts)
