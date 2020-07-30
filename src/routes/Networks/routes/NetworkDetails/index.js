@@ -9,6 +9,7 @@ import {
 } from 'redux/modules/network'
 import styles, { tableCellStyles } from './styles'
 
+import Box from '@material-ui/core/Box'
 import Breadcrumbs from 'components/Breadcrumbs'
 import Button from '@material-ui/core/Button'
 import LeftPane from '../../components/LeftPane'
@@ -73,7 +74,19 @@ export const NetworkDetails = props => {
     <>
       {!podcastsLoading && !networkDetailsLoading && <LeftPane networkDetails={networkDetails} state={leftPaneState} />}
       <div className={classes.content}>
-        <Breadcrumbs />
+        <Box display="flex" justifyContent="space-between">
+          <Breadcrumbs />
+          <Box mb={1}>
+            <Button
+              color="primary"
+              variant="contained"
+              component={Link}
+              to={`/networks/${match.params.networkId}/podcasts/add`}
+              size="large">
+              ADD PODCASTS
+            </Button>
+          </Box>
+        </Box>
         <Paper className={classes.paper}>
           {podcastsLoading || networkDetailsLoading ? (
             <LoadingIndicator />
