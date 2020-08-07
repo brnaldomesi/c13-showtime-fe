@@ -15,7 +15,8 @@ import styles from './styles'
 import { withStyles } from '@material-ui/core/styles'
 
 export const LeftPane = ({ classes, networkDetails, state }) => {
-  const coverImgEditable = state === 'NETWORK_PODCASTS' || state === 'NETWORK_DETAILS' ? false : true
+  const coverImgEditable =
+    state === 'NETWORK_PODCASTS' || state === 'NETWORK_DETAILS' || state === 'NETWORK_PODCASTS_EDIT' ? false : true
 
   return networkDetails ? (
     <Drawer
@@ -75,7 +76,7 @@ export const LeftPane = ({ classes, networkDetails, state }) => {
                   color="primary"
                   variant="contained"
                   component={Link}
-                  to={`/networks/${networkDetails.id}/podcasts/add`}
+                  to={`/networks/${networkDetails.id}/podcasts/edit`}
                   fullWidth>
                   ADD PODCASTS
                 </Button>

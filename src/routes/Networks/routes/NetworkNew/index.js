@@ -29,8 +29,9 @@ const NetworkNew = ({ createNetwork, match, history }) => {
       {
         id: match.params.networkId,
         data: values,
-        success: () => {
+        success: res => {
           enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+          history.push(`/networks/${res.id}/podcasts`)
         },
         fail: () => enqueueSnackbar('Failed to save the network details.', { variant: SNACKBAR_TYPE.ERROR })
       },

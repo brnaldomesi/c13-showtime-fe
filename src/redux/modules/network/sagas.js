@@ -3,7 +3,8 @@ import {
   GET_NETWORKS_LIST,
   GET_NETWORK_DETAILS,
   GET_NETWORK_PODCASTS_LIST,
-  UPDATE_NETWORK
+  UPDATE_NETWORK,
+  UPDATE_NETWORK_PODCASTS
 } from './types'
 
 import { apiCallSaga } from '../api'
@@ -49,10 +50,19 @@ const getNetworkPodcastsList = apiCallSaga({
   selectorKey: 'networkPodcastsList'
 })
 
+const updateNetworkPodcasts = apiCallSaga({
+  type: UPDATE_NETWORK_PODCASTS,
+  method: 'patch',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/networks/${payload.networkId}/podcasts`,
+  selectorKey: 'networkPodcastsList'
+})
+
 export default function* rootSaga() {
   yield takeLatest(CREATE_NETWORK, createNetwork)
   yield takeLatest(GET_NETWORKS_LIST, getNetworksList)
   yield takeLatest(GET_NETWORK_DETAILS, getNetworkDetails)
   yield takeLatest(UPDATE_NETWORK, updateNetwork)
   yield takeLatest(GET_NETWORK_PODCASTS_LIST, getNetworkPodcastsList)
+  yield takeLatest(UPDATE_NETWORK_PODCASTS, updateNetworkPodcasts)
 }

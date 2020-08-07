@@ -15,7 +15,6 @@ import PropTypes from 'prop-types'
 import SortableTableHead from 'components/SortableTableHead'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
-import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import ThumbnailImage from 'components/ThumbnailImage'
 import Typography from '@material-ui/core/Typography'
@@ -72,16 +71,6 @@ export const Podcasts = props => {
         ) : podcastsList.length > 0 ? (
           <>
             <Table className={classes.table}>
-              {/* <TableHead>
-                <TableRow>
-                  <TableCell width={66}>Thumbnail</TableCell>
-                  <TableCell>Title</TableCell>
-                  <TableCell width="15%">Slug</TableCell>
-                  <TableCell width="12%">Network</TableCell>
-                  <TableCell width="8%">Show Hub Status</TableCell>
-                  <TableCell width={210} />
-                </TableRow>
-              </TableHead> */}
               <SortableTableHead columns={columns} onRequestSort={onRequestSort} order={order} orderBy={orderBy} />
               <TableBody>
                 {sortedList.map(podcast => (
