@@ -8,15 +8,28 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { SNACKBAR_TYPE } from 'config/constants'
 import ThumbnailImage from 'components/ThumbnailImage'
 import Typography from '@material-ui/core/Typography'
 import ViewModuleIcon from '@material-ui/icons/ViewModule'
+import { compose } from 'redux'
+import { confirmAndDeleteNetwork } from 'redux/modules/network'
+import { connect } from 'react-redux'
 import styles from './styles'
+import { useSnackbar } from 'notistack'
 import { withStyles } from '@material-ui/core/styles'
 
-export const LeftPane = ({ classes, networkDetails, state }) => {
+export const LeftPane = ({ classes, networkDetails, state, confirmAndDeleteNetwork }) => {
   const coverImgEditable =
     state === 'NETWORK_PODCASTS' || state === 'NETWORK_DETAILS' || state === 'NETWORK_PODCASTS_EDIT' ? false : true
+  const { enqueueSnackbar } = useSnackbar()
+
+  const handleDelete = () => {
+    confirmAndDeleteNetwork({
+      id: networkDetails.id,
+      success: () => enqueueSnackbar('Network deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+    })
+  }
 
   return networkDetails ? (
     <Drawer
@@ -89,7 +102,7 @@ export const LeftPane = ({ classes, networkDetails, state }) => {
         <List>
           <Divider className={classes.divider} />
           <div className={classes.button}>
-            <Button color="primary" variant="contained" fullWidth>
+            <Button color="primary" variant="contained" onClick={handleDelete} fullWidth>
               DELETE NETWORK
             </Button>
           </div>
@@ -101,7 +114,12 @@ export const LeftPane = ({ classes, networkDetails, state }) => {
 
 LeftPane.propTypes = {
   networkDetails: PropTypes.object,
-  state: PropTypes.string
+  state: PropTypes.string,
+  confirmAndDeleteNetwork: PropTypes.func.isRequired
 }
 
-export default withStyles(styles)(LeftPane)
+const actions = {
+  confirmAndDeleteNetwork
+}
+
+export default compose(connect(null, actions), withStyles(styles))(LeftPane)
