@@ -6,6 +6,7 @@ import {
   UPDATE_PODCAST,
   UPDATE_PODCAST_CONFIG,
   UPDATE_PODCAST_DETAILS,
+  UPDATE_PODCAST_NETWORK,
   UPDATE_SUBSCRIPTION_URLS,
   UPLOAD_PODCAST_IMAGE
 } from './types'
@@ -122,6 +123,14 @@ const getAllPodcasts = apiCallSaga({
   selectorKey: 'allPodcasts'
 })
 
+const updatePodcastNetwork = apiCallSaga({
+  type: UPDATE_PODCAST_NETWORK,
+  method: 'put',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts/${payload.id}/network`,
+  selectorKey: 'podcastDetails'
+})
+
 export default function* rootSaga() {
   yield takeLatest(GET_PODCASTS_LIST, getPodcastsList)
   yield takeLatest(GET_PODCAST_DETAILS, getPodcastDetails)
@@ -131,4 +140,5 @@ export default function* rootSaga() {
   yield takeLatest(UPDATE_SUBSCRIPTION_URLS, updateSubscriptionUrls)
   yield takeLatest(SEARCH_PODCASTS, searchPodcasts)
   yield takeLatest(GET_ALL_PODCASTS, getAllPodcasts)
+  yield takeLatest(UPDATE_PODCAST_NETWORK, updatePodcastNetwork)
 }

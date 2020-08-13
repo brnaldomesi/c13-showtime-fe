@@ -5,8 +5,7 @@ import {
   GET_NETWORKS_LIST,
   GET_NETWORK_DETAILS,
   GET_NETWORK_PODCASTS_LIST,
-  UPDATE_NETWORK,
-  UPDATE_NETWORK_PODCASTS
+  UPDATE_NETWORK
 } from './types'
 import { call, put, race, takeLatest } from 'redux-saga/effects'
 
@@ -54,14 +53,6 @@ const getNetworkPodcastsList = apiCallSaga({
   selectorKey: 'networkPodcastsList'
 })
 
-const updateNetworkPodcasts = apiCallSaga({
-  type: UPDATE_NETWORK_PODCASTS,
-  method: 'patch',
-  allowedParamKeys: [],
-  path: ({ payload }) => `/networks/${payload.networkId}/podcasts`,
-  selectorKey: 'networkPodcastsList'
-})
-
 const deleteNetwork = apiCallSaga({
   type: DELETE_NETWORK,
   method: 'delete',
@@ -100,7 +91,6 @@ export default function* rootSaga() {
   yield takeLatest(GET_NETWORK_DETAILS, getNetworkDetails)
   yield takeLatest(UPDATE_NETWORK, updateNetwork)
   yield takeLatest(GET_NETWORK_PODCASTS_LIST, getNetworkPodcastsList)
-  yield takeLatest(UPDATE_NETWORK_PODCASTS, updateNetworkPodcasts)
   yield takeLatest(CONFIRM_AND_DELETE_NETWORK, confirmAndDeleteNetwork)
   yield takeLatest(DELETE_NETWORK, deleteNetwork)
 }

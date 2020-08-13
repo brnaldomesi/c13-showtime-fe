@@ -57,8 +57,8 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
             path: `/networks/${networkId}`
           })
           results.push({
-            name: 'Edit Podcast',
-            path: `/networks/${networkId}/${podcastId}/edit`
+            name: 'Add Podcast',
+            path: `/networks/${networkId}/${podcastId}/add`
           })
         } else {
           results.push({

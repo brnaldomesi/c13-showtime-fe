@@ -15,7 +15,7 @@ const routes = ({ match }) => (
     <Route path={`${match.path}/:networkId`} exact component={NetworkDetails} />
     <Route path={`${match.path}/:networkId/edit`} exact component={NetworkEdit} />
     <Route path={`${match.path}/:networkId/podcasts`} exact component={NetworkDetails} />
-    <Route path={`${match.path}/:networkId/podcasts/edit`} exact component={NetworkPodcastEdit} />
+    <Route path={`${match.path}/:networkId/podcasts/add`} exact component={NetworkPodcastEdit} />
   </Switch>
 )
 

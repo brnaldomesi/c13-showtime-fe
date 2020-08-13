@@ -1,4 +1,5 @@
 import { dataSelector, isRequestPending } from '../api'
+
 import { EMPTY_LIST_DATA } from 'config/constants'
 
 export const networksListSelector = dataSelector('networksList', EMPTY_LIST_DATA)

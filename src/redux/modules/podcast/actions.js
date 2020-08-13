@@ -19,3 +19,5 @@ export const updatePodcastConfig = createAction(types.UPDATE_PODCAST_CONFIG)
 export const searchPodcasts = createAction(types.SEARCH_PODCASTS)
 
 export const getAllPodcasts = createAction(types.GET_ALL_PODCASTS)
+
+export const updatePodcastNetwork = createAction(types.UPDATE_PODCAST_NETWORK)

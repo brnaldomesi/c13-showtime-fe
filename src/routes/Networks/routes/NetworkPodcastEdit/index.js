@@ -6,8 +6,7 @@ import {
   networkDetailsLoadingSelector,
   networkDetailsSelector,
   networkPodcastsListLoadingSelector,
-  networkPodcastsListSelector,
-  updateNetworkPodcasts
+  networkPodcastsListSelector
 } from 'redux/modules/network'
 
 import Autocomplete from '@material-ui/lab/Autocomplete'
@@ -25,7 +24,10 @@ import TextField from '@material-ui/core/TextField'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
+import differenceWith from 'lodash/differenceWith'
+import fp from 'lodash/fp'
 import styles from './styles'
+import { updatePodcastNetwork } from 'redux/modules/podcast'
 import { useSnackbar } from 'notistack'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import { withStyles } from '@material-ui/core/styles'
@@ -43,23 +45,24 @@ export const NetworkPodcastEdit = props => {
     allPodcastsLoading,
     networkPodcastsLoading,
     networkDetailsLoading,
-    updateNetworkPodcasts
+    updatePodcastNetwork,
+    history
   } = props
   const { enqueueSnackbar } = useSnackbar()
-  const memoPodcasts = useMemo(
-    () =>
-      networkPodcasts &&
-      networkPodcasts.map(item => ({
+  const podcastsOption = useMemo(() => {
+    if (networkPodcasts && allPodcasts) {
+      const simplifiedNetworkPodcasts = networkPodcasts.map(item => ({
         id: item.id,
         imageUrl: item.imageUrls.original,
         title: item.title
-      })),
-    [networkPodcasts]
-  )
-  const [podcasts, setPodcasts] = useState(memoPodcasts)
-  useEffect(() => {
-    setPodcasts(memoPodcasts)
-  }, [memoPodcasts])
+      }))
+
+      return differenceWith(allPodcasts, simplifiedNetworkPodcasts, fp.isEqual)
+    } else {
+      return null
+    }
+  }, [networkPodcasts, allPodcasts])
+  const [podcast, setPodcast] = useState(null)
 
   useEffect(() => {
     if (!networkDetails) {
@@ -68,40 +71,40 @@ export const NetworkPodcastEdit = props => {
         fail: () => enqueueSnackbar('Failed to load network details!', { variant: SNACKBAR_TYPE.ERROR })
       })
     }
-    if (networkPodcasts.length === 0) {
+  }, [match, networkDetails, getNetworkDetails, enqueueSnackbar])
+
+  useEffect(() => {
+    if (!networkPodcasts) {
       getNetworkPodcastsList({
         networkId: match.params.networkId,
         fail: () => enqueueSnackbar('Failed to load podcasts of the network!', { variant: SNACKBAR_TYPE.ERROR })
       })
     }
+  }, [match, getNetworkPodcastsList, networkPodcasts, enqueueSnackbar])
+
+  useEffect(() => {
     if (allPodcasts.length === 0) {
       getAllPodcasts({
         fail: () => enqueueSnackbar('Failed to load all podcasts!', { variant: SNACKBAR_TYPE.ERROR })
       })
     }
-  }, [
-    match,
-    networkDetails,
-    networkPodcasts,
-    allPodcasts,
-    getAllPodcasts,
-    getNetworkDetails,
-    getNetworkPodcastsList,
-    enqueueSnackbar
-  ])
+  }, [getAllPodcasts, allPodcasts, enqueueSnackbar])
 
   const handleSave = () => {
-    updateNetworkPodcasts({
+    updatePodcastNetwork({
+      id: podcast.id,
       data: {
-        networkId: match.params.networkId,
-        podcasts
+        networkId: match.params.networkId
       },
-      success: () => enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+      success: () => {
+        enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+        history.push(`/networks/${match.params.networkId}/podcasts`)
+      }
     })
   }
 
   const handleChange = (e, p) => {
-    setPodcasts(p)
+    setPodcast(p)
   }
 
   return (
@@ -116,19 +119,17 @@ export const NetworkPodcastEdit = props => {
             <LoadingIndicator />
           ) : (
             <>
-              <Box mb={2}>
-                <Autocomplete
-                  multiple
-                  id="networkPodcasts"
-                  options={allPodcasts}
-                  value={podcasts}
-                  getOptionLabel={option => option.title}
-                  filterSelectedOptions
-                  getOptionSelected={(option, value) => value.id === option.id}
-                  onChange={handleChange}
-                  renderInput={params => <TextField {...params} variant="outlined" label="Podcasts" />}
-                />
-              </Box>
+              {podcastsOption && (
+                <Box mb={2}>
+                  <Autocomplete
+                    id="networkPodcasts"
+                    options={podcastsOption}
+                    getOptionLabel={option => option.title}
+                    onChange={handleChange}
+                    renderInput={params => <TextField {...params} variant="outlined" label="Podcasts" />}
+                  />
+                </Box>
+              )}
               <Grid container justify="flex-end" spacing={2}>
                 <Grid item>
                   <Button color="primary" component={Link} to={`/networks/${match.params.networkId}/podcasts`}>
@@ -151,13 +152,13 @@ export const NetworkPodcastEdit = props => {
 
 NetworkPodcastEdit.propTypes = {
   classes: PropTypes.object.isRequired,
-  updateNetworkPodcasts: PropTypes.func.isRequired,
+  updatePodcastNetwork: PropTypes.func.isRequired,
   getNetworkDetails: PropTypes.func.isRequired,
   getNetworkPodcastsList: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
   networkDetails: PropTypes.object,
   networkDetailsLoading: PropTypes.bool,
-  networkPodcasts: PropTypes.array.isRequired,
+  networkPodcasts: PropTypes.array,
   networkPodcastsLoading: PropTypes.bool
 }
 
@@ -174,7 +175,7 @@ const actions = {
   getAllPodcasts,
   getNetworkDetails,
   getNetworkPodcastsList,
-  updateNetworkPodcasts
+  updatePodcastNetwork
 }
 
 export default compose(userIsAuthenticatedRedir, connect(selector, actions), withStyles(styles))(NetworkPodcastEdit)

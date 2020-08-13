@@ -12,7 +12,5 @@ export const updateNetwork = createAction(types.UPDATE_NETWORK)
 
 export const getNetworkPodcastsList = createAction(types.GET_NETWORK_PODCASTS_LIST)
 
-export const updateNetworkPodcasts = createAction(types.UPDATE_NETWORK_PODCASTS)
-
 export const confirmAndDeleteNetwork = createAction(types.CONFIRM_AND_DELETE_NETWORK)
 export const deleteNetwork = createAction(types.DELETE_NETWORK)

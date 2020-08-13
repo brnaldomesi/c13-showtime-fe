@@ -89,7 +89,7 @@ export const LeftPane = ({ classes, networkDetails, state, confirmAndDeleteNetwo
                   color="primary"
                   variant="contained"
                   component={Link}
-                  to={`/networks/${networkDetails.id}/podcasts/edit`}
+                  to={`/networks/${networkDetails.id}/podcasts/add`}
                   fullWidth>
                   ADD PODCASTS
                 </Button>

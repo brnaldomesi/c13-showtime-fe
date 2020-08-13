@@ -81,7 +81,7 @@ export const NetworkDetails = props => {
               color="primary"
               variant="contained"
               component={Link}
-              to={`/networks/${match.params.networkId}/podcasts/edit`}
+              to={`/networks/${match.params.networkId}/podcasts/add`}
               size="large">
               ADD PODCASTS
             </Button>
