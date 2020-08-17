@@ -51,26 +51,22 @@ const buildBredcrumbItems = ({ episode, match, location, networkDetails, podcast
     })
     if (networkDetails && networkDetails.id === networkId) {
       if (location.pathname.endsWith('/edit')) {
-        if (location.pathname.endsWith('/podcasts/edit')) {
-          results.push({
-            name: networkDetails.name,
-            path: `/networks/${networkId}`
-          })
-          results.push({
-            name: 'Add Podcast',
-            path: `/networks/${networkId}/${podcastId}/add`
-          })
-        } else {
-          results.push({
-            name: 'Edit network',
-            path: `/networks/${networkId}/edit`
-          })
-        }
+        results.push({
+          name: 'Edit network',
+          path: `/networks/${networkId}/edit`
+        })
       } else {
         results.push({
           name: networkDetails.name,
           path: `/networks/${networkId}`
         })
+
+        if (location.pathname.endsWith('/podcasts/add')) {
+          results.push({
+            name: 'Add Podcast',
+            path: `/networks/${networkId}/${podcastId}/add`
+          })
+        }
       }
     } else if (location.pathname.endsWith('/new')) {
       results.push({
