@@ -99,7 +99,8 @@ export const NetworkPodcastEdit = props => {
       success: () => {
         enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
         history.push(`/networks/${match.params.networkId}/podcasts`)
-      }
+      },
+      fail: err => enqueueSnackbar(err, { variant: SNACKBAR_TYPE.ERROR })
     })
   }
 
