@@ -26,6 +26,7 @@ import TableRow from '@material-ui/core/TableRow'
 import ThumbnailImage from 'components/ThumbnailImage'
 import Typography from '@material-ui/core/Typography'
 import { compose } from 'redux'
+import { confirmAndDeletePodcast } from 'redux/modules/podcast'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import dfFormat from 'date-fns/format'
@@ -54,10 +55,18 @@ export const NetworkDetails = props => {
     podcasts,
     podcastsLoading,
     networkDetailsLoading,
-    sortProps: { onRequestSort, sortedList, order, orderBy }
+    sortProps: { onRequestSort, sortedList, order, orderBy },
+    confirmAndDeletePodcast
   } = props
   const { enqueueSnackbar } = useSnackbar()
   const leftPaneState = match.path.endsWith('/podcasts') ? 'NETWORK_PODCASTS' : 'NETWORK_DETAILS'
+
+  const handleDelete = id => () => {
+    confirmAndDeletePodcast({
+      id,
+      success: () => enqueueSnackbar('Podcast deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+    })
+  }
 
   useEffect(() => {
     getNetworkDetails({
@@ -127,7 +136,7 @@ export const NetworkDetails = props => {
                       </TableCell>
                       <TableCell align="right" className={classes.actions}>
                         {match.path.endsWith('/podcasts') ? (
-                          <Button variant="contained" color="primary">
+                          <Button variant="contained" color="primary" onClick={handleDelete(podcast.id)}>
                             REMOVE PODCAST
                           </Button>
                         ) : (
@@ -170,7 +179,8 @@ NetworkDetails.propTypes = {
   networkDetails: PropTypes.object,
   networkDetailsLoading: PropTypes.bool,
   podcasts: PropTypes.array.isRequired,
-  podcastsLoading: PropTypes.bool
+  podcastsLoading: PropTypes.bool,
+  confirmAndDeletePodcast: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
@@ -182,7 +192,8 @@ const selector = createStructuredSelector({
 
 const actions = {
   getNetworkDetails,
-  getNetworkPodcastsList
+  getNetworkPodcastsList,
+  confirmAndDeletePodcast
 }
 
 export default compose(

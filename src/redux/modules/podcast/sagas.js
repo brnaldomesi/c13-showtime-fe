@@ -1,4 +1,6 @@
 import {
+  CONFIRM_AND_DELETE_PODCAST,
+  DELETE_PODCAST,
   GET_ALL_PODCASTS,
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
@@ -10,9 +12,11 @@ import {
   UPDATE_SUBSCRIPTION_URLS,
   UPLOAD_PODCAST_IMAGE
 } from './types'
+import { call, put, race, takeLatest } from 'redux-saga/effects'
 
 import { apiCallSaga } from '../api'
-import { takeLatest } from 'redux-saga/effects'
+import { bindCallbackToPromise } from 'utils/helpers'
+import { show } from 'redux-modal'
 
 const getPodcastsList = apiCallSaga({
   type: GET_PODCASTS_LIST,
@@ -131,6 +135,38 @@ const updatePodcastNetwork = apiCallSaga({
   selectorKey: 'podcastDetails'
 })
 
+const deletePodcast = apiCallSaga({
+  type: DELETE_PODCAST,
+  method: 'delete',
+  allowedParamKeys: [],
+  path: ({ payload }) => `/podcasts/${payload.id}`,
+  selectorKey: 'podcastsList'
+})
+
+const confirmDelete = function*() {
+  const confirmProm = bindCallbackToPromise()
+  const cancelProm = bindCallbackToPromise()
+  yield put(
+    show('confirmModal', {
+      onConfirm: confirmProm.cb,
+      onCancel: cancelProm.cb,
+      title: 'ARE YOU SURE YOU WANT TO DELETE?'
+    })
+  )
+  const result = yield race({
+    confirmed: call(confirmProm.promise),
+    canceled: call(cancelProm.promise)
+  })
+  return Object.keys(result).includes('confirmed') ? true : false
+}
+
+const confirmAndDeletePodcast = function*(action) {
+  const confirmed = yield call(confirmDelete)
+  if (confirmed) {
+    yield call(deletePodcast, action)
+  }
+}
+
 export default function* rootSaga() {
   yield takeLatest(GET_PODCASTS_LIST, getPodcastsList)
   yield takeLatest(GET_PODCAST_DETAILS, getPodcastDetails)
@@ -141,4 +177,6 @@ export default function* rootSaga() {
   yield takeLatest(SEARCH_PODCASTS, searchPodcasts)
   yield takeLatest(GET_ALL_PODCASTS, getAllPodcasts)
   yield takeLatest(UPDATE_PODCAST_NETWORK, updatePodcastNetwork)
+  yield takeLatest(CONFIRM_AND_DELETE_PODCAST, confirmAndDeletePodcast)
+  yield takeLatest(DELETE_PODCAST, deletePodcast)
 }
