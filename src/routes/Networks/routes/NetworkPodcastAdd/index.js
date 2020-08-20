@@ -32,7 +32,7 @@ import { useSnackbar } from 'notistack'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 import { withStyles } from '@material-ui/core/styles'
 
-export const NetworkPodcastEdit = props => {
+export const NetworkPodcastAdd = props => {
   const {
     classes,
     getNetworkDetails,
@@ -63,6 +63,7 @@ export const NetworkPodcastEdit = props => {
     }
   }, [networkPodcasts, allPodcasts])
   const [podcast, setPodcast] = useState(null)
+  const [podcastAdding, setPodcastAdding] = useState(false)
 
   useEffect(() => {
     if (!networkDetails) {
@@ -91,16 +92,25 @@ export const NetworkPodcastEdit = props => {
   }, [getAllPodcasts, allPodcasts, enqueueSnackbar])
 
   const handleSave = () => {
+    setPodcastAdding(true)
     updatePodcastNetwork({
       id: podcast.id,
       data: {
         networkId: match.params.networkId
       },
       success: () => {
+        setPodcastAdding(false)
         enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
         history.push(`/networks/${match.params.networkId}/podcasts`)
       },
-      fail: err => enqueueSnackbar(err, { variant: SNACKBAR_TYPE.ERROR })
+      fail: err => {
+        setPodcastAdding(false)
+        if (err) {
+          enqueueSnackbar(err, { variant: SNACKBAR_TYPE.ERROR })
+        } else {
+          enqueueSnackbar('Failed to add podcast to network', { variant: SNACKBAR_TYPE.ERROR })
+        }
+      }
     })
   }
 
@@ -116,7 +126,7 @@ export const NetworkPodcastEdit = props => {
       <div className={classes.content}>
         <Breadcrumbs />
         <Paper className={classes.paper}>
-          {networkPodcastsLoading || networkDetailsLoading || allPodcastsLoading ? (
+          {networkPodcastsLoading || networkDetailsLoading || allPodcastsLoading || podcastAdding ? (
             <LoadingIndicator />
           ) : (
             <>
@@ -151,7 +161,7 @@ export const NetworkPodcastEdit = props => {
   )
 }
 
-NetworkPodcastEdit.propTypes = {
+NetworkPodcastAdd.propTypes = {
   classes: PropTypes.object.isRequired,
   updatePodcastNetwork: PropTypes.func.isRequired,
   getNetworkDetails: PropTypes.func.isRequired,
@@ -179,4 +189,4 @@ const actions = {
   updatePodcastNetwork
 }
 
-export default compose(userIsAuthenticatedRedir, connect(selector, actions), withStyles(styles))(NetworkPodcastEdit)
+export default compose(userIsAuthenticatedRedir, connect(selector, actions), withStyles(styles))(NetworkPodcastAdd)

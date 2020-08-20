@@ -23,4 +23,3 @@ export const getAllPodcasts = createAction(types.GET_ALL_PODCASTS)
 export const updatePodcastNetwork = createAction(types.UPDATE_PODCAST_NETWORK)
 
 export const confirmAndDeletePodcast = createAction(types.CONFIRM_AND_DELETE_PODCAST)
-export const deletePodcast = createAction(types.DELETE_PODCAST)

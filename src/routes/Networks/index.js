@@ -4,7 +4,7 @@ import NetworkDetails from './routes/NetworkDetails'
 import NetworkEdit from './routes/NetworkEdit'
 import NetworkList from './routes/NetworkList'
 import NetworkNew from './routes/NetworkNew'
-import NetworkPodcastEdit from './routes/NetworkPodcastEdit'
+import NetworkPodcastAdd from './routes/NetworkPodcastAdd'
 import React from 'react'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
 
@@ -15,7 +15,7 @@ const routes = ({ match }) => (
     <Route path={`${match.path}/:networkId`} exact component={NetworkDetails} />
     <Route path={`${match.path}/:networkId/edit`} exact component={NetworkEdit} />
     <Route path={`${match.path}/:networkId/podcasts`} exact component={NetworkDetails} />
-    <Route path={`${match.path}/:networkId/podcasts/add`} exact component={NetworkPodcastEdit} />
+    <Route path={`${match.path}/:networkId/podcasts/add`} exact component={NetworkPodcastAdd} />
   </Switch>
 )
 

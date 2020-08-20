@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { confirmAndDeletePodcast, podcastUpdatingSelector } from 'redux/modules/podcast'
 import {
   getNetworkDetails,
   getNetworkPodcastsList,
@@ -26,7 +27,6 @@ import TableRow from '@material-ui/core/TableRow'
 import ThumbnailImage from 'components/ThumbnailImage'
 import Typography from '@material-ui/core/Typography'
 import { compose } from 'redux'
-import { confirmAndDeletePodcast } from 'redux/modules/podcast'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import dfFormat from 'date-fns/format'
@@ -56,7 +56,8 @@ export const NetworkDetails = props => {
     podcastsLoading,
     networkDetailsLoading,
     sortProps: { onRequestSort, sortedList, order, orderBy },
-    confirmAndDeletePodcast
+    confirmAndDeletePodcast,
+    podcastUpdating
   } = props
   const { enqueueSnackbar } = useSnackbar()
   const leftPaneState = match.path.endsWith('/podcasts') ? 'NETWORK_PODCASTS' : 'NETWORK_DETAILS'
@@ -64,7 +65,14 @@ export const NetworkDetails = props => {
   const handleDelete = id => () => {
     confirmAndDeletePodcast({
       id,
-      success: () => enqueueSnackbar('Podcast deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+      data: { networkId: null },
+      success: () => {
+        enqueueSnackbar('Podcast deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+        getNetworkPodcastsList({
+          networkId: match.params.networkId,
+          fail: () => enqueueSnackbar('Failed to load podcasts of the network!', { variant: SNACKBAR_TYPE.ERROR })
+        })
+      }
     })
   }
 
@@ -97,7 +105,7 @@ export const NetworkDetails = props => {
           </Box>
         </Box>
         <Paper className={classes.paper}>
-          {podcastsLoading || networkDetailsLoading ? (
+          {podcastsLoading || networkDetailsLoading || podcastUpdating ? (
             <LoadingIndicator />
           ) : podcasts.length > 0 ? (
             <>
@@ -180,14 +188,16 @@ NetworkDetails.propTypes = {
   networkDetailsLoading: PropTypes.bool,
   podcasts: PropTypes.array.isRequired,
   podcastsLoading: PropTypes.bool,
-  confirmAndDeletePodcast: PropTypes.func.isRequired
+  confirmAndDeletePodcast: PropTypes.func.isRequired,
+  podcastUpdating: PropTypes.bool
 }
 
 const selector = createStructuredSelector({
   networkDetails: networkDetailsSelector,
   networkDetailsLoading: networkDetailsLoadingSelector,
   podcasts: networkPodcastsListSelector,
-  podcastsLoading: networkPodcastsListLoadingSelector
+  podcastsLoading: networkPodcastsListLoadingSelector,
+  podcastUpdating: podcastUpdatingSelector
 })
 
 const actions = {

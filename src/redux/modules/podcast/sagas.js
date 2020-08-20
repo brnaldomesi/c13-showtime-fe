@@ -1,6 +1,5 @@
 import {
   CONFIRM_AND_DELETE_PODCAST,
-  DELETE_PODCAST,
   GET_ALL_PODCASTS,
   GET_PODCASTS_LIST,
   GET_PODCAST_DETAILS,
@@ -135,14 +134,6 @@ const updatePodcastNetwork = apiCallSaga({
   selectorKey: 'podcastDetails'
 })
 
-const deletePodcast = apiCallSaga({
-  type: DELETE_PODCAST,
-  method: 'delete',
-  allowedParamKeys: [],
-  path: ({ payload }) => `/podcasts/${payload.id}`,
-  selectorKey: 'podcastsList'
-})
-
 const confirmDelete = function*() {
   const confirmProm = bindCallbackToPromise()
   const cancelProm = bindCallbackToPromise()
@@ -163,7 +154,7 @@ const confirmDelete = function*() {
 const confirmAndDeletePodcast = function*(action) {
   const confirmed = yield call(confirmDelete)
   if (confirmed) {
-    yield call(deletePodcast, action)
+    yield call(updatePodcast, action)
   }
 }
 
@@ -178,5 +169,4 @@ export default function* rootSaga() {
   yield takeLatest(GET_ALL_PODCASTS, getAllPodcasts)
   yield takeLatest(UPDATE_PODCAST_NETWORK, updatePodcastNetwork)
   yield takeLatest(CONFIRM_AND_DELETE_PODCAST, confirmAndDeletePodcast)
-  yield takeLatest(DELETE_PODCAST, deletePodcast)
 }

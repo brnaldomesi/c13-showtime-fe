@@ -15,3 +15,5 @@ export const podcastsSearchResultsSelector = dataSelector('podcastsSearch', [])
 export const allPodcastsSelector = dataSelector('allPodcasts', [])
 
 export const allPodcastsLoadingSelector = isRequestPending('allPodcasts', 'get')
+
+export const podcastUpdatingSelector = isRequestPending('podcastDetails', 'patch')
