@@ -38,6 +38,7 @@ const RenderForm = ({ handleSubmit, values, categories, isSubmitting, setFieldVa
         toggleValues={[false, true]}
         component={FormCheckbox}
       />
+      <Field name="config.enablePlayer" label="Enable Player" toggleValues={[false, true]} component={FormCheckbox} />
       <Field
         name="title"
         label="Podcast Title"

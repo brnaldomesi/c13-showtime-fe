@@ -22,6 +22,7 @@ export const deserializePodcast = podcast => ({
   seoHeader: podcast.seoHeader,
   seoDescription: podcast.seoDescription,
   config: {
+    enablePlayer: get(podcast, 'config.enablePlayer') || false,
     enableShowPage: get(podcast, 'config.enableShowPage') || false,
     lockedSyncFields: get(podcast, 'config.lockedSyncFields') || []
   },
@@ -39,6 +40,7 @@ export const serializePodcast = values => ({
   seoHeader: values.seoHeader || null,
   seoDescription: values.seoDescription || null,
   config: {
+    enablePlayer: get(values, 'config.enablePlayer') || false,
     enableShowPage: get(values, 'config.enableShowPage') || false,
     lockedSyncFields: get(values, 'config.lockedSyncFields') || []
   },
