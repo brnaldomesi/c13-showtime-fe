@@ -1,9 +1,9 @@
+import { call, put, select } from 'redux-saga/effects'
+import { requestPending, requestRejected, requestSuccess } from './actions'
+
 import axios from 'axios'
 import get from 'lodash/get'
 import pick from 'lodash/pick'
-import { call, put, select } from 'redux-saga/effects'
-
-import { requestRejected, requestPending, requestSuccess } from './actions'
 import { tokenSelector } from 'redux/modules/auth/selectors'
 
 const defaultHeaders = token => ({
@@ -24,6 +24,7 @@ export default ({
   defaultParams,
   headers,
   stealthy,
+  withCredential,
   success, // Can be function generator to use yield
   fail, // Can be function generator to use yield
   payloadOnSuccess,
@@ -58,7 +59,7 @@ export default ({
       const res = yield call(axios.request, {
         url: typeof path === 'function' ? path(action) : path,
         method: method.toLowerCase(),
-        withCredentials: true,
+        withCredentials: withCredential === undefined ? true : !!withCredential,
         headers: {
           ...defaultHeaders(token),
           ...headers,

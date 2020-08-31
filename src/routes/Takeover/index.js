@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import TakeoverForm, { validationSchema } from './components/TakeoverForm'
 import {
   getTakeover,
+  presignedPost,
+  presignedPostingSelector,
   takeoverLoadingSelector,
-  takeoverSelector,
   takeoverUpdatingSelector,
-  updateTakeover
+  updateTakeover,
+  uploadToS3,
+  uploadingSelector
 } from 'redux/modules/takeover'
 
 import Breadcrumbs from 'components/Breadcrumbs'
@@ -23,40 +26,155 @@ import { makeStyles } from '@material-ui/core/styles'
 import styles from './styles'
 import { useSnackbar } from 'notistack'
 import { userIsAuthenticatedRedir } from 'hocs/withAuth'
+import { withRouter } from 'react-router'
 
 const useStyles = makeStyles(styles)
 
 const initialValues = {
   headline: '',
   subHeadline: '',
-  backgroundImg: null,
-  logoImg: null
+  bgDesktop: null,
+  bgMobilePortrait: null,
+  bgTabletLandscape: null,
+  bgTabletPortrait: null,
+  logo: null
 }
 
-const Takeover = ({ takeover, takeoverLoading, takeoverUpdating, getTakeover, updateTakeover }) => {
+const imagesTypeList = ['bgDesktop', 'bgMobilePortrait', 'bgTabletLandscape', 'bgTabletPortrait', 'logo']
+
+const Takeover = ({
+  takeoverLoading,
+  takeoverUpdating,
+  getTakeover,
+  updateTakeover,
+  presignedPosting,
+  presignedPost,
+  uploadToS3,
+  uploading
+}) => {
   const classes = useStyles()
   const { enqueueSnackbar } = useSnackbar()
+  const [formValues, setFormValues] = useState(initialValues)
+  const getTakeoverCall = useCallback(() => {
+    getTakeover({
+      success: res => {
+        setFormValues({
+          headline: res.headline,
+          subHeadline: res.subHeadline,
+          bgDesktop: res.images.bgDesktop ? res.images.bgDesktop.sizes.original : initialValues.bgDesktop,
+          bgMobilePortrait: res.images.bgMobilePortrait
+            ? res.images.bgMobilePortrait.sizes.original
+            : initialValues.bgMobilePortrait,
+          bgTabletLandscape: res.images.bgTabletLandscape
+            ? res.images.bgTabletLandscape.sizes.original
+            : initialValues.bgTabletLandscape,
+          bgTabletPortrait: res.images.bgTabletPortrait
+            ? res.images.bgTabletPortrait.sizes.original
+            : initialValues.bgTabletPortrait,
+          logo: res.images.logo ? res.images.logo.sizes.original : initialValues.logo
+        })
+      },
+      fail: () => enqueueSnackbar('Failed to load all takeover!', { variant: SNACKBAR_TYPE.ERROR })
+    })
+  }, [getTakeover, enqueueSnackbar])
 
-  // useEffect(() => {
-  //   if (takeover === null) {
-  //     getTakeover({
-  //       fail: () => enqueueSnackbar('Failed to load all takeover!', { variant: SNACKBAR_TYPE.ERROR })
-  //     })
-  //   }
-  // }, [getTakeover, enqueueSnackbar, takeover])
+  useEffect(() => {
+    getTakeoverCall()
+  }, [getTakeoverCall])
 
   const handleSubmit = (values, actions) => {
-    return formSubmit(
-      updateTakeover,
-      {
-        data: values,
-        success: () => {
-          enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
-        },
-        fail: () => enqueueSnackbar('Failed to save takeover!', { variant: SNACKBAR_TYPE.ERROR })
-      },
-      actions
+    const data = imagesTypeList
+      .filter(imageType => values[imageType] && values[imageType] !== formValues[imageType])
+      .map(imageType => ({
+        file: values[imageType],
+        imageType
+      }))
+
+    const updateTakeoverData = {
+      headline: values.headline,
+      subHeadline: values.subHeadline,
+      images: {}
+    }
+
+    imagesTypeList
+      .filter(imageType => values[imageType] === null)
+      .forEach(imageType => {
+        updateTakeoverData.images[imageType] = {}
+        updateTakeoverData.images[imageType].sourceUrl = ''
+      })
+
+    actions.setSubmitting(true)
+
+    const presignedPostPromises = data.map(
+      ({ file, imageType }) =>
+        new Promise((resolve, reject) => {
+          const data = {
+            fileName: file.name,
+            contentType: file.type,
+            imageType
+          }
+
+          presignedPost({
+            data,
+            success: res => {
+              const imageData = new FormData()
+              Object.keys(res.formData.fields).forEach(key => imageData.append(key, res.formData.fields[key]))
+              imageData.append('file', values[imageType])
+
+              uploadToS3({
+                path: res.formData.url,
+                data: imageData,
+                success: () =>
+                  resolve({
+                    imageType,
+                    sourceUrl: res.location
+                  }),
+                fail: () =>
+                  reject({
+                    type: 'upload s3',
+                    value: imageType
+                  })
+              })
+            },
+            fail: () =>
+              reject({
+                type: 'presigned post',
+                value: imageType
+              })
+          })
+        })
     )
+
+    Promise.allSettled(presignedPostPromises).then(results => {
+      results.forEach(res => {
+        if (res.status === 'fulfilled') {
+          const { imageType, sourceUrl } = res.value
+          updateTakeoverData.images[imageType] = {}
+          updateTakeoverData.images[imageType].sourceUrl = sourceUrl
+        } else if (res.status === 'rejected') {
+          const { type, value: imageType } = res.value
+          if (type === 'upload s3') {
+            enqueueSnackbar(`Failed to upload ${imageType} image to s3 bucket`, { variant: SNACKBAR_TYPE.ERROR })
+          } else if (type === 'presigned post') {
+            enqueueSnackbar(`Failed to get authorization to upload ${imageType} image`, {
+              variant: SNACKBAR_TYPE.ERROR
+            })
+          }
+        }
+      })
+
+      return formSubmit(
+        updateTakeover,
+        {
+          data: updateTakeoverData,
+          success: () => {
+            enqueueSnackbar('Saved successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+            getTakeoverCall()
+          }
+        },
+        actions
+      )
+    })
   }
 
   return (
@@ -66,14 +184,15 @@ const Takeover = ({ takeover, takeoverLoading, takeoverUpdating, getTakeover, up
         Show Hub Takeover
       </Typography>
       <Paper className={classes.paper}>
-        {takeoverLoading || takeoverUpdating ? (
+        {takeoverLoading || takeoverUpdating || presignedPosting || uploading ? (
           <LoadingIndicator />
         ) : (
           <Formik
-            initialValues={initialValues}
+            initialValues={formValues}
             validateOnChange
             validateOnBlur
             onSubmit={handleSubmit}
+            enableReinitialize
             validationSchema={validationSchema}>
             {formikProps => <TakeoverForm {...formikProps} />}
           </Formik>
@@ -85,18 +204,23 @@ const Takeover = ({ takeover, takeoverLoading, takeoverUpdating, getTakeover, up
 
 Takeover.propTypes = {
   getTakeover: PropTypes.func.isRequired,
-  updateTakeover: PropTypes.func.isRequired
+  updateTakeover: PropTypes.func.isRequired,
+  presignedPost: PropTypes.func.isRequired,
+  uploadToS3: PropTypes.func.isRequired
 }
 
 const selector = createStructuredSelector({
-  takeover: takeoverSelector,
   takeoverLoading: takeoverLoadingSelector,
-  takeoverUpdating: takeoverUpdatingSelector
+  takeoverUpdating: takeoverUpdatingSelector,
+  presignedPosting: presignedPostingSelector,
+  uploading: uploadingSelector
 })
 
 const actions = {
   getTakeover,
-  updateTakeover
+  updateTakeover,
+  presignedPost,
+  uploadToS3
 }
 
-export default compose(userIsAuthenticatedRedir, connect(selector, actions))(Takeover)
+export default compose(userIsAuthenticatedRedir, withRouter, connect(selector, actions))(Takeover)

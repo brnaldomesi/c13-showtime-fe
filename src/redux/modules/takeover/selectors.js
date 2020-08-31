@@ -1,5 +1,6 @@
-import { dataSelector, isRequestPending } from '../api'
+import { isRequestPending } from '../api'
 
-export const takeoverSelector = dataSelector('takeover', null)
 export const takeoverLoadingSelector = isRequestPending('takeover', 'get')
+export const presignedPostingSelector = isRequestPending('presignedPost', 'post')
+export const uploadingSelector = isRequestPending('s3', 'post')
 export const takeoverUpdatingSelector = isRequestPending('takeover', 'patch')

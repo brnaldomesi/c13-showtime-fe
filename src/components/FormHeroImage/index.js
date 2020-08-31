@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import AddIcon from '@material-ui/icons/Add'
 import Box from '@material-ui/core/Box'
@@ -23,16 +23,15 @@ const FormHeroImage = ({ required, width, field, form, label, setFieldValue, sou
   const [invalidImage, setInvalidImage] = useState(null)
   const fileInput = useRef(null)
 
+  useEffect(() => {
+    setImgSrc(sourceImg)
+  }, [sourceImg])
+
   const handleChange = event => {
     const imageFile = event.target.files[0]
     if (!imageFile) {
       return false
     }
-
-    // if (!imageFile.name.match(/\.(xbm|tif|pjp|svgz|jpg|jpeg|ico|tiff|gif|svg|jfif|webp|png|bmp|pjpeg|avif)$/)) {
-    //   setInvalidImage('Please select valid image.')
-    //   return false
-    // }
 
     const reader = new FileReader()
     reader.readAsDataURL(imageFile)
@@ -42,7 +41,7 @@ const FormHeroImage = ({ required, width, field, form, label, setFieldValue, sou
       img.src = URL.createObjectURL(imageFile)
 
       img.onload = imgEvent => {
-        if (imgEvent.path[0].naturalWidth !== width) {
+        if (imgEvent.target.naturalWidth !== width) {
           setInvalidImage('Invalid image width.')
           return false
         }
@@ -55,8 +54,7 @@ const FormHeroImage = ({ required, width, field, form, label, setFieldValue, sou
       }
     }
 
-    reader.onloadend = function(e) {
-      //setImgSrc(reader.result)
+    reader.onloadend = e => {
       setFieldValue(field.name, imageFile)
       setImgSrc(URL.createObjectURL(imageFile))
     }
@@ -73,14 +71,15 @@ const FormHeroImage = ({ required, width, field, form, label, setFieldValue, sou
   }
 
   const clearImg = () => {
-    fileInput.current.value = ''
+    fileInput.current.value = null
     setImgSrc(null)
+    setFieldValue(field.name, null)
   }
 
   return (
     <div>
       {label && (
-        <Box mb={1}>
+        <Box mb={1} width={330}>
           <FormHelperText>{label}</FormHelperText>
         </Box>
       )}
@@ -103,7 +102,7 @@ const FormHeroImage = ({ required, width, field, form, label, setFieldValue, sou
           </Button>
         </Box>
       </Box>
-      <Box mb={3}>
+      <Box mb={3} width={330}>
         {required && <FormHelperText>*Required</FormHelperText>}
         <FormHelperText>Width: {width}px</FormHelperText>
         {Boolean(error) && <FormHelperText error>{error}</FormHelperText>}

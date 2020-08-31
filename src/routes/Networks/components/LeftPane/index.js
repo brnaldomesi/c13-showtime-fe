@@ -17,9 +17,10 @@ import { confirmAndDeleteNetwork } from 'redux/modules/network'
 import { connect } from 'react-redux'
 import styles from './styles'
 import { useSnackbar } from 'notistack'
+import { withRouter } from 'react-router'
 import { withStyles } from '@material-ui/core/styles'
 
-export const LeftPane = ({ classes, networkDetails, state, confirmAndDeleteNetwork }) => {
+export const LeftPane = ({ classes, networkDetails, state, confirmAndDeleteNetwork, history }) => {
   const coverImgEditable =
     state === 'NETWORK_PODCASTS' || state === 'NETWORK_DETAILS' || state === 'NETWORK_PODCASTS_EDIT' ? false : true
   const { enqueueSnackbar } = useSnackbar()
@@ -27,7 +28,10 @@ export const LeftPane = ({ classes, networkDetails, state, confirmAndDeleteNetwo
   const handleDelete = () => {
     confirmAndDeleteNetwork({
       id: networkDetails.id,
-      success: () => enqueueSnackbar('Network deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+      success: () => {
+        enqueueSnackbar('Network deleted successfully!', { variant: SNACKBAR_TYPE.SUCCESS })
+        history.goBack()
+      }
     })
   }
 
@@ -122,4 +126,4 @@ const actions = {
   confirmAndDeleteNetwork
 }
 
-export default compose(connect(null, actions), withStyles(styles))(LeftPane)
+export default compose(withRouter, connect(null, actions), withStyles(styles))(LeftPane)
