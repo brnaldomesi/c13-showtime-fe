@@ -38,6 +38,12 @@ const RenderForm = ({ handleSubmit, values, categories, isSubmitting, setFieldVa
         toggleValues={[false, true]}
         component={FormCheckbox}
       />
+      <Field
+        name="config.enableShowHub"
+        label="Make Searchable on Show Hub"
+        toggleValues={[false, true]}
+        component={FormCheckbox}
+      />
       <Field name="config.enablePlayer" label="Enable Player" toggleValues={[false, true]} component={FormCheckbox} />
       <Field
         name="title"
