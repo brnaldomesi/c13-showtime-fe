@@ -34,7 +34,7 @@ const RenderForm = ({ handleSubmit, values, categories, isSubmitting, setFieldVa
     <form onSubmit={handleSubmit}>
       <Field
         name="config.enableShowPage"
-        label="Display on Show Hub"
+        label="Enable Show Hub Page"
         toggleValues={[false, true]}
         component={FormCheckbox}
       />
