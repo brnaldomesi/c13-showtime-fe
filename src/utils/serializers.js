@@ -43,6 +43,7 @@ export const serializePodcast = values => ({
   config: {
     enablePlayer: get(values, 'config.enablePlayer') || false,
     enableShowPage: get(values, 'config.enableShowPage') || false,
+    enableShowHub: get(values, 'config.enableShowHub') || false,
     lockedSyncFields: get(values, 'config.lockedSyncFields') || []
   },
   categories: values.categories
