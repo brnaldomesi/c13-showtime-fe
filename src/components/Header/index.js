@@ -28,17 +28,11 @@ export const Header = ({ classes, isAuthenticated, toggleSidebar }) => (
         <div className={classes.menuButton} />
       )}
       <Typography variant="h6" color="inherit" noWrap>
-        Cadence13 Showtime
+        C13 Showtime
       </Typography>
       {isAuthenticated && (
         <>
           <HeaderSearchForm />
-          <Button component={Link} to="/podcasts" color="inherit">
-            Podcasts
-          </Button>
-          <Button component={Link} to="/networks" color="inherit">
-            Networks
-          </Button>
           <div className={classes.spacer} />
           <UserActionsMenu />
         </>
@@ -57,7 +51,4 @@ const selector = createStructuredSelector({
   isAuthenticated: isAuthenticatedSelector
 })
 
-export default compose(
-  connect(selector),
-  withStyles(styles)
-)(Header)
+export default compose(connect(selector), withStyles(styles))(Header)
