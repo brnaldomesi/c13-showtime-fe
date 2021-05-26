@@ -33,7 +33,6 @@ class Dashboard extends Component {
     return (
       <div className={classes.root}>
         <Breadcrumbs />
-        <Typography variant="h4">Welcome to Cadence Showtime!</Typography>
         <Grid container>
           <Grid item sm={6}>
             <List component="nav" aria-label="Navigation" className={classes.list}>
